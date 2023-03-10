@@ -1,0 +1,249 @@
+body {
+  font-family: "Faktum",sans-serif;
+}
+
+.mt-badge {
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 110%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #707070;
+}
+
+.mt-title {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 110%;
+  color: #111;
+  letter-spacing: -0.02em;
+
+  &_white {
+    color: #fff;
+  }
+}
+
+.mt-subtitle {
+  margin-top: 32px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.01em;
+  color: #111;
+  opacity: 0.6;
+
+  &_white {
+    color: #fff;
+  }
+}
+
+.mt-container {
+  margin: 0 auto;
+  max-width: 1120px;
+}
+
+.mt-features {
+  padding: 120px 0 105px;
+  background-color: #F1F2F5;
+  text-align: center;
+}
+
+.mt-development {
+  padding: 108px 0 120px;
+  background-color: #111111;
+
+  &__subtitle {
+    max-width: 446px;
+  }
+
+  &__cards {
+    margin-top: 72px;
+    display: flex;
+    gap: 8px;
+  }
+
+  &__card {
+    background: #3B3B3B;
+    border-radius: 10px;
+    padding: 44px;
+    max-width: 368px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+  }
+
+  &__card-title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
+  }
+
+  &__card-subtitle {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+    opacity: 0.8;
+  }
+}
+
+.mt-one-stop {
+  display: block;
+
+  &__cards {
+    margin-top: 44px;
+    margin-bottom: 120px;
+    display: flex;
+    gap: 8px;
+  }
+
+  &__card {
+    background: #F1F2F5;
+    border-radius: 10px;
+    padding: 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 368px;
+    width: 100%;
+    gap: 55px;
+  }
+
+  &__card-badge {
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 110%;
+    letter-spacing: -0.01em;
+    color: #111111;
+  }
+
+  &__card-title {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 110%;
+    color: #3C37FF;
+  }
+
+  &__card-text {
+    margin-top: auto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    color: #111111;
+    opacity: 0.9;
+  }
+
+  &__reasons {
+    text-align: center;
+    margin-top: 145px;
+  }
+
+  &__reasons-title {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 110%;
+    text-align: center;
+    color: #111111;
+  }
+
+  &__reasons-img {
+    margin-top: 44px;
+  }
+}
+
+.mt-cta-block {
+  text-align: center;
+  width: 100%;
+  max-width: 1284px;
+  padding: 59px 0;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("https://monite.com/wp-content/uploads/2023/03/CTA-scaled.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 12px;
+
+  &__button {
+    margin-top: 58px;
+  }
+}
+
+.mt-button {
+  background-color: #3C37FF;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  padding: 15px 30px;
+  color: #fff;
+
+  &:hover {
+    background: linear-gradient(180deg, #3C37FF 0%, #FE66BA 100%);
+  }
+}
+
+.mt-review {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 927px;
+  margin: 0 auto;
+  align-items: center;
+
+  &_small {
+    max-width: 743px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 130%;
+    color: #111;
+    text-align: center;
+    letter-spacing: 0.01em;
+  }
+
+  &__author {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #111111;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .mt-title {
+    font-size: 22px;
+  }
+
+  .mt-subtitle {
+    font-size: 14px;
+  }
+
+  .mt-container {
+    margin: 0 20px;
+  }
+
+  .mt-one-stop {
+    &__cards {
+      flex-direction: column;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    &__card {
+      padding: 24px;
+      gap: 35px;
+    }
+  }
+}
