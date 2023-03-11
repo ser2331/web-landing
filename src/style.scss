@@ -1,5 +1,5 @@
 body {
-  font-family: "Faktum",sans-serif;
+  font-family: "Faktum", sans-serif;
 }
 
 .mt-badge {
@@ -154,6 +154,64 @@ body {
 
   &__reasons-img {
     margin-top: 44px;
+  }
+}
+
+.mt-about {
+  display: block;
+
+  .mt-title {
+    margin-top: 12px;
+  }
+
+  .mt-subtitle {
+    margin: 0;
+  }
+
+  &__cards {
+    margin-top: 34px;
+    margin-bottom: 72px;
+    display: flex;
+    gap: 36px;
+  }
+
+  &__card {
+    background: #F1F2F5;
+    border-radius: 10px;
+    padding: 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 368px;
+    width: 100%;
+    gap: 55px;
+  }
+
+  &__card-text {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+  }
+
+  &__link {
+    position: relative;
+    width: 110px;
+    height: 22px;
+    color: #0A0A0A;
+
+    &:hover {
+      color: #3C37FF;
+    }
+
+    &__btn {
+      padding-left: 44px;
+      width: 82px;
+      height: 22px;
+      font-size: 16px;
+      line-height: 140%;
+      letter-spacing: 0.01em;
+    }
   }
 }
 
