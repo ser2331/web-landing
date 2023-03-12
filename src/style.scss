@@ -397,6 +397,7 @@ section:not(:last-child) {
     background-color: #3C37FF;
     border-radius: 40px;
     will-change: transform;
+    transition: all .4s;
   }
 
   &__filter-item {

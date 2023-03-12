@@ -15,6 +15,8 @@ function changeText() {
   }
   mtHeroTitle.innerHTML = mtHeroArrayTitles[loopItem];
 }
+
+
 //
 // loopHeader()
 //
