@@ -76,7 +76,6 @@ section:not(:last-child) {
     background: #3C37FF;
     border-radius: 10px;
     height: 700px;
-
   }
 
   &__cards {
@@ -167,6 +166,12 @@ section:not(:last-child) {
   margin: 0 auto;
   max-width: 1120px;
 }
+
+.mt-container_big {
+  margin: 0 auto;
+  max-width: 1284px;
+}
+
 
 .mt-features {
   padding: 120px 0 105px;
@@ -427,6 +432,13 @@ section:not(:last-child) {
         fill: white;
       }
     }
+  }
+
+  &__content {
+    border-radius: 10px;
+    background: linear-gradient(180deg, #3C37FF 0%, #FE66BA 100%);
+    height: 800px;
+    width: 100%
   }
 }
 
