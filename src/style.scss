@@ -376,6 +376,20 @@ section:not(:last-child) {
     color: #FFFFFF;
     opacity: 0.8;
   }
+
+  &__button {
+    gap: 24px;
+    display: flex;
+  }
+
+  .mt-development__btn {
+    background-color: transparent;
+    border: 1px solid #fff;
+
+    &:hover {
+      background: #0A0A0A;
+    }
+  }
 }
 
 .mt-payments {
