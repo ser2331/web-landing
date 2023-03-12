@@ -2,6 +2,126 @@ body {
   font-family: "Faktum", sans-serif;
 }
 
+section:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.mt-hero {
+  padding: 47px 0 24px 0;
+  position: relative;
+  overflow: hidden;
+
+  .mt-subtitle {
+    margin-top: 0;
+  }
+
+  .mt-trusted__title {
+    margin: 94px 0 0;
+  }
+
+  &__title {
+    span {
+      color: #3C37FF;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1120px;
+  }
+
+  &__content {
+    margin-top: 153px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 518px;
+    gap: 32px;
+  }
+
+  &__images {
+    position: absolute;
+    right: -67px;
+    height: 505px;
+    width: 814px;
+  }
+
+  &__partners {
+    display: flex;
+    gap: 13px;
+    list-style-type: none;
+  }
+
+  &__partner {
+    padding: 0 15px;
+    border: 1px solid #F4F4F4;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+  }
+}
+
+.mt-earn {
+  padding: 120px 0 116px 0;
+  text-align: center;
+
+  &__inner {
+    bottom: 0;
+    top: 0;
+    position: sticky;
+    margin-top: 90px;
+    background: #3C37FF;
+    border-radius: 10px;
+    height: 700px;
+
+  }
+
+  &__cards {
+    padding: 0;
+    margin-top: 32px;
+    display: flex;
+    gap: 7px;
+    list-style-type: none;
+  }
+
+  &__cards-inner {
+    position: sticky;
+    z-index: 2;
+    margin-top: 90px;
+  }
+
+  &__card {
+    background: #F1F2F5;
+    border-radius: 10px;
+    padding: 35px 0;
+    width: 100%;
+    max-width: 274px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  &__card-title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: #111111;
+    margin: 0;
+  }
+
+  &__cards-head {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 110%;
+    color: #111;
+  }
+}
+
 .mt-badge {
   margin-bottom: 12px;
   font-weight: 600;
@@ -22,6 +142,10 @@ body {
 
   &_white {
     color: #fff;
+  }
+
+  &_left {
+    text-align: left;
   }
 }
 
@@ -48,6 +172,90 @@ body {
   padding: 120px 0 105px;
   background-color: #F1F2F5;
   text-align: center;
+
+  &__content {
+    text-align: left;
+  }
+
+  &__inner {
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__caption {
+    margin-top: 32px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    color: #0A0A0A;
+    text-align: left;
+    opacity: 0.6;
+  }
+
+  &__head {
+    margin-top: 32px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    color: #0A0A0A;
+    max-width: 424px;
+    text-align: left;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+
+    &::before {
+      display: block;
+      content: '';
+      min-width: 4px;
+      width: 4px;
+      height: 108px;
+      border-radius: 10px;
+      background: linear-gradient(180deg, #3D38FF 0%, #FE66BA 100%);
+    }
+
+    &_small {
+      &:before {
+        height: 68px;
+      }
+    }
+  }
+
+  &__list {
+    margin-bottom: 32px;
+    margin-top: 17px;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 16px;
+    padding: 0;
+  }
+
+  &__item {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    color: #3B3B3B;
+    text-align: left;
+    display: flex;
+    gap: 16px;
+
+    &::before {
+      display: block;
+      width: 24px;
+      height: 24px;
+      content: '';
+      background-image: url("./images/mt-features__icon.svg");
+    }
+  }
+
+  &__image {
+  }
 }
 
 .mt-trusted {
@@ -69,6 +277,9 @@ body {
   &__logos {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     gap: 86px;
     margin-bottom: 32px;
   }
@@ -80,6 +291,18 @@ body {
 
   &__subtitle {
     max-width: 446px;
+  }
+
+  &__inner {
+    display: flex;
+    gap: 120px;
+  }
+
+  &__images {
+    background: #302F4D;
+    border-radius: 10px;
+    width: 319px;
+    height: 411px;
   }
 
   &__cards {
@@ -97,6 +320,25 @@ body {
     display: flex;
     flex-direction: column;
     gap: 17px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      background-image: url("./images/mt-development__icon.svg");
+      width: 46px;
+      height: 46px;
+      top: 61px;
+      right: -27px;
+      z-index: 1;
+    }
+
+    &:last-child {
+
+      &::after {
+        content: unset;
+      }
+    }
   }
 
   &__card-title {
@@ -114,6 +356,76 @@ body {
     letter-spacing: 0.01em;
     color: #FFFFFF;
     opacity: 0.8;
+  }
+}
+
+.mt-payments {
+  padding: 120px 0;
+  text-align: center;
+
+  &__inner {
+    margin-top: 52px;
+  }
+
+  &__filter {
+    margin: 0 auto 32px auto;
+    background: #F3F3F3;
+    border-radius: 310px;
+    display: flex;
+    max-width: 343px;
+    padding: 6px;
+    gap: 39px;
+    list-style-type: none;
+    position: relative;
+  }
+
+  &__filter-toogl {
+    position: absolute;
+    left: 8px;
+    display: block;
+    width: calc(50% - 0px);
+    height: 48px;
+    padding: 0;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: Inter,sans-serif;
+    font-style: normal;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: center;
+    background-color: #3C37FF;
+    border-radius: 40px;
+    will-change: transform;
+  }
+
+  &__filter-item {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 110%;
+    padding: 16px 38px 16px 0px;
+    letter-spacing: -0.01em;
+    cursor: pointer;
+    display: flex;
+    gap: 11px;
+    z-index: 2;
+
+    &_first {
+      padding-left: 19px;
+      padding-right: 19px;
+    }
+
+    svg path {
+      fill: #111;
+    }
+
+    &_active {
+      color: #fff;
+
+      svg path {
+        fill: white;
+      }
+    }
   }
 }
 
@@ -155,6 +467,7 @@ body {
   }
 
   &__card-text {
+    margin-top: auto;
     font-weight: 500;
     font-size: 16px;
     line-height: 140%;
@@ -165,6 +478,7 @@ body {
 
   &__reasons {
     text-align: center;
+    margin-top: 145px;
   }
 
   &__reasons-title {
@@ -176,49 +490,26 @@ body {
   }
 
   &__reasons-img {
-    margin-top: 45px;
-    margin-bottom: 120px;
+    margin-top: 44px;
   }
 
-  &__cards-list {
-    gap: 12px;
-    margin-top: 65px;
-  }
+  &__shops {
+    margin-top: 120px;
 
-  &__card-item {
-    display: flex;
-    max-width: 554px;
-  }
-
-  &__subtitle {
-    align-self: end;
-    max-width: 260px;
-    text-align: left;
-    margin: 0;
-  }
-
-  &__column {
-    column-count: 2;
-    text-align: left;
-  }
-
-  &__card-title-shop {
-    font-size: 38px;
-    letter-spacing: -0.01em;
-    margin-bottom: 18px;
-  }
-
-  &__card-box-text {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 140%;
-    letter-spacing: 0.01em;
-    color: #000000;
+    & > ul {
+      justify-content: center;
+    }
   }
 }
 
 .mt-about {
+  padding: 120px 0 61px;
   display: block;
+
+  &__btn {
+    display: flex;
+    gap: 8px;
+  }
 
   .mt-title {
     margin-top: 12px;
@@ -256,7 +547,6 @@ body {
 
   &__link {
     position: relative;
-    width: 110px;
     height: 22px;
     color: #0A0A0A;
 
@@ -285,7 +575,7 @@ body {
   max-width: 1284px;
   padding: 59px 0;
   display: flex;
-  margin: 0 auto;
+  margin: 120px auto !important;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -293,6 +583,23 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 12px;
+
+  &_alt {
+    padding: 77px 82px;
+    background-image: url("https://monite.com/wp-content/uploads/2023/03/CTA.png");
+    background-size: contain;
+    text-align: left;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .mt-title {
+      color: #fff;
+    }
+
+    .mt-subtitle {
+      color: #fff;
+    }
+  }
 
   &__button {
     margin-top: 58px;
@@ -306,6 +613,8 @@ body {
   transition: all 0.3s ease-in-out;
   padding: 15px 30px;
   color: #fff;
+  display: flex;
+  width: fit-content;
 
   &:hover {
     background: linear-gradient(180deg, #3C37FF 0%, #FE66BA 100%);
@@ -340,11 +649,23 @@ body {
     text-align: center;
     letter-spacing: 0.01em;
     color: #111111;
-    margin-bottom: 145px;
   }
 }
 
 @media screen and (max-width: 991px) {
+  .mt-hero {
+    padding: 16px 0 0;
+
+    &__inner {
+      margin: 20px;
+      flex-direction: column;
+    }
+
+    &__images {
+      width: 100%;
+      position: relative;
+    }
+  }
   .mt-title {
     font-size: 22px;
   }
@@ -367,6 +688,22 @@ body {
     &__card {
       padding: 24px;
       gap: 35px;
+    }
+  }
+
+  .mt-features {
+
+    &__inner {
+      margin-top: 46px;
+      flex-direction: column-reverse;
+      gap: 45px;
+    }
+  }
+
+  .mt-trusted {
+
+    &__logos {
+      gap: 33px;
     }
   }
 }
