@@ -155,7 +155,6 @@ body {
   }
 
   &__card-text {
-    margin-top: auto;
     font-weight: 500;
     font-size: 16px;
     line-height: 140%;
@@ -166,7 +165,6 @@ body {
 
   &__reasons {
     text-align: center;
-    margin-top: 145px;
   }
 
   &__reasons-title {
@@ -178,11 +176,44 @@ body {
   }
 
   &__reasons-img {
-    margin-top: 44px;
+    margin-top: 45px;
+    margin-bottom: 120px;
   }
 
-  &__shops > ul {
-    justify-content: center;
+  &__cards-list {
+    gap: 12px;
+    margin-top: 65px;
+  }
+
+  &__card-item {
+    display: flex;
+    max-width: 554px;
+  }
+
+  &__subtitle {
+    align-self: end;
+    max-width: 260px;
+    text-align: left;
+    margin: 0;
+  }
+
+  &__column {
+    column-count: 2;
+    text-align: left;
+  }
+
+  &__card-title-shop {
+    font-size: 38px;
+    letter-spacing: -0.01em;
+    margin-bottom: 18px;
+  }
+
+  &__card-box-text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    color: #000000;
   }
 }
 
@@ -309,6 +340,7 @@ body {
     text-align: center;
     letter-spacing: 0.01em;
     color: #111111;
+    margin-bottom: 145px;
   }
 }
 
