@@ -653,6 +653,91 @@ section:not(:last-child) {
   }
 }
 
+.mt-footer {
+  padding: 70px 0 56px;
+  background-color: #F1F2F5;
+
+  &__inner {
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  &__nav-menu-head {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    color: #111111;
+    opacity: 0.5;
+  }
+
+  &__nav-menu-link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    color: #111111;
+  }
+
+  &__social {
+    margin-top: 64px;
+  }
+
+  &__copy {
+    margin-top: 44px;
+    padding-top: 52px;
+    border-top: 1px solid #B8B8B8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__copy-inner {
+    display: flex;
+    gap: 50px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    color: #111111;
+    opacity: 0.5;
+  }
+
+  &__copy-mail a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    color: #111111;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 13px;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .mt-hero {
     padding: 16px 0 0;
