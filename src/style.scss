@@ -6,6 +6,44 @@ section:not(:last-child) {
   margin-bottom: 0;
 }
 
+.mt-header {
+  max-width: 1432px;
+  width: 100%;
+  z-index: 10;
+  margin: 4px auto;
+
+
+  &__container {
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    height: 60px;
+    border: 1px solid #E3E3E3;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__navbar {
+    margin-right: auto;
+    align-items: center;
+  }
+
+  &__btn {
+    margin-right: 12px;
+  }
+
+  &__logo {
+    padding-left: 20px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 24px;
+    margin-left: 39px;
+  }
+}
+
 .mt-hero-wrapper {
   display: flex;
   max-width: 1440px;
@@ -76,7 +114,6 @@ section:not(:last-child) {
     height: 550px;
   }
 }
-
 
 .mt-earn {
   padding: 120px 0 116px 0;
@@ -185,7 +222,6 @@ section:not(:last-child) {
   margin: 0 auto;
   max-width: 1284px;
 }
-
 
 .mt-features {
   padding: 120px 0 105px;
