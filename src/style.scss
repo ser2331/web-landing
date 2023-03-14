@@ -7,11 +7,13 @@ section:not(:last-child) {
 }
 
 .mt-header {
+  position: fixed;
   max-width: 1432px;
   width: 100%;
   z-index: 10;
   margin: 4px auto;
-
+  right: 0;
+  left: 0;
 
   &__container {
     display: flex;
@@ -39,8 +41,52 @@ section:not(:last-child) {
 
   &__list {
     display: flex;
+    list-style-type: none;
     gap: 24px;
     margin-left: 39px;
+  }
+
+  &__item {
+    float: left;
+
+    &:hover {
+      color: #3C37FF;
+      cursor: pointer;
+    }
+
+    &:hover > ul {
+      display: block;
+    }
+  }
+
+  &__sublist {
+    display: none;
+    position: absolute;
+    list-style: none;
+    margin-left: -5px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #707070;
+    padding-right: 40px;
+  }
+
+  &__subitem {
+    display: block;
+    text-decoration: none;
+    padding: 10px 90px 10px 2px;
+    border: 1px solid #111;
+    border-radius: 10px;
+    margin: 4px 2px;
+    background-color: #fff;
+
+    a {
+      font-size: 18px;
+      color: #0A0A0A;
+
+      &:hover {
+        color: #3C37FF;
+      }
+    }
   }
 }
 
@@ -51,12 +97,15 @@ section:not(:last-child) {
 }
 
 .mt-hero {
-  padding: 47px 0 24px 0;
+  margin-top: 47px;
+  padding-bottom: 24px;
   position: relative;
   overflow: hidden;
 
   .mt-trusted__title {
-    margin: 94px 0 0;
+    margin: 62px 0 0;
+    width: auto;
+    height: auto;
   }
 
   &__title {
@@ -572,6 +621,39 @@ section:not(:last-child) {
 
   &__shops {
     margin-top: 120px;
+  }
+
+  &__cards-list {
+    gap: 12px;
+    margin-top: 65px;
+  }
+
+  &__card-item {
+    display: flex;
+    max-width: 554px;
+  }
+
+  &__subtitle {
+    margin: 0 auto;
+    max-width: 260px;
+    text-align: left;
+
+  }
+
+  &__card-title-shop {
+    font-size: 38px;
+    letter-spacing: -0.01em;
+    margin-bottom: 18px;
+  }
+
+  &__card-box-text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+  }
+
+  &__shops {
 
     & > ul {
       justify-content: center;
