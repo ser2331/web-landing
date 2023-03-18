@@ -1,10 +1,10 @@
 const mtHeroTitle = document.getElementById('mtHeroTitle')
 const mtHeroArrayTitles = [
-  'invoicing', 'bill pay', 'B2B payments'
+  'bill pay', 'B2B payments', 'invoicing'
 ]
 
 function loopHeader() {
-  let loopHeader = setInterval(changeText, 1500);
+  let loopHeader = setInterval(changeText, 2000);
 }
 let loopItem = 0;
 
@@ -18,7 +18,9 @@ function changeText() {
 
 
 //
-// loopHeader()
+setTimeout(()=>{
+  loopHeader()
+}, 1000)
 //
 // setInterval(()=> {
 //   for (let i = 0; i <= 3 ; i++) {

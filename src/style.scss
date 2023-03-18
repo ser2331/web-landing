@@ -22,6 +22,8 @@ section:not(:last-child) {
   }
 
   &__title {
+    background-color: #fff;
+    z-index: 1;
     span {
       color: #3C37FF;
     }
@@ -67,19 +69,140 @@ section:not(:last-child) {
   }
 }
 
+#mtHeroTitle {
+  display: block;
+  margin-top: -55px;
+  animation: bobbingAnim ease-in-out 2s infinite;
+}
+
+@keyframes bobbingAnim {
+  0% {
+    transform: translateY(0%);
+  }
+  5% {
+    transform: translateY(-5px);
+  }
+  10% {
+    transform: translateY(-10px);
+  }
+  15% {
+    transform: translateY(-15px);
+  }
+  20% {
+    transform: translateY(-20px);
+  }
+  25% {
+    transform: translateY(-25px);
+  }
+  30% {
+    transform: translateY(-30px);
+  }
+  35% {
+    transform: translateY(-35px);
+  }
+  48% {
+    opacity: 0;
+  }
+  56% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+    transform: translateY(60%);
+  }
+  80% {
+    opacity: 1;
+  }
+  85% {
+    transform: translateY(40%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(20%);
+  }
+}
+
 .mt-earn {
   padding: 120px 0 116px 0;
   text-align: center;
 
   &__inner {
     bottom: 0;
-    top: 0;
+    top: 20px;
     position: sticky;
     margin-top: 90px;
-    background: #3C37FF;
     border-radius: 10px;
-    height: 700px;
+    height: 2100px;
+    background-color: #3C37FF;
+  }
 
+  &__head {
+    position: sticky;
+    height: 700px;
+    top: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    border-radius: 10px;
+    padding: 168px 115px;
+    display: flex;
+    justify-content: flex-end;
+
+    &_first {
+      background-image: url('https://monite.com/wp-content/uploads/2023/03/earn_bg_first.png');
+    }
+
+    &_second {
+      background-image: url('https://monite.com/wp-content/uploads/2023/03/earn_bg_second.png');
+
+    }
+
+    &_third {
+      background-image: url('https://monite.com/wp-content/uploads/2023/03/earn_bg_third.png');
+    }
+  }
+
+  &__head-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 413px;
+  }
+
+  &__head-title {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 110%;
+    color: #FFFFFF;
+    letter-spacing: -0.01em;
+
+    &_alt {
+      margin-top: 57px;
+    }
+  }
+
+  &__head-inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__head-list {
+    margin-top: 32px;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__head-item {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+    opacity: 0.8;
+    text-align: left;
   }
 
   &__cards {
@@ -253,7 +376,7 @@ section:not(:last-child) {
       width: 24px;
       height: 24px;
       content: '';
-      background-image: url("./images/mt-features__icon.svg");
+      background-image: url("https://monite.com/wp-content/uploads/2023/03/mt-features__icon.svg");
     }
   }
 
@@ -334,7 +457,7 @@ section:not(:last-child) {
     &::after {
       position: absolute;
       content: '';
-      background-image: url("./images/mt-development__icon.svg");
+      background-image: url("https://monite.com/wp-content/uploads/2023/03/mt-development__icon.svg");
       width: 46px;
       height: 46px;
       top: 61px;
@@ -448,6 +571,10 @@ section:not(:last-child) {
     margin-bottom: 120px;
     display: flex;
     gap: 8px;
+
+    &_alt {
+      margin-bottom: 0;
+    }
   }
 
   &__card {
@@ -460,6 +587,13 @@ section:not(:last-child) {
     max-width: 368px;
     width: 100%;
     gap: 55px;
+
+    &_alt {
+      max-width: 554px;
+      justify-content: space-between;
+      text-align: left;
+      gap: 61px;
+    }
   }
 
   &__card-badge {
@@ -468,6 +602,10 @@ section:not(:last-child) {
     line-height: 110%;
     letter-spacing: -0.01em;
     color: #111111;
+
+    &_alt {
+      color: #3C37FF;
+    }
   }
 
   &__card-title {
@@ -485,6 +623,18 @@ section:not(:last-child) {
     letter-spacing: 0.01em;
     color: #111111;
     opacity: 0.9;
+
+    &_alt {
+      margin-top: 18px;
+      font-size: 12px;
+      opacity: 1;
+      max-width: 188px;
+    }
+
+    &_third {
+      opacity: 0.6;
+      max-width: 256px;
+    }
   }
 
   &__reasons {
@@ -514,6 +664,11 @@ section:not(:last-child) {
     & > ul {
       justify-content: center;
     }
+  }
+
+  &__card-inner {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -547,7 +702,7 @@ section:not(:last-child) {
     padding: 44px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     max-width: 368px;
     width: 100%;
     gap: 55px;
@@ -712,6 +867,14 @@ section:not(:last-child) {
     line-height: 140%;
     letter-spacing: 0.01em;
     color: #111111;
+
+    a {
+      color: #111111;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
   }
 
   &__social {
@@ -765,13 +928,19 @@ section:not(:last-child) {
 .mt-main-cases {
   padding: 120px 0;
   text-align: center;
+  overflow: hidden;
 
   &__cards {
     margin-top: 44px;
     display: flex;
     gap: 36px;
+  }
+
+  &__container {
+    padding-left: 10%;
+    width: 100%;
+    margin: 0 auto;
     overflow: scroll;
-    width: 2000px;
   }
 
   &__card {
@@ -883,7 +1052,19 @@ section:not(:last-child) {
 
   .mt-development {
     &__cards {
+      margin-top: 34px;
+      flex-direction: column;
       flex-wrap: wrap;
+      align-items: center;
+    }
+
+    &__card {
+
+      &:after {
+        right: 45%;
+        bottom: -28px;
+        top: unset;
+      }
     }
   }
 
@@ -891,7 +1072,7 @@ section:not(:last-child) {
 
 @media screen and (max-width: 991px) {
   .mt-hero {
-    padding: 16px 0 0;
+    padding: 56px 0 0;
   }
   .mt-title {
     font-size: 26px;
@@ -923,11 +1104,31 @@ section:not(:last-child) {
     margin: 0 20px;
   }
 
+  #mtHeroTitle {
+    margin-top: -30px;
+  }
+
   .mt-one-stop {
+    padding-top: 52px;
+
     &__cards {
       flex-direction: column;
       justify-content: center;
+      align-items: center;
       gap: 24px;
+      margin-bottom: 64px;
+    }
+
+    &__shops {
+      margin-top: 64px;
+    }
+
+    &__reasons {
+      margin-top: 64px;
+    }
+
+    &__reasons-title {
+      font-size: 18px;
     }
 
     &__reasons-img {
@@ -942,6 +1143,28 @@ section:not(:last-child) {
     &__card {
       padding: 24px;
       gap: 35px;
+    }
+
+    &__card-title {
+      font-size: 18px;
+    }
+
+    &__card-text {
+      font-size: 14px;
+    }
+
+    &__card-badge {
+      font-size: 22px;
+    }
+
+    &__card-inner_first {
+      flex-direction: column;
+      gap: 33px;
+
+      img {
+        width: 80px;
+        height: 40px;
+      }
     }
   }
 
@@ -968,7 +1191,7 @@ section:not(:last-child) {
 
     &__filter-item {
       font-size: 14px;
-      padding: 16px 8px 16px 0px;
+      padding: 16px 8px 16px 9px;
 
       &_first {
         padding-left: 8px;
@@ -979,6 +1202,17 @@ section:not(:last-child) {
 
   .mt-main-cases {
     padding: 52px 0 26px 0;
+
+    &__container {
+      padding-left: 20px;
+    }
+
+    &__card {
+      padding: 20px;
+      min-width: 455px;
+      background-size: cover;
+      background-position: left;
+    }
   }
 
   .mt-earn {
@@ -1021,6 +1255,20 @@ section:not(:last-child) {
     &__card-title {
       font-size: 14px;
     }
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      height: auto;
+      text-align: left;
+    }
+
+    &__head {
+      height: 500px;
+      padding: 24px;
+      background: #3C37FF;
+    }
   }
 
   .mt-trusted {
@@ -1038,15 +1286,26 @@ section:not(:last-child) {
     &__logo {
       img {
         height: 10px;
-        width: 100%;
+        width: auto;
+        object-fit: contain;
       }
     }
   }
 
   .mt-about {
+    padding-top: 52px;
+
+    .mt-title {
+      text-align: center;
+    }
+
+    .mt-subtitle {
+      text-align: center;
+    }
 
     &__cards {
       flex-wrap: wrap;
+      justify-content: center;
     }
   }
 
@@ -1058,7 +1317,22 @@ section:not(:last-child) {
   }
 
   .mt-cta-block {
+    width: calc(100% - 40px);
+    height: 474px;
+    padding: 24px;
+    background-image: url("https://monite.com/wp-content/uploads/2023/03/cta-scaled_alt_mob.png");
+    background-size: cover;
+    background-position: bottom;
     margin:  0 20px 56px !important;
+    justify-content: flex-start;
+
+    &_alt {
+      background-image: url("https://monite.com/wp-content/uploads/2023/03/cta-scaled_mob.png");
+    }
+
+    &__button {
+      margin-top: 24px;
+    }
   }
 
   .mt-footer {
@@ -1099,6 +1373,21 @@ section:not(:last-child) {
       flex-direction: column;
       gap: 12px;
       font-size: 14px;
+    }
+  }
+
+  .mt-development {
+
+    padding: 40px 0 44px;
+
+    &__inner {
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+    }
+
+    &__buttons {
+      margin-top: 24px;
     }
   }
 }
