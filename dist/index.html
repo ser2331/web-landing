@@ -53,7 +53,6 @@
           </ul>
         </li>
       </ul>
-
       <div class='mt-header__footer'>
         <div class='mt-footer__copy-mail mt-header__mail'>
           <a href='mailto:hello@monite.com'>hello@monite.com</a>
@@ -80,13 +79,9 @@
       </div>
     </nav>
     <button class='mt-button mt-header__btn'>Get demo</button>
-    <button class='mt-button_menu' id='buttonMenu'>
-
-    </button>
+    <button class='mt-button_menu' id='buttonMenu'></button>
   </div>
 </section>
-
-
 <section class='mt-hero'>
   <div class='mt-hero__inner'>
     <div class='mt-hero__content'>
@@ -303,14 +298,14 @@
     <p class='mt-subtitle'>63% of SMBs struggle with payments, handling them by hand or using multiple providers for <br/>banking, FX, cards, etc. Meanwhile, 90% would prefer a single solution for all of it.</p>
     <div class='mt-payments__inner'>
       <ul class='mt-payments__filter'>
-        <li class='mt-payments__filter-toogl' id='mtPaymentsToogler'></li>
-        <li class='mt-payments__filter-item mt-payments__filter-item_first mt-payments__filter-item_active' onclick="mtPaymentsToogler('left')" id='mtPaymentsFirstToogl'>
+        <li class='mt-payments__filter-toggle' id='mtPaymentsToggler'></li>
+        <li class='mt-payments__filter-item mt-payments__filter-item_first mt-payments__filter-item_active' onclick="mtPaymentsToggler('left')" id='mtPaymentsFirstToggle'>
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M7.5 13.1625L6.1725 14.4525C5.8244 14.8006 5.35228 14.9962 4.86 14.9962C4.36772 14.9962 3.8956 14.8006 3.5475 14.4525C3.1994 14.1044 3.00384 13.6323 3.00384 13.14C3.00384 12.6477 3.1994 12.1756 3.5475 11.8275L6.9525 8.41501C7.28671 8.07972 7.73702 7.88572 8.21026 7.87315C8.6835 7.86059 9.14347 8.03042 9.495 8.34751L9.585 8.42251C9.72722 8.56175 9.91893 8.63879 10.118 8.63668C10.317 8.63457 10.507 8.55348 10.6462 8.41126C10.7855 8.26904 10.8625 8.07733 10.8604 7.8783C10.8583 7.67928 10.7772 7.48925 10.635 7.35001C10.5927 7.29528 10.5476 7.24271 10.5 7.19251C9.85976 6.63549 9.03175 6.34265 8.18367 6.37328C7.3356 6.40392 6.53087 6.75575 5.9325 7.35751L2.4825 10.77C1.89627 11.4081 1.57921 12.248 1.59756 13.1143C1.6159 13.9806 1.96821 14.8064 2.58092 15.4191C3.19364 16.0318 4.01937 16.3841 4.88568 16.4025C5.752 16.4208 6.5919 16.1037 7.23 15.5175L8.5275 14.25C8.65561 14.1102 8.72604 13.9272 8.72461 13.7376C8.72317 13.548 8.64999 13.366 8.51978 13.2281C8.38957 13.0903 8.212 13.0069 8.0228 12.9948C7.8336 12.9826 7.6468 13.0425 7.5 13.1625V13.1625ZM15.5175 2.48251C14.8866 1.85552 14.0332 1.5036 13.1437 1.5036C12.2543 1.5036 11.4009 1.85552 10.77 2.48251L9.4725 3.75001C9.34439 3.88977 9.27396 4.07287 9.27539 4.26246C9.27682 4.45205 9.35001 4.63406 9.48022 4.77187C9.61042 4.90969 9.788 4.99307 9.9772 5.00525C10.1664 5.01743 10.3532 4.95749 10.5 4.83751L11.7975 3.54751C12.1456 3.19941 12.6177 3.00385 13.11 3.00385C13.6023 3.00385 14.0744 3.19941 14.4225 3.54751C14.7706 3.89561 14.9662 4.36773 14.9662 4.86001C14.9662 5.35229 14.7706 5.82441 14.4225 6.17251L11.0175 9.58501C10.6833 9.9203 10.233 10.1143 9.75974 10.1269C9.28649 10.1394 8.82653 9.9696 8.475 9.65251L8.385 9.57751C8.24278 9.43827 8.05107 9.36123 7.85204 9.36334C7.65302 9.36545 7.46299 9.44654 7.32375 9.58876C7.18451 9.73098 7.10747 9.92269 7.10958 10.1217C7.11169 10.3207 7.19278 10.5108 7.335 10.65C7.38948 10.7057 7.44707 10.7583 7.5075 10.8075C8.14851 11.3628 8.97617 11.6546 9.82372 11.624C10.6713 11.5934 11.4757 11.2427 12.075 10.6425L15.4875 7.23001C16.1185 6.60307 16.4758 5.75193 16.4814 4.86245C16.4871 3.97296 16.1405 3.11738 15.5175 2.48251V2.48251Z" fill="white"/>
           </svg>
           Payment links
         </li>
-        <li class='mt-payments__filter-item' onclick="mtPaymentsToogler('right')" id='mtPaymentsSecondToogl'>
+        <li class='mt-payments__filter-item' onclick="mtPaymentsToggler('right')" id='mtPaymentsSecondToggle'>
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M9.75001 12H5.25001C5.05109 12 4.86033 12.079 4.71968 12.2197C4.57902 12.3603 4.50001 12.5511 4.50001 12.75C4.50001 12.9489 4.57902 13.1397 4.71968 13.2803C4.86033 13.421 5.05109 13.5 5.25001 13.5H9.75001C9.94892 13.5 10.1397 13.421 10.2803 13.2803C10.421 13.1397 10.5 12.9489 10.5 12.75C10.5 12.5511 10.421 12.3603 10.2803 12.2197C10.1397 12.079 9.94892 12 9.75001 12ZM6.75001 7.49999H8.25001C8.44892 7.49999 8.63968 7.42097 8.78034 7.28032C8.92099 7.13967 9.00001 6.9489 9.00001 6.74999C9.00001 6.55108 8.92099 6.36031 8.78034 6.21966C8.63968 6.07901 8.44892 5.99999 8.25001 5.99999H6.75001C6.55109 5.99999 6.36033 6.07901 6.21968 6.21966C6.07902 6.36031 6.00001 6.55108 6.00001 6.74999C6.00001 6.9489 6.07902 7.13967 6.21968 7.28032C6.36033 7.42097 6.55109 7.49999 6.75001 7.49999V7.49999ZM15.75 8.99999H13.5V2.24999C13.5005 2.11783 13.4661 1.98788 13.4003 1.8733C13.3344 1.75872 13.2395 1.66357 13.125 1.59749C13.011 1.53166 12.8817 1.49701 12.75 1.49701C12.6184 1.49701 12.489 1.53166 12.375 1.59749L10.125 2.88749L7.87501 1.59749C7.76099 1.53166 7.63166 1.49701 7.50001 1.49701C7.36835 1.49701 7.23902 1.53166 7.12501 1.59749L4.87501 2.88749L2.62501 1.59749C2.51099 1.53166 2.38166 1.49701 2.25001 1.49701C2.11835 1.49701 1.98902 1.53166 1.87501 1.59749C1.76055 1.66357 1.66559 1.75872 1.59974 1.8733C1.53389 1.98788 1.49948 2.11783 1.50001 2.24999V14.25C1.50001 14.8467 1.73706 15.419 2.15902 15.841C2.58097 16.2629 3.15327 16.5 3.75001 16.5H14.25C14.8467 16.5 15.419 16.2629 15.841 15.841C16.263 15.419 16.5 14.8467 16.5 14.25V9.74999C16.5 9.55108 16.421 9.36031 16.2803 9.21966C16.1397 9.07901 15.9489 8.99999 15.75 8.99999ZM3.75001 15C3.55109 15 3.36033 14.921 3.21968 14.7803C3.07902 14.6397 3.00001 14.4489 3.00001 14.25V3.54749L4.50001 4.40249C4.61576 4.46295 4.74441 4.49452 4.87501 4.49452C5.0056 4.49452 5.13425 4.46295 5.25001 4.40249L7.50001 3.11249L9.75001 4.40249C9.86576 4.46295 9.99441 4.49452 10.125 4.49452C10.2556 4.49452 10.3843 4.46295 10.5 4.40249L12 3.54749V14.25C12.002 14.5058 12.0477 14.7595 12.135 15H3.75001ZM15 14.25C15 14.4489 14.921 14.6397 14.7803 14.7803C14.6397 14.921 14.4489 15 14.25 15C14.0511 15 13.8603 14.921 13.7197 14.7803C13.579 14.6397 13.5 14.4489 13.5 14.25V10.5H15V14.25ZM9.75001 8.99999H5.25001C5.05109 8.99999 4.86033 9.07901 4.71968 9.21966C4.57902 9.36031 4.50001 9.55108 4.50001 9.74999C4.50001 9.9489 4.57902 10.1397 4.71968 10.2803C4.86033 10.421 5.05109 10.5 5.25001 10.5H9.75001C9.94892 10.5 10.1397 10.421 10.2803 10.2803C10.421 10.1397 10.5 9.9489 10.5 9.74999C10.5 9.55108 10.421 9.36031 10.2803 9.21966C10.1397 9.07901 9.94892 8.99999 9.75001 8.99999Z" fill="#111111"/>
           </svg>
@@ -798,17 +793,16 @@
 </footer>
 <script src='./bundle.js'></script>
 
-
 <script>
-  function mtPaymentsToogler (position) {
+  function mtPaymentsToggler (position) {
     if (position === 'right') {
-      document.getElementById('mtPaymentsToogler').style.transform = "translateX(100%) translateZ(0px)"
-      document.getElementById('mtPaymentsSecondToogl').classList.add('mt-payments__filter-item_active')
-      document.getElementById('mtPaymentsFirstToogl').classList.remove('mt-payments__filter-item_active')
+      document.getElementById('mtPaymentsToggler').style.transform = "translateX(100%) translateZ(0px)"
+      document.getElementById('mtPaymentsSecondToggle').classList.add('mt-payments__filter-item_active')
+      document.getElementById('mtPaymentsFirstToggle').classList.remove('mt-payments__filter-item_active')
     } else {
-      document.getElementById('mtPaymentsToogler').style.transform = "translateX(0px) translateZ(0px)"
-      document.getElementById('mtPaymentsFirstToogl').classList.add('mt-payments__filter-item_active')
-      document.getElementById('mtPaymentsSecondToogl').classList.remove('mt-payments__filter-item_active')
+      document.getElementById('mtPaymentsToggler').style.transform = "translateX(0px) translateZ(0px)"
+      document.getElementById('mtPaymentsFirstToggle').classList.add('mt-payments__filter-item_active')
+      document.getElementById('mtPaymentsSecondToggle').classList.remove('mt-payments__filter-item_active')
     }
   }
 </script>
