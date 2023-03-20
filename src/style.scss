@@ -100,6 +100,10 @@ footer .box, footer .copyright {
       }
     }
   }
+
+  &__footer {
+    display: none;
+  }
 }
 
 .mt-hero {
@@ -1541,7 +1545,6 @@ footer .box, footer .copyright {
     margin: 0 auto;
 
     &__container {
-      background-color: #FE66BA;
       height: 52px;
       border: none;
       border-radius: unset;
@@ -1619,6 +1622,20 @@ footer .box, footer .copyright {
         width: 59px;
         height: 11px;
       }
+    }
+
+    &__footer {
+      display: flex;
+      position: absolute;
+      width: 100%;
+      padding: 0 20px;
+      justify-content: space-between;
+    }
+    &__mail {
+      margin: auto 0;
+    }
+    &__social {
+    margin: auto 0;
     }
   }
 
