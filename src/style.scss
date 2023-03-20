@@ -6,6 +6,7 @@ section:not(:last-child) {
   margin-bottom: 0;
 }
 
+
 .mt-header {
   position: fixed;
   max-width: 1432px;
@@ -34,9 +35,9 @@ section:not(:last-child) {
   &__btn {
     margin-right: 12px;
   }
-  .mt-button-mob {
-    position: absolute;
-    visibility: hidden;
+
+  .mt-button_menu {
+    display: none;
   }
 
   &__logo {
@@ -1480,14 +1481,15 @@ section:not(:last-child) {
   }
 }
 
-@media screen and (max-width: 598px) {
+@media screen and (max-width: 768px) {
 
   .mt-header {
-    position: absolute;
+    position: fixed;
     max-width: 100%;
     margin: 0 auto;
 
     &__container {
+      background-color: #FE66BA;
       height: 52px;
       border: none;
       border-radius: unset;
@@ -1497,6 +1499,27 @@ section:not(:last-child) {
 
     &__navbar {
       display: none;
+      top: 0;
+      left: 0;
+      right: 0;
+
+      &_active {
+        display: flex;
+        position: absolute;
+        height: 100vh;
+        background-color: #fff;
+        z-index: 10;
+      }
+    }
+
+    &__list {
+      flex-direction: column;
+      margin: 68px 0 auto 20px;
+    }
+
+    &__item {
+      font-weight: 600;
+      font-size: 26px;
     }
 
     &__btn {
@@ -1513,20 +1536,32 @@ section:not(:last-child) {
       align-items: center;
     }
 
-    .mt-button-mob {
+    .mt-button_menu {
+      display: unset;
       position: relative;
-      visibility: unset;
-      background: #DDDDDD;
       border-radius: 6px;
       width: 24px;
       height: 24px;
       margin-right: 20px;
+      background-color: #DDD;
+      z-index: 10;
+      background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.666606 4.90675L6.66661 8.37342C6.76795 8.43193 6.88291 8.46273 6.99994 8.46273C7.11696 8.46273 7.23193 8.43193 7.33327 8.37342L13.3333 4.90675C13.434 4.84858 13.5178 4.76506 13.5763 4.66447C13.6348 4.56389 13.6659 4.44976 13.6666 4.33342C13.6671 4.21594 13.6365 4.10043 13.578 3.99858C13.5194 3.89673 13.435 3.81215 13.3333 3.75342L7.33327 0.293418C7.23193 0.234906 7.11696 0.204102 6.99994 0.204102C6.88291 0.204102 6.76795 0.234906 6.66661 0.293418L0.666606 3.75342C0.564869 3.81215 0.48046 3.89673 0.421924 3.99858C0.363389 4.10043 0.332806 4.21594 0.333272 4.33342C0.333975 4.44976 0.365112 4.56389 0.423589 4.66447C0.482066 4.76506 0.565847 4.84858 0.666606 4.90675ZM6.99994 1.66675L11.6666 4.33342L6.99994 7.00008L2.33327 4.33342L6.99994 1.66675ZM12.6666 6.44675L6.99994 9.66675L1.33327 6.42008C1.25718 6.37601 1.17313 6.34741 1.08594 6.33596C0.998754 6.3245 0.910163 6.33041 0.82527 6.35334C0.740376 6.37626 0.660858 6.41576 0.591293 6.46955C0.521728 6.52334 0.463492 6.59036 0.419939 6.66675C0.333024 6.81983 0.31018 7.00107 0.356391 7.17093C0.402602 7.34079 0.514118 7.48547 0.666606 7.57342L6.66661 11.0401C6.76795 11.0986 6.88291 11.1294 6.99994 11.1294C7.11696 11.1294 7.23193 11.0986 7.33327 11.0401L13.3333 7.57342C13.4858 7.48547 13.5973 7.34079 13.6435 7.17093C13.6897 7.00107 13.6669 6.81983 13.5799 6.66675C13.5364 6.59036 13.4781 6.52334 13.4086 6.46955C13.339 6.41576 13.2595 6.37626 13.1746 6.35334C13.0897 6.33041 13.0011 6.3245 12.9139 6.33596C12.8268 6.34741 12.7427 6.37601 12.6666 6.42008V6.44675ZM12.6666 9.11342L6.99994 12.3334L1.33327 9.08675C1.25718 9.04267 1.17313 9.01408 1.08594 9.00263C0.998754 8.99117 0.910163 8.99708 0.82527 9.02C0.740376 9.04293 0.660858 9.08243 0.591293 9.13622C0.521728 9.19001 0.463492 9.25703 0.419939 9.33342C0.333024 9.4865 0.31018 9.66774 0.356391 9.83759C0.402602 10.0075 0.514118 10.1521 0.666606 10.2401L6.66661 13.7068C6.76795 13.7653 6.88291 13.7961 6.99994 13.7961C7.11696 13.7961 7.23193 13.7653 7.33327 13.7068L13.3333 10.2401C13.4858 10.1521 13.5973 10.0075 13.6435 9.83759C13.6897 9.66774 13.6669 9.4865 13.5799 9.33342C13.5364 9.25703 13.4781 9.19001 13.4086 9.13622C13.339 9.08243 13.2595 9.04293 13.1746 9.02C13.0897 8.99708 13.0011 8.99117 12.9139 9.00263C12.8268 9.01408 12.7427 9.04267 12.6666 9.08675V9.11342Z' fill='%233B3B3B'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+
+
+      &::after {
+        content: '';
+        position: absolute;
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.94004 6.00012L11.14 1.80679C11.2656 1.68125 11.3361 1.51099 11.3361 1.33346C11.3361 1.15592 11.2656 0.985659 11.14 0.860124C11.0145 0.734588 10.8442 0.664062 10.6667 0.664062C10.4892 0.664062 10.3189 0.734588 10.1934 0.860124L6.00004 5.06012L1.80671 0.860124C1.68117 0.734588 1.51091 0.664063 1.33337 0.664063C1.15584 0.664063 0.985576 0.734588 0.860041 0.860124C0.734505 0.985659 0.66398 1.15592 0.66398 1.33346C0.66398 1.51099 0.734505 1.68125 0.860041 1.80679L5.06004 6.00012L0.860041 10.1935C0.797555 10.2554 0.747959 10.3292 0.714113 10.4104C0.680267 10.4916 0.662842 10.5788 0.662842 10.6668C0.662842 10.7548 0.680267 10.8419 0.714113 10.9232C0.747959 11.0044 0.797555 11.0781 0.860041 11.1401C0.922016 11.2026 0.99575 11.2522 1.07699 11.2861C1.15823 11.3199 1.24537 11.3373 1.33337 11.3373C1.42138 11.3373 1.50852 11.3199 1.58976 11.2861C1.671 11.2522 1.74473 11.2026 1.80671 11.1401L6.00004 6.94012L10.1934 11.1401C10.2554 11.2026 10.3291 11.2522 10.4103 11.2861C10.4916 11.3199 10.5787 11.3373 10.6667 11.3373C10.7547 11.3373 10.8419 11.3199 10.9231 11.2861C11.0043 11.2522 11.0781 11.2026 11.14 11.1401C11.2025 11.0781 11.2521 11.0044 11.286 10.9232C11.3198 10.8419 11.3372 10.7548 11.3372 10.6668C11.3372 10.5788 11.3198 10.4916 11.286 10.4104C11.2521 10.3292 11.2025 10.2554 11.14 10.1935L6.94004 6.00012Z' fill='black'/%3E%3C/svg%3E");
+      }
     }
 
     &__logo {
       position: absolute;
       left: 0;
       padding-left: 20px;
+      z-index: 11;
 
       svg {
         width: 59px;
@@ -1536,7 +1571,31 @@ section:not(:last-child) {
   }
 
   .mt-hero {
-    margin-top: 16px;
+    margin-top: 68px;
+    padding: 0;
+
+    &__inner {
+      margin: 0 auto;
+    }
+
+    &__content {
+      gap: 24px;
+      margin: 0 20px;
+    }
+
+    &__partners {
+      gap: 7px;
+    }
+
+    &__partner {
+      border: 1px solid #F4F4F4;
+      border-radius: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 25px;
+    }
   }
 
   .mt-earn {
@@ -1544,29 +1603,55 @@ section:not(:last-child) {
 
     .mt-title {
       width: 226px;
+      margin: 0 20px 24px;
     }
+
     .mt-subtitle {
       width: 254px;
+      margin: 0 20px;
+    }
+
+    .mt-container {
+      margin: 0 auto;
     }
 
     &__inner {
-      margin-top: 32px;
+      margin: 32px 0;
     }
+
+    &__cards-inner {
+      margin: 0 20px;
+    }
+
     &__head-item {
       font-size: 14px;
     }
+
     &__head-title_alt {
       font-size: 18px;
       font-weight: 600;
     }
   }
 
-  .mt-one-stop {
-    .mt-title {
-      font-size: 22px;
+  .mt-payments {
+    .mt-badge {
+      margin: 0 20px;
     }
-    &__card-text_alt {
-      font-size: 10px;
+
+    .mt-title {
+      margin: 12px 20px 24px;
+    }
+
+    .mt-subtitle {
+      margin: 0 20px;
+    }
+
+    .mt-container {
+      margin: 0 auto;
+    }
+
+    &__filter {
+      margin: 0 auto 24px;
     }
   }
 
@@ -1588,11 +1673,9 @@ section:not(:last-child) {
     }
 
     &__card {
-      width: 280px;
+      min-width: 280px;
       height: 455px;
       gap: 10px;
-      background-size: 280px 455px;
-
     }
 
     &__card-title {
@@ -1618,6 +1701,32 @@ section:not(:last-child) {
     }
   }
 
+  .mt-one-stop {
+    .mt-title {
+      font-size: 22px;
+    }
+
+    &__card-text_alt {
+      font-size: 10px;
+    }
+  }
+
+  .mt-development {
+
+    &__card {
+      padding: 44px;
+      gap: 9px;
+    }
+
+    &__card-title {
+      font-size: 18px;
+    }
+
+    &__card-subtitle {
+      font-size: 14px;
+    }
+  }
+
   .mt-about {
 
     &__card {
@@ -1625,9 +1734,15 @@ section:not(:last-child) {
       gap: 24px;
       font-size: 14px;
     }
+
     &__card-text {
       width: 241px;
       font-size: 14px;
     }
   }
+
+  .mt-footer__social {
+    align-items: center;
+  }
+
 }

@@ -30,3 +30,10 @@ setTimeout(()=>{
 //   }
 //   mtHeroTitle.innerHTML = mtHeroArrayTitles[2]
 // }, 1500)
+const headerMenu = document.getElementById("headerMenu")
+
+const buttonMenu = document.getElementById("buttonMenu")
+function switchBurgerMenu() {
+  headerMenu.classList.toggle('mt-header__navbar_active');
+}
+buttonMenu.addEventListener("click", switchBurgerMenu);
