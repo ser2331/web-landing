@@ -16,6 +16,30 @@ function changeText() {
   mtHeroTitle.innerHTML = mtHeroArrayTitles[loopItem];
 }
 
+const switchCurrentItem = () => {
+  if (window.innerWidth > 991) {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY
+    const mtEarnStickyFirst = document.getElementById('mtEarnStickyFirst')
+    const mtEarnStickySecond = document.getElementById('mtEarnStickySecond')
+    const mtEarnStickyThird = document.getElementById('mtEarnStickyThird')
+
+    if (scrollTop < 1465) {
+      mtEarnStickyFirst.classList.add('mt-earn__head-inner_active')
+      mtEarnStickySecond.classList.remove('mt-earn__head-inner_active')
+      mtEarnStickyThird.classList.remove('mt-earn__head-inner_active')
+
+    } else if (scrollTop > 1665 && scrollTop < 1964) {
+      mtEarnStickySecond.classList.add('mt-earn__head-inner_active')
+      mtEarnStickyFirst.classList.remove('mt-earn__head-inner_active')
+      mtEarnStickyThird.classList.remove('mt-earn__head-inner_active')
+    } else if (scrollTop > 1965 && scrollTop < 2264) {
+      mtEarnStickyThird.classList.add('mt-earn__head-inner_active')
+      mtEarnStickyFirst.classList.remove('mt-earn__head-inner_active')
+      mtEarnStickySecond.classList.remove('mt-earn__head-inner_active')
+    }
+  }
+}
+window.addEventListener('scroll', switchCurrentItem)
 
 //
 setTimeout(()=>{

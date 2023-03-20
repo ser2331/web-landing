@@ -6,6 +6,13 @@ section:not(:last-child) {
   margin-bottom: 0;
 }
 
+.footer_cta {
+  display: none;
+}
+
+footer .box, footer .copyright {
+  display: none;
+}
 
 .mt-header {
   position: fixed;
@@ -219,7 +226,6 @@ section:not(:last-child) {
   &__inner {
     bottom: 0;
     top: 20px;
-    position: sticky;
     margin-top: 90px;
     border-radius: 10px;
     height: 2100px;
@@ -227,7 +233,6 @@ section:not(:last-child) {
   }
 
   &__head {
-    position: sticky;
     height: 700px;
     top: 0;
     background-size: cover;
@@ -252,12 +257,41 @@ section:not(:last-child) {
     }
   }
 
-  &__head-inner {
+  &__content {
+    background: #3C37FF;
+    border-radius: 10px;
     display: flex;
+    gap: 144px;
+    justify-content: center;
+    padding-top: 163px;
+    margin-top: 90px;
+  }
+
+  &__images {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+  }
+
+  &__head-inner {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     max-width: 413px;
+    position: sticky;
+    display: none;
+
+    &_active {
+      display: flex;
+    }
+  }
+
+  &__head-sticky {
+    position: sticky;
+    top: calc(50vh - 162px);
+    align-self: flex-start;
+    margin-bottom: 90px;
   }
 
   &__head-title {
@@ -270,11 +304,6 @@ section:not(:last-child) {
     &_alt {
       margin-top: 57px;
     }
-  }
-
-  &__head-inner {
-    display: flex;
-    flex-direction: column;
   }
 
   &__head-list {
@@ -1354,10 +1383,31 @@ section:not(:last-child) {
       text-align: left;
     }
 
+    &__images {
+      display: none;
+    }
+
     &__head {
       height: 500px;
       padding: 24px;
       background: #3C37FF;
+    }
+
+    &__head-inner {
+      display: flex;
+    }
+
+    &__head-sticky {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      padding: 0 20px;
+      margin-bottom: 32px;
+    }
+
+    &__content {
+      padding-top: 32px;
+      margin-top: 32px;
     }
   }
 
