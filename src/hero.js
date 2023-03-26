@@ -63,6 +63,3 @@ function switchBurgerMenu() {
   document.body.classList.toggle('body_lock');
 }
 buttonMenu.addEventListener("click", switchBurgerMenu);
-
-
-

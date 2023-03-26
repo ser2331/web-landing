@@ -118,6 +118,7 @@ footer .box, footer .copyright {
   padding: 47px 0 24px 0;
   position: relative;
   overflow: hidden;
+  margin-left: 20px;
 
   .mt-subtitle {
     opacity: 1;
@@ -799,6 +800,8 @@ footer .box, footer .copyright {
   &__card-inner {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+
   }
 }
 
@@ -1047,6 +1050,13 @@ footer .box, footer .copyright {
   &__social {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+
+  &_logo {
+    a {
+      display: flex;
+    }
   }
 
   &__socials {
@@ -1055,6 +1065,8 @@ footer .box, footer .copyright {
 
     li {
       a {
+        display: flex;
+
         img {
           width: 32px;
           height: 32px;
@@ -1210,6 +1222,7 @@ footer .box, footer .copyright {
   .mt-hero {
     padding: 56px 0 0;
   }
+
   .mt-title {
     font-size: 26px;
     letter-spacing: -0.01em;
@@ -1578,7 +1591,6 @@ footer .box, footer .copyright {
       left: 0;
       right: 0;
 
-
       &_active {
         display: flex;
         position: absolute;
@@ -1643,7 +1655,6 @@ footer .box, footer .copyright {
         transition: all .4s ease-in-out;
       }
     }
-
 
     &__logo {
       position: absolute;
@@ -1863,4 +1874,7 @@ footer .box, footer .copyright {
     }
   }
 
+  .mt-footer {
+    padding: 44px 0 32px;
+  }
 }
