@@ -368,6 +368,14 @@
 }
 
 @media screen and (max-width: 1144px) {
+
+  .mt-backed {
+
+    &__people {
+      gap: 10px;
+    }
+  }
+
   .mt-about_alt {
 
     &__container {
@@ -390,10 +398,11 @@
 @media screen and (max-width: 991px) {
 
   .mt-hero_about {
-    padding-top: 68px;
+    display: block;
+    padding-top: 90px;
     padding-bottom: 0;
     background-image: unset;
-    width: 100%;
+    margin: 0;
 
     .mt-hero__content {
       text-align: center;
@@ -407,7 +416,7 @@
     }
 
     &__images {
-      display: block;
+      display: flex;
     }
   }
 
@@ -420,10 +429,8 @@
     }
 
     .mt-container_scroll {
-      display: inline-block;
       max-width: 100%;
       margin: 0 20px;
-      flex-wrap: nowrap;
     }
 
     &__container {
@@ -431,7 +438,9 @@
     }
 
     &__cards {
+      display: flex;
       gap: 26px;
+      flex-wrap: nowrap;
     }
   }
 
@@ -452,39 +461,24 @@
 @media screen and (max-width: 768px) {
 
   .mt-hero_about {
-    margin: 68px auto 0;
     width: 100%;
+    padding-top: 68px;
 
-    .mt-hero__title {
+    .mt-title {
       margin: 0 36px;
+
+      br {
+        display: none;
+      }
     }
     .mt-subtitle {
       margin: 0 20px;
     }
 
-    &__inner {
-      margin: 0 auto;
-      display: flex;
-    }
-
     &__content {
       display: flex;
-      gap: 32px;
-      margin: 0;
-    }
+      gap: 24px;
 
-    &__partners {
-      gap: 7px;
-    }
-
-    &__partner {
-      border: 1px solid #F4F4F4;
-      border-radius: 4px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 50px;
-      height: 25px;
     }
 
     &__images {
@@ -508,20 +502,12 @@
       margin: 0;
     }
 
-    .mt-people__name {
-      text-align: center;
-    }
-
-    .mt-people__position {
-
-    }
-
     &__people {
       display: flex;
       position: relative;
       max-width: 735px;
       margin: 48px auto 62px;
-      gap: 2px;
+      gap: 32px 5px;
       flex-wrap: wrap;
       justify-content: center;
     }
@@ -536,7 +522,6 @@
 
     .mt-backed__photo {
       border: unset;
-
     }
 
     .mt-backed__logo_alt {
@@ -575,8 +560,9 @@
     }
     .mt-container_scroll {
       max-width: 100%;
-      padding: 0;
+      padding: 0 20px;
       overflow: auto;
+      margin: 0;
     }
 
     &__cards {
