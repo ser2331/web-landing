@@ -16,7 +16,7 @@ function changeText() {
   mtHeroTitle.innerHTML = mtHeroArrayTitles[loopItem];
 }
 
-const switchCurrentItem = () => {
+const switchCurrentItem = (item, step) => {
   if (window.innerWidth > 991) {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY
     const mtEarnStickyFirst = document.getElementById('mtEarnStickyFirst')
@@ -63,3 +63,7 @@ function switchBurgerMenu() {
   document.body.classList.toggle('body_lock');
 }
 buttonMenu.addEventListener("click", switchBurgerMenu);
+
+
+
+
