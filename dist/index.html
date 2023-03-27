@@ -759,6 +759,7 @@
 
 <script>
   function mtPaymentsToggler (position) {
+    console.log('position', position)
     if (position === 'right') {
       document.getElementById('mtPaymentsToggler').style.transform = "translateX(100%) translateZ(0px)"
       document.getElementById('mtPaymentsSecondToggle').classList.add('mt-payments__filter-item_active')

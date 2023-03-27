@@ -1,0 +1,250 @@
+.mt-hero_ap-page {
+  display: flex;
+  margin: 0;
+  padding-top: 180px;
+  //background-image: url('https://monite.com/wp-content/uploads/2023/03/mt-about_hero.png');
+  //background-repeat: no-repeat;
+  //background-position: bottom;
+  //background-size: contain;
+
+  .mt-hero__inner {
+    display: flex;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .mt-hero__content {
+    align-items: center;
+    width: 722px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .mt-subtitle {
+    max-width: 569px;
+  }
+
+  .mt-hero_ap-page__subtitle {
+    background: linear-gradient(180deg, #3C37FF 0%, #33DAFF 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .mt-hero_app-page-btn {
+    font-family: 'Satoshi', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.01em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 17px 34px;
+  }
+
+  &__images {
+    display: none;
+  }
+
+  .mt-payment-content {
+    display: flex;
+    position: relative;
+
+    .pay-bills {
+      height: 276.12px;
+      width: 409.52px;
+      background: white;
+      filter: drop-shadow(0px 0px 17px rgba(0, 0, 0, 0.12));
+      border-radius: 9px;
+    }
+
+    .choice-methods {
+      width: 316px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: 'Faktum', serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 10.0407px;
+      line-height: 14px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #3C37FF;
+
+      .method-position {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 9px 16px;
+        background: rgba(60, 55, 255, 0.05);
+        border: 2.15157px solid #3C37FF;
+        border-radius: 5.73753px;
+        position: relative;
+
+        .card {
+          width: 24px;
+          background-image: url("./images/mt-card.svg");
+          background-repeat: no-repeat;
+          background-position: center 268px;
+          background-size: contain;
+        }
+        span::before, span::after {
+          display: none !important;
+        }
+
+        .title {
+
+        }
+      }
+      .card-position {
+        margin-bottom: 68px;
+      }
+      .method-position:after, :before {
+        display: block;
+        background-color: #3C37FF;
+        border-radius: 500px;
+        top: 12px;
+        content: "";
+        height: 8px;
+        position: absolute;
+        width: 8px;
+      }
+
+      .method-position:after {
+        right: -5px;
+      }
+
+      .method-position:before {
+        left: -5px;
+      }
+    }
+
+    //==============> brace
+    .brace-l, .brace-r {
+      //width: 92px;
+      //display: flex;
+      //flex-wrap: wrap;
+    }
+
+    .braces-wrapper-top, .braces-wrapper-bottom {
+      position: absolute;
+      display: flex;
+    }
+
+    .brace-l .braces-wrapper-top {
+      top: 0;
+      left: 163px;
+      z-index: 2;
+
+      .left-brace {
+        position: relative;
+        border-bottom: 1.5px #3C37FF solid;
+        border-right: 1.5px #3C37FF solid;
+        border-bottom-right-radius: 10px;
+        width: 108px;
+        height: 33px;
+        top: 28px;
+        left: 157px;
+      }
+
+      .right-brace {
+        position: relative;
+        border-top: 1.5px #3C37FF solid;
+        border-left: 1.5px #3C37FF solid;
+        border-top-left-radius: 10px;
+        width: 108px;
+        top: 18px;
+        height: 33px;
+        left: 156px;
+      }
+    }
+
+    .brace-l .braces-wrapper-bottom {
+      .left-brace {
+        position: relative;
+        border-top: 1.5px #3C37FF solid;
+        border-right: 1.5px #3C37FF solid;
+        border-top-right-radius: 10px;
+        width: 108px;
+        height: 55px;
+        top: 60px;
+        right: 90px;
+      }
+
+      .right-brace {
+        position: relative;
+        border-bottom: 1.5px #3C37FF solid;
+        border-left: 1.5px #3C37FF solid;
+        border-bottom-left-radius: 10px;
+        width: 108px;
+        height: 55px;
+        top: 68px;
+        right: 91px;
+      }
+    }
+
+    .brace-r .braces-wrapper-top {
+      .left-brace {
+        position: relative;
+        border-top: 1.5px #3C37FF solid;
+        border-right: 1.5px #3C37FF solid;
+        border-top-right-radius: 10px;
+        width: 72px;
+        height: 44px;
+        top: 18px;
+        right: 122px;
+      }
+
+      .right-brace {
+        position: relative;
+        border-bottom: 1.5px #3C37FF solid;
+        border-left: 1.5px #3C37FF solid;
+        border-bottom-left-radius: 10px;
+        width: 50px;
+        height: 30px;
+        top: 42px;
+        right: 123px;
+      }
+    }
+
+    .brace-r .braces-wrapper-bottom {
+      .left-brace {
+        position: relative;
+        border-bottom: 1.5px #3C37FF solid;
+        border-right: 1.5px #3C37FF solid;
+        border-bottom-right-radius: 10px;
+        width: 32px;
+        height: 44px;
+        top: 78px;
+        right: 82px;
+      }
+
+      .right-brace {
+        position: relative;
+        border-top: 1.5px #3C37FF solid;
+        border-left: 1.5px #3C37FF solid;
+        border-top-left-radius: 10px;
+        width: 48px;
+        height: 26px;
+        top: 71px;
+        right: 83px;
+      }
+    }
+
+    //==============> brace
+
+    .payment-result {
+      width: 385px;
+      height: 252px;
+      background: white;
+      filter: drop-shadow(0px 0px 17px rgba(0, 0, 0, 0.12));
+      border-radius: 9px;
+    }
+  }
+}

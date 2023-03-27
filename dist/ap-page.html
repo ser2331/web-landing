@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/html'>
+<head>
+  <title>monite</title>
+  <link rel='stylesheet' href='https://monite.com/wp-content/themes/monite/css/main.min.css?ver=6.1.1' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+</head>
+<body>
+
+
+<section class='mt-header'>
+  <div class='mt-header__container'>
+    <div class='mt-footer-logo mt-header__logo'>
+      <a href='https://monite.com/'>
+        <svg width='104' height='19' viewBox='0 0 104 19' fill='none' xmlns='http://www.w3.org/2000/svg'>
+          <path fill-rule='evenodd' clip-rule='evenodd'
+                d='M30.009 1.98042C29.4629 0.368097 28.459 0 27.9814 0H24.4921V18.56H27.2847V2.81397L28.0742 5.03624L33.1317 18.56H36.5571L41.5888 5.03624L42.4056 2.94173V18.56H45.1983V0H41.6983C41.2268 0 40.3218 0.330071 39.7605 1.73857L36.4005 11.1889L34.8459 16.1202L33.2914 11.1889L30.0166 1.97434L30.009 1.98194V1.98042Z'
+                fill='#111111' />
+          <path fill-rule='evenodd' clip-rule='evenodd'
+                d='M53.9289 5.5498C50.2464 5.5498 47.2499 8.15538 47.2499 12.1953C47.2499 16.2353 50.2449 18.8408 53.9289 18.8408C57.6129 18.8408 60.6337 16.2353 60.6337 12.1953C60.6337 8.15538 57.6387 5.5498 53.9289 5.5498ZM53.9289 16.3691C51.2518 16.3691 49.9802 15.0397 49.9802 12.1953C49.9802 9.35094 51.2518 8.02153 53.9289 8.02153C56.6059 8.02153 57.9034 9.35094 57.9034 12.1953C57.9034 15.0397 56.6318 16.3691 53.9289 16.3691Z'
+                fill='#111111' />
+          <path fill-rule='evenodd' clip-rule='evenodd'
+                d='M69.8832 5.5498C67.3948 5.5498 66.0426 6.85183 65.4357 8.89462V5.81447H62.7343V18.5579H65.4357V12.5589C65.4357 9.61104 66.8122 8.02001 68.9569 8.02001C70.6772 8.02001 71.7374 9.00262 71.7374 10.9131V18.561H74.4388V10.7275C74.4388 7.35378 72.8767 5.5498 69.8832 5.5498Z'
+                fill='#111111' />
+          <path fill-rule='evenodd' clip-rule='evenodd'
+                d='M80.1206 1.87312C80.1464 3.02913 79.4893 3.6847 78.2801 3.6847C77.0708 3.6847 76.4655 3.0276 76.4381 1.87312C76.4122 0.74449 77.0967 0.140628 78.2801 0.140628C79.4391 0.139107 80.0947 0.742969 80.1206 1.87312Z'
+                fill='#111111' />
+          <path d='M79.6106 5.78369H76.9061V18.5606H79.6106V5.78369Z' fill='#111111' />
+          <path fill-rule='evenodd' clip-rule='evenodd'
+                d='M90.7562 8.26172V5.85236H86.8942V1.95996H84.1958V5.85236H81.5233V8.26172H84.1958V15.0396C84.1958 17.1584 85.5982 18.5608 87.714 18.5608H90.3607V16.1515H86.8942V8.26172H90.7562Z'
+                fill='#111111' />
+          <path fill-rule='evenodd' clip-rule='evenodd'
+                d='M97.9858 5.5498C94.3307 5.5498 91.7343 8.23448 91.7343 12.2212C91.7343 16.2079 94.2501 18.8393 98.1181 18.8393C100.715 18.8393 103.261 16.9441 103.656 14.6397H101.27C100.687 16.182 99.9191 16.6323 98.144 16.6323C95.7605 16.6323 94.6729 15.6223 94.4889 13.0441H103.971C103.997 12.5391 103.997 12.3261 103.997 11.9276C103.999 8.02153 101.534 5.5498 97.9843 5.5498H97.9858ZM94.5178 11.0515C94.7566 8.73795 95.8944 7.67625 98.0147 7.67625C100.135 7.67625 101.194 8.60714 101.299 11.0515H94.5178Z'
+                fill='#111111' />
+          <path fill-rule='evenodd' clip-rule='evenodd'
+                d='M19.8922 14.2006C20.3835 13.828 20.782 13.0994 20.782 12.5716V5.98842C20.782 5.46061 20.382 4.73202 19.8922 4.35936L14.2491 0H8.59375L18.7073 7.65246C19.1986 8.02512 19.5971 8.75371 19.5971 9.28152C19.5971 9.80933 19.1971 10.5379 18.7073 10.9106L8.59375 18.56H14.2491L19.8922 14.1991V14.2006Z'
+                fill='#3C37FF' />
+          <path fill-rule='evenodd' clip-rule='evenodd'
+                d='M11.1448 14.3527C11.6361 13.9801 12.0346 13.2515 12.0346 12.7237V5.83632C12.0346 5.30851 11.6346 4.57992 11.1448 4.20726L5.65531 0H0L10.112 7.65246C10.6033 8.02512 11.0018 8.75371 11.0018 9.28152C11.0018 9.80933 10.6018 10.5379 10.112 10.9106L0 18.56H5.65531L11.1463 14.3512L11.1448 14.3527Z'
+                fill='#3C37FF' />
+        </svg>
+      </a>
+    </div>
+    <nav class='mt-header__navbar' id='headerMenu'>
+      <ul class='mt-header__list'>
+        <li class='mt-header__item'>Products
+          <ul class='mt-header__sublist'>
+            <li class='mt-header__subitem'><a href='https://monite.com/ap-automation/'>AP Automation</a></li>
+            <li class='mt-header__subitem'><a href='https://monite.com/invoicing-api/'>AR Automation</a></li>
+            <li class='mt-header__subitem'><a href='https://monite.com/payments/'>Payments</a></li>
+            <li class='mt-header__subitem'><a href='https://monite.com/invoice-payment-link/'>Payment links</a></li>
+          </ul>
+        </li>
+        <li class='mt-header__item'>Solutions
+          <ul class='mt-header__sublist'>
+            <li class='mt-header__subitem'><a href='#'>7777777?????????</a></li>
+            <li class='mt-header__subitem'><a href='#'>?????????</a></li>
+            <li class='mt-header__subitem'><a href='#'>?????????</a></li>
+          </ul>
+        </li>
+        <li class='mt-header__item'>Docs + Resources
+          <ul class='mt-header__sublist'>
+            <li class='mt-header__subitem'><a href='https://docs.monite.com/'>API docs</a></li>
+            <li class='mt-header__subitem'><a href='https://portal.sandbox.monite.com/signin'>Sandbox</a></li>
+            <li class='mt-header__subitem'><a href='https://github.com/team-monite'>Github</a></li>
+            <li class='mt-header__subitem'><a
+              href='https://www.postman.com/monite/workspace/monite-public-workspace/overview'>Postman</a></li>
+            <li class='mt-header__subitem'><a
+              href='https://www.postman.com/monite/workspace/monite-public-workspace/overview'>Postman</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class='mt-header__footer'>
+        <div class='mt-footer__copy-mail mt-header__mail'>
+          <a href='mailto:hello@monite.com'>hello@monite.com</a>
+        </div>
+        <div class='mt-footer__social mt-header__social'>
+          <ul class='mt-footer__socials mt-header__socials'>
+            <li>
+              <a href='https://www.facebook.com/monitehq/'>
+                <img src='https://monite.com/wp-content/uploads/2023/03/facebook_icon.svg' />
+              </a>
+            </li>
+            <li>
+              <a href='https://www.linkedin.com/company/monitehq'>
+                <img src='https://monite.com/wp-content/uploads/2023/03/li_icon.svg' />
+              </a>
+            </li>
+            <li>
+              <a href='https://twitter.com/Monite_'>
+                <img src='https://monite.com/wp-content/uploads/2023/03/twitter_icon.svg' />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <button class='mt-button mt-header__btn'>Get demo</button>
+    <button class='mt-button_menu' id='buttonMenu'></button>
+  </div>
+</section>
+<section class='mt-hero mt-hero_ap-page'>
+  <div class='mt-hero__inner'>
+    <div class='mt-hero__content'>
+      <div class='mt-title mt-hero__title-wrapper'>
+        <h1 class='mt-title mt-hero__title' style='z-index: 2;'>Embed powerful bill pay.</h1>
+        <h2 class='mt-title mt-hero_ap-page__subtitle'>Triple revenue per customer</h2>
+      </div>
+
+      <p class='mt-subtitle' style='z-index: 2; background: #fff;'>
+        Offer world-class accounts payable automation to your business clients, with email collection, OCR,
+        approval workflows, and bill pay by card or SEPA/ACH in one click. Go live with 2 developers in 4 weeks.
+      </p>
+      <a class='mt-button mt-hero_app-page-btn' href='#modal_call' data-fancybox=''>Get demo</a>
+
+      <div class='mt-payment-content'>
+        <div class='pay-bills'>
+
+        </div>
+
+        <div class="brace-l">
+          <div class='braces-wrapper-top'>
+            <div class='left-brace'></div>
+            <div class='right-brace'></div>
+          </div>
+
+          <div class='braces-wrapper-bottom'>
+            <div class='left-brace'></div>
+            <div class='right-brace'></div>
+          </div>
+        </div>
+
+        <div class='choice-methods'>
+          <div class='method-position card-position'>
+            <span class='card'></span>
+            <span class='title'>Card</span>
+          </div>
+          <div class='method-position bank-transfer-position'>Bank transfer – ACH</div>
+        </div>
+
+        <div class="brace-r">
+          <div class='braces-wrapper-top'>
+            <div class='left-brace'></div>
+            <div class='right-brace'></div>
+          </div>
+
+          <div class='braces-wrapper-bottom'>
+            <div class='left-brace'></div>
+            <div class='right-brace'></div>
+          </div>
+        </div>
+
+        <div class='payment-result'>
+
+        </div>
+      </div>
+      <ul class='mt-hero__partners'>
+        <li class='mt-hero__partner'>
+          <img src='https://monite.com/wp-content/uploads/2023/03/klarna_logo.png' width='42' height='9'
+               alt='klarna_logo' />
+        </li>
+        <li class='mt-hero__partner'>
+          <img src='https://monite.com/wp-content/uploads/2023/03/mollie_logo.png' width='52' height='13'
+               alt='mollie_logo' />
+        </li>
+        <li class='mt-hero__partner'>
+          <img src='https://monite.com/wp-content/uploads/2023/03/plaid_logo.png' width='50' height='19'
+               alt='plaid_logo' />
+        </li>
+        <li class='mt-hero__partner'>
+          <img src='https://monite.com/wp-content/uploads/2023/03/paypal_logo.png' width='49' height='13'
+               alt='paypal_logo' />
+        </li>
+        <li class='mt-hero__partner'>
+          <img src='https://monite.com/wp-content/uploads/2023/03/square_logo.png' width='46' height='12'
+               alt='square_logo' />
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+<section class='mt-trusted'>
+  <div class='mt-container'>
+    <h2 class='mt-trusted__title'>Trusted by many B2B platforms</h2>
+    <ul class='mt-trusted__logos'>
+      <li class='mt-trusted__logo'>
+        <img src='https://monite.com/wp-content/uploads/2023/03/finswiss_logo.png' alt='logo1' width='105'
+             height='24' />
+      </li>
+      <li class='mt-trusted__logo'>
+        <img src='https://monite.com/wp-content/uploads/2023/03/intrepid_logo.png' alt='logo2' width='104'
+             height='24' />
+      </li>
+      <li class='mt-trusted__logo'>
+        <img src='https://monite.com/wp-content/uploads/2023/03/entry_logo.png' alt='logo3' width='49' height='24' />
+      </li>
+      <li class='mt-trusted__logo'>
+        <img src='https://monite.com/wp-content/uploads/2023/03/debite_logo.png' alt='logo4' width='72' height='16' />
+      </li>
+      <li class='mt-trusted__logo'>
+        <img src='https://monite.com/wp-content/uploads/2023/03/intrepid_logo.png' alt='logo5' width='104'
+             height='24' />
+      </li>
+      <li class='mt-trusted__logo'>
+        <img src='https://monite.com/wp-content/uploads/2023/03/entry_logo.png' alt='logo6' width='49' height='24' />
+      </li>
+    </ul>
+  </div>
+</section>
+
+<footer class='mt-footer'>
+  <div class='mt-footer__inner'>
+    <div class='mt-footer__nav'>
+      <ul class='mt-footer__nav-menu'>
+        <li class='mt-footer__nav-menu-head'>Company</li>
+        <li class='mt-footer__nav-menu-link'>
+          <a href='https://monite.com/about/'>
+            About
+          </a>
+        </li>
+        <li class='mt-footer__nav-menu-link'>
+          <a href='https://monite.com/press/'>
+            Press
+          </a>
+        </li>
+        <li class='mt-footer__nav-menu-link'>
+          <a href='https://monite.notion.site/Careers-Monite-9ad0d34fcd0e4ec5ba1017aab6df686f'>
+            Careers
+          </a>
+        </li>
+        <li class='mt-footer__nav-menu-link'>
+          <a href='https://docs.monite.com/'>
+            Docs
+          </a>
+        </li>
+        <li class='mt-footer__nav-menu-link'>
+          <a href='https://monite.com/blog/'>
+            Blog
+          </a>
+        </li>
+      </ul>
+      <ul class='mt-footer__nav-menu'>
+        <li class='mt-footer__nav-menu-head'>Products</li>
+        <li class='mt-footer__nav-menu-link'>
+          <a href='https://monite.com/ap-automation/'>
+            AP Automation
+          </a>
+        </li>
+        <li class='mt-footer__nav-menu-link'>
+          <a href='https://monite.com/invoicing-api/'>
+            AP Automation / Invoicing
+          </a>
+        </li>
+        <li class='mt-footer__nav-menu-link'>
+          <a href='https://monite.com/payments/'>
+            Payments
+          </a>
+        </li>
+        <li class='mt-footer__nav-menu-link'>
+          <a href='https://monite.com/invoice-payment-link/'>
+            Payment links
+          </a>
+        </li>
+      </ul>
+      <ul class='mt-footer__nav-menu'>
+        <li class='mt-footer__nav-menu-head'>Developers</li>
+        <li class='mt-footer__nav-menu-link'>
+          <a href='https://docs.monite.com/'>
+            API docs
+          </a>
+        </li>
+        <li class='mt-footer__nav-menu-link'>
+          <a href='https://portal.sandbox.monite.com/'>
+            Sandbox
+          </a>
+        </li>
+        <li class='mt-footer__nav-menu-link'>
+          <a href='https://github.com/team-monite'>
+            Github
+          </a>
+        </li>
+        <li class='mt-footer__nav-menu-link'>
+          <a href='https://www.postman.com/monite/workspace/monite-public-workspace'>
+            Postman
+          </a>
+        </li>
+      </ul>
+      <ul class='mt-footer__nav-menu'>
+        <li class='mt-footer__nav-menu-head'>Resourses</li>
+        <li class='mt-footer__nav-menu-link'>
+          <a href='https://monite.com/imprint/'>
+            Imprint
+          </a>
+        </li>
+        <li class='mt-footer__nav-menu-link'>
+          <a href='https://monite.com/terms/'>
+            Terms
+          </a>
+        </li>
+        <li class='mt-footer__nav-menu-link'>
+          <a href='https://monite.com/data-privacy/'>
+            Data privacy
+          </a>
+        </li>
+        <li class='mt-footer__nav-menu-link'>
+          <a href='https://www.iubenda.com/privacy-policy/91473590'>
+            Privacy
+          </a>
+        </li>
+        <li class='mt-footer__nav-menu-link'>
+          <a href='https://www.iubenda.com/privacy-policy/91473590'>
+            Cookie Policy
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class='mt-footer__social'>
+      <div class='mt-footer-logo'>
+        <a href='https://monite.com/'>
+          <svg width='104' height='19' viewBox='0 0 104 19' fill='none' xmlns='http://www.w3.org/2000/svg'>
+            <path fill-rule='evenodd' clip-rule='evenodd'
+                  d='M30.009 1.98042C29.4629 0.368097 28.459 0 27.9814 0H24.4921V18.56H27.2847V2.81397L28.0742 5.03624L33.1317 18.56H36.5571L41.5888 5.03624L42.4056 2.94173V18.56H45.1983V0H41.6983C41.2268 0 40.3218 0.330071 39.7605 1.73857L36.4005 11.1889L34.8459 16.1202L33.2914 11.1889L30.0166 1.97434L30.009 1.98194V1.98042Z'
+                  fill='#111111' />
+            <path fill-rule='evenodd' clip-rule='evenodd'
+                  d='M53.9289 5.5498C50.2464 5.5498 47.2499 8.15538 47.2499 12.1953C47.2499 16.2353 50.2449 18.8408 53.9289 18.8408C57.6129 18.8408 60.6337 16.2353 60.6337 12.1953C60.6337 8.15538 57.6387 5.5498 53.9289 5.5498ZM53.9289 16.3691C51.2518 16.3691 49.9802 15.0397 49.9802 12.1953C49.9802 9.35094 51.2518 8.02153 53.9289 8.02153C56.6059 8.02153 57.9034 9.35094 57.9034 12.1953C57.9034 15.0397 56.6318 16.3691 53.9289 16.3691Z'
+                  fill='#111111' />
+            <path fill-rule='evenodd' clip-rule='evenodd'
+                  d='M69.8832 5.5498C67.3948 5.5498 66.0426 6.85183 65.4357 8.89462V5.81447H62.7343V18.5579H65.4357V12.5589C65.4357 9.61104 66.8122 8.02001 68.9569 8.02001C70.6772 8.02001 71.7374 9.00262 71.7374 10.9131V18.561H74.4388V10.7275C74.4388 7.35378 72.8767 5.5498 69.8832 5.5498Z'
+                  fill='#111111' />
+            <path fill-rule='evenodd' clip-rule='evenodd'
+                  d='M80.1206 1.87312C80.1464 3.02913 79.4893 3.6847 78.2801 3.6847C77.0708 3.6847 76.4655 3.0276 76.4381 1.87312C76.4122 0.74449 77.0967 0.140628 78.2801 0.140628C79.4391 0.139107 80.0947 0.742969 80.1206 1.87312Z'
+                  fill='#111111' />
+            <path d='M79.6106 5.78369H76.9061V18.5606H79.6106V5.78369Z' fill='#111111' />
+            <path fill-rule='evenodd' clip-rule='evenodd'
+                  d='M90.7562 8.26172V5.85236H86.8942V1.95996H84.1958V5.85236H81.5233V8.26172H84.1958V15.0396C84.1958 17.1584 85.5982 18.5608 87.714 18.5608H90.3607V16.1515H86.8942V8.26172H90.7562Z'
+                  fill='#111111' />
+            <path fill-rule='evenodd' clip-rule='evenodd'
+                  d='M97.9858 5.5498C94.3307 5.5498 91.7343 8.23448 91.7343 12.2212C91.7343 16.2079 94.2501 18.8393 98.1181 18.8393C100.715 18.8393 103.261 16.9441 103.656 14.6397H101.27C100.687 16.182 99.9191 16.6323 98.144 16.6323C95.7605 16.6323 94.6729 15.6223 94.4889 13.0441H103.971C103.997 12.5391 103.997 12.3261 103.997 11.9276C103.999 8.02153 101.534 5.5498 97.9843 5.5498H97.9858ZM94.5178 11.0515C94.7566 8.73795 95.8944 7.67625 98.0147 7.67625C100.135 7.67625 101.194 8.60714 101.299 11.0515H94.5178Z'
+                  fill='#111111' />
+            <path fill-rule='evenodd' clip-rule='evenodd'
+                  d='M19.8922 14.2006C20.3835 13.828 20.782 13.0994 20.782 12.5716V5.98842C20.782 5.46061 20.382 4.73202 19.8922 4.35936L14.2491 0H8.59375L18.7073 7.65246C19.1986 8.02512 19.5971 8.75371 19.5971 9.28152C19.5971 9.80933 19.1971 10.5379 18.7073 10.9106L8.59375 18.56H14.2491L19.8922 14.1991V14.2006Z'
+                  fill='#3C37FF' />
+            <path fill-rule='evenodd' clip-rule='evenodd'
+                  d='M11.1448 14.3527C11.6361 13.9801 12.0346 13.2515 12.0346 12.7237V5.83632C12.0346 5.30851 11.6346 4.57992 11.1448 4.20726L5.65531 0H0L10.112 7.65246C10.6033 8.02512 11.0018 8.75371 11.0018 9.28152C11.0018 9.80933 10.6018 10.5379 10.112 10.9106L0 18.56H5.65531L11.1463 14.3512L11.1448 14.3527Z'
+                  fill='#3C37FF' />
+          </svg>
+        </a>
+      </div>
+      <ul class='mt-footer__socials'>
+        <li>
+          <a href='https://www.facebook.com/monitehq/'>
+            <img src='https://monite.com/wp-content/uploads/2023/03/facebook_icon.svg' />
+          </a>
+        </li>
+        <li>
+          <a href='https://www.linkedin.com/company/monitehq'>
+            <img src='https://monite.com/wp-content/uploads/2023/03/li_icon.svg' />
+          </a>
+        </li>
+        <li>
+          <a href='https://twitter.com/Monite_'>
+            <img src='https://monite.com/wp-content/uploads/2023/03/twitter_icon.svg' />
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class='mt-footer__copy'>
+      <div class='mt-footer__copy-inner'>
+        <p>2022 - 2023 Monite GmbH</p>
+        <p>Friedrichstrasse 6810117 Berlin</p>
+      </div>
+      <div class='mt-footer__copy-mail'>
+        <a href='mailto:hello@monite.com'>hello@monite.com</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src='./bundle.js'></script>
+<script>
+</script>
+</body>
+</html>
