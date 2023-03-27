@@ -1,5 +1,5 @@
 body {
-  font-family: "Faktum", sans-serif;
+  font-family: 'Faktum', sans-serif;
 }
 
 section:not(:last-child) {
@@ -16,27 +16,27 @@ footer .box, footer .copyright {
 
 .mt-header {
   position: fixed;
-  max-width: 1432px;
-  width: 100%;
-  z-index: 10;
-  margin: 4px auto;
   right: 0;
   left: 0;
+  z-index: 10;
+  width: 100%;
+  max-width: 1432px;
+  margin: 4px auto;
 
   &__container {
     display: flex;
-    width: 100%;
-    background-color: #fff;
-    height: 60px;
-    border: 1px solid #E3E3E3;
-    border-radius: 10px;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    border: 1px solid #E3E3E3;
+    border-radius: 10px;
   }
 
   &__navbar {
-    margin-right: auto;
     align-items: center;
+    margin-right: auto;
   }
 
   &__btn {
@@ -53,16 +53,16 @@ footer .box, footer .copyright {
 
   &__list {
     display: flex;
-    list-style-type: none;
     gap: 24px;
-    margin-left: 39px;
     margin-top: 21px;
+    margin-left: 39px;
+    list-style-type: none;
   }
 
   &__item {
     float: left;
-    transition: .3s ease;
     padding-bottom: 21px;
+    transition: .3s ease;
 
     &:hover {
       color: #3C37FF;
@@ -75,30 +75,30 @@ footer .box, footer .copyright {
   }
 
   &__sublist {
+    position: absolute;
+    top: 100%;
     display: none;
     flex-direction: column;
-    position: absolute;
+    width: max-content;
+    padding: 6px;
     list-style: none;
     background: #fff;
     border-radius: 10px;
-    width: max-content;
-    padding: 6px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, .02), 0 6px 8px rgba(0, 0, 0, .06);
-    top: 100%;
+    box-shadow: 0 2px 2px rgb(0 0 0 / 2%), 0 6px 8px rgb(0 0 0 / 6%);
   }
 
   &__subitem {
     display: block;
     width: 100%;
+    margin: 15px 0;
     text-align: left;
     background: #fff;
-    margin: 15px 0;
 
     a {
-      font-size: 18px;
-      color: #0A0A0A;
-      padding: 10px 15px 10px 5px;
       width: 100%;
+      padding: 10px 15px 10px 5px;
+      color: #0A0A0A;
+      font-size: 18px;
 
       &:hover {
         color: #3C37FF;
@@ -115,15 +115,15 @@ footer .box, footer .copyright {
 }
 
 .mt-hero {
-  padding: 47px 0 24px 0;
   position: relative;
-  overflow: hidden;
   margin-left: 20px;
+  padding: 47px 0 24px;
+  overflow: hidden;
 
   .mt-subtitle {
-    opacity: 1;
     margin-top: 0;
     color: #000;
+    opacity: 1;
   }
 
   .mt-trusted__title {
@@ -131,8 +131,8 @@ footer .box, footer .copyright {
   }
 
   &__title {
-    background-color: #fff;
     z-index: 1;
+    background-color: #fff;
 
     span {
       color: #3C37FF;
@@ -140,26 +140,26 @@ footer .box, footer .copyright {
   }
 
   &__inner {
-    display: flex;
-    margin: 0 auto;
-    max-width: 1348px;
     position: relative;
+    display: flex;
+    max-width: 1348px;
+    margin: 0 auto;
   }
 
   &__content {
-    margin-top: 153px;
     display: flex;
     flex-direction: column;
+    gap: 32px;
     align-items: flex-start;
     max-width: 518px;
-    gap: 32px;
+    margin-top: 153px;
   }
 
   &__images {
     position: absolute;
     right: -67px;
-    height: 505px;
     width: 814px;
+    height: 505px;
   }
 
   &__partners {
@@ -169,13 +169,13 @@ footer .box, footer .copyright {
   }
 
   &__partner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
     padding: 0 15px;
     border: 1px solid #F4F4F4;
     border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
   }
 }
 
@@ -189,72 +189,85 @@ footer .box, footer .copyright {
   0% {
     transform: translateY(0%);
   }
+
   5% {
     transform: translateY(-5px);
   }
+
   10% {
     transform: translateY(-10px);
   }
+
   15% {
     transform: translateY(-15px);
   }
+
   20% {
     transform: translateY(-20px);
   }
+
   25% {
     transform: translateY(-25px);
   }
+
   30% {
     transform: translateY(-30px);
   }
+
   35% {
     transform: translateY(-35px);
   }
+
   48% {
     opacity: 0;
   }
+
   56% {
     opacity: 0;
   }
+
   60% {
-    opacity: 0;
     transform: translateY(60%);
+    opacity: 0;
   }
+
   80% {
     opacity: 1;
   }
+
   85% {
     transform: translateY(40%);
   }
+
   100% {
-    opacity: 1;
     transform: translateY(20%);
+    opacity: 1;
   }
 }
 
 .mt-earn {
-  padding: 120px 0 116px 0;
+  padding: 120px 0 116px;
   text-align: center;
 
   &__inner {
-    bottom: 0;
     top: 20px;
-    margin-top: 90px;
-    border-radius: 10px;
+    bottom: 0;
     height: 2100px;
+    margin-top: 90px;
     background-color: #3C37FF;
+    border-radius: 10px;
   }
 
   &__head {
-    height: 700px;
     top: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-    border-radius: 10px;
-    padding: 168px 115px;
     display: flex;
     justify-content: flex-end;
+    height: 700px;
+    padding: 168px 115px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    border-radius: 10px;
 
     &_first {
       background-image: url('https://monite.com/wp-content/uploads/2023/03/earn_bg_first.png');
@@ -270,29 +283,29 @@ footer .box, footer .copyright {
   }
 
   &__content {
-    background: #3C37FF;
-    border-radius: 10px;
     display: flex;
     gap: 144px;
     justify-content: center;
-    padding-top: 163px;
     margin-top: 90px;
+    padding-top: 163px;
+    background: #3C37FF;
+    border-radius: 10px;
   }
 
   &__images {
-    display: flex;
-    flex-direction: column;
     position: sticky;
     top: 0;
+    display: flex;
+    flex-direction: column;
   }
 
   &__head-inner {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    max-width: 413px;
     position: sticky;
     display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 413px;
 
     &_active {
       display: flex;
@@ -307,10 +320,10 @@ footer .box, footer .copyright {
   }
 
   &__head-title {
+    color: #FFF;
     font-weight: 600;
     font-size: 28px;
     line-height: 110%;
-    color: #FFFFFF;
     letter-spacing: -0.01em;
 
     &_alt {
@@ -319,28 +332,28 @@ footer .box, footer .copyright {
   }
 
   &__head-list {
-    margin-top: 32px;
-    gap: 40px;
     display: flex;
     flex-direction: column;
+    gap: 40px;
     align-items: flex-start;
+    margin-top: 32px;
   }
 
   &__head-item {
+    color: #FFF;
     font-weight: 500;
     font-size: 16px;
     line-height: 140%;
     letter-spacing: 0.01em;
-    color: #FFFFFF;
-    opacity: 0.8;
     text-align: left;
+    opacity: 0.8;
   }
 
   &__cards {
-    padding: 0;
-    margin-top: 32px;
     display: flex;
     gap: 7px;
+    margin-top: 32px;
+    padding: 0;
     list-style-type: none;
   }
 
@@ -351,51 +364,51 @@ footer .box, footer .copyright {
   }
 
   &__card {
-    background: #F1F2F5;
-    border-radius: 10px;
-    padding: 35px 0;
-    width: 100%;
-    max-width: 274px;
     display: flex;
+    gap: 24px;
     align-items: center;
     justify-content: center;
-    gap: 24px;
+    width: 100%;
+    max-width: 274px;
+    padding: 35px 0;
+    background: #F1F2F5;
+    border-radius: 10px;
   }
 
   &__card-title {
+    margin: 0;
+    color: #111;
     font-weight: 600;
     font-size: 22px;
     line-height: 140%;
     letter-spacing: -0.01em;
-    color: #111111;
-    margin: 0;
   }
 
   &__cards-head {
+    color: #111;
     font-weight: 600;
     font-size: 28px;
     line-height: 110%;
-    color: #111;
   }
 }
 
 .mt-badge {
   margin-bottom: 12px;
+  color: #707070;
   font-weight: 600;
   font-size: 12px;
   line-height: 110%;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #707070;
 }
 
 .mt-title {
+  align-items: center;
+  color: #111;
   font-weight: 600;
   font-size: 48px;
   line-height: 110%;
-  color: #111;
   letter-spacing: -0.02em;
-  align-items: center;
 
   &_white {
     color: #fff;
@@ -408,11 +421,11 @@ footer .box, footer .copyright {
 
 .mt-subtitle {
   margin-top: 32px;
+  color: #111;
   font-weight: 500;
   font-size: 16px;
   line-height: 140%;
   letter-spacing: 0.01em;
-  color: #111;
   opacity: 0.6;
 
   &_white {
@@ -421,93 +434,93 @@ footer .box, footer .copyright {
 }
 
 .mt-container {
-  margin: 0 auto;
   max-width: 1120px;
+  margin: 0 auto;
 }
 
 .mt-features {
   padding: 120px 0 105px;
-  background-color: #F1F2F5;
   text-align: center;
+  background-color: #F1F2F5;
 
   &__content {
     text-align: left;
   }
 
   &__inner {
-    margin-top: 120px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    margin-top: 120px;
   }
 
   &__caption {
     margin-top: 32px;
+    color: #0A0A0A;
     font-weight: 500;
     font-size: 16px;
     line-height: 140%;
     letter-spacing: 0.01em;
-    color: #0A0A0A;
     text-align: left;
     opacity: 0.6;
   }
 
   &__head {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    max-width: 424px;
     margin-top: 32px;
+    color: #0A0A0A;
     font-weight: 700;
     font-size: 16px;
     line-height: 140%;
     letter-spacing: 0.01em;
-    color: #0A0A0A;
-    max-width: 424px;
     text-align: left;
-    display: flex;
-    gap: 24px;
-    align-items: center;
 
     &::before {
       display: block;
-      content: '';
-      min-width: 4px;
       width: 4px;
+      min-width: 4px;
       height: 108px;
-      border-radius: 10px;
       background: linear-gradient(180deg, #3D38FF 0%, #FE66BA 100%);
+      border-radius: 10px;
+      content: '';
     }
 
     &_small {
-      &:before {
+      &::before {
         height: 68px;
       }
     }
   }
 
   &__list {
-    margin-bottom: 32px;
-    margin-top: 17px;
     display: flex;
     flex-direction: column;
-    list-style-type: none;
     gap: 16px;
+    margin-top: 17px;
+    margin-bottom: 32px;
     padding: 0;
+    list-style-type: none;
   }
 
   &__item {
+    display: flex;
+    gap: 16px;
+    color: #3B3B3B;
     font-weight: 500;
     font-size: 16px;
     line-height: 140%;
     letter-spacing: 0.01em;
-    color: #3B3B3B;
     text-align: left;
-    display: flex;
-    gap: 16px;
 
     &::before {
       display: block;
       width: 24px;
       height: 24px;
+      background-image: url('https://monite.com/wp-content/uploads/2023/03/mt-features__icon.svg');
       content: '';
-      background-image: url("https://monite.com/wp-content/uploads/2023/03/mt-features__icon.svg");
     }
   }
 
@@ -520,40 +533,40 @@ footer .box, footer .copyright {
   background: #F3F3F3;
 
   &__title {
-    text-align: center;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 110%;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: #111111;
     margin-top: 32px;
     margin-bottom: 35px;
+    color: #111;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 110%;
+    letter-spacing: 0.04em;
+    text-align: center;
+    text-transform: uppercase;
   }
 
   &__logos {
-    list-style: none;
     display: flex;
     flex-wrap: wrap;
+    gap: 86px;
     align-items: center;
     justify-content: center;
-    gap: 86px;
     margin-bottom: 32px;
+    list-style: none;
   }
 }
 
 .mt-development {
   padding: 108px 0 120px;
-  background-color: #111111;
+  background-color: #111;
 
   &__subtitle {
     max-width: 446px;
   }
 
   &__buttons {
-    margin-top: 44px;
     display: flex;
     gap: 24px;
+    margin-top: 44px;
   }
 
   &__inner {
@@ -562,42 +575,41 @@ footer .box, footer .copyright {
   }
 
   &__images {
-    background: #302F4D;
-    border-radius: 10px;
     width: 319px;
     height: 411px;
+    background: #302F4D;
+    border-radius: 10px;
   }
 
   &__cards {
-    margin-top: 72px;
     display: flex;
     gap: 8px;
+    margin-top: 72px;
   }
 
   &__card {
-    background: #3B3B3B;
-    border-radius: 10px;
-    padding: 44px;
-    max-width: 368px;
-    width: 100%;
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 17px;
-    position: relative;
+    width: 100%;
+    max-width: 368px;
+    padding: 44px;
+    background: #3B3B3B;
+    border-radius: 10px;
 
     &::after {
       position: absolute;
-      content: '';
-      background-image: url("https://monite.com/wp-content/uploads/2023/03/mt-development__icon.svg");
-      width: 46px;
-      height: 46px;
       top: 61px;
       right: -27px;
       z-index: 1;
+      width: 46px;
+      height: 46px;
+      background-image: url('https://monite.com/wp-content/uploads/2023/03/mt-development__icon.svg');
+      content: '';
     }
 
     &:last-child {
-
       &::after {
         content: unset;
       }
@@ -605,19 +617,19 @@ footer .box, footer .copyright {
   }
 
   &__card-title {
+    color: #FFF;
     font-weight: 600;
     font-size: 22px;
     line-height: 140%;
     letter-spacing: -0.01em;
-    color: #FFFFFF;
   }
 
   &__card-subtitle {
+    color: #FFF;
     font-weight: 500;
     font-size: 16px;
     line-height: 140%;
     letter-spacing: 0.01em;
-    color: #FFFFFF;
     opacity: 0.8;
   }
 }
@@ -631,17 +643,17 @@ footer .box, footer .copyright {
   }
 
   &__filter {
-    margin: 0 auto 32px auto;
-    background: #F3F3F3;
-    border-radius: 310px;
+    position: relative;
     display: flex;
+    gap: 39px;
+    align-items: center;
     max-width: 343px;
     height: 62px;
+    margin: 0 auto 32px;
     padding: 6px;
-    gap: 39px;
     list-style-type: none;
-    position: relative;
-    align-items: center;
+    background: #F3F3F3;
+    border-radius: 310px;
   }
 
   &__filter-toggle {
@@ -659,24 +671,24 @@ footer .box, footer .copyright {
     text-align: center;
     background-color: #3C37FF;
     border-radius: 40px;
-    will-change: transform;
     transition: all .4s;
+    will-change: transform;
   }
 
   &__filter-item {
+    z-index: 2;
+    display: flex;
+    gap: 11px;
+    padding: 16px 38px 16px 0;
     font-weight: 500;
     font-size: 16px;
     line-height: 110%;
-    padding: 16px 38px 16px 0px;
     letter-spacing: -0.01em;
     cursor: pointer;
-    display: flex;
-    gap: 11px;
-    z-index: 2;
 
     &_first {
-      padding-left: 19px;
       padding-right: 19px;
+      padding-left: 19px;
     }
 
     svg path {
@@ -694,14 +706,14 @@ footer .box, footer .copyright {
 }
 
 .mt-one-stop {
-  padding: 120px 0 0 0;
   display: block;
+  padding: 120px 0 0;
 
   &__cards {
-    margin-top: 44px;
-    margin-bottom: 120px;
     display: flex;
     gap: 8px;
+    margin-top: 44px;
+    margin-bottom: 120px;
 
     &_alt {
       margin-bottom: 0;
@@ -709,30 +721,30 @@ footer .box, footer .copyright {
   }
 
   &__card {
-    background: #F1F2F5;
-    border-radius: 10px;
-    padding: 44px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    max-width: 368px;
-    width: 100%;
     gap: 55px;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 368px;
+    padding: 44px;
+    background: #F1F2F5;
+    border-radius: 10px;
 
     &_alt {
-      max-width: 554px;
-      justify-content: space-between;
-      text-align: left;
       gap: 61px;
+      justify-content: space-between;
+      max-width: 554px;
+      text-align: left;
     }
   }
 
   &__card-badge {
+    color: #111;
     font-weight: 600;
     font-size: 38px;
     line-height: 110%;
     letter-spacing: -0.01em;
-    color: #111111;
 
     &_alt {
       color: #3C37FF;
@@ -740,45 +752,45 @@ footer .box, footer .copyright {
   }
 
   &__card-title {
+    color: #3C37FF;
     font-weight: 600;
     font-size: 28px;
     line-height: 110%;
-    color: #3C37FF;
   }
 
   &__card-text {
     margin-top: auto;
+    color: #111;
     font-weight: 500;
     font-size: 16px;
     line-height: 140%;
     letter-spacing: 0.01em;
-    color: #111111;
     opacity: 0.9;
 
     &_alt {
+      max-width: 188px;
       margin-top: 18px;
       font-size: 12px;
       opacity: 1;
-      max-width: 188px;
     }
 
     &_third {
-      opacity: 0.6;
       max-width: 256px;
+      opacity: 0.6;
     }
   }
 
   &__reasons {
-    text-align: center;
     margin-top: 145px;
+    text-align: center;
   }
 
   &__reasons-title {
+    color: #111;
     font-weight: 600;
     font-size: 28px;
     line-height: 110%;
     text-align: center;
-    color: #111111;
   }
 
   &__reasons-img {
@@ -799,15 +811,15 @@ footer .box, footer .copyright {
 
   &__card-inner {
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
+    justify-content: space-between;
 
   }
 }
 
 .mt-about {
-  padding: 120px 0 61px;
   display: block;
+  padding: 120px 0 61px;
 
   &__btn {
     display: flex;
@@ -823,22 +835,22 @@ footer .box, footer .copyright {
   }
 
   &__cards {
-    margin-top: 34px;
-    margin-bottom: 72px;
     display: flex;
     gap: 36px;
+    margin-top: 34px;
+    margin-bottom: 72px;
   }
 
   &__card {
-    background: #F1F2F5;
-    border-radius: 10px;
-    padding: 44px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    max-width: 368px;
-    width: 100%;
     gap: 55px;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 368px;
+    padding: 44px;
+    background: #F1F2F5;
+    border-radius: 10px;
   }
 
   &__card-text {
@@ -858,9 +870,9 @@ footer .box, footer .copyright {
     }
 
     &__btn {
-      padding-left: 44px;
       width: 82px;
       height: 22px;
+      padding-left: 44px;
       font-size: 16px;
       line-height: 140%;
       letter-spacing: 0.01em;
@@ -873,27 +885,27 @@ footer .box, footer .copyright {
 }
 
 .mt-cta-block {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   max-width: 1284px;
-  padding: 59px 0;
-  display: flex;
   margin: 120px auto !important;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: url("https://monite.com/wp-content/uploads/2023/03/CTA-scaled.jpg");
+  padding: 59px 0;
+  text-align: center;
+  background: url('https://monite.com/wp-content/uploads/2023/03/CTA-scaled.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 12px;
 
   &_alt {
-    padding: 77px 82px;
-    background-image: url("https://monite.com/wp-content/uploads/2023/03/CTA.png");
-    background-size: contain;
-    text-align: left;
-    justify-content: flex-start;
     align-items: flex-start;
+    justify-content: flex-start;
+    padding: 77px 82px;
+    text-align: left;
+    background-image: url('https://monite.com/wp-content/uploads/2023/03/CTA.png');
+    background-size: contain;
 
     .mt-title {
       color: #fff;
@@ -910,26 +922,26 @@ footer .box, footer .copyright {
 }
 
 .mt-button {
+  display: flex;
+  width: fit-content;
+  padding: 15px 30px;
+  color: #fff;
   background: linear-gradient(180deg, #3C37FF 0%, #3C37FF 100%);
   border-radius: 10px;
   cursor: pointer;
-  padding: 15px 30px;
-  color: #fff;
-  display: flex;
-  width: fit-content;
 
   &:hover {
-    transition: all .4s;
     background: linear-gradient(180deg, #3C37FF 0%, #FE66BA 100%);
+    transition: all .4s;
   }
 
   &_black {
-    border: 1px solid #FFFFFF;
     background: transparent;
+    border: 1px solid #FFF;
 
     &:hover {
-      background: #fff;
       color: #000;
+      background: #fff;
     }
   }
 }
@@ -938,30 +950,30 @@ footer .box, footer .copyright {
   display: flex;
   flex-direction: column;
   gap: 28px;
+  align-items: center;
   max-width: 927px;
   margin: 0 auto;
-  align-items: center;
 
   &_small {
     max-width: 743px;
   }
 
   &__text {
+    color: #111;
     font-weight: 500;
     font-size: 28px;
     line-height: 130%;
-    color: #111;
-    text-align: center;
     letter-spacing: 0.01em;
+    text-align: center;
   }
 
   &__author {
+    color: #111;
     font-weight: 500;
     font-size: 16px;
     line-height: 140%;
-    text-align: center;
     letter-spacing: 0.01em;
-    color: #111111;
+    text-align: center;
   }
 }
 
@@ -986,23 +998,23 @@ footer .box, footer .copyright {
   }
 
   &__nav-menu-head {
+    color: #111;
     font-weight: 500;
     font-size: 16px;
     line-height: 140%;
     letter-spacing: 0.01em;
-    color: #111111;
     opacity: 0.5;
   }
 
   &__nav-menu-link {
+    color: #111;
     font-weight: 500;
     font-size: 16px;
     line-height: 140%;
     letter-spacing: 0.01em;
-    color: #111111;
 
     a {
-      color: #111111;
+      color: #111;
 
       &:hover {
         opacity: 0.7;
@@ -1015,31 +1027,31 @@ footer .box, footer .copyright {
   }
 
   &__copy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-top: 44px;
     padding-top: 52px;
     border-top: 1px solid #B8B8B8;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 
   &__copy-inner {
     display: flex;
     gap: 50px;
+    color: #111;
     font-weight: 500;
     font-size: 16px;
     line-height: 140%;
     letter-spacing: 0.01em;
-    color: #111111;
     opacity: 0.5;
   }
 
   &__copy-mail a {
+    color: #111;
     font-weight: 500;
     font-size: 16px;
     line-height: 140%;
     letter-spacing: 0.01em;
-    color: #111111;
     opacity: 0.5;
 
     &:hover {
@@ -1049,8 +1061,8 @@ footer .box, footer .copyright {
 
   &__social {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
   }
 
   &_logo {
@@ -1078,80 +1090,79 @@ footer .box, footer .copyright {
 
 .mt-main-cases {
   padding: 120px 0;
-  text-align: center;
   overflow: hidden;
+  text-align: center;
 
   &__cards {
-    margin-top: 44px;
     display: flex;
     gap: 36px;
+    margin-top: 44px;
   }
 
   &__container {
-    padding-left: 10%;
     width: 100%;
     margin: 0 auto;
+    padding-left: 10%;
     overflow: scroll;
   }
 
   &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: flex-end;
+    width: 100%;
+    min-width: 542px;
+    height: 580px;
     padding: 44px;
+    text-align: left;
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
     border-radius: 10px;
-    min-width: 542px;
-    width: 100%;
-    height: 580px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: 24px;
 
     &:nth-child(1) {
-      background-image: url("https://monite.com/wp-content/uploads/2023/03/mt-cases-bg-1.png");
+      background-image: url('https://monite.com/wp-content/uploads/2023/03/mt-cases-bg-1.png');
     }
 
     &:nth-child(2) {
-      background-image: url("https://monite.com/wp-content/uploads/2023/03/mt-cases-bg-2.png");
+      background-image: url('https://monite.com/wp-content/uploads/2023/03/mt-cases-bg-2.png');
     }
 
     &:nth-child(3) {
-      background-image: url("https://monite.com/wp-content/uploads/2023/03/mt-cases-bg-3.png");
+      background-image: url('https://monite.com/wp-content/uploads/2023/03/mt-cases-bg-3.png');
     }
 
     &:nth-child(4) {
-      background-image: url("https://monite.com/wp-content/uploads/2023/03/mt-cases-bg-4.png");
+      background-image: url('https://monite.com/wp-content/uploads/2023/03/mt-cases-bg-4.png');
     }
   }
 
   &__card-title {
+    color: #000;
     font-weight: 600;
     font-size: 28px;
     line-height: 110%;
-    color: #000;
   }
 
   &__card-text {
+    color: #0A0A0A;
     font-weight: 500;
     font-size: 16px;
     line-height: 140%;
     letter-spacing: 0.01em;
-    color: #0A0A0A;
     opacity: 0.6;
   }
 
   &__card-review {
     display: flex;
-    align-items: center;
     gap: 24px;
+    align-items: center;
   }
 }
 
 @media screen and (max-width: 1310px) {
   .mt-hero {
-
     &__images {
       right: -167px;
     }
@@ -1169,18 +1180,18 @@ footer .box, footer .copyright {
     }
 
     &__inner {
-      margin: 0 20px;
       flex-direction: column;
       align-items: center;
+      margin: 0 20px;
     }
 
     &__images {
-      margin-top: 12px;
-      width: 100%;
       position: relative;
-      left: 0;
       right: 0;
+      left: 0;
+      width: 100%;
       height: auto;
+      margin-top: 12px;
     }
 
     &__content {
@@ -1200,18 +1211,17 @@ footer .box, footer .copyright {
 
   .mt-development {
     &__cards {
-      margin-top: 34px;
       flex-direction: column;
       flex-wrap: wrap;
       align-items: center;
+      margin-top: 34px;
     }
 
     &__card {
-
-      &:after {
+      &::after {
+        top: unset;
         right: 45%;
         bottom: -28px;
-        top: unset;
       }
     }
   }
@@ -1262,9 +1272,9 @@ footer .box, footer .copyright {
 
     &__cards {
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
       gap: 24px;
+      align-items: center;
+      justify-content: center;
       margin-bottom: 64px;
     }
 
@@ -1291,8 +1301,8 @@ footer .box, footer .copyright {
     }
 
     &__card {
-      padding: 24px;
       gap: 35px;
+      padding: 24px;
     }
 
     &__card-title {
@@ -1322,9 +1332,9 @@ footer .box, footer .copyright {
     padding: 52px 0 44px;
 
     &__inner {
-      margin-top: 46px;
       flex-direction: column-reverse;
       gap: 45px;
+      margin-top: 46px;
     }
 
     &__head {
@@ -1337,31 +1347,31 @@ footer .box, footer .copyright {
   }
 
   .mt-payments {
-    padding: 73px 0 0 0;
+    padding: 73px 0 0;
 
     &__filter-item {
-      font-size: 14px;
       padding: 16px 8px 16px 9px;
+      font-size: 14px;
 
       &_first {
-        padding-left: 8px;
         padding-right: 8px;
+        padding-left: 8px;
       }
     }
   }
 
   .mt-main-cases {
-    padding: 52px 0 26px 0;
+    padding: 52px 0 26px;
 
     &__container {
       padding-left: 20px;
     }
 
     &__card {
-      padding: 20px;
       min-width: 455px;
-      background-size: cover;
+      padding: 20px;
       background-position: left;
+      background-size: cover;
     }
   }
 
@@ -1386,17 +1396,17 @@ footer .box, footer .copyright {
     }
 
     &__cards {
-      margin-top: 24px;
       justify-content: space-between;
+      margin-top: 24px;
     }
 
     &__card {
       flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      padding: 12px;
       gap: 14px;
+      align-items: flex-start;
+      justify-content: flex-start;
       width: 48%;
+      padding: 12px;
 
       svg {
         width: 24px;
@@ -1434,24 +1444,23 @@ footer .box, footer .copyright {
       display: flex;
       flex-direction: column;
       gap: 32px;
-      padding: 0 20px;
       margin-bottom: 32px;
+      padding: 0 20px;
     }
 
     &__content {
-      padding-top: 32px;
       margin-top: 32px;
       margin-bottom: 32px;
+      padding-top: 32px;
       border-radius: 0;
     }
   }
 
   .mt-trusted {
-
     &__title {
-      font-size: 10px;
       margin-top: 24px;
       margin-bottom: 24px;
+      font-size: 10px;
     }
 
     &__logos {
@@ -1460,8 +1469,8 @@ footer .box, footer .copyright {
 
     &__logo {
       img {
-        height: 10px;
         width: auto;
+        height: 10px;
         object-fit: contain;
       }
     }
@@ -1485,24 +1494,23 @@ footer .box, footer .copyright {
   }
 
   .mt-review {
-
     &__text {
       font-size: 18px;
     }
   }
 
   .mt-cta-block {
+    justify-content: flex-start;
     width: calc(100% - 40px);
     height: 474px;
-    padding: 24px;
-    background-image: url("https://monite.com/wp-content/uploads/2023/03/cta-scaled_alt_mob.png");
-    background-size: cover;
-    background-position: bottom;
     margin: 0 20px 56px !important;
-    justify-content: flex-start;
+    padding: 24px;
+    background-image: url('https://monite.com/wp-content/uploads/2023/03/cta-scaled_alt_mob.png');
+    background-position: bottom;
+    background-size: cover;
 
     &_alt {
-      background-image: url("https://monite.com/wp-content/uploads/2023/03/cta-scaled_mob.png");
+      background-image: url('https://monite.com/wp-content/uploads/2023/03/cta-scaled_mob.png');
     }
 
     &__button {
@@ -1519,8 +1527,8 @@ footer .box, footer .copyright {
     }
 
     &__nav-menu {
-      width: 50%;
       gap: 10px;
+      width: 50%;
     }
 
     &__nav-menu-head {
@@ -1536,11 +1544,11 @@ footer .box, footer .copyright {
     }
 
     &__copy {
-      padding-top: 44px;
       flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
       gap: 12px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding-top: 44px;
       font-size: 14px;
     }
 
@@ -1567,7 +1575,6 @@ footer .box, footer .copyright {
 }
 
 @media screen and (max-width: 768px) {
-
   .body_lock {
     overflow: hidden;
   }
@@ -1578,33 +1585,34 @@ footer .box, footer .copyright {
     margin: 0 auto;
 
     &__container {
+      align-items: center;
+      justify-content: right;
       height: 52px;
       border: none;
       border-radius: unset;
-      align-items: center;
-      justify-content: right;
     }
 
     &__navbar {
-      display: none;
       top: 0;
-      left: 0;
       right: 0;
+      left: 0;
+      display: none;
 
       &_active {
-        display: flex;
         position: absolute;
+        z-index: 10;
+        display: flex;
         height: 100vh;
         background-color: #fff;
-        z-index: 10;
-        transition: all 0.7s ease;
         transform: translateX(-150%);
+        transition: all 0.7s ease;
         animation: ani 0.6s forwards;
 
         @keyframes ani {
           0% {
             transform: translateX(-150%);
           }
+
           100% {
             transform: translateY(0);
           }
@@ -1624,30 +1632,30 @@ footer .box, footer .copyright {
 
     &__btn {
       display: flex;
+      align-items: center;
       width: 65px;
       height: 24px;
+      margin-right: 6px;
       padding: 4px 8px;
-      border-radius: 6px;
       font-size: 10px;
       line-height: 140%;
-      text-align: center;
       letter-spacing: 0.01em;
-      margin-right: 6px;
-      align-items: center;
+      text-align: center;
+      border-radius: 6px;
     }
 
     .mt-button_menu {
-      display: unset;
       position: relative;
-      border-radius: 6px;
+      z-index: 10;
+      display: unset;
       width: 24px;
       height: 24px;
       margin-right: 20px;
       background-color: #DDD;
-      z-index: 10;
       background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.666606 4.90675L6.66661 8.37342C6.76795 8.43193 6.88291 8.46273 6.99994 8.46273C7.11696 8.46273 7.23193 8.43193 7.33327 8.37342L13.3333 4.90675C13.434 4.84858 13.5178 4.76506 13.5763 4.66447C13.6348 4.56389 13.6659 4.44976 13.6666 4.33342C13.6671 4.21594 13.6365 4.10043 13.578 3.99858C13.5194 3.89673 13.435 3.81215 13.3333 3.75342L7.33327 0.293418C7.23193 0.234906 7.11696 0.204102 6.99994 0.204102C6.88291 0.204102 6.76795 0.234906 6.66661 0.293418L0.666606 3.75342C0.564869 3.81215 0.48046 3.89673 0.421924 3.99858C0.363389 4.10043 0.332806 4.21594 0.333272 4.33342C0.333975 4.44976 0.365112 4.56389 0.423589 4.66447C0.482066 4.76506 0.565847 4.84858 0.666606 4.90675ZM6.99994 1.66675L11.6666 4.33342L6.99994 7.00008L2.33327 4.33342L6.99994 1.66675ZM12.6666 6.44675L6.99994 9.66675L1.33327 6.42008C1.25718 6.37601 1.17313 6.34741 1.08594 6.33596C0.998754 6.3245 0.910163 6.33041 0.82527 6.35334C0.740376 6.37626 0.660858 6.41576 0.591293 6.46955C0.521728 6.52334 0.463492 6.59036 0.419939 6.66675C0.333024 6.81983 0.31018 7.00107 0.356391 7.17093C0.402602 7.34079 0.514118 7.48547 0.666606 7.57342L6.66661 11.0401C6.76795 11.0986 6.88291 11.1294 6.99994 11.1294C7.11696 11.1294 7.23193 11.0986 7.33327 11.0401L13.3333 7.57342C13.4858 7.48547 13.5973 7.34079 13.6435 7.17093C13.6897 7.00107 13.6669 6.81983 13.5799 6.66675C13.5364 6.59036 13.4781 6.52334 13.4086 6.46955C13.339 6.41576 13.2595 6.37626 13.1746 6.35334C13.0897 6.33041 13.0011 6.3245 12.9139 6.33596C12.8268 6.34741 12.7427 6.37601 12.6666 6.42008V6.44675ZM12.6666 9.11342L6.99994 12.3334L1.33327 9.08675C1.25718 9.04267 1.17313 9.01408 1.08594 9.00263C0.998754 8.99117 0.910163 8.99708 0.82527 9.02C0.740376 9.04293 0.660858 9.08243 0.591293 9.13622C0.521728 9.19001 0.463492 9.25703 0.419939 9.33342C0.333024 9.4865 0.31018 9.66774 0.356391 9.83759C0.402602 10.0075 0.514118 10.1521 0.666606 10.2401L6.66661 13.7068C6.76795 13.7653 6.88291 13.7961 6.99994 13.7961C7.11696 13.7961 7.23193 13.7653 7.33327 13.7068L13.3333 10.2401C13.4858 10.1521 13.5973 10.0075 13.6435 9.83759C13.6897 9.66774 13.6669 9.4865 13.5799 9.33342C13.5364 9.25703 13.4781 9.19001 13.4086 9.13622C13.339 9.08243 13.2595 9.04293 13.1746 9.02C13.0897 8.99708 13.0011 8.99117 12.9139 9.00263C12.8268 9.01408 12.7427 9.04267 12.6666 9.08675V9.11342Z' fill='%233B3B3B'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: center;
+      border-radius: 6px;
       transition: all .4s ease-in-out;
 
       &_active {
@@ -1659,8 +1667,8 @@ footer .box, footer .copyright {
     &__logo {
       position: absolute;
       left: 0;
-      padding-left: 20px;
       z-index: 11;
+      padding-left: 20px;
 
       svg {
         width: 59px;
@@ -1669,12 +1677,12 @@ footer .box, footer .copyright {
     }
 
     &__footer {
-      display: flex;
       position: absolute;
+      bottom: 32px;
+      display: flex;
+      justify-content: space-between;
       width: 100%;
       padding: 0 20px;
-      bottom: 32px;
-      justify-content: space-between;
     }
 
     &__mail {
@@ -1708,13 +1716,13 @@ footer .box, footer .copyright {
     }
 
     &__partner {
-      border: 1px solid #F4F4F4;
-      border-radius: 4px;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       width: 50px;
       height: 25px;
+      border: 1px solid #F4F4F4;
+      border-radius: 4px;
     }
   }
 
@@ -1748,8 +1756,8 @@ footer .box, footer .copyright {
     }
 
     &__head-title_alt {
-      font-size: 18px;
       font-weight: 600;
+      font-size: 18px;
     }
   }
 
@@ -1771,12 +1779,12 @@ footer .box, footer .copyright {
     }
 
     &__filter {
-      display: flex;
       position: relative;
-      margin: 0 auto 24px;
-      max-width: 280px;
-      padding: 6px 5px;
+      display: flex;
       gap: 15px;
+      max-width: 280px;
+      margin: 0 auto 24px;
+      padding: 6px 5px;
     }
 
     &__filter-toggle {
@@ -1790,13 +1798,13 @@ footer .box, footer .copyright {
 
   .mt-main-cases {
     padding: 52px 0;
-    text-align: center;
     overflow: hidden;
+    text-align: center;
 
     &__cards {
-      margin-top: 44px;
       display: flex;
       gap: 10px;
+      margin-top: 44px;
     }
 
     &__container {
@@ -1806,25 +1814,25 @@ footer .box, footer .copyright {
     }
 
     &__card {
+      gap: 10px;
       min-width: 280px;
       height: 455px;
-      gap: 10px;
     }
 
     &__card-title {
-      font-size: 18px;
       width: 200px;
+      font-size: 18px;
     }
 
     &__card-text {
-      font-size: 14px;
       width: 240px;
+      font-size: 14px;
     }
 
     &__card-review {
       display: flex;
-      align-items: center;
       gap: 12px;
+      align-items: center;
       font-size: 14px;
 
       img {
@@ -1845,10 +1853,9 @@ footer .box, footer .copyright {
   }
 
   .mt-development {
-
     &__card {
-      padding: 44px;
       gap: 9px;
+      padding: 44px;
     }
 
     &__card-title {
@@ -1861,10 +1868,9 @@ footer .box, footer .copyright {
   }
 
   .mt-about {
-
     &__card {
-      padding: 24px;
       gap: 24px;
+      padding: 24px;
       font-size: 14px;
     }
 
