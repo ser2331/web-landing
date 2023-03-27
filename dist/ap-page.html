@@ -7,7 +7,6 @@
 </head>
 <body>
 
-
 <section class='mt-header'>
   <div class='mt-header__container'>
     <div class='mt-footer-logo mt-header__logo'>
@@ -114,11 +113,11 @@
       <a class='mt-button mt-hero_app-page-btn' href='#modal_call' data-fancybox=''>Get demo</a>
 
       <div class='mt-payment-content'>
-        <div class='pay-bills'>
-
+        <div class='bills-image-container'>
+          <div class='bills-image'></div>
         </div>
 
-        <div class="brace-l">
+        <div class='brace-l'>
           <div class='braces-wrapper-top'>
             <div class='left-brace'></div>
             <div class='right-brace'></div>
@@ -138,7 +137,7 @@
           <div class='method-position bank-transfer-position'>Bank transfer – ACH</div>
         </div>
 
-        <div class="brace-r">
+        <div class='brace-r'>
           <div class='braces-wrapper-top'>
             <div class='left-brace'></div>
             <div class='right-brace'></div>
@@ -150,8 +149,8 @@
           </div>
         </div>
 
-        <div class='payment-result'>
-
+        <div class='payment-result-container'>
+          <div class='payment-result'></div>
         </div>
       </div>
       <ul class='mt-hero__partners'>
@@ -180,6 +179,7 @@
 
   </div>
 </section>
+
 <section class='mt-trusted'>
   <div class='mt-container'>
     <h2 class='mt-trusted__title'>Trusted by many B2B platforms</h2>
@@ -208,6 +208,80 @@
     </ul>
   </div>
 </section>
+
+<section class='manual-bill-statistics'>
+  <div class='manual-bill-statistics__content'>
+    <h1 class='mbs-title'>Over 80% of SMBs waste 17+ hours/mo <br /> on manual bill processing</h1>
+    <h2 class='mbs-subtitle'>Replace endless emails, messaging, Excel, and <br />paperwork with a fast, all-in-one
+      solution.</h2>
+
+    <div class='mbs-statistics-content'>
+      <div class='mbs-statistics-item-wrapper'>
+        <span class='mbs-statistics-label'>only 5–10%</span>
+        <br />
+        <span class='mbs-statistics-description'>of SMBs use software for their financial operations*</span>
+      </div>
+      <div class='mbs-statistics-item-wrapper'>
+        <span class='mbs-statistics-label'>80%+</span>
+        <br />
+        <span
+          class='mbs-statistics-description'>of SMBs use Microsoft Excel, email, and paper for invoicing and billing</span>
+      </div>
+      <div class='mbs-statistics-item-wrapper'>
+        <span class='mbs-statistics-label'>40h+/mo</span>
+        <br />
+        <span class='mbs-statistics-description'>average time wasted by SMBs on financial admin tasks</span>
+      </div>
+      <div class='mbs-statistics-item-wrapper'>
+        <span class='mbs-statistics-label'>€/$ 6.5</span>
+        <br />
+        <span class='mbs-statistics-description'>The cost to manually process a single invoice on average</span>
+      </div>
+      <div class='mbs-statistics-item-wrapper'>
+        <span class='mbs-statistics-label'>5%</span>
+        <br />
+        <span class='mbs-statistics-description'>revenue lost by SMBs due to inefficient payments</span>
+      </div>
+      <div class='mbs-statistics-item-wrapper'>
+        <span class='mbs-statistics-label'>5</span>
+        <br />
+        <span class='mbs-statistics-description'>Specialized tools needed to automate SMB financial admin</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class='function-demonstration'>
+  <div class='function-demonstration__content'>
+    <h1 class='fd-title'>Build all the features <br /> your clients need</h1>
+
+    <div class='fd-content'>
+      <div class='demonstration'>
+        <a href='#0'>
+          <img src='./src/images/collectAll.png' alt='collect-all'>
+        </a>
+        <a href='#1'>
+          <img src='../parama/src/images/collect-all.png' alt='collect-all'>
+        </a>
+      </div>
+
+      <div class='function-selector'>
+        <ul>
+          <li onclick='onChangeFeatures(0)'>Collect all bills in one place</li>
+          <li onclick='onChangeFeatures(1)'>Automatic invoice data capturing</li>
+          <li onclick='onChangeFeatures(2)'>Invoice review and suggestions</li>
+          <li onclick='onChangeFeatures(3)'>Approval workflows</li>
+          <li onclick='onChangeFeatures(4)'>One-click bill pay</li>
+          <li onclick='onChangeFeatures(5)'>Auto-reconciliation</li>
+          <li onclick='onChangeFeatures(6)'>Bills prepared for accounting</li>
+          <li onclick='onChangeFeatures(7)'>Bills prepared for accounting</li>
+          <li onclick='onChangeFeatures(8)'>Overview of vendors and payables</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <footer class='mt-footer'>
   <div class='mt-footer__inner'>
@@ -376,9 +450,12 @@
     </div>
   </div>
 </footer>
-
 <script src='./bundle.js'></script>
 <script>
+  function onChangeFeatures(num) {
+    console.log(num)
+  }
+
 </script>
 </body>
 </html>
