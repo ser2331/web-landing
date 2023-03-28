@@ -1,3 +1,13 @@
+.content-title {
+  font-family: 'Faktum', serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 110%;
+  text-align: center;
+  letter-spacing: -0.02em;
+  font-feature-settings: 'tnum' on, 'lnum' on;
+}
+
 .mt-hero_ap-page {
   display: flex;
   margin: 0;
@@ -63,7 +73,7 @@
       .bills-image {
         width: 100%;
         height: 100%;
-        background-image: url("./images/bill.jpg");
+        background-image: url("images/ap-page/bill.jpg");
         background-size: contain;
         background-repeat: no-repeat;
       }
@@ -315,13 +325,6 @@
 
   &__content {
     .mbs-title {
-      font-family: 'Faktum';
-      font-weight: 600;
-      font-size: 48px;
-      line-height: 110%;
-      text-align: center;
-      letter-spacing: -0.02em;
-      font-feature-settings: 'tnum' on, 'lnum' on;
       margin-bottom: 20px;
     }
 
@@ -355,7 +358,6 @@
           background: linear-gradient(180deg, #3C37FF 0%, #33DAFF 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-          background-clip: text;
         }
 
         .mbs-statistics-description {
@@ -384,14 +386,6 @@
     text-align: center;
 
     .fd-title {
-      font-family: 'Faktum', serif;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 48px;
-      line-height: 110%;
-      text-align: center;
-      letter-spacing: -0.02em;
-      font-feature-settings: 'tnum' on, 'lnum' on;
       padding: 32px 0 142px;
     }
 
@@ -408,6 +402,7 @@
       .function-selector {
         flex: 1 1;
         text-align: start;
+
         ul li {
           font-family: 'Faktum', serif;
           font-weight: 600;
@@ -418,20 +413,372 @@
           padding: 16px;
           opacity: 0.5;
           cursor: pointer;
-          list-style-image: url("images/arrow.svg");
+          list-style-image: url("images/ap-page/arrow.svg");
+
           &:hover {
             background: #F1F2F5;
             opacity: 1;
-            list-style-image: url("images/circleArrow.svg");
+            list-style-image: url("images/ap-page/circleArrow.svg");
           }
+
           &:focus {
             background: #F1F2F5;
             opacity: 1;
-            list-style-image: url("images/circleArrow.svg");
+            list-style-image: url("images/ap-page/circleArrow.svg");
           }
         }
       }
 
+    }
+  }
+}
+
+.adding-invoicing {
+  padding: 120px;
+
+  &__content {
+    .ai-title {
+      margin-bottom: 74px;
+    }
+
+    .ai-content {
+      .ai-fees-cards {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 120px;
+
+        .fees-card {
+          position: relative;
+          background: #F1F2F5;
+          border-radius: 10px;
+          width: max-content;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          flex-direction: column;
+          flex: 1 1;
+          height: 325px;
+          max-width: 368px;
+
+          &:nth-child(2) {
+            margin: 0 8px;
+          }
+
+          .fees-image-wrapper {
+            width: 100%;
+            height: 125px;
+            margin-bottom: 56px;
+          }
+
+          .payments {
+            .fees-image {
+              width: 100%;
+              mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
+              -webkit-mask-image: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+              height: 125px;
+              border-radius: 10px;
+              background: url("images/ap-page/fees.png") no-repeat;
+            }
+          }
+
+          .saas {
+            padding: 38px 0 0 40px;
+
+            .fees-image {
+              width: 70px;
+              height: 70px;
+              background: url("images/ap-page/saas.png") no-repeat;
+            }
+          }
+
+          .saas:before, .saas:after {
+            position: absolute;
+            content: "+";
+            top: 143px;
+            font-size: 26px;
+            background: white;
+            padding: 12px;
+            width: 20px;
+            border-radius: 25px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+          }
+
+          .saas:before {
+            right: 95%;
+          }
+
+          .saas:after {
+            content: "+";
+            left: 95%;
+          }
+
+          .revenue {
+            padding: 38px 0 0 40px;
+
+            .fees-image {
+              width: 70px;
+              height: 70px;
+              background: url("images/ap-page/revenue.png") no-repeat;
+            }
+          }
+
+          .label-wrapper {
+            padding: 0 38px 40px;
+
+            .fees-label {
+              font-family: 'Faktum', serif;
+              font-style: normal;
+              font-weight: 600;
+              font-size: 28px;
+              line-height: 110%;
+              width: 100%;
+              text-align: start;
+              margin-bottom: 26px;
+            }
+
+            .fees-description {
+              font-family: 'Satoshi', serif;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 140%;
+              letter-spacing: 0.01em;
+              width: 100%;
+              text-align: start;
+            }
+          }
+        }
+      }
+    }
+
+    .ai-words-gratitude {
+      width: 100%;
+      background: #F1F2F5;
+      border-radius: 10px;
+      height: 608px;
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 44px;
+
+      .ai-words-gratitude-countries-icons {
+        display: flex;
+        align-items: center;
+        margin-bottom: 36px;
+
+        .ai-words-gratitude-finsWiss-icon {
+          width: 64px;
+          height: 16px;
+          margin-right: 16px;
+          background: url("./images/ap-page/fins-wiss.svg") no-repeat;
+        }
+
+        .divider {
+          width: 1px;
+          height: 16px;
+          border-right: 1px solid #B8B8B8;
+          margin-right: 16px;
+        }
+
+        .ai-words-gratitude-europe-icon {
+          width: 45px;
+          height: 30px;
+          background: url("./images/ap-page/europe-icon.png") no-repeat;
+        }
+
+        .ai-words-gratitude-switzerland-icon {
+          width: 45px;
+          height: 30px;
+          background: url("./images/ap-page/switzerland-icon.png") no-repeat;
+        }
+      }
+
+      .ai-words-gratitude-title {
+        font-weight: 600;
+        font-size: 38px;
+        letter-spacing: -0.01em;
+        margin-bottom: 48px;
+      }
+
+      .ai-quotes {
+        width: 22px;
+        height: 16px;
+        background: url("./images/ap-page/quots.svg") no-repeat;
+        margin-bottom: 12px;
+      }
+
+      .ai-words-gratitude-description {
+        font-family: 'Satoshi', serif;
+        font-size: 16px;
+        line-height: 140%;
+        text-align: center;
+        letter-spacing: 0.01em;
+        max-width: 586px;
+        margin-bottom: 24px;
+      }
+
+      .carlos-icon-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 44px;
+
+        img {
+          width: 50px;
+          height: 50px;
+          margin-bottom: 12px;
+        }
+
+        .carlos-description {
+          font-family: 'Satoshi', serif;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 140%;
+          text-align: center;
+          letter-spacing: 0.01em;
+        }
+      }
+
+      .download_pdf-button {
+        display: flex;
+        align-items: center;
+        border: 1px solid #B8B8B8;
+        padding: 15px 30px;
+        border-radius: 10px;
+
+        .download_pdf-icon {
+          width: 24px;
+          height: 24px;
+          margin-right: 12px;
+        }
+
+        .download_pdf-title {
+          font-family: 'Satoshi', serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 140%;
+          text-align: center;
+          letter-spacing: 0.01em;
+        }
+      }
+
+      .back-images {
+        position: absolute;
+        width: 100%;
+        top: 222px;
+        display: flex;
+        justify-content: space-between;
+
+
+        .left-img {
+          flex: 1 1;
+          width: 100%;
+          height: 390px;
+          background: url("images/ap-page/fin-swiss-leftback.png") no-repeat;
+          border-radius: 10px;
+        }
+
+        .right-img {
+          flex: 1 1;
+          width: 100%;
+          height: 390px;
+          background: url("images/ap-page/fin-swiss-rightback.png") no-repeat right;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
+
+.integrations {
+  padding-top: 120px;
+  height: 734px;
+  overflow: hidden;
+
+  &__content {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .integrations-title {
+      margin-bottom: 28px;
+    }
+
+    .content-description {
+      max-width: 535px;
+
+      font-family: 'Satoshi', serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
+      text-align: center;
+      letter-spacing: 0.01em;
+    }
+  }
+
+  &__mob-card-wrapper {
+    position: relative;
+
+    .mob-card {
+      position: absolute;
+      width: 470px;
+      height: 475px;
+      right: 33%;
+      pointer-events: all;
+      transition: top 1s, opacity 2s, width 1s, right 1s, box-shadow 1s;
+    }
+
+    .fully-featured-platform {
+      width: 470px;
+      top: 110px;
+      z-index: 3;
+      &:hover {
+        top: -80px;
+        z-index: 4;
+        opacity: 1;
+        box-shadow: 0 0 200px 100px rgba(255,255,255, 0.9);
+      }
+    }
+
+    .compliance-included {
+      width: 442px;
+      top: 102px;
+      z-index: 2;
+      opacity: 0.7;
+      right: 34%;
+      &:hover {
+        right: 33%;
+        width: 470px;
+        top: -80px;
+        z-index: 4;
+        opacity: 1;
+        box-shadow: 0 0 200px 100px rgba(255,255,255, 0.9);
+      }
+    }
+
+    .ux-consistence {
+      width: 416px;
+      top: 94px;
+      z-index: 1;
+      opacity: 0.5;
+      right: 35%;
+      &:hover {
+        right: 33%;
+        width: 470px;
+        top: -80px;
+        z-index: 4;
+        opacity: 1;
+        box-shadow: 0 0 200px 100px rgba(255,255,255, 0.9);
+      }
     }
   }
 }

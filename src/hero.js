@@ -13,7 +13,9 @@ function changeText() {
   if (loopItem == mtHeroArrayTitles.length) {
     loopItem = 0;
   }
-  mtHeroTitle.innerHTML = mtHeroArrayTitles[loopItem];
+  if(mtHeroTitle) {
+    mtHeroTitle.innerHTML = mtHeroArrayTitles[loopItem];
+  }
 }
 
 const switchCurrentItem = (item, step) => {
@@ -24,18 +26,18 @@ const switchCurrentItem = (item, step) => {
     const mtEarnStickyThird = document.getElementById('mtEarnStickyThird')
 
     if (scrollTop < 1465) {
-      mtEarnStickyFirst.classList.add('mt-earn__head-inner_active')
-      mtEarnStickySecond.classList.remove('mt-earn__head-inner_active')
-      mtEarnStickyThird.classList.remove('mt-earn__head-inner_active')
+      mtEarnStickyFirst?.classList.add('mt-earn__head-inner_active')
+      mtEarnStickySecond?.classList.remove('mt-earn__head-inner_active')
+      mtEarnStickyThird?.classList.remove('mt-earn__head-inner_active')
 
     } else if (scrollTop > 1665 && scrollTop < 1964) {
-      mtEarnStickySecond.classList.add('mt-earn__head-inner_active')
-      mtEarnStickyFirst.classList.remove('mt-earn__head-inner_active')
-      mtEarnStickyThird.classList.remove('mt-earn__head-inner_active')
+      mtEarnStickySecond?.classList.add('mt-earn__head-inner_active')
+      mtEarnStickyFirst?.classList.remove('mt-earn__head-inner_active')
+      mtEarnStickyThird?.classList.remove('mt-earn__head-inner_active')
     } else if (scrollTop > 1965 && scrollTop < 2264) {
-      mtEarnStickyThird.classList.add('mt-earn__head-inner_active')
-      mtEarnStickyFirst.classList.remove('mt-earn__head-inner_active')
-      mtEarnStickySecond.classList.remove('mt-earn__head-inner_active')
+      mtEarnStickyThird?.classList.add('mt-earn__head-inner_active')
+      mtEarnStickyFirst?.classList.remove('mt-earn__head-inner_active')
+      mtEarnStickySecond?.classList.remove('mt-earn__head-inner_active')
     }
   }
 }
@@ -58,8 +60,8 @@ setTimeout(()=>{
 const headerMenu = document.getElementById("headerMenu")
 const buttonMenu = document.getElementById("buttonMenu")
 function switchBurgerMenu() {
-  headerMenu.classList.toggle('mt-header__navbar_active');
-  buttonMenu.classList.toggle('mt-button_menu_active');
+  headerMenu?.classList.toggle('mt-header__navbar_active');
+  buttonMenu?.classList.toggle('mt-button_menu_active');
   document.body.classList.toggle('body_lock');
 }
 buttonMenu.addEventListener("click", switchBurgerMenu);
