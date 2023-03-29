@@ -741,8 +741,7 @@
   }
 
   function onEntry(entry) {
-    entry.forEach((change, index) => {
-      console.log('change', change)
+    entry.forEach((change) => {
       if (change.isIntersecting) {
         change.target.classList.add('element-show');
       } else {
@@ -762,12 +761,6 @@
   for (let elm of elements) {
     observer.observe(elm);
   }
-
-  // let disObserver = new IntersectionObserver(disableVisible, options);
-  // let finish = document.querySelector('.mt-button.mt-hero_app-page-btn.BTN_1.learn-more-btn');
-  // let finish2 = document.querySelector('.fees-card');
-  // disObserver.observe(finish);
-  // disObserver.observe(finish2);
 
 </script>
 </body>
