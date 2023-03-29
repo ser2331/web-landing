@@ -573,8 +573,10 @@
 
 .integrations {
   padding-top: 120px;
-  height: 734px;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   &__content {
     width: 100%;
@@ -582,6 +584,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: sticky;
+    top: calc(50vh - 162px);
+    margin-bottom: 194px;
 
     .integrations-title {
       text-align: center;
@@ -593,65 +598,58 @@
       max-width: 535px;
     }
   }
+  &__mobil-wrapper {
+    display: none;
+  }
 
   &__mob-card-wrapper {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .element-animation.element-show {
+      opacity: 1;
+      width: 470px;
+    }
 
     .mob-card {
-      position: absolute;
+      box-shadow: 0 0 200px 100px rgba(255, 255, 255, 0.9);
       width: 470px;
       height: 475px;
-      left: 50%;
-      transform: translate(-50%, 0);
-      pointer-events: all;
-      transition: top 1s, opacity 2s, width 1s, right 1s, box-shadow 1s, z-index 1s;
+      position: sticky;
+      bottom: 0;
+      transition: width 0.5s, box-shadow 0.1s;
+    }
+
+    .mob-card:not(.mob-card:nth-last-child(1)) {
+      margin-bottom: 300px;
+    }
+
+    .mob-card:nth-last-child(1) {
+      margin-bottom: 254px;
     }
 
     .fully-featured-platform {
       width: 470px;
-      top: 80px;
-      z-index: 3;
-
-      &:hover {
-        top: -80px;
-        z-index: 4;
-        opacity: 1;
-        box-shadow: 0 0 200px 100px rgba(255, 255, 255, 0.9);
-      }
+      z-index: 4;
+      margin-top: 84px;
+      bottom: -224px;
     }
 
     .compliance-included {
       width: 442px;
-      top: 72px;
-      z-index: 2;
-      opacity: 0.7;
-      right: 34%;
-
-      &:hover {
-        right: 33%;
-        width: 470px;
-        top: -80px;
-        z-index: 4;
-        opacity: 1;
-        box-shadow: 0 0 200px 100px rgba(255, 255, 255, 0.9);
-      }
+      z-index: 3;
+      margin-top: 58px;
+      left: calc(50vw - 221px);
+      bottom: -300px;
     }
 
     .ux-consistence {
       width: 416px;
-      top: 64px;
-      z-index: 1;
-      opacity: 0.5;
-      right: 35%;
-
-      &:hover {
-        right: 33%;
-        width: 470px;
-        top: -80px;
-        z-index: 4;
-        opacity: 1;
-        box-shadow: 0 0 200px 100px rgba(255, 255, 255, 0.9);
-      }
+      z-index: 2;
+      left: calc(50vw - 208px);
+      margin-top: 34px;
+      bottom: -286px;
     }
   }
 }
@@ -1145,16 +1143,34 @@
   .integrations {
     padding: 0 20px;
 
-    .integrations__content {
-      .integrations-title {
-        padding: 52px 0;
-      }
+    &__content {
+      position: relative;
+      top: 52px;
+      margin-bottom: 50px;
+
+      //.integrations-title {
+      //  padding: 52px 0;
+      //}
 
       .content-description {
         display: none;
       }
     }
+    &__mob-card-wrapper {
+      display: none;
+    }
 
+    &__mobil-wrapper {
+      display: flex;
+      flex-direction: column;
+
+      .mobil-card {
+        position: relative;
+        margin-bottom: 32px;
+        width: 280px;
+        height: 358px;
+      }
+    }
   }
 
   .payments-integrated {

@@ -102,7 +102,7 @@
 <section class='mt-hero mt-hero_ap-page'>
 
   <div class='mt-hero_ap-page__background-image'>
-    <img src='https://monite.com/wp-content/uploads/2023/03/hero-block-1.png' alt='hero-block'/>
+    <img src='https://monite.com/wp-content/uploads/2023/03/hero-block-1.png' alt='hero-block' />
   </div>
   <div class='mt-hero__inner'>
     <div class='mt-hero__content'>
@@ -148,7 +148,7 @@
 
 </section>
 <section class='mt-hero_ap-page__background-image-mobile'>
-  <img src='https://monite.com/wp-content/uploads/2023/03/hiro-content-image.png' alt='hero-block-content'/>
+  <img src='https://monite.com/wp-content/uploads/2023/03/hiro-content-image.png' alt='hero-block-content' />
 </section>
 <section class='mt-trusted'>
   <div class='mt-container'>
@@ -287,12 +287,18 @@
             <div class='horizontal-link-line before'></div>
             <div class='block-with-many-items image'>
               <div class='logotype-collection'>
-                <img src='https://monite.com/wp-content/uploads/2023/03/xero.png' alt='xero' class='logotype-collection-logo xero'>
-                <img src='https://monite.com/wp-content/uploads/2023/03/E.png' alt='E' class='logotype-collection-logo E'>
-                <img src='https://monite.com/wp-content/uploads/2023/03/qb-1.png' alt='qb' class='logotype-collection-logo qb'>
-                <img src='https://monite.com/wp-content/uploads/2023/03/arrays-1.png' alt='arrays' class='logotype-collection-logo arrays'>
-                <img src='https://monite.com/wp-content/uploads/2023/03/F-1.png' alt='F' class='logotype-collection-logo F'>
-                <img src='https://monite.com/wp-content/uploads/2023/03/sage.png' alt='sage' class='logotype-collection-logo sage'>
+                <img src='https://monite.com/wp-content/uploads/2023/03/xero.png' alt='xero'
+                     class='logotype-collection-logo xero'>
+                <img src='https://monite.com/wp-content/uploads/2023/03/E.png' alt='E'
+                     class='logotype-collection-logo E'>
+                <img src='https://monite.com/wp-content/uploads/2023/03/qb-1.png' alt='qb'
+                     class='logotype-collection-logo qb'>
+                <img src='https://monite.com/wp-content/uploads/2023/03/arrays-1.png' alt='arrays'
+                     class='logotype-collection-logo arrays'>
+                <img src='https://monite.com/wp-content/uploads/2023/03/F-1.png' alt='F'
+                     class='logotype-collection-logo F'>
+                <img src='https://monite.com/wp-content/uploads/2023/03/sage.png' alt='sage'
+                     class='logotype-collection-logo sage'>
               </div>
               <img class='dabble-image' src='https://monite.com/wp-content/uploads/2023/03/invoice-status.png'
                    alt='invoice-status'>
@@ -469,11 +475,19 @@
 
   <div class='integrations__mob-card-wrapper'>
     <img src='https://monite.com/wp-content/uploads/2023/03/mob-card1-1.png' alt='fully-featured-platform'
-         class='mob-card fully-featured-platform' />
+         class='mob-card fully-featured-platform element-animation' />
     <img src='https://monite.com/wp-content/uploads/2023/03/mob-card2.png' alt='compliance-included'
-         class='mob-card compliance-included' />
+         class='mob-card compliance-included element-animation' />
     <img src='https://monite.com/wp-content/uploads/2023/03/mob-card3.png' alt='ux-consistence'
-         class='mob-card ux-consistence' />
+         class='mob-card ux-consistence element-animation' />
+  </div>
+  <div class='integrations__mobil-wrapper'>
+    <img src='https://monite.com/wp-content/uploads/2023/03/mob-card2-1.png' alt='fully-featured-platform'
+         class='mobil-card' />
+    <img src='https://monite.com/wp-content/uploads/2023/03/mob-card.png' alt='compliance-included'
+         class='mobil-card' />
+    <img src='https://monite.com/wp-content/uploads/2023/03/mob-card3-1.png' alt='ux-consistence'
+         class='mobil-card' />
   </div>
 </section>
 
@@ -701,30 +715,60 @@
     const checkedItem = document.querySelector(`.function-selector #listItem_${num}`);
     const listItems = document.querySelectorAll('.function-selector ul li');
 
-    if(demonstrationImagesWrapper) {
+    if (demonstrationImagesWrapper) {
       // let transformY = num * (700 + 130);
       let transformY = num * 700;
       demonstrationImagesWrapper.style.setProperty('--transformY', -transformY + 'px');
     }
 
-    if(listItems && listItems.length) {
-      for(let item of listItems) {
+    if (listItems && listItems.length) {
+      for (let item of listItems) {
         item?.classList.remove('checkedItem');
         const descr = item.querySelector('p');
-        if(descr) {
+        if (descr) {
           descr.classList.remove('description-visible');
         }
       }
     }
 
-    if(checkedItem) {
+    if (checkedItem) {
       checkedItem.classList.add('checkedItem');
       const descr = checkedItem.querySelector('p');
-      if(descr) {
+      if (descr) {
         descr.classList.add('description-visible');
       }
     }
   }
+
+  function onEntry(entry) {
+    entry.forEach((change, index) => {
+      console.log('change', change)
+      if (change.isIntersecting) {
+        change.target.classList.add('element-show');
+      } else {
+        change.target.classList.remove('element-show');
+      }
+    });
+  }
+
+  let options = {
+    // root: document.querySelector('.integrations'),
+    threshold: [0.5],
+    // rootMargin: '350px 0px 0px 0px',
+  };
+  let observer = new IntersectionObserver(onEntry, options);
+  let elements = document.querySelectorAll('.element-animation');
+
+  for (let elm of elements) {
+    observer.observe(elm);
+  }
+
+  // let disObserver = new IntersectionObserver(disableVisible, options);
+  // let finish = document.querySelector('.mt-button.mt-hero_app-page-btn.BTN_1.learn-more-btn');
+  // let finish2 = document.querySelector('.fees-card');
+  // disObserver.observe(finish);
+  // disObserver.observe(finish2);
+
 </script>
 </body>
 </html>
