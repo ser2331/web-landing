@@ -98,6 +98,7 @@
     <button class='mt-button_menu' id='buttonMenu'></button>
   </div>
 </section>
+
 <section class='mt-hero mt-hero_ap-page'>
   <div class='mt-hero__inner'>
     <div class='mt-hero__content'>
@@ -219,33 +220,34 @@
       <div class='mbs-statistics-item-wrapper'>
         <span class='mbs-statistics-label'>only 5–10%</span>
         <br />
-        <span class='mbs-statistics-description'>of SMBs use software for their financial operations*</span>
+        <span class='description mbs-statistics-description'>of SMBs use software for their financial operations*</span>
       </div>
       <div class='mbs-statistics-item-wrapper'>
         <span class='mbs-statistics-label'>80%+</span>
         <br />
-        <span
-          class='mbs-statistics-description'>of SMBs use Microsoft Excel, email, and paper for invoicing and billing</span>
+        <span class='description mbs-statistics-description'>of SMBs use Microsoft Excel, email, and paper for invoicing and billing</span>
       </div>
       <div class='mbs-statistics-item-wrapper'>
         <span class='mbs-statistics-label'>40h+/mo</span>
         <br />
-        <span class='mbs-statistics-description'>average time wasted by SMBs on financial admin tasks</span>
+        <span class='description mbs-statistics-description'>average time wasted by SMBs on financial admin tasks</span>
       </div>
       <div class='mbs-statistics-item-wrapper'>
         <span class='mbs-statistics-label'>€/$ 6.5</span>
         <br />
-        <span class='mbs-statistics-description'>The cost to manually process a single invoice on average</span>
+        <span
+          class='description mbs-statistics-description'>The cost to manually process a single invoice on average</span>
       </div>
       <div class='mbs-statistics-item-wrapper'>
         <span class='mbs-statistics-label'>5%</span>
         <br />
-        <span class='mbs-statistics-description'>revenue lost by SMBs due to inefficient payments</span>
+        <span class='description mbs-statistics-description'>revenue lost by SMBs due to inefficient payments</span>
       </div>
       <div class='mbs-statistics-item-wrapper'>
         <span class='mbs-statistics-label'>5</span>
         <br />
-        <span class='mbs-statistics-description'>Specialized tools needed to automate SMB financial admin</span>
+        <span
+          class='description mbs-statistics-description'>Specialized tools needed to automate SMB financial admin</span>
       </div>
     </div>
   </div>
@@ -257,25 +259,115 @@
 
     <div class='fd-content'>
       <div class='demonstration'>
-        <a href='#0'>
-          <img src='./src/images/collectAll.png' alt='collect-all'>
-        </a>
-        <a href='#1'>
-          <img src='../parama/src/images/collect-all.png' alt='collect-all'>
-        </a>
+        <div id='demonstration-images-wrapper' class='demonstration-images-wrapper'>
+          <a class='fd-image' id='0' href='#0'>
+            <img class='image' src='https://monite.com/wp-content/uploads/2023/03/collect.png' alt='collect-all'>
+          </a>
+          <a class='fd-image' id='1' href='#1'>
+            <img class='image' src='https://monite.com/wp-content/uploads/2023/03/invoice.png' alt='invoice'>
+          </a>
+          <a class='fd-image' id='2' href='#2'>
+            <img class='image' src='https://monite.com/wp-content/uploads/2023/03/invoice-chat.png' alt='invoice-chat'>
+          </a>
+          <a class='fd-image' id='3' href='#3'>
+            <img class='image' src='https://monite.com/wp-content/uploads/2023/03/approval-policy.png'
+                 alt='approval-policy'>
+          </a>
+          <a class='fd-image' id='4' href='#4'>
+            <div class='image block'>
+              <img class='approval-dabble' src='https://monite.com/wp-content/uploads/2023/03/approval-chat2.png'
+                   alt='approval-chat2'>
+              <img src='https://monite.com/wp-content/uploads/2023/03/approval-chat-4.png' alt='approval-chat'>
+            </div>
+          </a>
+          <a class='fd-image' id='5' href='#5'>
+            <img class='image' src='https://monite.com/wp-content/uploads/2023/03/order.png' alt='order'>
+          </a>
+          <a class='fd-image' id='6' href='#6'>
+            <div class='image block'>
+              <img class='dabble-image' src='https://monite.com/wp-content/uploads/2023/03/invoice-status.png'
+                   alt='invoice-status'>
+              <img src='https://monite.com/wp-content/uploads/2023/03/invoice-key.png' alt='invoice-key'>
+            </div>
+          </a>
+          <a class='fd-image' id='7' href='#7'>
+            <div class='image block'>
+              <div class='logotype-collection'>
+                <img src='https://monite.com/wp-content/uploads/2023/03/xero.png' alt='xero' class='xero'>
+                <img src='https://monite.com/wp-content/uploads/2023/03/E.png' alt='E' class='E'>
+                <img src='https://monite.com/wp-content/uploads/2023/03/qb-1.png' alt='qb' class='qb'>
+                <img src='https://monite.com/wp-content/uploads/2023/03/arrays-1.png' alt='arrays' class='arrays'>
+                <img src='https://monite.com/wp-content/uploads/2023/03/F-1.png' alt='F' class='F'>
+                <img src='https://monite.com/wp-content/uploads/2023/03/sage.png' alt='sage' class='sage'>
+              </div>
+              <img class='dabble-image' src='https://monite.com/wp-content/uploads/2023/03/invoice-status.png'
+                   alt='invoice-status'>
+              <img src='https://monite.com/wp-content/uploads/2023/03/invoice-key.png' alt='invoice-key'>
+            </div>
+          </a>
+          <a class='fd-image' id='8' href='#8'>
+            <img class='image' src='https://monite.com/wp-content/uploads/2023/03/top-supliers.png' alt='top-supliers'>
+          </a>
+        </div>
       </div>
 
       <div class='function-selector'>
         <ul>
-          <li onclick='onChangeFeatures(0)'>Collect all bills in one place</li>
-          <li onclick='onChangeFeatures(1)'>Automatic invoice data capturing</li>
-          <li onclick='onChangeFeatures(2)'>Invoice review and suggestions</li>
-          <li onclick='onChangeFeatures(3)'>Approval workflows</li>
-          <li onclick='onChangeFeatures(4)'>One-click bill pay</li>
-          <li onclick='onChangeFeatures(5)'>Auto-reconciliation</li>
-          <li onclick='onChangeFeatures(6)'>Bills prepared for accounting</li>
-          <li onclick='onChangeFeatures(7)'>Bills prepared for accounting</li>
-          <li onclick='onChangeFeatures(8)'>Overview of vendors and payables</li>
+          <li id='listItem_0' onclick='onChangeFeatures(0)'>
+            Collect all bills in one place
+
+            <p class='description listItem-description'>
+              Forward incoming bills to a dedicated email address or upload them manually
+            </p>
+          </li>
+          <li id='listItem_1' onclick='onChangeFeatures(1)'>
+            Automatic invoice data capturing
+            <p class='description listItem-description'>
+              Our OCR solution covers multi-page bills in all formats & over 50 languages
+            </p>
+          </li>
+          <li id='listItem_2' onclick='onChangeFeatures(2)'>
+            Invoice review and suggestions
+            <p class='description listItem-description'>
+              Let managers in SMBs review invoices and leave questions/comments in one place
+            </p>
+          </li>
+          <li id='listItem_3' onclick='onChangeFeatures(3)'>
+            Approval workflows
+            <p class='description listItem-description'>
+              Let your users build approval policies based on payment amount, vendor, department, and more
+            </p>
+          </li>
+          <li id='listItem_4' onclick='onChangeFeatures(4)'>
+            One-click bill pay
+            <p class='description listItem-description'>
+              Let customers pay bills with a click using SEPA, ACH, cards, or any other desired method
+            </p>
+          </li>
+          <li id='listItem_5' onclick='onChangeFeatures(5)'>
+            Auto-reconciliation
+            <p class='description listItem-description'>
+              Paid bills are automatically linked to transactions
+            </p>
+          </li>
+          <li id='listItem_6' onclick='onChangeFeatures(6)'>
+            Bills prepared for accounting
+            <p class='description listItem-description'>
+              Data from bills is extracted and fully prepared for use in other processes.
+            </p>
+          </li>
+          <li id='listItem_7' onclick='onChangeFeatures(7)'>
+            Bills prepared for accounting
+            <p class='description listItem-description'>
+              Integrations with 30+ accounting platforms let your customers manage your financial data seamlessly
+            </p>
+          </li>
+          <li id='listItem_8' onclick='onChangeFeatures(8)'>
+            Overview of vendors and payables
+            <p class='description listItem-description'>
+              Full overviews of suppliers, early discount savings, and more
+            </p>
+          </li>
         </ul>
       </div>
     </div>
@@ -295,7 +387,8 @@
 
           <div class='label-wrapper'>
             <h2 class='fees-label'>Payment fees</h2>
-            <h3 class='fees-description'>Let users pay within your interface and earn up to 0.6% per invoice.</h3>
+            <h3 class='description fees-description'>Let users pay within your interface and earn up to 0.6% per
+              invoice.</h3>
           </div>
         </div>
 
@@ -306,7 +399,7 @@
 
           <div class='label-wrapper'>
             <h2 class='fees-label'>SaaS fees</h2>
-            <h3 class='fees-description'>Charge 5-50$/mo for additional products.</h3>
+            <h3 class='description fees-description'>Charge 5-50$/mo for additional products.</h3>
           </div>
         </div>
 
@@ -317,7 +410,8 @@
 
           <div class='label-wrapper'>
             <h2 class='fees-label'>Revenue share</h2>
-            <h3 class='fees-description'>Upsell customers with BNPL/financing and get a share of the payment.</h3>
+            <h3 class='description fees-description'>Upsell customers with BNPL/financing and get a share of the
+              payment.</h3>
           </div>
         </div>
       </div>
@@ -340,7 +434,7 @@
 
       <div class='ai-quotes'></div>
 
-      <p class='ai-words-gratitude-description'>
+      <p class='description ai-words-gratitude-description'>
         Thanks to Monite, we enable our clients all across Europe to send compliant invoices
         and collect payments via payment links. At the same time, we enable our eComm customers
         to pay suppliers worldwide using Monite’s Accounts Payable functionalities and payment rails
@@ -349,14 +443,14 @@
       <div class='carlos-icon-wrapper'>
         <img src='https://monite.com/wp-content/uploads/2023/03/mt-cases-avatar-2.png' alt='carlos'
              class='carlos-icon' />
-        <div class='carlos-description'>Carlos, CEO</div>
+        <div class='description carlos-description'>Carlos, CEO</div>
       </div>
 
       <div class='download_pdf-button'>
-        <img src='https://monite.com/wp-content/uploads/2023/03/download_pdf.png' alt='download_pdf' class='download_pdf-icon' />
-        <span class='download_pdf-title'>PDF case</span>
+        <img src='https://monite.com/wp-content/uploads/2023/03/download_pdf.png' alt='download_pdf'
+             class='download_pdf-icon' />
+        <span class='description download_pdf-title'>PDF case</span>
       </div>
-
 
       <div class='back-images'>
         <div class='left-img'></div>
@@ -368,8 +462,8 @@
 
 <section class='integrations'>
   <div class='integrations__content'>
-    <h1 class='content-title integrations-title'>Integrate in 4 weeks instead <br/> of building for 2 years</h1>
-    <p class='content-description'>
+    <h1 class='content-title integrations-title'>Integrate in 4 weeks instead <br /> of building for 2 years</h1>
+    <p class='description content-description'>
       Building bill pay automation takes years of development and domain expertise.
       Monite does all the heavy lifting for you, offering turnkey front-end, back-end,
       design, and partnerships, so you can focus on your core product rather than
@@ -378,12 +472,64 @@
   </div>
 
   <div class='integrations__mob-card-wrapper'>
-    <img src='https://monite.com/wp-content/uploads/2023/03/mob-card1-1.png' alt='fully-featured-platform' class='mob-card fully-featured-platform'  />
-    <img src='https://monite.com/wp-content/uploads/2023/03/mob-card2.png' alt='compliance-included' class='mob-card compliance-included' />
-    <img src='https://monite.com/wp-content/uploads/2023/03/mob-card3.png' alt='ux-consistence' class='mob-card ux-consistence' />
+    <img src='https://monite.com/wp-content/uploads/2023/03/mob-card1-1.png' alt='fully-featured-platform'
+         class='mob-card fully-featured-platform' />
+    <img src='https://monite.com/wp-content/uploads/2023/03/mob-card2.png' alt='compliance-included'
+         class='mob-card compliance-included' />
+    <img src='https://monite.com/wp-content/uploads/2023/03/mob-card3.png' alt='ux-consistence'
+         class='mob-card ux-consistence' />
   </div>
 </section>
 
+<section class='payments-integrated'>
+  <div class='payments-integrated__content'>
+    <div class='pi-transaction-image'></div>
+
+    <h1 class='title pi-title'>Payments pre-integrated <br /> Earn on each transaction</h1>
+
+    <p class='description pi-description'>
+      Monite aggregates the best payment providers to help your clients get paid fast via invoice payment links
+    </p>
+
+    <a class='mt-button mt-hero_app-page-btn learn-more-btn' href='#learn-more' data-fancybox=''>Learn more</a>
+  </div>
+</section>
+
+<section class='robust-account'>
+  <div class='robust-account__content'>
+    <h1 class='title ra-title'>Robust Accounts <br /> Payable APIdesigned <br /> for developers</h1>
+    <h2 class='description ra-description'>
+      A single access point for various capabilities. Construct solutions of any
+      complexity; test new features once we roll them out without the need to reintegrate.
+    </h2>
+
+    <div class='ra-btn-wrapper'>
+      <a class='mt-button mt-hero_app-page-btn api-docs-btn' href='#API-docs' data-fancybox=''>API docs</a>
+      <a class='mt-button mt-hero_app-page-btn sand-box-btn' href='#SandBox' data-fancybox=''>SandBox</a>
+    </div>
+
+  </div>
+
+  <div class='robust-account__invoice-code-image-wrapper'>
+    <img class='invoice-code-image' src='https://monite.com/wp-content/uploads/2023/03/invice-code.png'
+         alt='invoice-code' />
+  </div>
+
+</section>
+
+<section class='billpay'>
+  <div class='billpay__content'>
+    <h1 class='title bp-title'>Billpay that <br /> earns revenue</h1>
+    <h2 class='description bp-description'>Discuss your new revenue <br /> streams with an expert.</h2>
+
+    <a class='mt-button mt-hero_app-page-btn billpay-btn' href='#get-demo' data-fancybox=''>Get demo</a>
+
+    <div class='back-images'>
+      <div class='left-img'></div>
+      <div class='right-img'></div>
+    </div>
+  </div>
+</section>
 <footer class='mt-footer'>
   <div class='mt-footer__inner'>
     <div class='mt-footer__nav'>
@@ -554,7 +700,32 @@
 <script src='./bundle.js'></script>
 <script>
   function onChangeFeatures(num) {
-    console.log(num);
+    const demonstrationImagesWrapper = document.querySelector('#demonstration-images-wrapper.demonstration-images-wrapper');
+    const checkedItem = document.querySelector(`.function-selector #listItem_${num}`);
+    const listItems = document.querySelectorAll('.function-selector ul li');
+
+    if (demonstrationImagesWrapper) {
+      let transformY = num * (500 + 130);
+      demonstrationImagesWrapper.style.setProperty('--transformY', -transformY + 'px');
+    }
+
+    if (listItems && listItems.length) {
+      for (let item of listItems) {
+        item?.classList.remove('checkedItem');
+        const descr = item.querySelector('p');
+        if (descr) {
+          descr.classList.remove('description-visible');
+        }
+      }
+    }
+
+    if (checkedItem) {
+      checkedItem.classList.add('checkedItem');
+      const descr = checkedItem.querySelector('p');
+      if (descr) {
+        descr.classList.add('description-visible');
+      }
+    }
   }
 
 </script>
