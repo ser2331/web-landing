@@ -1,0 +1,228 @@
+.H1 {
+  font-family: 'Faktum', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  font-feature-settings: 'tnum' on, 'lnum' on;
+  color: #000000;
+}
+
+.H2 {
+  font-family: 'Faktum', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 110%;
+  letter-spacing: -0.01em;
+  color: #111111;
+}
+.H3 {
+  font-family: 'Faktum', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 110%;
+  color: #111111;
+}
+.H4 {
+  font-family: 'Faktum', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #111111;
+}
+.H5 {
+  font-family: 'Satoshi', serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #111111;
+}
+
+.H6 {
+  font-family: 'Faktum', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #111111;
+}
+.H7 {
+  font-family: 'Satoshi', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.01em;
+  color: #111111
+}
+.Subhead_1 {
+  font-family: 'Faktum', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 110%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #111111
+}
+.P_1 {
+  font-family: 'Satoshi', serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+.P_2 {
+  font-family: 'Satoshi', serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0.01em;
+  color: #111111;
+}
+
+.BTN_1 {
+  font-family: 'Satoshi', serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+.BTN_2 {
+  font-family: 'Satoshi', serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+@media screen and (max-width: 768px) {
+  .H1 {
+    font-family: 'Faktum', serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: #000000;
+    font-size: 26px;
+    letter-spacing: -0.01em;
+  }
+
+  .H2 {
+    font-family: 'Faktum', serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+    letter-spacing: -0.01em;
+    color: #111111;
+    font-size: 22px;
+  }
+  .H3 {
+    font-family: 'Faktum', serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+    color: #111111;
+    font-size: 18px;
+  }
+  .H4 {
+    font-family: 'Faktum', serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: #111111;
+    font-size: 14px;
+  }
+  .H5 {
+    font-family: 'Satoshi', serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: 0.01em;
+    color: #111111;
+    font-size: 18px;
+  }
+
+  //.H6 {
+  //  font-family: 'Faktum', serif;
+  //  font-style: normal;
+  //  font-weight: 600;
+  //  font-size: 16px;
+  //  line-height: 140%;
+  //  letter-spacing: -0.01em;
+  //  color: #111111;
+  //}
+  .H7 {
+    font-family: 'Satoshi', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    color: #111111
+  }
+  .Subhead_1 {
+    font-family: 'Faktum', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 110%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #111111
+  }
+  .P_1 {
+    font-family: 'Satoshi', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    color: #000000;
+  }
+  .P_2 {
+    font-family: 'Satoshi', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    color: #000000;
+  }
+
+  .BTN_1 {
+    font-family: 'Satoshi', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    color: #000000;
+  }
+  .BTN_2 {
+    font-family: 'Satoshi', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #000000;
+  }
+}

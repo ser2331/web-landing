@@ -2,35 +2,41 @@
   --transformY: 0px
 }
 
-.content-title {
-  font-family: 'Faktum', serif;
-  font-weight: 600;
-  font-size: 48px;
-  line-height: 110%;
-  text-align: center;
-  letter-spacing: -0.02em;
-  font-feature-settings: 'tnum' on, 'lnum' on;
-}
-
-.description {
-  font-family: 'Satoshi', serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 140%;
-  text-align: center;
-  letter-spacing: 0.01em;
-  color: #0A0A0A;
+.mt-button.mt-hero_app-page-btn {
+  color: white;
 }
 
 .mt-hero_ap-page {
   display: flex;
   margin: 0;
+  height: 1100px;
   padding-top: 180px;
   padding-bottom: 44px;
-  //background-image: url('https://monite.com/wp-content/uploads/2023/03/mt-about_hero.png');
-  //background-repeat: no-repeat;
-  //background-position: bottom;
-  //background-size: contain;
+  position: relative;
+
+  &__background-image {
+    width: 100%;
+    position: absolute;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 850px;
+    }
+  }
+
+  &__background-image-mobile {
+    display: none;
+  }
+
+  .call-wrapper {
+    position: absolute;
+    bottom: 24px;
+
+    .backed-founders {
+      margin-bottom: 24px;
+    }
+  }
 
   .mt-hero__inner {
     display: flex;
@@ -58,13 +64,7 @@
   }
 
   .mt-hero_app-page-btn {
-    font-family: 'Satoshi', serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 140%;
     text-align: center;
-    letter-spacing: 0.01em;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -75,263 +75,6 @@
   &__images {
     display: none;
   }
-
-  .mt-payment-content {
-    display: flex;
-    position: relative;
-
-    .bills-image-container {
-      height: 276.12px;
-      width: 409.52px;
-
-      .bills-image {
-        width: 100%;
-        height: 100%;
-        background-image: url("images/ap-page/bill.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
-    }
-
-    .pay-bills {
-      //height: 276.12px;
-      //width: 409.52px;
-      //padding: 34px 24px 24px 24px;
-      //background: white;
-      //filter: drop-shadow(0px 0px 17px rgba(0, 0, 0, 0.12));
-      //border-radius: 9px;
-
-
-      .pay-bills-header {
-        display: flex;
-        justify-content: space-between;
-        align-content: center;
-
-        .pay-bills-label {
-          font-weight: bold;
-        }
-
-        .add-bills-btn {
-          padding: 8px 24px;
-          font-size: 12px;
-          border-radius: 5px;
-          z-index: 3;
-        }
-      }
-
-      .pay-bill-items {
-
-        .bill-wrapper {
-          display: flex;
-        }
-      }
-    }
-
-    .choice-methods {
-      width: 316px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-family: 'Faktum', serif;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 10.0407px;
-      line-height: 14px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: #3C37FF;
-      margin: 0 24px 0 0;
-
-      .method-position {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 9px 16px;
-        background: linear-gradient(180deg, rgba(217, 217, 217, 1) 0%, #FFFFFF 81.77%);
-        border: 2.15157px solid #3C37FF;
-        border-radius: 5.73753px;
-        position: relative;
-        z-index: 3;
-
-        .card {
-          width: 24px;
-          background-image: url("./images/mt-card.svg");
-          background-repeat: no-repeat;
-          background-position: center 268px;
-          background-size: contain;
-        }
-
-        span::before, span::after {
-          display: none !important;
-        }
-
-        .title {
-
-        }
-      }
-
-      .card-position {
-        margin-bottom: 68px;
-      }
-
-      .method-position:after, :before {
-        display: block;
-        background-color: #3C37FF;
-        border-radius: 500px;
-        top: 12px;
-        content: "";
-        height: 8px;
-        position: absolute;
-        width: 8px;
-      }
-
-      .method-position:after {
-        right: -5px;
-      }
-
-      .method-position:before {
-        left: -5px;
-      }
-    }
-
-    //==============> brace
-    .brace-l, .brace-r {
-      position: absolute;
-    }
-
-    .braces-wrapper-top, .braces-wrapper-bottom {
-      position: absolute;
-      display: flex;
-    }
-
-    .brace-l .braces-wrapper-top {
-      top: 0;
-      left: 372px;
-      z-index: 2;
-      position: relative;
-
-      .left-brace {
-        position: relative;
-        border-bottom: 1.5px #3C37FF solid;
-        border-right: 1.5px #3C37FF solid;
-        border-bottom-right-radius: 10px;
-        width: 78px;
-        height: 23px;
-        top: 28px;
-        left: 1.3px;
-      }
-
-      .right-brace {
-        position: relative;
-        border-top: 1.5px #3C37FF solid;
-        border-left: 1.5px #3C37FF solid;
-        border-top-left-radius: 10px;
-        width: 108px;
-        top: 18px;
-        height: 14px;
-      }
-    }
-
-    .brace-l .braces-wrapper-bottom {
-      position: relative;
-      top: -33.5px;
-      z-index: 2;
-      left: 372px;
-
-      .left-brace {
-        position: relative;
-        border-top: 1.5px #3C37FF solid;
-        border-right: 1.5px #3C37FF solid;
-        border-top-right-radius: 10px;
-        width: 78px;
-        height: 14px;
-        top: 60px;
-        left: 1.3px;
-      }
-
-      .right-brace {
-        position: relative;
-        border-bottom: 1.5px #3C37FF solid;
-        border-left: 1.5px #3C37FF solid;
-        border-bottom-left-radius: 10px;
-        width: 108px;
-        height: 66px;
-        top: 68px;
-      }
-    }
-
-    .brace-r .braces-wrapper-top {
-      position: relative;
-      top: -1px;
-      left: 614px;
-      z-index: 2;
-
-      .left-brace {
-        position: relative;
-        border-top: 1.5px #3C37FF solid;
-        border-right: 1.5px #3C37FF solid;
-        border-top-right-radius: 10px;
-        width: 72px;
-        height: 44px;
-        top: 18px;
-      }
-
-      .right-brace {
-        position: relative;
-        border-bottom: 1.5px #3C37FF solid;
-        border-left: 1.5px #3C37FF solid;
-        border-bottom-left-radius: 10px;
-        width: 72px;
-        height: 14px;
-        top: 59px;
-        right: 1px;
-      }
-    }
-
-    .brace-r .braces-wrapper-bottom {
-      position: relative;
-      top: -43px;
-      left: 614px;
-      z-index: 2;
-
-      .left-brace {
-        position: relative;
-        border-bottom: 1.5px #3C37FF solid;
-        border-right: 1.5px #3C37FF solid;
-        border-bottom-right-radius: 10px;
-        width: 72px;
-        height: 44px;
-        top: 78px;
-        //right: 82px;
-      }
-
-      .right-brace {
-        position: relative;
-        border-top: 1.5px #3C37FF solid;
-        border-left: 1.5px #3C37FF solid;
-        border-top-left-radius: 10px;
-        width: 72px;
-        height: 14px;
-        top: 70px;
-        right: 1px;
-      }
-    }
-
-    //==============> brace
-
-    .payment-result-container {
-      width: 385px;
-      height: 252px;
-
-      .payment-result {
-        width: 100%;
-        height: 100%;
-        background-image: url("./images/payment-method.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
-    }
-  }
 }
 
 .manual-bill-statistics {
@@ -339,16 +82,12 @@
 
   &__content {
     .mbs-title {
+      text-align: center;
       margin-bottom: 20px;
     }
 
     .mbs-subtitle {
-      font-family: 'Satoshi';
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 140%;
       text-align: center;
-      letter-spacing: 0.01em;
       opacity: 0.6;
       margin-bottom: 90px;
     }
@@ -365,10 +104,6 @@
         text-align: center;
 
         .mbs-statistics-label {
-          font-family: 'Faktum', serif;
-          font-weight: 600;
-          font-size: 28px;
-          line-height: 110%;
           background: linear-gradient(180deg, #3C37FF 0%, #33DAFF 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -377,13 +112,6 @@
         .mbs-statistics-description {
           padding: 0 40px;
           display: inline-block;
-          //font-family: 'Satoshi';
-          //font-weight: 500;
-          font-size: 12px;
-          //line-height: 140%;
-          //text-align: center;
-          //letter-spacing: 0.01em;
-          //color: #0A0A0A;
         }
       }
     }
@@ -407,39 +135,106 @@
       background: #FFFFFF;
       border-radius: 10px;
       display: flex;
-      padding: 45px 0;
 
       .demonstration {
-        flex: 1.5 1;
-        height: 500px;
+        flex: 1 1;
+        height: 700px;
         overflow: hidden;
-        padding: 42px 0;
 
         .demonstration-images-wrapper {
           transform: translate(0, var(--transformY));
           transition: transform 1s;
 
-          .fd-image:not(:nth-child(1)) {
-            margin-top: 130px;
+          .horizontal-link-line {
+            width: 2px;
+            height: 130px;
+            border-left: 2px solid;
+          }
+
+          .after {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            height: 14em;
+            border-image: linear-gradient(to bottom, #3C37FF, #33DAFF) 1 100%;
+          }
+
+          .before {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 14em;
+            border-image: linear-gradient(to bottom, #33DAFF, rgba(0, 0, 0, 0)) 1 100%;
           }
 
           .fd-image {
             display: block;
-            height: 500px;
+            height: 700px;
             position: relative;
 
             .image {
               position: absolute;
               top: 50%;
               transform: translate(-50%, -50%);
+              z-index: 2;
             }
 
-            .block {
-              display: inline-block;
+            .has-point {
+              position: absolute;
+              top: 50%;
+              left: 0;
+              right: 0;
+              transform: translate(0, -50%);
+              z-index: 2;
+
+              .image {
+                position: relative;
+                transform: translate(0, 0);
+              }
+
+              &:before {
+                display: block;
+                background-color: #3C37FF;
+                border-radius: 16px;
+                bottom: 4px;
+                content: "";
+                height: 14px;
+                position: absolute;
+                width: 14px;
+                left: 50%;
+                margin-left: -6px;
+                z-index: 3;
+              }
+            }
+
+            .small-image {
+              &:before {
+                bottom: 24px;
+              }
+            }
+
+            .smalled-image {
+              &:before {
+                bottom: 64px;
+              }
+            }
+
+            .block-with-many-items.image {
+              position: absolute;
+              top: 50%;
+              left: 0;
+              right: 0;
+              transform: translate(0, -50%);
+              z-index: 2;
+            }
+
+            .block-with-many-items {
 
               .logotype-collection {
                 position: absolute;
                 height: 500px;
+                left: 0;
+                right: 0;
 
                 .xero {
                   transform: translate(195px, 45px);
@@ -479,7 +274,7 @@
 
             .approval-dabble {
               display: inherit;
-              margin-bottom: 12px;
+              margin: 24px;
             }
           }
         }
@@ -488,14 +283,11 @@
       .function-selector {
         flex: 1 1;
         text-align: start;
-        padding-right: 82px;
+        display: flex;
+        padding: 22px 82px;
+        align-items: center;
 
         ul li {
-          font-family: 'Faktum', serif;
-          font-weight: 600;
-          font-size: 22px;
-          line-height: 140%;
-          letter-spacing: -0.01em;
           border-radius: 4px;
           padding: 16px 0 16px 50px;
           opacity: 0.5;
@@ -528,24 +320,19 @@
         }
 
         .listItem-description {
-          font-family: 'Satoshi', serif;
-          font-weight: 500;
-          font-size: 16px;
-          line-height: 140%;
-          letter-spacing: 0.01em;
-
-          transition: height 1s, visibility 0.3s;
+          transition: height 0.5s, visibility 0.3s, opacity 1s;
           text-align: start;
           height: 0;
           visibility: hidden;
+          opacity: 0;
         }
 
         .listItem-description.description-visible {
+          opacity: 1;
           height: 50px;
           visibility: visible;
         }
       }
-
     }
   }
 }
@@ -555,6 +342,7 @@
 
   &__content {
     .ai-title {
+      text-align: center;
       margin-bottom: 74px;
     }
 
@@ -648,23 +436,12 @@
             padding: 0 38px 40px;
 
             .fees-label {
-              font-family: 'Faktum', serif;
-              font-style: normal;
-              font-weight: 600;
-              font-size: 28px;
-              line-height: 110%;
               width: 100%;
               text-align: start;
               margin-bottom: 26px;
             }
 
             .fees-description {
-              //font-family: 'Satoshi', serif;
-              //font-style: normal;
-              //font-weight: 500;
-              //font-size: 16px;
-              //line-height: 140%;
-              //letter-spacing: 0.01em;
               width: 100%;
               text-align: start;
             }
@@ -683,6 +460,7 @@
       flex-direction: column;
       align-items: center;
       padding-top: 44px;
+      overflow: hidden;
 
       .ai-words-gratitude-countries-icons {
         display: flex;
@@ -717,9 +495,7 @@
       }
 
       .ai-words-gratitude-title {
-        font-weight: 600;
-        font-size: 38px;
-        letter-spacing: -0.01em;
+        text-align: center;
         margin-bottom: 48px;
       }
 
@@ -731,11 +507,7 @@
       }
 
       .ai-words-gratitude-description {
-        //font-family: 'Satoshi', serif;
-        //font-size: 16px;
-        //line-height: 140%;
-        //text-align: center;
-        //letter-spacing: 0.01em;
+        text-align: center;
         max-width: 586px;
         margin-bottom: 24px;
       }
@@ -753,12 +525,7 @@
         }
 
         .carlos-description {
-          //font-family: 'Satoshi', serif;
-          //font-weight: 500;
-          //font-size: 16px;
-          //line-height: 140%;
-          //text-align: center;
-          //letter-spacing: 0.01em;
+          text-align: center;
         }
       }
 
@@ -773,16 +540,6 @@
           width: 24px;
           height: 24px;
           margin-right: 12px;
-        }
-
-        .download_pdf-title {
-          //font-family: 'Satoshi', serif;
-          //font-style: normal;
-          //font-weight: 500;
-          //font-size: 16px;
-          //line-height: 140%;
-          //text-align: center;
-          //letter-spacing: 0.01em;
         }
       }
 
@@ -827,18 +584,13 @@
     justify-content: center;
 
     .integrations-title {
+      text-align: center;
       margin-bottom: 28px;
     }
 
     .content-description {
+      text-align: center;
       max-width: 535px;
-
-      //font-family: 'Satoshi', serif;
-      //font-weight: 500;
-      //font-size: 16px;
-      //line-height: 140%;
-      //text-align: center;
-      //letter-spacing: 0.01em;
     }
   }
 
@@ -849,7 +601,8 @@
       position: absolute;
       width: 470px;
       height: 475px;
-      right: 33%;
+      left: 50%;
+      transform: translate(-50%, 0);
       pointer-events: all;
       transition: top 1s, opacity 2s, width 1s, right 1s, box-shadow 1s, z-index 1s;
     }
@@ -916,12 +669,11 @@
     align-items: center;
 
     .pi-transaction-image {
-      //width: 100%;
       position: relative;
       width: 684px;
       height: 410px;
       background: url("https://monite.com/wp-content/uploads/2023/03/payments-integrated.png") no-repeat;
-      background-size: contain;
+      background-size: cover;
       margin-bottom: 20px;
     }
 
@@ -935,28 +687,14 @@
     }
 
     .pi-title {
-      font-family: 'Faktum', serif;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 48px;
-      line-height: 110%;
       text-align: center;
-      letter-spacing: -0.02em;
-      font-feature-settings: 'tnum' on, 'lnum' on;
       margin-bottom: 24px;
     }
 
     .pi-description {
+      text-align: center;
       max-width: 558px;
       margin-bottom: 32px;
-    }
-
-    .learn-more-btn {
-      font-family: 'Satoshi', serif;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 140%;
-      letter-spacing: 0.01em;
     }
 
   }
@@ -976,26 +714,12 @@
     }
 
     .ra-title {
-      font-family: 'Faktum', serif;
-      font-weight: 600;
-      font-size: 48px;
-      line-height: 110%;
-      letter-spacing: -0.02em;
-      font-feature-settings: 'tnum' on, 'lnum' on;
-
       max-width: 490px;
       margin-bottom: 24px;
     }
 
     .ra-description {
-      font-family: 'Satoshi', serif;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 140%;
-      letter-spacing: 0.01em;
       opacity: 0.6;
-
       text-align: start;
       max-width: 446px;
       margin-bottom: 44px;
@@ -1022,6 +746,8 @@
 
   &__invoice-code-image-wrapper {
     flex: 1 1;
+    display: flex;
+    align-items: end;
   }
 }
 
@@ -1038,18 +764,12 @@
     overflow: hidden;
 
     .bp-title {
-      font-family: 'Faktum', serif;
-      font-weight: 600;
-      font-size: 48px;
-      line-height: 110%;
       text-align: center;
-      letter-spacing: -0.02em;
-      font-feature-settings: 'tnum' on, 'lnum' on;
-
       margin-bottom: 24px;
     }
 
     .bp-description {
+      text-align: center;
       opacity: 0.7;
       margin-bottom: 58px;
     }
@@ -1066,7 +786,6 @@
       display: flex;
       justify-content: space-between;
 
-
       .left-img {
         flex: 1 1;
         width: 100%;
@@ -1081,6 +800,430 @@
         height: 420px;
         background: url("https://monite.com/wp-content/uploads/2023/03/billpay-right.png") no-repeat right;
         border-radius: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1144px) {
+  .function-demonstration {
+
+    &__content {
+
+      .fd-content {
+        .demonstration {
+          flex: 1 1;
+        }
+
+        .function-selector {
+          padding: 22px 0;
+
+          ul li {
+            padding: 12px 0 12px 42px;
+          }
+        }
+      }
+    }
+  }
+
+  .adding-invoicing {
+    padding: 32px;
+
+    &__content {
+      .ai-words-gratitude {
+        .back-images {
+          top: 304px;
+
+          .left-img, .right-img {
+            height: 304px;
+            background-size: contain;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .function-demonstration {
+    &__content {
+      .fd-content {
+        .demonstration {
+          flex: 1 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .demonstration-images-wrapper {
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+
+  .robust-account {
+    padding: 32px 32px 0 32px;
+
+    &__content {
+      padding: 0 32px 100px 0;
+    }
+  }
+
+
+  .function-demonstration {
+
+    &__content {
+
+      .fd-content {
+        .demonstration {
+          flex: 1 1;
+        }
+
+        //.demonstration {
+        //
+        //  .demonstration-images-wrapper {
+        //
+        //    .fd-image {
+        //
+        //      .block-with-many-items {
+        //        .logotype-collection {
+        //          position: absolute;
+        //          height: 500px;
+        //
+        //          .logotype-collection-logo {
+        //            width: 24px;
+        //          }
+        //
+        //          .xero {
+        //            transform: translate(124px, 53px);
+        //          }
+        //
+        //          .E {
+        //            transform: translate(145px, 168px);
+        //          }
+        //
+        //          .qb {
+        //            transform: translate(88px, 260px);
+        //          }
+        //
+        //          .arrays {
+        //            transform: translate(-102px, 246px);
+        //          }
+        //
+        //          .F {
+        //            transform: translate(-152px, 194px);
+        //          }
+        //
+        //          .sage {
+        //            transform: translate(-170px, 100px);
+        //
+        //          }
+        //        }
+        //      }
+        //    }
+        //  }
+        //}
+
+
+        .function-selector {
+          ul li {
+            padding: 8px 0 8px 42px;
+          }
+        }
+      }
+    }
+  }
+
+  .adding-invoicing {
+    padding: 32px;
+
+    &__content {
+      .ai-words-gratitude {
+        .back-images {
+          top: 344px;
+
+          .left-img, .right-img {
+            height: 264px;
+            background-size: contain;
+          }
+        }
+      }
+    }
+  }
+
+  .billpay {
+    &__content {
+      .back-images {
+        top: 120px;
+
+
+        .left-img, .right-img {
+          height: 300px;
+          background-size: contain;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mt-hero.mt-hero_ap-page {
+    flex-direction: column;
+    height: max-content;
+    padding: 68px 20px 0;
+
+    .mt-hero_ap-page__background-image {
+      display: none;
+    }
+
+    .mt-hero__inner {
+      .mt-hero__content {
+
+        .mt-button.mt-hero_app-page-btn {
+          margin-bottom: 24px;
+          padding: 12px 18px;
+        }
+
+        .call-wrapper {
+          position: relative;
+          margin-bottom: 48px;
+        }
+      }
+    }
+  }
+  .mt-hero_ap-page__background-image-mobile {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("https://monite.com/wp-content/uploads/2023/03/mobile-hiro.png") repeat;
+
+    img {
+      //height: 300px;
+      //width: 300px;
+    }
+  }
+
+  .manual-bill-statistics {
+    padding: 52px 20px;
+
+    .mbs-subtitle {
+      margin-bottom: 34px;
+    }
+
+    .mbs-statistics-content {
+      .mbs-statistics-item-wrapper {
+        width: 135px;
+        height: 56px;
+        margin: 0 0 35px 0;
+        padding: 8px;
+
+        .mbs-statistics-description {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .function-demonstration {
+    padding: 52px 20px 44px;
+  }
+  .adding-invoicing {
+    padding: 52px 20px;
+
+    &__content {
+      .ai-content {
+        .ai-fees-cards {
+          flex-direction: column;
+
+          .fees-card {
+            width: 100%;
+            margin: 8px 0;
+
+            .fees-image-wrapper {
+              margin-bottom: 42px;
+              height: auto;
+            }
+
+            .saas, .revenue {
+              padding: 24px 0 0 24px;
+            }
+
+            .saas:after, .saas:before {
+              right: 50%;
+              left: 50%;
+              transform: translate(-50%, 0);
+            }
+
+            .saas:after {
+              top: auto;
+              bottom: -26px;
+            }
+
+            .saas:before {
+              top: -26px;
+            }
+
+            .label-wrapper {
+              padding: 0 24px 44px;
+
+              .fees-label {
+                margin-bottom: 8px;
+              }
+            }
+          }
+        }
+      }
+
+      .ai-words-gratitude {
+        padding: 32px 20px 44px;
+
+        .ai-words-gratitude-countries-icons {
+          margin-bottom: 32px;
+
+          .ai-words-gratitude-finsWiss-icon {
+            width: 44px;
+            background-size: contain;
+          }
+
+          .ai-words-gratitude-europe-icon {
+            width: 16px;
+            height: 16px;
+            background-size: contain;
+            margin-right: 2px;
+          }
+
+          .ai-words-gratitude-switzerland-icon {
+            width: 16px;
+            height: 16px;
+            background-size: contain;
+          }
+        }
+
+        .ai-words-gratitude-title {
+          padding: 0 20px;
+          margin-bottom: 32px;
+        }
+
+        .ai-quotes {
+          padding-bottom: 24px;
+        }
+
+        .carlos-icon-wrapper {
+          .carlos-icon {
+            width: 30px;
+            height: 30px;
+            margin-bottom: 8px;
+          }
+        }
+
+        .download_pdf-button {
+          padding: 12px 16px;
+
+          img {
+            width: 17px;
+            height: 17px;
+            margin-right: 10px;
+          }
+
+        }
+
+        .back-images {
+          display: none;
+          top: 360px;
+
+          .left-img, .right-img {
+            height: 248px;
+            background-size: contain;
+          }
+        }
+      }
+    }
+  }
+
+  .integrations {
+    padding: 0 20px;
+
+    .integrations__content {
+      .integrations-title {
+        padding: 52px 0;
+      }
+
+      .content-description {
+        display: none;
+      }
+    }
+
+  }
+
+  .payments-integrated {
+    padding: 30px 28px 44px;
+
+    .payments-integrated__content {
+      .pi-transaction-image {
+        width: 100%;
+        height: 162px;
+      }
+
+      .pi-description {
+        padding: 0 16px;
+      }
+    }
+  }
+
+  .robust-account {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+
+    &__invoice-code-image-wrapper {
+      position: relative;
+    }
+
+    &__invoice-code-image-wrapper:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 114px;
+      background: linear-gradient(to top, #0a0a0a, transparent);
+    }
+
+    &__content {
+      padding-bottom: 0;
+
+      .ra-btn-wrapper {
+        .mt-button.mt-hero_app-page-btn.api-docs-btn {
+          padding: 12px 17px;
+        }
+
+        .mt-button.mt-hero_app-page-btn.sand-box-btn {
+          padding: 12px 17px;
+        }
+      }
+    }
+  }
+
+  .billpay {
+    padding: 52px 20px 80px;
+
+    &__content {
+      padding: 24px 15px;
+      background: url("https://monite.com/wp-content/uploads/2023/03/billPay-back-mobile.png") no-repeat;
+      background-size: cover;
+
+      .bp-title {
+        z-index: 2;
+      }
+
+      .back-images {
+        display: none;
+      }
+
+      .mt-button.mt-hero_app-page-btn.billpay-btn {
+        padding: 12px 17px;
       }
     }
   }
