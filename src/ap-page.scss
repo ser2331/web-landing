@@ -808,6 +808,53 @@
   }
 }
 
+.mt-footer.ap-page {
+  .mt-footer__inner {
+    .mt-footer-logo-nav-wrapper {
+      display: flex;
+      justify-content: space-around;
+
+      .mt-footer__nav {
+        flex: 1 1;
+
+        .mt-footer__nav-menu.mobile {
+          display: none;
+        }
+      }
+    }
+
+    .mt-footer-logo {
+      flex: 1 1;
+      margin-bottom: 44px;
+    }
+
+    .mt-footer__nav {
+      margin-bottom: 44px;
+    }
+
+    .mt-footer-companies {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 44px;
+
+      .company-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 77px;
+        height: 36px;
+        margin-bottom: 8px;
+
+        .company {
+
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1144px) {
   .function-demonstration {
 
@@ -1140,6 +1187,7 @@
       }
 
       .ai-words-gratitude {
+        justify-content: center;
         padding: 32px 20px 44px;
 
         .ai-words-gratitude-countries-icons {
@@ -1302,6 +1350,22 @@
 
       .mt-button.mt-hero_app-page-btn.billpay-btn {
         padding: 12px 17px;
+      }
+    }
+  }
+
+  .mt-footer.ap-page {
+    .mt-footer__inner {
+      .mt-footer-logo-nav-wrapper {
+        flex-direction: column;
+        .mt-footer__nav {
+          .mt-footer__nav-menu.mobile {
+            display: flex;
+          }
+          .mt-footer__nav-menu:nth-last-child(1) {
+            display: none;
+          }
+        }
       }
     }
   }
