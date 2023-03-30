@@ -539,6 +539,8 @@
         border: 1px solid #B8B8B8;
         padding: 15px 30px;
         border-radius: 10px;
+        cursor: pointer;
+        z-index: 3;
 
         .download_pdf-icon {
           width: 24px;
@@ -780,6 +782,8 @@
     .billpay-btn {
       margin: 0 auto;
       padding: 17px 30px;
+      position: inherit;
+      z-index: 3;
     }
 
     .back-images {
@@ -1356,13 +1360,16 @@
 
   .mt-footer.ap-page {
     padding: 44px 20px 32px;
+
     .mt-footer__inner {
       .mt-footer-logo-nav-wrapper {
         flex-direction: column;
+
         .mt-footer__nav {
           .mt-footer__nav-menu.mobile {
             display: flex;
           }
+
           .mt-footer__nav-menu:nth-last-child(1) {
             display: none;
           }
