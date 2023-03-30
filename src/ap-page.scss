@@ -155,7 +155,7 @@
             position: absolute;
             bottom: 0;
             left: 50%;
-            height: 14em;
+            height: 50%;
             border-image: linear-gradient(to bottom, #3C37FF, #33DAFF) 1 100%;
           }
 
@@ -163,7 +163,7 @@
             position: absolute;
             top: 0;
             left: 50%;
-            height: 14em;
+            height: 50%;
             border-image: linear-gradient(to bottom, #33DAFF, rgba(0, 0, 0, 0)) 1 100%;
           }
 
@@ -171,6 +171,7 @@
             display: block;
             height: 700px;
             position: relative;
+            background: white;
 
             .image {
               position: absolute;
@@ -186,6 +187,7 @@
               right: 0;
               transform: translate(0, -50%);
               z-index: 2;
+              background: white;
 
               .image {
                 position: relative;
@@ -514,6 +516,8 @@
         text-align: center;
         max-width: 586px;
         margin-bottom: 24px;
+        background-color: transparent;
+        z-index: 2;
       }
 
       .carlos-icon-wrapper {
@@ -771,12 +775,16 @@
     .bp-title {
       text-align: center;
       margin-bottom: 24px;
+      background-color: transparent;
+      z-index: 2;
     }
 
     .bp-description {
       text-align: center;
       opacity: 0.7;
       margin-bottom: 58px;
+      background-color: transparent;
+      z-index: 2;
     }
 
     .billpay-btn {
@@ -934,52 +942,6 @@
           flex: 1 1;
         }
 
-        //.demonstration {
-        //
-        //  .demonstration-images-wrapper {
-        //
-        //    .fd-image {
-        //
-        //      .block-with-many-items {
-        //        .logotype-collection {
-        //          position: absolute;
-        //          height: 500px;
-        //
-        //          .logotype-collection-logo {
-        //            width: 24px;
-        //          }
-        //
-        //          .xero {
-        //            transform: translate(124px, 53px);
-        //          }
-        //
-        //          .E {
-        //            transform: translate(145px, 168px);
-        //          }
-        //
-        //          .qb {
-        //            transform: translate(88px, 260px);
-        //          }
-        //
-        //          .arrays {
-        //            transform: translate(-102px, 246px);
-        //          }
-        //
-        //          .F {
-        //            transform: translate(-152px, 194px);
-        //          }
-        //
-        //          .sage {
-        //            transform: translate(-170px, 100px);
-        //
-        //          }
-        //        }
-        //      }
-        //    }
-        //  }
-        //}
-
-
         .function-selector {
           ul li {
             padding: 8px 0 8px 42px;
@@ -993,6 +955,16 @@
     padding: 32px;
 
     &__content {
+      .ai-content {
+        .ai-fees-cards {
+          .fees-card {
+            .label-wrapper {
+              padding: 0 20px 40px;
+            }
+          }
+        }
+      }
+
       .ai-words-gratitude {
         .back-images {
           top: 344px;
@@ -1022,6 +994,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  br {
+    display: none;
+  }
   .function-demonstration {
     display: none;
   }
@@ -1032,6 +1007,11 @@
     align-items: center;
     justify-content: center;
     padding: 52px 20px;
+    background: #F1F2F5;
+
+    .fd-title {
+      margin-bottom: 44px;
+    }
 
     .image-wrapper {
       position: relative;
@@ -1043,13 +1023,13 @@
         left: 0;
         width: 100%;
         height: 100px;
-        background: linear-gradient(to top, #fff, #fff, transparent);
+        background: linear-gradient(to top, #F1F2F5, #F1F2F5, transparent);
       }
     }
 
     .image {
       padding: 20px;
-      margin-bottom: 12px;
+      //margin-bottom: 12px;
     }
 
     .image-label {
@@ -1058,6 +1038,7 @@
 
     .image-description {
       opacity: 0.8;
+      margin-bottom: 82px;
     }
 
     .block {
@@ -1217,7 +1198,7 @@
         }
 
         .ai-words-gratitude-title {
-          padding: 0 20px;
+          padding: 0;
           margin-bottom: 32px;
         }
 

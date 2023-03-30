@@ -1,0 +1,168 @@
+.mt-hero.mt-hero_ap-page.ar-page {
+  background: url("https://monite.com/wp-content/uploads/2023/03/Hero-Block.png") no-repeat;
+
+  .mt-hero__inner {
+    .mt-hero__content {
+      .mt-title.mt-hero__title-wrapper {
+        .mt-hero_ap-page__subtitle {
+          background: linear-gradient(180deg, #3C37FF 0%, #62008E 100%);
+          background-size: 100%;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+      .mt-subtitle {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.manual-bill-statistics.ar-page {
+  .manual-bill-statistics__content {
+    .mbs-statistics-content {
+      .mbs-statistics-item-wrapper {
+        .mbs-statistics-label {
+          background: linear-gradient(180deg, #3C37FF 0%, #62008E 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+.function-demonstration.ar-page {
+  .function-demonstration__content {
+    .fd-content {
+      .demonstration {
+        .demonstration-images-wrapper {
+          .after.small {
+            height: 12em;
+          }
+
+          .fd-image {
+            .has-point {
+              &:before {
+                display: block;
+                background-color: #3C37FF;
+                border-radius: 16px;
+                bottom: 14px;
+                content: "";
+                height: 14px;
+                position: absolute;
+                width: 14px;
+                left: 50%;
+                margin-left: -6px;
+                z-index: 3;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.adding-invoicing.ar-page {
+  .adding-invoicing__content {
+    .ai-words-gratitude {
+      .ai-words-gratitude-countries-icons {
+        .ai-words-gratitude-finsWiss-icon {
+          background: url("./images/ar-page/entry.png") no-repeat;
+          background-size: contain;
+        }
+
+        .ai-words-gratitude-europe-icon {
+          background: url("./images/ar-page/holland.png") no-repeat;
+          background-size: contain;
+        }
+
+        .ai-words-gratitude-switzerland-icon {
+          background: url("./images/ar-page/estonia.png") no-repeat;
+          background-size: contain;
+        }
+      }
+
+      .back-images {
+        .left-img {
+          background: url("images/ar-page/left-block.png") no-repeat;
+        }
+
+        .right-img {
+          background: url("images/ar-page/rhite-block.png") no-repeat right;
+        }
+      }
+    }
+  }
+}
+
+.billpay.ar-page {
+  .billpay__content {
+    height: 402px;
+
+    .back-images {
+      top: -6px;
+
+      .left-img {
+        margin-top: 6px;
+        background: url("https://monite.com/wp-content/uploads/2023/03/invoisin-left-block.png") no-repeat;
+      }
+
+      .right-img {
+        background: url("https://monite.com/wp-content/uploads/2023/03/invoisin-rhite-block.png") no-repeat right;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .billpay.ar-page {
+    .billpay__content {
+      height: 402px;
+
+      .back-images {
+        display: none;
+        height: 402px;
+
+        .left-img {
+          height: 402px;
+          margin-top: 6px;
+          background: url("https://monite.com/wp-content/uploads/2023/03/invoisin-left-block.png") no-repeat;
+        }
+
+        .right-img {
+          margin-top: 6px;
+          height: 402px;
+          background: url("https://monite.com/wp-content/uploads/2023/03/invoisin-rhite-block.png") no-repeat right;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mt-hero.mt-hero_ap-page.ar-page {
+    background: none;
+
+    .mt-hero__inner {
+      .mt-hero__content {
+        .hero-image-wrapper {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .billpay.ar-page {
+    .billpay__content {
+      background: url("https://monite.com/wp-content/uploads/2023/03/back-mob-invoice.png") no-repeat;
+      background-size: cover;
+
+      .back-images {
+       display: none;
+      }
+    }
+  }
+}
