@@ -1,3 +1,7 @@
+:root {
+  --transformRange: 84px;
+}
+
 .mt-hero.mt-hero_ap-page.payment-links {
   background: url("https://monite.com/wp-content/uploads/2023/03/pay-hero.png") no-repeat center;
   background-size: contain;
@@ -42,4 +46,336 @@
   width: 100%;
   height: 752px;
   background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, #FFFFFF 81.77%);
+}
+
+.payments-mt-win-win {
+  padding: 120px 276px 90px;
+
+  .mt-ww-title {
+    text-align: center;
+    margin-bottom: 90px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 90px;
+    padding: 0 78px;
+
+    .ww-description-col {
+      width: 265px;
+
+      .col-title {
+        color: #3C37FF;
+        margin-bottom: 32px;
+      }
+
+      .ww-col-list {
+
+        .ww-list-item {
+          margin-bottom: 18px;
+          position: relative;
+
+          &::before {
+            content: url("images/payment-links/arrow-list-item.svg");
+            position: absolute;
+            left: -38px;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .mt-ww-sub-title {
+    text-align: center;
+    margin-bottom: 42px;
+  }
+
+  .beneficial-content {
+    display: flex;
+    justify-content: space-between;
+
+    .beneficial {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 280px;
+      padding: 30px 26px;
+      background: #F1F2F5;
+      border-radius: 10px;
+      margin-right: 12px;
+
+      .icon {
+        width: 34px;
+        height: 34px;
+        margin-right: 4px;
+      }
+
+      .beneficial-label {
+      }
+    }
+  }
+}
+
+.payments-mt-one-api {
+  padding: 120px 78px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 94px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #3C37FF;
+    border-radius: 10px;
+    position: relative;
+    padding: 66px 70px 66px 90px;
+    margin-bottom: 158px;
+
+    .oa-your-platform {
+      width: 308px;
+      height: 221px;
+      background: #FFFFFF;
+      box-shadow: 0 2.40212px 16.8148px rgba(0, 0, 0, 0.06);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      img {
+        margin-right: 8px;
+      }
+
+      &::before {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        content: url("https://monite.com/wp-content/uploads/2023/04/windo-icons.svg");
+      }
+    }
+
+    .oa-divider {
+      width: 356px;
+      height: 28px;
+      border-bottom: 1px solid #E5EEFF;
+      position: relative;
+
+      font-family: 'Faktum', serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      text-align: center;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+
+      .circle-point {
+        position: absolute;
+        left: -10px;
+        display: flex;
+        width: 20px;
+        top: 18px;
+        height: 20px;
+        border-radius: 50%;
+        background: #E5EEFF;
+      }
+
+      .circle-point::after {
+        content: '';
+        display: block;
+        margin: auto;
+        width: 10px;
+        height: 10px;
+        background: #05f;
+        border-radius: 50%;
+      }
+
+    }
+
+    .oa-monite {
+      width: 460px;
+      //height: 380px;
+      border: 1px solid #E5EEFF;
+      border-radius: 8px;
+      position: relative;
+      padding: 40px 28px;
+
+      &::before {
+        position: absolute;
+        content: "MONITE";
+        font-family: 'Faktum', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14.4127px;
+        line-height: 150%;
+        text-transform: uppercase;
+        color: #3C37FF;
+        background: #E5EEFF;
+        left: calc(50% - 34px);
+        top: -12px;
+        padding: 0 6px;
+        border-radius: 4px;
+      }
+
+      .card-list {
+
+        .card {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 26px 24px;
+          background: #fff;
+          box-shadow: 0 2.40212px 16.8148px rgba(0, 0, 0, 0.06);
+          border-radius: 8px;
+
+          &:not(.card:nth-last-child(1)) {
+            margin-bottom: 12px;
+          }
+
+          .card-label {
+            .status {
+              font-family: 'IBM Plex Mono', serif;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 6.81214px;
+              line-height: 140%;
+              letter-spacing: -0.01em;
+              text-transform: uppercase;
+              border-radius: 4px;
+              padding: 2px 4px;
+              margin-left: 12px;
+              margin-right: 12px;
+            }
+
+            .live {
+              color: #246FFF;
+              border: 1px solid #246FFF;
+            }
+
+            .soon {
+              background: #C1FF72;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__revenue {
+    padding: 36px 0 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #F1F2F5;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+
+    .revenue-title {
+      margin-bottom: 24px;
+      z-index: 2;
+    }
+
+    .revenue-subtitle {
+      margin-bottom: 16px;
+      z-index: 2;
+    }
+
+    .range-wrapper {
+      position: relative;
+      margin-bottom: 24px;
+      z-index: 2;
+
+      .revenue-range {
+        min-width: 420px;
+        border-radius: 10px;
+      }
+
+      .revenue-range-value {
+        position: relative;
+        width: 50px;
+        height: 34px;
+        background: #fff;
+        border-radius: 6px;
+        transform: translate(var(--transformRange), 8px);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .arrow {
+          background: #fff;
+          position: absolute;
+          top: -4px;
+          width: 12px;
+          height: 12px;
+          z-index: -1;
+          transform: rotate(45deg);
+        }
+      }
+    }
+
+    .revenue-btn {
+      z-index: 2;
+    }
+
+    .back-images {
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      background: url("https://monite.com/wp-content/uploads/2023/04/left-top.png") no-repeat left top,
+      url("https://monite.com/wp-content/uploads/2023/04/right-bottom.png") no-repeat right bottom;
+      height: 470px;
+    }
+  }
+}
+
+.adding-invoicing.payment-links {
+
+  .ai-words-gratitude {
+    margin-bottom: 120px;
+  }
+
+  .ai-content {
+    .ai-fees-cards {
+      .fees-card {
+        max-width: initial;
+
+        .fees-image-wrapper.payments {
+          padding: 42px 0;
+
+          .fees-image {
+            background: url("https://monite.com/wp-content/uploads/2023/04/pays.png") no-repeat;
+          }
+        }
+      }
+
+      .fees-card.with-plus:after {
+        position: absolute;
+        content: "+";
+        top: 143px;
+        font-size: 26px;
+        background: white;
+        padding: 12px;
+        width: 20px;
+        border-radius: 25px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        right: -25px;
+      }
+    }
+  }
 }

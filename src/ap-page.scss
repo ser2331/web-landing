@@ -1,7 +1,10 @@
 :root {
   --transformY: 0px
 }
-
+main {
+  display: block;
+  overflow: initial!important;
+}
 .mt-button.mt-hero_app-page-btn {
   color: white;
 }
