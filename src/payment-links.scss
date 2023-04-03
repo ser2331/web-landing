@@ -49,7 +49,11 @@
 }
 
 .payments-mt-win-win {
-  padding: 120px 276px 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 120px 120px 90px;
 
   .mt-ww-title {
     text-align: center;
@@ -57,66 +61,71 @@
   }
 
   &__content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 90px;
-    padding: 0 78px;
+    max-width: 888px;
 
-    .ww-description-col {
-      width: 265px;
+    .descriptions-cols {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 90px;
+      padding: 0 78px;
 
-      .col-title {
-        color: #3C37FF;
-        margin-bottom: 32px;
-      }
+      .ww-description-col {
+        width: 265px;
 
-      .ww-col-list {
+        .col-title {
+          color: #3C37FF;
+          margin-bottom: 32px;
+        }
 
-        .ww-list-item {
-          margin-bottom: 18px;
-          position: relative;
+        .ww-col-list {
 
-          &::before {
-            content: url("images/payment-links/arrow-list-item.svg");
-            position: absolute;
-            left: -38px;
-            top: 0;
+          .ww-list-item {
+            margin-bottom: 18px;
+            position: relative;
+
+            &::before {
+              content: url("images/payment-links/arrow-list-item.svg");
+              position: absolute;
+              left: -38px;
+              top: 0;
+            }
           }
+        }
+      }
+    }
+
+    .mt-ww-sub-title {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .beneficial-content {
+      display: flex;
+      justify-content: space-between;
+
+      .beneficial {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 30px 26px;
+        background: #F1F2F5;
+        border-radius: 10px;
+        margin-right: 12px;
+
+        .icon {
+          width: 34px;
+          height: 34px;
+          margin-right: 4px;
+        }
+
+        .beneficial-label {
         }
       }
     }
   }
 
-  .mt-ww-sub-title {
-    text-align: center;
-    margin-bottom: 42px;
-  }
 
-  .beneficial-content {
-    display: flex;
-    justify-content: space-between;
-
-    .beneficial {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      width: 280px;
-      padding: 30px 26px;
-      background: #F1F2F5;
-      border-radius: 10px;
-      margin-right: 12px;
-
-      .icon {
-        width: 34px;
-        height: 34px;
-        margin-right: 4px;
-      }
-
-      .beneficial-label {
-      }
-    }
-  }
 }
 
 .function-demonstration.ar-page.payment-links-page {
@@ -137,11 +146,13 @@
           list-style: none;
           counter-reset: li;
         }
+
         ul li {
           padding: 24px 16px 24px 68px;
+
           &::before {
             counter-increment: li;
-            content: "0"counters(li, ".");
+            content: "0" counters(li, ".");
             font-family: 'Faktum', serif;
             font-style: normal;
             font-weight: 600;
@@ -169,7 +180,6 @@
     }
   }
 }
-
 
 .payments-mt-one-api {
   padding: 120px 78px;
@@ -302,8 +312,7 @@
               text-transform: uppercase;
               border-radius: 4px;
               padding: 2px 4px;
-              margin-left: 12px;
-              margin-right: 12px;
+              margin: 0;
             }
 
             .live {
@@ -331,6 +340,10 @@
     border-radius: 12px;
     position: relative;
     overflow: hidden;
+
+    .payments-mt-one-api__revenue-mob {
+      display: none;
+    }
 
     .revenue-title {
       margin-bottom: 24px;
@@ -444,7 +457,7 @@
 }
 
 .monites-features {
-  padding: 120px 160px 90px;
+  padding: 120px 120px 90px;
   background: #F1F2F5;
 
   &__title {
@@ -551,6 +564,297 @@
       .right-img {
         background: url("https://monite.com/wp-content/uploads/2023/04/right-block.png") no-repeat right;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 1144px) {
+
+}
+
+@media screen and (max-width: 991px) {
+  .monites-features {
+    padding: 120px 20px 90px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mt-hero.mt-hero_ap-page.payment-links {
+    background: none;
+
+    .mt-hero__inner {
+      .mt-hero__content {
+        .hero-image-wrapper {
+          display: none;
+        }
+
+        .hero-image-wrapper.play-btn {
+          display: none;
+        }
+
+        .call-wrapper {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .mt-hero_ap-page__background-image-mobile.payment-links {
+    position: relative;
+    background: url("https://monite.com/wp-content/uploads/2023/04/Group-1948756907.png") no-repeat bottom;
+    background-size: contain;
+    padding: 30px 40px 20px;
+
+    .hero-image-wrapper.play-btn {
+      position: absolute;
+      margin: 25% auto;
+      width: 46px;
+      height: 46px;
+      background-color: #3C37FF;
+      cursor: pointer;
+      border-radius: 100px;
+      top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .play-button {
+      width: 12px;
+    }
+  }
+
+  .payments-mt-win-win {
+    padding: 52px 20px 90px;
+
+    .mt-ww-title {
+      margin-bottom: 42px;
+
+    }
+
+    &__content {
+
+      .descriptions-cols {
+        flex-direction: column;
+      }
+
+      .descriptions-cols {
+        padding: 0 0 0 38px;
+
+        .ww-description-col {
+          width: 100%;
+        }
+      }
+
+      .beneficial-content {
+        flex-wrap: wrap;
+
+        .beneficial {
+          flex: 1 1;
+          min-width: 135px;
+          margin: 6px 2px;
+          padding: 12px;
+          flex-direction: column;
+          justify-content: left;
+          align-items: start;
+
+          .icon {
+            margin-bottom: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .function-demonstration-mobile.payment-links-page {
+    padding: 52px 26px;
+    .fd-title {
+      text-align: center;
+    }
+
+    .image-label {
+      text-align: center;
+      background: linear-gradient(to bottom, #3C37FF 0%, #FF4A4B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .image-description {
+      text-align: center;
+    }
+  }
+
+  .payment-links-integrated {
+    padding: 52px 20px 44px;
+
+    .payment-links-integrated__content {
+      flex-direction: column;
+
+      .pli-card {
+        margin: 0;
+        width: 100%;
+        height: auto;
+        padding: 32px 24px;
+
+        &:nth-child(1) {
+          margin-bottom: 16px;
+          position: relative;
+
+          &::after {
+            width: 46px;
+            height: 46px;
+            right: calc(50% - 23px);
+            bottom: -38px;
+            top: auto;
+          }
+        }
+      }
+    }
+  }
+
+  .payments-mt-one-api {
+    padding: 120px 0 90px;
+
+    .payments-mt-one-api__content {
+      flex-direction: column;
+      padding: 30px 20px;
+      border-radius: 0;
+
+      .oa-your-platform {
+        width: 100%;
+      }
+
+      .oa-divider {
+        height: 192px;
+        width: 2px;
+        border-left: 1px solid white;
+        border-bottom: none;
+
+        .circle-point {
+          top: -8px;
+        }
+
+        .name {
+          position: absolute;
+          top: 50%;
+          left: -40px;
+          width: 80px;
+          height: 40px;
+          background: #3C37FF;
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .oa-monite {
+        width: auto;
+      }
+
+      .card-list {
+
+        .card {
+          padding: 12px;
+
+          .card-label {
+            font-family: 'Faktum', serif;
+            font-weight: 400;
+            font-size: 8.68421px;
+            line-height: 140%;
+            letter-spacing: -0.02em;
+            color: #000000;
+
+            .status {
+              width: 16px;
+              height: 8px;
+            }
+          }
+
+          .card-icon {
+            width: 56px;
+            height: 12px;
+            margin: 10px;
+          }
+        }
+      }
+    }
+
+    .payments-mt-one-api__revenue {
+      margin: 0 20px;
+      padding: 0px 20px 20px;
+      position: relative;
+
+      .payments-mt-one-api__revenue-mob {
+        display: block;
+        width: 120%;
+        float: left;
+
+        img {
+          float: left;
+        }
+
+        margin-bottom: 26px;
+      }
+
+      .range-wrapper {
+        .revenue-range {
+          min-width: 232px;
+        }
+      }
+
+      .back-images {
+        display: none;
+      }
+    }
+  }
+
+  .adding-invoicing.payment-links {
+    .adding-invoicing__content {
+      .ai-fees-cards {
+        margin-bottom: 0;
+
+        .fees-card.with-plus {
+          .fees-image-wrapper.payments {
+            margin: 0;
+            padding: 20px 0 0;
+          }
+
+          &::after {
+            right: auto;
+            top: auto;
+            bottom: -24px;
+          }
+        }
+      }
+    }
+  }
+
+  .monites-features {
+    .monites-features__content {
+      .mf-card {
+        padding: 24px;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .mf-card-icon {
+          height: 52px;
+          margin-bottom: 22px;
+        }
+
+        .mf-card-description {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .billpay.ar-page.payment-link-invoice {
+    height: 474px;
+    padding: 50px 16px;
+
+    .billpay__content {
+      background: url("https://monite.com/wp-content/uploads/2023/04/mob-bottom.png") no-repeat bottom;
+      background-size: cover;
     }
   }
 }
