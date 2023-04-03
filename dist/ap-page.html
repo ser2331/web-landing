@@ -147,9 +147,11 @@
 
 
 </section>
+
 <section class='mt-hero_ap-page__background-image-mobile'>
   <img src='https://monite.com/wp-content/uploads/2023/03/hiro-content-image.png' alt='hero-block-content' />
 </section>
+
 <section class='mt-trusted'>
   <div class='mt-container'>
     <h2 class='mt-trusted__title'>Trusted by many B2B platforms</h2>
@@ -894,8 +896,10 @@
   let observer = new IntersectionObserver(onEntry, options);
   let elements = document.querySelectorAll('.element-animation');
 
-  for(let elm of elements) {
-    observer.observe(elm);
+  if (elements) {
+    for(let elm of elements) {
+      observer.observe(elm);
+    }
   }
 
 </script>

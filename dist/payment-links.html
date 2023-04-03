@@ -6,12 +6,14 @@
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 </head>
 <body>
-<div id="myModal" class="modal">
+<div id='myModal' class='modal'>
 
   <!-- Модальное содержание -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p class='H4'>How does payment links works</p>
+  <div class='modal-content'>
+    <div class='modal-header'>
+      <span class='close'>&times;</span>
+      <p class='H4'>How does payment links works</p>
+    </div>
 
     <div class='video'></div>
   </div>
@@ -200,13 +202,42 @@
   </div>
 </section>
 
-<section class='payments-mt-win-win'>
+<section class='how-mach-revenue'>
+  <div class='how-mach-revenue__revenue'>
+    <div class='payments-mt-one-api__revenue-mob'>
+      <img src='https://monite.com/wp-content/uploads/2023/04/mob-revenue.png' alt='back-revenue' />
+    </div>
+    <h1 class='H1 revenue-title'>How much revenue <br />can I make?</h1>
+
+    <p class='P_1 revenue-subtitle'>
+      A typical SMB sends about 450 invoices in a busy month, <br />
+      while payment companies get a 2-3% cut of those <br />
+      transactions. Take that revenue back.
+    </p>
+
+    <label class='range-label' for='revenue' style='margin-bottom: 12px'>CLIENTS / MO</label>
+    <div class='range-wrapper'>
+      <input class='styled-slider slider-progress revenue-range' type='range' id='revenue' name='revenue' min='0'
+             max='220' value='50' />
+      <div class='revenue-range-value'>
+        <span class='arrow'></span>
+        <span class='value'>50</span>
+      </div>
+    </div>
+
+    <a class='mt-button mt-hero_app-page-btn BTN_2 revenue-btn'>Calculate potential revenue</a>
+
+    <div class='back-images'></div>
+  </div>
+</section>
+
+<section class='payments-mt-win-win solution'>
   <h1 class='H1 mt-ww-title'>A win-win solution for you <br /> and your customers</h1>
 
   <div class='payments-mt-win-win__content'>
     <div class='descriptions-cols'>
       <div class='ww-description-col'>
-        <h2 class='H3 col-title'>For you</h2>
+        <h2 class='H4 col-title'>For you</h2>
 
         <ul class='ww-col-list'>
           <li class='P_1 ww-list-item'>Earn additional payment revenue from your current user base without extra
@@ -215,17 +246,22 @@
           <li class='P_1 ww-list-item'>Win over more customers by offering a faster way to get paid</li>
         </ul>
 
+        <div class='image-wrapper'>
+          <img src='https://monite.com/wp-content/uploads/2023/04/for-ypur.png' alt='for-your' />
+        </div>
       </div>
 
       <div class='ww-description-col'>
-        <h2 class='H3 col-title'>For your customers</h2>
+        <h2 class='H4 col-title'>For your customers</h2>
 
         <ul class='ww-col-list'>
           <li class='P_1 ww-list-item'>Get paid by international clients 40% faster</li>
           <li class='P_1 ww-list-item'>Let people pay however they want, regardless of what vendors accept</li>
           <li class='P_1 ww-list-item'>Offer convenient payment requests.</li>
         </ul>
-
+        <div class='image-wrapper'>
+          <img src='https://monite.com/wp-content/uploads/2023/04/for-all.png' alt='for-customers' />
+        </div>
       </div>
     </div>
 
@@ -250,12 +286,12 @@
   </div>
 
 
-
 </section>
 
 <section class='function-demonstration ar-page payment-links-page'>
   <div class='function-demonstration__content'>
-    <h1 class='H1 fd-title'>Offer all the features <br /> your clients need</h1>
+    <h2 class='Subhead_1 over-text'>How do payment links work?</h2>
+    <h1 class='H1 fd-title'>Get customers paid in <br /> hours instead of days — <br />and earn on it</h1>
 
     <div class='fd-content'>
       <div class='demonstration'>
@@ -298,13 +334,14 @@
             Their client pays it in one click by card, bank transfer, or other popular methods.
           </li>
           <li class='H6' id='listItem_2' onclick='onChangeFeatures(2)'>
-            Invoices with links get paid 40% faster, your clients don't need to chase payments
+            Invoices with payment links get paid 40% faster, so your clients don’t need to chase payments. Monite does
+            this for them.
           </li>
           <li class='H6' id='listItem_3' onclick='onChangeFeatures(3)'>
             Your customer gets notified when the invoice is paid, and reconciliation is automated
           </li>
           <li class='H6' id='listItem_4' onclick='onChangeFeatures(4)'>
-            You earn up to 0.5% on every invoice payment. Markups for each payment method are adjustable.
+            You earn up to 2% on every invoice payment. Markups for each payment method are adjustable.
           </li>
         </ul>
       </div>
@@ -330,7 +367,8 @@
     <img class='image' src='https://monite.com/wp-content/uploads/2023/04/Group-1948756110.png' alt='invoice'>
   </div>
   <h3 class='H3 image-label'>02</h3>
-  <p class='P_1 image-description'>Their client pays it in one click by card, bank transfer, or other popular methods.</p>
+  <p class='P_1 image-description'>Their client pays it in one click by card, bank transfer, or other popular
+    methods.</p>
 
   <!--  2-->
   <div class='image-wrapper'>
@@ -345,7 +383,8 @@
          alt='payment-method'>
   </div>
   <h3 class='H3 image-label'>04</h3>
-  <p class='P_1 image-description'>Your customer gets notified when the invoice is paid, and reconciliation is automated</p>
+  <p class='P_1 image-description'>Your customer gets notified when the invoice is paid, and reconciliation is
+    automated</p>
 
   <!--  4-->
   <div class='image-wrapper'>
@@ -353,13 +392,61 @@
          alt='invoice'>
   </div>
   <h3 class='H3 image-label'>05</h3>
-  <p class='P_1 image-description'>You earn up to 0.5% on every invoice payment. Markups for each payment method are adjustable</p>
+  <p class='P_1 image-description'>You earn up to 0.5% on every invoice payment. Markups for each payment method are
+    adjustable</p>
 </section>
 <!-- ===========================================================================>Доделать-->
 
+<section class='adding-invoicing ar-page'>
+  <div class='adding-invoicing__content'>
+    <h1 class='H1 ai-title'>Leading invoicing providers earn 30-50% <br /> of total revenue from payment links</h1>
+    <div class='ai-words-gratitude'>
+      <div class='ai-words-gratitude-countries-icons'>
+        <div class='ai-words-gratitude-finsWiss-icon'></div>
+
+        <div class='divider'></div>
+
+        <div class='ai-words-gratitude-europe-icon'></div>
+        <div class='ai-words-gratitude-switzerland-icon'></div>
+      </div>
+
+      <h2 class='H2 ai-words-gratitude-title'>
+        Let users pay within your interface <br />
+        and earn up to 0.6% per invoice.
+      </h2>
+
+      <div class='ai-quotes'></div>
+
+      <p class='P_1 ai-words-gratitude-description'>
+        AR/AP are core to our product, so we looked at multiple providers as well as building in-house.
+        We chose Monite due to their product depth, quality of APIs, and fast development. Working with Monite
+        has been a breeze – a  robust API platform, knowledgeable team, and quick support at all times
+      </p>
+
+      <div class='carlos-icon-wrapper'>
+        <img src='https://monite.com/wp-content/uploads/2023/03/jane.png' alt='jane'
+             class='carlos-icon' />
+        <div class='P_1 carlos-description'>Jane, CPO</div>
+      </div>
+
+      <a class='download_pdf-button' href='#pdf' data-fancybox=''>
+        <img src='https://monite.com/wp-content/uploads/2023/03/download_pdf.png' alt='download_pdf'
+             class='download_pdf-icon' />
+        <span class='BTN_1 download_pdf-title'>PDF case</span>
+      </a>
+
+      <div class='back-images'>
+        <div class='left-img'></div>
+        <div class='right-img'></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class='payments-mt-one-api'>
-  <h1 class='H1 payments-mt-one-api__title'>One API with all the best payment providers.<br />50+ payment methods across
-    190 countries.</h1>
+  <h1 class='H1 payments-mt-one-api__title'>
+    One API, 50+ payment methods, 190 countries
+  </h1>
   <div class='payments-mt-one-api__content'>
     <div class='oa-your-platform'>
       <img src='https://monite.com/wp-content/uploads/2023/04/your-platform.svg' alt='platform' />
@@ -397,156 +484,63 @@
 
     </div>
   </div>
-
-  <div class='payments-mt-one-api__revenue'>
-    <div class='payments-mt-one-api__revenue-mob'>
-      <img src='https://monite.com/wp-content/uploads/2023/04/mob-revenue.png' alt='back-revenue' />
-    </div>
-    <h1 class='H1 revenue-title'>How much revenue <br />can I make?</h1>
-
-    <p class='P_1 revenue-subtitle'>Up to 2-5x revenue per user, <br />earn from each transaction</p>
-
-    <label class='range-label' for='revenue' style='margin-bottom: 12px'>CLIENTS / MO</label>
-    <div class='range-wrapper'>
-      <input class='styled-slider slider-progress revenue-range' type='range' id='revenue' name='revenue' min='0'
-             max='220' value='50' />
-      <div class='revenue-range-value'>
-        <span class='arrow'></span>
-        <span class='value'>50</span>
-      </div>
-    </div>
-
-    <a class='mt-button mt-hero_app-page-btn BTN_2 revenue-btn'>Calculate</a>
-
-    <div class='back-images'></div>
-  </div>
 </section>
 
-<section class='adding-invoicing payment-links'>
-  <div class='adding-invoicing__content'>
-    <h1 class='H1 ai-title'>Leading invoicing providers earn 30-50% <br /> of total revenue from payment links</h1>
+<section class='integrate-of-building'>
+  <h1 class='H1 mt-iob-title'>Integrate in 6 days instead of <br/> building for 2 years</h1>
+  <p class='P_1 mt-iob-subtitle'>
+    Building payment links takes years of development and domain expertise. Monite does all <br/>
+    the heavy lifting for you, offering turnkey front-end, back-end, design, and partnerships, so <br/>
+    you can focus on your core product rather than building from scratch.
+  </p>
 
-    <div class='ai-words-gratitude'>
-      <div class='ai-words-gratitude-countries-icons'>
-        <div class='ai-words-gratitude-finsWiss-icon'></div>
-
-        <div class='divider'></div>
-
-        <div class='ai-words-gratitude-europe-icon'></div>
-        <div class='ai-words-gratitude-switzerland-icon'></div>
-      </div>
-
-      <h2 class='H2 ai-words-gratitude-title'>
-        How FinSwiss Built the Ultimate <br />
-        Vertical ERP for E-commerce
-      </h2>
-
-      <div class='ai-quotes'></div>
-
-      <p class='P_1 ai-words-gratitude-description'>
-        Thanks to Monite, we enable our clients all across Europe to send compliant invoices
-        and collect payments via payment links. At the same time, we enable our eComm customers
-        to pay suppliers worldwide using Monite’s Accounts Payable functionalities and payment rails
-      </p>
-
-      <div class='carlos-icon-wrapper'>
-        <img src='https://monite.com/wp-content/uploads/2023/03/mt-cases-avatar-2.png' alt='carlos'
-             class='carlos-icon' />
-        <div class='P_1 carlos-description'>Carlos, CEO</div>
-      </div>
-
-      <a class='download_pdf-button' href='#pdf' data-fancybox=''>
-        <img src='https://monite.com/wp-content/uploads/2023/03/download_pdf.png' alt='download_pdf'
-             class='download_pdf-icon' />
-        <span class='BTN_1 download_pdf-title'>PDF case</span>
-      </a>
-
-      <div class='back-images'>
-        <div class='left-img'></div>
-        <div class='right-img'></div>
-      </div>
-    </div>
-
-
-    <h1 class='H1 ai-title'>How adding invoicing <br /> supercharges revenues</h1>
-
-    <div class='ai-content'>
-      <div class='ai-fees-cards'>
-        <div class='fees-card with-plus'>
-          <div class='fees-image-wrapper payments'>
-            <div class='fees-image'></div>
-          </div>
-
-          <div class='label-wrapper'>
-            <h2 class='H3 fees-label'>Payment fees</h2>
-            <p class='P_1 fees-description'>Let users pay within your interface and earn up to 0.6% per
-              invoice.</p>
-          </div>
+  <div class='integrate-of-building__content'>
+    <div class='descriptions-cols'>
+      <div class='iob-description-col'>
+        <div class='image-wrapper'>
+          <img src='https://monite.com/wp-content/uploads/2023/04/keys.png' alt='for-your' />
         </div>
+        <h4 class='H4 col-title'>Fully featured platform</h4>
+        <p class='P_1 col-description'>
+          Launch quickly and grow with a robust set of white-label features from role-setting
+          and permissions to coding complex business workflows—all available via a modern API.
+        </p>
+      </div>
 
-        <div class='fees-card'>
-          <div class='fees-image-wrapper revenue'>
-            <div class='fees-image'></div>
-          </div>
-
-          <div class='label-wrapper'>
-            <h2 class='H3 fees-label'>Revenue share</h2>
-            <p class='P_1 fees-description'>Upsell customers with BNPL/financing and get a share of the
-              payment.</p>
-          </div>
+      <div class='iob-description-col'>
+        <div class='image-wrapper'>
+          <img src='https://monite.com/wp-content/uploads/2023/04/Frame-1948756892.png' alt='for-your' />
         </div>
+        <h4 class='H4 col-title'>Compliance included</h4>
+        <p class='P_1 col-description'>
+          We take care of regional invoice compliance, KYC & KYB, GDPR, and more
+        </p>
+      </div>
+
+      <div class='iob-description-col'>
+        <div class='image-wrapper'>
+          <img src='https://monite.com/wp-content/uploads/2023/04/Frame-1948756892-1.png' alt='for-your' />
+        </div>
+        <h4 class='H4 col-title'>UX consistent with your brand</h4>
+        <p class='P_1 col-description'>
+          Ensure a consistent brand experience at every touchpoint. Manage the look and feel of invoicing
+          interfaces as well as PDFs. Our invoicing interface matches your app interface, so clients won’t see a difference.
+        </p>
       </div>
     </div>
   </div>
-</section>
-
-<section class='monites-features'>
-  <h1 class='H1 monites-features__title'>Monite's features</h1>
-
-  <div class='monites-features__content'>
-    <div class='mf-card'>
-      <img class='mf-card-icon' src='https://monite.com/wp-content/uploads/2023/04/countries.png' alt='countries' />
-      <div class='H3 mf-card-description'>190 countries <br /> supported</div>
-    </div>
-
-    <div class='mf-card'>
-      <img class='mf-card-icon' src='https://monite.com/wp-content/uploads/2023/04/methods.png' alt='methods' />
-      <div class='H3 mf-card-description'>50+ payment <br /> methods covered</div>
-    </div>
-
-    <div class='mf-card'>
-      <img class='mf-card-icon' src='https://monite.com/wp-content/uploads/2023/04/secure.png' alt='secure' />
-      <div class='H3 mf-card-description'>Secure & reliable</div>
-    </div>
-
-    <div class='mf-card'>
-      <img class='mf-card-icon' src='https://monite.com/wp-content/uploads/2023/04/compliance.png' alt='compliance' />
-      <div class='H3 mf-card-description'>Compliance & fraud <br /> prevention included</div>
-    </div>
-
-    <div class='mf-card'>
-      <img class='mf-card-icon' src='https://monite.com/wp-content/uploads/2023/04/clients.png' alt='payment methods' />
-      <div class='H3 mf-card-description'>Clients choose the <br /> payment methods <br /> they want</div>
-    </div>
-
-    <div class='mf-card'>
-      <img class='mf-card-icon' src='https://monite.com/wp-content/uploads/2023/04/commissions.png' alt='commissions' />
-      <div class='H3 mf-card-description'>Custom commissions <br /> for each payment <br /> method</div>
-    </div>
-  </div>
-
 </section>
 
 <section class='payment-links-integrated'>
-  <h1 class='H1 payment-links-integrated__title'>Payments pre-integrated <br /> Earn on each transaction</h1>
+  <h1 class='H1 payment-links-integrated__title'>Get experimenting with invoice <br/> links in just 6 days, using 2 <br/> developers</h1>
 
   <div class='payment-links-integrated__content'>
     <div class='pli-card'>
       <h2 class='H2 card-title'>4 days </h2>
       <h4 class='H4 card-subtitle'>Onboarding flow</h4>
       <p class='P_1 card-description'>
-        Implement onboarding flows via API or a fully white-labeled custom page
-        to enable end-users to start paying how they want.
+        Implement onboarding flows for your clients for payments usage
+        usingAPI or a fully white-labeled custom page
       </p>
     </div>
 
@@ -562,7 +556,7 @@
 
 <section class='billpay ar-page payment-link-invoice'>
   <div class='billpay__content'>
-    <h1 class='H1 bp-title'>Start earning on invoice <br /> payments today!</h1>
+    <h1 class='H1 bp-title'>Don’t wait. Put your revenue <br/> into overdrive today</h1>
     <h2 class='P_1 bp-description'>No minimum commitments, pay-as-you-go pricing</h2>
 
     <a class='mt-button mt-hero_app-page-btn billpay-btn BTN_1' href='#get-demo' data-fancybox=''>Get demo</a>
@@ -816,26 +810,26 @@
     const checkedItem = document.querySelector(`.function-selector #listItem_${num}`);
     const listItems = document.querySelectorAll('.function-selector ul li');
 
-    if(demonstrationImagesWrapper) {
+    if (demonstrationImagesWrapper) {
       // let transformY = num * (700 + 130);
       let transformY = num * 700;
       demonstrationImagesWrapper.style.setProperty('--transformY', -transformY + 'px');
     }
 
-    if(listItems && listItems.length) {
-      for(let item of listItems) {
+    if (listItems && listItems.length) {
+      for (let item of listItems) {
         item?.classList.remove('checkedItem');
         const descr = item.querySelector('p');
-        if(descr) {
+        if (descr) {
           descr.classList.remove('description-visible');
         }
       }
     }
 
-    if(checkedItem) {
+    if (checkedItem) {
       checkedItem.classList.add('checkedItem');
       const descr = checkedItem.querySelector('p');
-      if(descr) {
+      if (descr) {
         descr.classList.add('description-visible');
       }
     }
@@ -843,7 +837,7 @@
 
   function onEntry(entry) {
     entry.forEach((change) => {
-      if(change.isIntersecting) {
+      if (change.isIntersecting) {
         change.target.classList.add('element-show');
       } else {
         change.target.classList.remove('element-show');
@@ -859,25 +853,25 @@
   let observer = new IntersectionObserver(onEntry, options);
   let elements = document.querySelectorAll('.element-animation');
 
-  for(let elm of elements) {
+  for (let elm of elements) {
     observer.observe(elm);
   }
 
 
-  const modal = document.getElementById("myModal");
-  const btn = document.getElementById("show-modal-player");
-  const span = document.getElementsByClassName("close")[0];
+  const modal = document.getElementById('myModal');
+  const btn = document.getElementById('show-modal-player');
+  const span = document.getElementsByClassName('close')[0];
   btn.onclick = function() {
-    modal.style.display = "block";
-  }
+    modal.style.display = 'block';
+  };
   span.onclick = function() {
-    modal.style.display = "none";
-  }
+    modal.style.display = 'none';
+  };
   window.onclick = function(event) {
     if (event.target == modal) {
-      modal.style.display = "none";
+      modal.style.display = 'none';
     }
-  }
+  };
 </script>
 </body>
 </html>
