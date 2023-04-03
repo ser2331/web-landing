@@ -6,6 +6,16 @@
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 </head>
 <body>
+<div id="myModal" class="modal">
+
+  <!-- Модальное содержание -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p class='H4'>How does payment links works</p>
+
+    <div class='video'></div>
+  </div>
+</div>
 
 <section class='mt-header'>
   <div class='mt-header__container'>
@@ -117,7 +127,7 @@
         <img src='https://monite.com/wp-content/uploads/2023/03/back-play.png' alt='top-clients' />
       </div>
 
-      <div class='hero-image-wrapper play-btn'>
+      <div id='show-modal-player' class='hero-image-wrapper play-btn'>
         <img class='play-button' src='https://monite.com/wp-content/uploads/2023/03/play-icon.png' alt='top-clients' />
       </div>
 
@@ -230,8 +240,7 @@
 
 </section>
 
-<!-- ===========================================================================>Доделать-->
-<section class='function-demonstration ar-page'>
+<section class='function-demonstration ar-page payment-links-page'>
   <div class='function-demonstration__content'>
     <h1 class='H1 fd-title'>Offer all the features <br /> your clients need</h1>
 
@@ -240,67 +249,27 @@
         <div id='demonstration-images-wrapper' class='demonstration-images-wrapper'>
           <div class='fd-image' id='0'>
             <div class='has-point'>
-              <img class='image' src='https://monite.com/wp-content/uploads/2023/03/customize-layout.png'
+              <img class='image' src='https://monite.com/wp-content/uploads/2023/04/customer-invoice.png'
                    alt='customize-layout'>
             </div>
             <div class='horizontal-link-line after'></div>
           </div>
           <div class='fd-image' id='1'>
             <div class='horizontal-link-line before'></div>
-            <img class='image' src='https://monite.com/wp-content/uploads/2023/03/ar-page-invoice.png' alt='invoice'>
+            <img class='image' src='https://monite.com/wp-content/uploads/2023/04/client-pays.png' alt='client-pays'>
             <div class='horizontal-link-line after'></div>
           </div>
           <div class='fd-image' id='2'>
             <div class='horizontal-link-line before'></div>
-            <img class='image' src='https://monite.com/wp-content/uploads/2023/03/one-click-send.png'
-                 alt='one-click-send'>
+            <img class='image' src='https://monite.com/wp-content/uploads/2023/04/invoices.png'
+                 alt='invoices'>
             <div class='horizontal-link-line after'></div>
           </div>
           <div class='fd-image' id='3'>
             <div class='horizontal-link-line before'></div>
-            <div class='has-point small-image'>
-              <img class='image' src='https://monite.com/wp-content/uploads/2023/03/payment-method.png'
-                   alt='payment-method'>
-            </div>
-            <div class='horizontal-link-line after'></div>
+            <img class='image' src='https://monite.com/wp-content/uploads/2023/03/top-supliers.png' alt='top-supliers'>
           </div>
-
           <div class='fd-image' id='4'>
-            <div class='horizontal-link-line before'></div>
-            <div class='has-point small-image'>
-              <img class='image' src='https://monite.com/wp-content/uploads/2023/03/invoice-chat-1.png'
-                   alt='invoice'>
-            </div>
-            <div class='horizontal-link-line after small'></div>
-          </div>
-
-          <div class='fd-image' id='5'>
-            <div class='horizontal-link-line before'></div>
-            <div class='has-point'>
-              <img class='image' src='https://monite.com/wp-content/uploads/2023/03/notification-chat.png'
-                   alt='notification'>
-            </div>
-            <div class='horizontal-link-line after small'></div>
-          </div>
-
-          <div class='fd-image' id='6'>
-            <div class='horizontal-link-line before'></div>
-            <div class='has-point'>
-              <img class='image' src='png' alt='?????'>
-            </div>
-            <div class='horizontal-link-line after small'></div>
-          </div>
-
-          <div class='fd-image' id='7'>
-            <div class='horizontal-link-line before'></div>
-            <div class='has-point'>
-              <img class='image' src='https://monite.com/wp-content/uploads/2023/03/acc-software.png'
-                   alt='acc-software'>
-            </div>
-            <div class='horizontal-link-line after small'></div>
-          </div>
-
-          <div class='fd-image' id='8'>
             <div class='horizontal-link-line before'></div>
             <img class='image' src='https://monite.com/wp-content/uploads/2023/03/top-supliers.png' alt='top-supliers'>
           </div>
@@ -310,65 +279,27 @@
       <div class='function-selector'>
         <ul>
           <li class='H6' id='listItem_0' onclick='onChangeFeatures(0)'>
-            Customizable invoices
-            <p class='P_1 listItem-description'>
-              Your clients can create their own design or pick templates, colors, and upload their logo.
-            </p>
+            Your customer emails an invoice with a payment link attached
           </li>
           <li class='H6' id='listItem_1' onclick='onChangeFeatures(1)'>
-            Fully compliant in 10+ regions
-            <p class='P_1 listItem-description'>
-              Regional compliance is covered for quotes and invoices. E-invoicing connectivity is included.
-            </p>
+            Their client pays it in one click by card, bank transfer, or other popular methods.
           </li>
           <li class='H6' id='listItem_2' onclick='onChangeFeatures(2)'>
-            One-click send
-            <p class='P_1 listItem-description'>
-              Your clients can send invoices right as they complete jobs or schedule them for a specific date.
-            </p>
+            Invoices with links get paid 40% faster, your clients don't need to chase payments
           </li>
           <li class='H6' id='listItem_3' onclick='onChangeFeatures(3)'>
-            Getting paid fast
-            <p class='P_1 listItem-description'>
-              Every invoice is sent with a payment link that can be paid online by card, bank transfer, or other
-              methods.
-            </p>
+            Your customer gets notified when the invoice is paid, and reconciliation is automated
           </li>
           <li class='H6' id='listItem_4' onclick='onChangeFeatures(4)'>
-            Automated reminders
-            <p class='P_1 listItem-description'>
-              Your customers can set up automatic reminders to stop chasing unpaid invoices.
-            </p>
-          </li>
-          <li class='H6' id='listItem_5' onclick='onChangeFeatures(5)'>
-            Notification on important events
-            <p class='P_1 listItem-description'>
-              Notify clients when invoices are paid, past due, and more.
-            </p>
-          </li>
-          <li class='H6' id='listItem_6' onclick='onChangeFeatures(6)'>
-            Automatic payment detection & reconciliation
-            <p class='P_1 listItem-description'>
-              Once an invoice is paid, it’s auto-reconciled for accounting. Full & partial payments are supported.
-            </p>
-          </li>
-          <li class='H6' id='listItem_7' onclick='onChangeFeatures(7)'>
-            Full sync with accounting software
-            <p class='P_1 listItem-description'>
-              We support two-way sync with over 30 accounting platforms.
-            </p>
-          </li>
-          <li class='H6' id='listItem_8' onclick='onChangeFeatures(8)'>
-            Clear cash flow analytics
-            <p class='P_1 listItem-description'>
-              Your customers can see their top clients, key problem areas, and more.
-            </p>
+            You earn up to 0.5% on every invoice payment. Markups for each payment method are adjustable.
           </li>
         </ul>
       </div>
     </div>
   </div>
 </section>
+
+<!-- ===========================================================================>Доделать-->
 
 <section class='function-demonstration-mobile'>
   <h1 class='H1 fd-title'>Offer all the features <br /> your clients need</h1>
@@ -503,7 +434,7 @@
 
     <p class='P_1 revenue-subtitle'>Up to 2-5x revenue per user, <br />earn from each transaction</p>
 
-    <label for='revenue' style='margin-bottom: 12px'>CLIENTS / MO</label>
+    <label class='range-label' for='revenue' style='margin-bottom: 12px'>CLIENTS / MO</label>
     <div class='range-wrapper'>
       <input class='styled-slider slider-progress revenue-range' type='range' id='revenue' name='revenue' min='0'
              max='220' value='50' />
@@ -519,10 +450,9 @@
   </div>
 </section>
 
-
 <section class='adding-invoicing payment-links'>
   <div class='adding-invoicing__content'>
-    <h1 class='H1 ai-title'>Leading invoicing providers earn 30-50% <br />  of total revenue from payment links</h1>
+    <h1 class='H1 ai-title'>Leading invoicing providers earn 30-50% <br /> of total revenue from payment links</h1>
 
     <div class='ai-words-gratitude'>
       <div class='ai-words-gratitude-countries-icons'>
@@ -598,74 +528,70 @@
   </div>
 </section>
 
-<section class='integrations'>
-  <div class='integrations__content'>
-    <h1 class='H1 integrations-title'>Integrate in 4 weeks instead <br /> of building for 2 years</h1>
-    <p class='P_1 content-description'>
-      Building invoicing automation takes years of development and domain expertise.
-      Monite does all the heavy lifting for you, offering turnkey front-end, back-end, design,
-      and partnerships, so you can focus on your core product rather than building from scratch.
-    </p>
-  </div>
+<section class='monites-features'>
+  <h1 class='H1 monites-features__title'>Monite's features</h1>
 
-  <div class='integrations__mob-card-wrapper'>
-    <img src='https://monite.com/wp-content/uploads/2023/03/mob-card1-1.png' alt='fully-featured-platform'
-         class='mob-card fully-featured-platform element-animation' />
-    <img src='https://monite.com/wp-content/uploads/2023/03/mob-card2.png' alt='compliance-included'
-         class='mob-card compliance-included element-animation' />
-    <img src='https://monite.com/wp-content/uploads/2023/03/mob-card3.png' alt='ux-consistence'
-         class='mob-card ux-consistence element-animation' />
-  </div>
-  <div class='integrations__mobil-wrapper'>
-    <img src='https://monite.com/wp-content/uploads/2023/03/mob-card2-1.png' alt='fully-featured-platform'
-         class='mobil-card' />
-    <img src='https://monite.com/wp-content/uploads/2023/03/mob-card.png' alt='compliance-included'
-         class='mobil-card' />
-    <img src='https://monite.com/wp-content/uploads/2023/03/mob-card3-1.png' alt='ux-consistence'
-         class='mobil-card' />
-  </div>
-</section>
-
-<section class='payments-integrated'>
-  <div class='payments-integrated__content'>
-    <div class='pi-transaction-image'></div>
-
-    <h1 class='H1 pi-title'>Payments pre-integrated <br /> Earn on each transaction</h1>
-
-    <p class='P_1 pi-description'>
-      Monite aggregates the best payment providers to help your clients get paid fast via invoice payment links
-    </p>
-
-    <a class='mt-button mt-hero_app-page-btn BTN_1 learn-more-btn' href='#learn-more' data-fancybox=''>Learn more</a>
-  </div>
-</section>
-
-<section class='robust-account'>
-  <div class='robust-account__content'>
-    <h1 class='H1 ra-title'>Robust Accounts <br /> Payable APIdesigned <br /> for developers</h1>
-    <h2 class='P_1 ra-description'>
-      A single access point for various capabilities. Construct solutions of any
-      complexity; test new features once we roll them out without the need to reintegrate.
-    </h2>
-
-    <div class='ra-btn-wrapper'>
-      <a class='mt-button mt-hero_app-page-btn api-docs-btn BTN_1' href='#API-docs' data-fancybox=''>API docs</a>
-      <a class='mt-button mt-hero_app-page-btn sand-box-btn BTN_2' href='#SandBox' data-fancybox=''>SandBox</a>
+  <div class='monites-features__content'>
+    <div class='mf-card'>
+      <img class='mf-card-icon' src='https://monite.com/wp-content/uploads/2023/04/countries.png' alt='countries' />
+      <div class='H3 mf-card-description'>190 countries <br /> supported</div>
     </div>
 
-  </div>
+    <div class='mf-card'>
+      <img class='mf-card-icon' src='https://monite.com/wp-content/uploads/2023/04/methods.png' alt='methods' />
+      <div class='H3 mf-card-description'>50+ payment <br /> methods covered</div>
+    </div>
 
-  <div class='robust-account__invoice-code-image-wrapper'>
-    <img class='invoice-code-image' src='https://monite.com/wp-content/uploads/2023/03/invice-code.png'
-         alt='invoice-code' />
+    <div class='mf-card'>
+      <img class='mf-card-icon' src='https://monite.com/wp-content/uploads/2023/04/secure.png' alt='secure' />
+      <div class='H3 mf-card-description'>Secure & reliable</div>
+    </div>
+
+    <div class='mf-card'>
+      <img class='mf-card-icon' src='https://monite.com/wp-content/uploads/2023/04/compliance.png' alt='compliance' />
+      <div class='H3 mf-card-description'>Compliance & fraud <br /> prevention included</div>
+    </div>
+
+    <div class='mf-card'>
+      <img class='mf-card-icon' src='https://monite.com/wp-content/uploads/2023/04/clients.png' alt='payment methods' />
+      <div class='H3 mf-card-description'>Clients choose the <br /> payment methods <br /> they want</div>
+    </div>
+
+    <div class='mf-card'>
+      <img class='mf-card-icon' src='https://monite.com/wp-content/uploads/2023/04/commissions.png' alt='commissions' />
+      <div class='H3 mf-card-description'>Custom commissions <br /> for each payment <br /> method</div>
+    </div>
   </div>
 
 </section>
 
-<section class='billpay ar-page'>
+<section class='payment-links-integrated'>
+  <h1 class='H1 payment-links-integrated__title'>Payments pre-integrated <br /> Earn on each transaction</h1>
+
+  <div class='payment-links-integrated__content'>
+    <div class='pli-card'>
+      <h2 class='H2 card-title'>4 days </h2>
+      <h4 class='H4 card-subtitle'>Onboarding flow</h4>
+      <p class='P_1 card-description'>
+        Implement onboarding flows via API or a fully white-labeled custom page
+        to enable end-users to start paying how they want.
+      </p>
+    </div>
+
+    <div class='pli-card'>
+      <h2 class='H2 card-title'>2 days </h2>
+      <h4 class='H4 card-subtitle'>Payment Links </h4>
+      <p class='P_1 card-description'>
+        Embed payment links in your emails, documents and more.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class='billpay ar-page payment-link-invoice'>
   <div class='billpay__content'>
-    <h1 class='H1 bp-title'>Invoicing that <br /> earns revenue</h1>
-    <h2 class='P_1 bp-description'>Discuss your new revenue <br /> streams with an expert.</h2>
+    <h1 class='H1 bp-title'>Start earning on invoice <br /> payments today!</h1>
+    <h2 class='P_1 bp-description'>No minimum commitments, pay-as-you-go pricing</h2>
 
     <a class='mt-button mt-hero_app-page-btn billpay-btn BTN_1' href='#get-demo' data-fancybox=''>Get demo</a>
 
@@ -918,26 +844,26 @@
     const checkedItem = document.querySelector(`.function-selector #listItem_${num}`);
     const listItems = document.querySelectorAll('.function-selector ul li');
 
-    if (demonstrationImagesWrapper) {
+    if(demonstrationImagesWrapper) {
       // let transformY = num * (700 + 130);
       let transformY = num * 700;
       demonstrationImagesWrapper.style.setProperty('--transformY', -transformY + 'px');
     }
 
-    if (listItems && listItems.length) {
-      for (let item of listItems) {
+    if(listItems && listItems.length) {
+      for(let item of listItems) {
         item?.classList.remove('checkedItem');
         const descr = item.querySelector('p');
-        if (descr) {
+        if(descr) {
           descr.classList.remove('description-visible');
         }
       }
     }
 
-    if (checkedItem) {
+    if(checkedItem) {
       checkedItem.classList.add('checkedItem');
       const descr = checkedItem.querySelector('p');
-      if (descr) {
+      if(descr) {
         descr.classList.add('description-visible');
       }
     }
@@ -945,7 +871,7 @@
 
   function onEntry(entry) {
     entry.forEach((change) => {
-      if (change.isIntersecting) {
+      if(change.isIntersecting) {
         change.target.classList.add('element-show');
       } else {
         change.target.classList.remove('element-show');
@@ -961,8 +887,24 @@
   let observer = new IntersectionObserver(onEntry, options);
   let elements = document.querySelectorAll('.element-animation');
 
-  for (let elm of elements) {
+  for(let elm of elements) {
     observer.observe(elm);
+  }
+
+
+  const modal = document.getElementById("myModal");
+  const btn = document.getElementById("show-modal-player");
+  const span = document.getElementsByClassName("close")[0];
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
   }
 </script>
 </body>

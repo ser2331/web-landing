@@ -119,6 +119,58 @@
   }
 }
 
+.function-demonstration.ar-page.payment-links-page {
+  .function-demonstration__content {
+    .fd-content {
+      .demonstration {
+        .demonstration-images-wrapper {
+          .fd-image {
+            img.image {
+              max-height: 534px;
+            }
+          }
+        }
+      }
+
+      .function-selector {
+        ul {
+          list-style: none;
+          counter-reset: li;
+        }
+        ul li {
+          padding: 24px 16px 24px 68px;
+          &::before {
+            counter-increment: li;
+            content: "0"counters(li, ".");
+            font-family: 'Faktum', serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 110%;
+            letter-spacing: -0.01em;
+            color: #3B3B3B;
+            position: absolute;
+            left: 16px;
+            top: 26px;
+            height: max-content;
+          }
+        }
+
+        .checkedItem {
+          opacity: 1;
+
+          &::before {
+            background: linear-gradient(to bottom, #3C37FF 0%, #FF4A4B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
+
 .payments-mt-one-api {
   padding: 120px 78px;
 
@@ -290,6 +342,17 @@
       z-index: 2;
     }
 
+    .range-label {
+      font-family: 'Faktum', serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 110%;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #707070;
+    }
+
     .range-wrapper {
       position: relative;
       margin-bottom: 24px;
@@ -375,6 +438,118 @@
         justify-content: center;
         z-index: 2;
         right: -25px;
+      }
+    }
+  }
+}
+
+.monites-features {
+  padding: 120px 160px 90px;
+  background: #F1F2F5;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 90px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .mf-card {
+      width: 368px;
+      height: 242px;
+      background: #FFFFFF;
+      border-radius: 10px;
+      margin: 4px;
+      padding: 44px 32px 38px 44px;
+
+      .mf-card-icon {
+        margin-bottom: 32px;
+      }
+
+      .mf-card-description {
+
+      }
+    }
+  }
+}
+
+.payment-links-integrated {
+  padding: 120px 20px 90px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 90px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .pli-card {
+      background: #F1F2F5;
+      border-radius: 10px;
+      padding: 44px;
+      width: 350px;
+      height: 327px;
+
+      &:nth-child(1) {
+        margin-right: 34px;
+        position: relative;
+
+        &:after {
+          position: absolute;
+          content: "+";
+          background: #3C37FF;
+          width: 78px;
+          height: 78px;
+          right: -60px;
+          top: calc(50% - 39px);
+          border-radius: 50%;
+          border: 6px solid #FFFFFF;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #FFFFFF;
+          font-size: 44px;
+        }
+      }
+
+      .card-title {
+        margin-bottom: 28px;
+
+      }
+
+      .card-subtitle {
+        color: #3C37FF;
+        margin-bottom: 24px;
+      }
+
+      .card-description {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.billpay.ar-page.payment-link-invoice {
+  .billpay__content {
+    .bp-title, .bp-description {
+      z-index: 2;
+      position: relative;
+    }
+
+    .back-images {
+      .left-img {
+        background: url("https://monite.com/wp-content/uploads/2023/04/left-block-1.png") no-repeat;
+      }
+
+      .right-img {
+        background: url("https://monite.com/wp-content/uploads/2023/04/right-block.png") no-repeat right;
       }
     }
   }

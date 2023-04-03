@@ -6,5 +6,6 @@ import './ar-page.scss';
 import './payment-links.scss';
 import './range-input.css';
 import './fonts.scss';
+import './modal.css';
 import './hero';
 import './range-input';
