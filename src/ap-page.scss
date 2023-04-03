@@ -10,23 +10,14 @@ main {
 }
 
 .mt-hero_ap-page {
+  position: relative;
+  background: url("https://monite.com/wp-content/uploads/2023/04/Hero-Block-1.png") no-repeat center;
+  background-size: cover;
   display: flex;
   margin: 0;
   height: 1100px;
   padding-top: 180px;
   padding-bottom: 44px;
-  position: relative;
-
-  &__background-image {
-    width: 100%;
-    position: absolute;
-
-    img {
-      object-fit: cover;
-      width: 100%;
-      height: 850px;
-    }
-  }
 
   &__background-image-mobile {
     display: none;
@@ -42,6 +33,7 @@ main {
   }
 
   .mt-hero__inner {
+    z-index: 2;
     display: flex;
     max-width: 100%;
     margin: 0 auto;
@@ -79,7 +71,15 @@ main {
     display: none;
   }
 }
-
+.mt-hero_ap-page:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 752px;
+  background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, #FFFFFF 81.77%);
+}
 .manual-bill-statistics {
   padding: 120px;
 
@@ -147,7 +147,7 @@ main {
 
         .demonstration-images-wrapper {
           transform: translate(0, var(--transformY));
-          transition: transform 1s;
+          transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 
           .horizontal-link-line {
             width: 2px;
@@ -299,6 +299,7 @@ main {
           opacity: 0.5;
           cursor: pointer;
           position: relative;
+          margin-bottom: 4px;
 
           &::before {
             content: url("images/ap-page/arrow.svg");
@@ -315,6 +316,7 @@ main {
 
         .checkedItem {
           opacity: 1;
+          background: #F1F2F5;
 
           &::before {
             content: url("images/ap-page/circleArrow.svg");
@@ -326,7 +328,9 @@ main {
         }
 
         .listItem-description {
-          transition: height 0.5s, visibility 0.3s, opacity 1s;
+          transition: height 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+          visibility 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+          opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1);
           text-align: start;
           height: 0;
           visibility: hidden;
@@ -386,17 +390,41 @@ main {
             margin-bottom: 56px;
           }
 
-          .payments {
-            .fees-image {
-              width: 100%;
-              mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
-              -webkit-mask-image: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
-              height: 125px;
-              border-radius: 10px;
-              background: url("images/ap-page/fees.png") no-repeat;
-            }
+          .images-wrapper {
+            width: max-content;
           }
 
+          .payments {
+            display: flex;
+            padding: 32px;
+            overflow: scroll;
+            position: relative;
+
+            img {
+              width: 62px;
+              height: 62px;
+            }
+            &:after {
+              content: "";
+              position: absolute;
+              left: 0px;
+              top: 0;
+              width: 90px;
+              height: 187px;
+              background: linear-gradient(to left, rgba(217, 217, 217, 0) 0%, rgba(255,255,255, 0.5) 100%);
+            }
+            &:before {
+
+            }
+          }
+          //.fees-image {
+          //  width: 100%;
+          //  mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
+          //  -webkit-mask-image: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+          //  height: 125px;
+          //  border-radius: 10px;
+            //background: url("images/ap-page/fees.png") no-repeat;
+          //}
           .saas {
             padding: 38px 0 0 40px;
 
@@ -1070,6 +1098,12 @@ main {
     }
   }
 
+  .mt-hero_ap-page {
+    background: none;
+  }
+  .mt-hero_ap-page:after {
+    display: none;
+  }
   .mt-hero.mt-hero_ap-page {
     flex-direction: column;
     height: max-content;
