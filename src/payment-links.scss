@@ -18,7 +18,80 @@
       }
     }
 
-    .hero-image-wrapper.play-btn {
+    .module-border-wrapper {
+      width: 492px;
+      height: 370px;
+      border-radius: 14px;
+      position: relative;
+      background: linear-gradient(to bottom, #3C37FF, #FF4A4B);
+      padding: 2px;
+      overflow: hidden;
+
+      .hero-image-wrapper {
+        height: 100%;
+        border-radius: 14px;
+        background: #FAFAFA;
+        position: relative;
+
+        .hero-image-wrapper-header {
+          padding: 10px 90px;
+          text-align: left;
+          display: flex;
+          align-items: center;
+          background: white;
+          border-radius: 14px 14px;
+          font-family: 'Faktum', sans-serif;
+          font-weight: 600;
+          font-size: 20.411px;
+          line-height: 27px;
+          color: #707070;
+          margin-bottom: 8px;
+
+          img {
+            margin-right: 12px;
+          }
+        }
+
+        .subheader {
+          justify-content: space-between;
+          padding: 10px 20px;
+          border-radius: 0;
+        }
+
+        .hero-image-wrapper-content {
+          font-family: 'Faktum', sans-serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 11.9064px;
+          line-height: 17px;
+          color: #707070;
+          text-align: left;
+          padding: 40px 20px 34px 100px;
+
+          .pay-invoice-btn {
+            border-radius: 10px;
+            border: 1px solid #000;
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            font-family: 'Satoshi', serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 17.0092px;
+            line-height: 23px;
+            color: #000;
+            margin-top: 34px;
+            width: max-content;
+
+            img {
+              margin-right: 12px;
+            }
+          }
+        }
+      }
+    }
+
+    .play-btn {
       position: absolute;
       margin: 25% auto;
       width: 6em;
@@ -26,10 +99,15 @@
       background-color: #3C37FF;
       cursor: pointer;
       border-radius: 100px;
-      top: calc(50% - 180px);
+      top: calc(50% - 6em);
       display: flex;
       align-items: center;
       justify-content: center;
+
+      &:hover {
+        box-shadow: inset rgba(255, 255, 255, 0.2) 8px 8px 18px 5px,
+        inset rgba(0,0,0,0.5)      -8px -8px 18px 5px;
+      }
     }
 
     .play-button {
@@ -457,6 +535,14 @@
 
 }
 
+.adding-invoicing.ar-page.payment-links-page {
+  .ai-words-gratitude {
+    .ai-words-gratitude-countries-icons {
+      margin-bottom: 36px;
+    }
+  }
+}
+
 .integrate-of-building {
   padding: 120px 160px 0;
 
@@ -584,7 +670,18 @@
 }
 
 @media screen and (max-width: 1144px) {
+  .integrate-of-building {
+    padding: 120px 40px 90px;
 
+    .integrate-of-building__content {
+      .descriptions-cols {
+        .iob-description-col {
+          padding: 12px;
+        }
+      }
+    }
+
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -620,8 +717,13 @@
           margin-bottom: 0;
         }
       }
+
+      .module-border-wrapper {
+        display: none;
+      }
     }
   }
+
   .mt-hero_ap-page__background-image-mobile.payment-links {
     position: relative;
     background: url("https://monite.com/wp-content/uploads/2023/04/Group-1948756907.png") no-repeat bottom;
@@ -681,12 +783,13 @@
 
         .beneficial {
           flex: 1 1;
-          min-width: 135px;
+          min-width: 132px;
           margin: 6px 2px;
           padding: 12px;
           flex-direction: column;
           justify-content: left;
           align-items: start;
+          max-width: 132px;
 
           .icon {
             margin-bottom: 12px;
@@ -699,6 +802,9 @@
   .function-demonstration-mobile.payment-links-page {
     padding: 52px 26px;
 
+    .over-text {
+      color: #707070;
+    }
     .fd-title {
       text-align: center;
     }
@@ -716,7 +822,7 @@
   }
 
   .payment-links-integrated {
-    padding: 52px 20px 44px;
+    padding: 52px 24px 44px;
 
     .payment-links-integrated__content {
       flex-direction: column;
@@ -775,8 +881,11 @@
   }
 
   .payments-mt-win-win {
-
+    ul {
+      padding-left: 36px!important;
+    }
   }
+
   .payments-mt-one-api {
     padding: 120px 0 0;
 
@@ -876,7 +985,7 @@
       margin-bottom: 24px;
     }
 
-    &__content {
+    .integrate-of-building__content {
       .descriptions-cols {
         flex-direction: column;
 
@@ -898,12 +1007,11 @@
 
   .billpay.ar-page.payment-link-invoice {
     height: 474px;
-    padding: 50px 16px;
+    padding: 50px 20px;
 
     .billpay__content {
       background: url("https://monite.com/wp-content/uploads/2023/04/mob-bottom.png") no-repeat bottom;
       background-size: cover;
     }
   }
-
 }

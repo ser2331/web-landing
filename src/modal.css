@@ -63,3 +63,18 @@
     border-radius: 24px;
     width: 100%;
 }
+
+
+@media screen and (max-width: 991px) {
+    .modal {
+        padding: 58px 100px 0px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .modal {
+        /*display: flex !important;*/
+        /*align-items: end;*/
+        padding: 58px 0px 0px;
+    }
+}

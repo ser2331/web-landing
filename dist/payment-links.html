@@ -16,7 +16,7 @@
     </div>
 
     <video class='video' controls>
-      <source src="https://www.w3schools.com/html/movie.ogg" type='video/ogg; codecs="theora, vorbis"'>
+      <source src='https://www.w3schools.com/html/movie.ogg' type='video/ogg; codecs="theora, vorbis"'>
     </video>
   </div>
 </div>
@@ -122,16 +122,52 @@
       </div>
 
       <p class='P_1 mt-subtitle' style='z-index: 2; background: #fff;'>
-        Your business clients get paid 40% faster, since their customers can pay invoices in one
-        click with any method. Meanwhile, you earn revenue from every transaction.
+        Help your business clients get paid 40% faster by allowing their customers to pay invoices in one click—all
+        payment
+        methods accepted. Meanwhile, you earn revenue from every transaction.
+
       </p>
       <a class='mt-button mt-hero_app-page-btn BTN_1' href='#modal_call' data-fancybox=''>Get demo</a>
 
-      <div class='hero-image-wrapper'>
-        <img src='https://monite.com/wp-content/uploads/2023/03/back-play.png' alt='top-clients' />
+      <div class='module-border-wrapper'>
+        <div class='hero-image-wrapper'>
+          <div class='hero-image-wrapper-header'>
+            <img src='https://monite.com/wp-content/uploads/2023/04/message.svg' alt='mail' />
+            Mail
+          </div>
+          <div class='hero-image-wrapper-header subheader'>
+            <div class='adding-email'>
+              <img src='https://monite.com/wp-content/uploads/2023/04/add-mail.svg' alt='mail' />
+              <img src='https://monite.com/wp-content/uploads/2023/04/Edit.svg' alt='edit' />
+            </div>
+            <div class='navigation'>
+              <img src='https://monite.com/wp-content/uploads/2023/04/Archive.svg' alt='archive' />
+              <img src='https://monite.com/wp-content/uploads/2023/04/Recycle-Bin.svg' alt='delete' />
+              <img src='https://monite.com/wp-content/uploads/2023/04/Union.svg' alt='back' />
+              <img src='https://monite.com/wp-content/uploads/2023/04/Group-1948756827.svg' alt='back' />
+              <img src='https://monite.com/wp-content/uploads/2023/04/Union2.svg' alt='forward' />
+            </div>
+          </div>
+          <div class='hero-image-wrapper-content'>
+            Dear, Bob,
+            <br/>
+            <br/>
+            please pay the following invoice according our previous agreement we made on our last call.
+            <br/>
+            <br/>
+            Best, Tabitha
+
+            <div class='pay-invoice-btn'>
+              <img src='https://monite.com/wp-content/uploads/2023/04/increase-money.svg' alt='increase' />
+              Pay Invoice
+            </div>
+          </div>
+
+          <!--        <img src='https://monite.com/wp-content/uploads/2023/03/back-play.png' alt='top-clients' />-->
+        </div>
       </div>
 
-      <div id='show-modal-player' class='hero-image-wrapper play-btn'>
+      <div id='show-modal-player' class='hero-image-wrapper play-btn show-modal-player'>
         <img class='play-button' src='https://monite.com/wp-content/uploads/2023/03/play-icon.png' alt='top-clients' />
       </div>
 
@@ -148,12 +184,12 @@
                  alt='mollie_logo' />
           </li>
           <li class='mt-hero__partner'>
-            <img src='https://monite.com/wp-content/uploads/2023/03/plaid_logo.png' width='50' height='19'
+            <img src='https://monite.com/wp-content/uploads/2023/04/payPal.svg' width='50' height='19'
                  alt='plaid_logo' />
           </li>
           <li class='mt-hero__partner'>
-            <img src='https://monite.com/wp-content/uploads/2023/03/paypal_logo.png' width='49' height='13'
-                 alt='paypal_logo' />
+            <img src='https://monite.com/wp-content/uploads/2023/03/plaid_logo.png' width='50' height='19'
+                 alt='plaid_logo' />
           </li>
           <li class='mt-hero__partner'>
             <img src='https://monite.com/wp-content/uploads/2023/03/square_logo.png' width='46' height='12'
@@ -170,7 +206,7 @@
     <img src='https://monite.com/wp-content/uploads/2023/03/back-play.png' alt='top-clients' />
   </div>
 
-  <div id='show-modal-player-mob' class='hero-image-wrapper play-btn'>
+  <div id='show-modal-player-mob' class='hero-image-wrapper play-btn show-modal-player'>
     <img class='play-button' src='https://monite.com/wp-content/uploads/2023/03/play-icon.png' alt='top-clients' />
   </div>
 </section>
@@ -188,17 +224,17 @@
              height='24' />
       </li>
       <li class='mt-trusted__logo'>
-        <img src='https://monite.com/wp-content/uploads/2023/03/entry_logo.png' alt='logo3' width='49' height='24' />
+        <img src='https://monite.com/wp-content/uploads/2023/04/entry.svg' alt='logo3' width='49' height='24' />
       </li>
       <li class='mt-trusted__logo'>
         <img src='https://monite.com/wp-content/uploads/2023/03/debite_logo.png' alt='logo4' width='72' height='16' />
       </li>
       <li class='mt-trusted__logo'>
-        <img src='https://monite.com/wp-content/uploads/2023/03/intrepid_logo.png' alt='logo5' width='104'
+        <img src='https://monite.com/wp-content/uploads/2023/04/nioby.svg' alt='logo5' width='104'
              height='24' />
       </li>
       <li class='mt-trusted__logo'>
-        <img src='https://monite.com/wp-content/uploads/2023/03/entry_logo.png' alt='logo6' width='49' height='24' />
+        <img src='https://monite.com/wp-content/uploads/2023/04/wowinvoice.svg' alt='logo6' width='102' height='30' />
       </li>
     </ul>
   </div>
@@ -354,8 +390,9 @@
 <!-- ===========================================================================>Доделать-->
 
 <section class='function-demonstration-mobile payment-links-page'>
-  <h1 class='H1 fd-title'>How do payment links work?</h1>
-
+<!--  <h1 class='H1 fd-title'>How do payment links work?</h1>-->
+  <h2 class='Subhead_1 over-text'>How do payment links work?</h2>
+  <h1 class='H1 fd-title'>Get customers paid in <br /> hours instead of days — <br />and earn on it</h1>
   <!--  0-->
   <div class='image-wrapper'>
     <img class='image' src='https://monite.com/wp-content/uploads/2023/04/Group-1948756115.png'
@@ -399,9 +436,99 @@
 </section>
 <!-- ===========================================================================>Доделать-->
 
-<section class='adding-invoicing ar-page'>
+<section class='adding-invoicing ar-page payment-links-page'>
   <div class='adding-invoicing__content'>
-    <h1 class='H1 ai-title'>Leading invoicing providers earn 30-50% <br /> of total revenue from payment links</h1>
+    <h1 class='H1 ai-title'>How adding invoicing <br /> supercharges revenues</h1>
+
+    <div class='ai-content'>
+      <div class='ai-fees-cards'>
+        <div class='fees-card'>
+          <div class='fees-image-wrapper payments'>
+            <div class='uk-position-relative uk-visible-toggle uk-light' tabindex='-1' uk-slider>
+              <ul
+                class='uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m images-wrapper slider'>
+                <li>
+                  <img src='https://monite.com/wp-content/uploads/2023/04/Frame-1948756895.png' alt='pay' />
+                </li>
+                <li>
+                  <img src='https://monite.com/wp-content/uploads/2023/04/Frame-1948756894.png' alt='pay' />
+                </li>
+                <li>
+                  <img src='https://monite.com/wp-content/uploads/2023/04/Frame-1948756893.png' alt='pay' />
+                </li>
+                <li>
+                  <img src='https://monite.com/wp-content/uploads/2023/04/Frame-1948756892-2.png' alt='pay' />
+                </li>
+                <li>
+                  <img src='https://monite.com/wp-content/uploads/2023/04/Frame-1948756891.png' alt='pay' />
+                </li>
+                <li>
+                  <img src='https://monite.com/wp-content/uploads/2023/04/Frame-1948756890.png' alt='pay' />
+                </li>
+                <li>
+                  <img src='https://monite.com/wp-content/uploads/2023/04/Frame-1948756889.png' alt='pay' />
+                </li>
+                <li>
+                  <img src='https://monite.com/wp-content/uploads/2023/04/Frame-1948756888.png' alt='pay' />
+                </li>
+                <li>
+                  <img src='https://monite.com/wp-content/uploads/2023/04/Frame-1948756887.png' alt='pay' />
+                </li>
+                <li>
+                  <img src='https://monite.com/wp-content/uploads/2023/04/Frame-1948756886.png' alt='pay' />
+                </li>
+              </ul>
+              <a class='uk-position-center-left uk-position-small uk-hidden-hover' href='#' uk-slidenav-previous
+                 uk-slider-item='previous'></a>
+              <a class='uk-position-center-right uk-position-small uk-hidden-hover' href='#' uk-slidenav-next
+                 uk-slider-item='next'></a>
+            </div>
+          </div>
+
+          <div class='label-wrapper'>
+            <h2 class='H3 fees-label'>Payment fees</h2>
+            <p class='P_1 fees-description'>Let users pay within your interface and earn up to 0.6% per
+              invoice.</p>
+          </div>
+        </div>
+
+        <div class='fees-card'>
+          <div class='fees-image-wrapper saas'>
+            <div class='icon-wrapper'>
+              <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                <path
+                  d='M7 16C7.39782 16 7.77936 15.842 8.06066 15.5607C8.34196 15.2794 8.5 14.8978 8.5 14.5C8.50488 14.4501 8.50488 14.3999 8.5 14.35L11.29 11.56H11.52H11.75L13.36 13.17C13.36 13.17 13.36 13.22 13.36 13.25C13.36 13.6478 13.518 14.0294 13.7993 14.3107C14.0806 14.592 14.4622 14.75 14.86 14.75C15.2578 14.75 15.6394 14.592 15.9207 14.3107C16.202 14.0294 16.36 13.6478 16.36 13.25V13.17L20 9.5C20.2967 9.5 20.5867 9.41203 20.8334 9.2472C21.08 9.08238 21.2723 8.84811 21.3858 8.57403C21.4993 8.29994 21.5291 7.99834 21.4712 7.70736C21.4133 7.41639 21.2704 7.14912 21.0607 6.93934C20.8509 6.72956 20.5836 6.5867 20.2926 6.52882C20.0017 6.47094 19.7001 6.50065 19.426 6.61418C19.1519 6.72771 18.9176 6.91997 18.7528 7.16664C18.588 7.41332 18.5 7.70333 18.5 8C18.4951 8.04988 18.4951 8.10012 18.5 8.15L14.89 11.76H14.73L13 10C13 9.60218 12.842 9.22064 12.5607 8.93934C12.2794 8.65804 11.8978 8.5 11.5 8.5C11.1022 8.5 10.7206 8.65804 10.4393 8.93934C10.158 9.22064 10 9.60218 10 10L7 13C6.60218 13 6.22064 13.158 5.93934 13.4393C5.65804 13.7206 5.5 14.1022 5.5 14.5C5.5 14.8978 5.65804 15.2794 5.93934 15.5607C6.22064 15.842 6.60218 16 7 16V16ZM20.5 20H3.5V3C3.5 2.73478 3.39464 2.48043 3.20711 2.29289C3.01957 2.10536 2.76522 2 2.5 2C2.23478 2 1.98043 2.10536 1.79289 2.29289C1.60536 2.48043 1.5 2.73478 1.5 3V21C1.5 21.2652 1.60536 21.5196 1.79289 21.7071C1.98043 21.8946 2.23478 22 2.5 22H20.5C20.7652 22 21.0196 21.8946 21.2071 21.7071C21.3946 21.5196 21.5 21.2652 21.5 21C21.5 20.7348 21.3946 20.4804 21.2071 20.2929C21.0196 20.1054 20.7652 20 20.5 20Z'
+                  fill='white' />
+              </svg>
+            </div>
+          </div>
+
+          <div class='label-wrapper'>
+            <h2 class='H3 fees-label'>SaaS fees</h2>
+            <p class='P_1 fees-description'>Charge 5-50$/mo for additional products.</p>
+          </div>
+        </div>
+
+        <div class='fees-card'>
+          <div class='fees-image-wrapper revenue'>
+            <div class='icon-wrapper'>
+              <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                <path
+                  d='M19 12H12V5C12 4.4 11.6 4 11 4C6 4 2 8 2 13C2 18 6 22 11 22C16 22 20 18 20 13C20 12.4 19.6 12 19 12ZM12 19.9C8.2 20.5 4.6 17.8 4.1 14C3.5 10.2 6.2 6.6 10 6.1V13C10 13.6 10.4 14 11 14H17.9C17.5 17.1 15.1 19.5 12 19.9ZM15 2C14.4 2 14 2.4 14 3V9C14 9.6 14.4 10 15 10H21C21.6 10 22 9.6 22 9C22 5.1 18.9 2 15 2ZM16 8V4.1C18 4.5 19.5 6 19.9 8H16Z'
+                  fill='white' />
+              </svg>
+            </div>
+          </div>
+
+          <div class='label-wrapper'>
+            <h2 class='H3 fees-label'>Revenue share</h2>
+            <p class='P_1 fees-description'>Upsell customers with BNPL/financing and get a share of the
+              payment.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class='ai-words-gratitude'>
       <div class='ai-words-gratitude-countries-icons'>
         <div class='ai-words-gratitude-finsWiss-icon'></div>
@@ -421,20 +548,21 @@
 
       <p class='P_1 ai-words-gratitude-description'>
         AR/AP are core to our product, so we looked at multiple providers as well as building in-house.
-        We chose Monite due to their product depth, quality of APIs, and fast development. Working with Monite
-        has been a breeze – a  robust API platform, knowledgeable team, and quick support at all times
+        We chose Monite due to their product depth, quality of APIs, and fast development.
+        Working with Monite has been a breeze – a robust API platform, knowledgeable team, and quick support at all
+        times
       </p>
 
       <div class='carlos-icon-wrapper'>
         <img src='https://monite.com/wp-content/uploads/2023/03/jane.png' alt='jane'
              class='carlos-icon' />
-        <div class='P_1 carlos-description'>Jane, CPO</div>
+        <div class='P_1 carlos-description'>Jane Shmygaleva, CPO</div>
       </div>
 
       <a class='download_pdf-button' href='#pdf' data-fancybox=''>
         <img src='https://monite.com/wp-content/uploads/2023/03/download_pdf.png' alt='download_pdf'
              class='download_pdf-icon' />
-        <span class='BTN_1 download_pdf-title'>PDF case</span>
+        <span class='BTN_1 download_pdf-title'>Learn more</span>
       </a>
 
       <div class='back-images'>
@@ -489,10 +617,10 @@
 </section>
 
 <section class='integrate-of-building'>
-  <h1 class='H1 mt-iob-title'>Integrate in 6 days instead of <br/> building for 2 years</h1>
+  <h1 class='H1 mt-iob-title'>Integrate in 6 days instead of <br /> building for 2 years</h1>
   <p class='P_1 mt-iob-subtitle'>
-    Building payment links takes years of development and domain expertise. Monite does all <br/>
-    the heavy lifting for you, offering turnkey front-end, back-end, design, and partnerships, so <br/>
+    Building payment links takes years of development and domain expertise. Monite does all <br />
+    the heavy lifting for you, offering turnkey front-end, back-end, design, and partnerships, so <br />
     you can focus on your core product rather than building from scratch.
   </p>
 
@@ -526,7 +654,8 @@
         <h4 class='H4 col-title'>UX consistent with your brand</h4>
         <p class='P_1 col-description'>
           Ensure a consistent brand experience at every touchpoint. Manage the look and feel of invoicing
-          interfaces as well as PDFs. Our invoicing interface matches your app interface, so clients won’t see a difference.
+          interfaces as well as PDFs. Our invoicing interface matches your app interface, so clients won’t see a
+          difference.
         </p>
       </div>
     </div>
@@ -534,7 +663,8 @@
 </section>
 
 <section class='payment-links-integrated'>
-  <h1 class='H1 payment-links-integrated__title'>Get experimenting with invoice <br/> links in just 6 days, using 2 <br/> developers</h1>
+  <h1 class='H1 payment-links-integrated__title'>Get experimenting with invoice <br /> links in just 6 days, using 2
+    <br /> developers</h1>
 
   <div class='payment-links-integrated__content'>
     <div class='pli-card'>
@@ -558,7 +688,7 @@
 
 <section class='billpay ar-page payment-link-invoice'>
   <div class='billpay__content'>
-    <h1 class='H1 bp-title'>Don’t wait. Put your revenue <br/> into overdrive today</h1>
+    <h1 class='H1 bp-title'>Don’t wait. Put your revenue <br /> into overdrive today</h1>
     <h2 class='P_1 bp-description'>No minimum commitments, pay-as-you-go pricing</h2>
 
     <a class='mt-button mt-hero_app-page-btn billpay-btn BTN_1' href='#get-demo' data-fancybox=''>Get demo</a>
@@ -837,35 +967,18 @@
     }
   }
 
-  function onEntry(entry) {
-    entry.forEach((change) => {
-      if (change.isIntersecting) {
-        change.target.classList.add('element-show');
-      } else {
-        change.target.classList.remove('element-show');
-      }
-    });
-  }
 
-  let options = {
-    // root: document.querySelector('.integrations'),
-    threshold: [0.5],
-    // rootMargin: '350px 0px 0px 0px',
-  };
-  let observer = new IntersectionObserver(onEntry, options);
-  let elements = document.querySelectorAll('.element-animation');
-
-  for (let elm of elements) {
-    observer.observe(elm);
-  }
-
-
+  // open modal
   const modal = document.getElementById('myModal');
-  const btn = document.getElementById('show-modal-player');
+  const btn = document.querySelectorAll('.hero-image-wrapper.play-btn.show-modal-player');
   const span = document.getElementsByClassName('close')[0];
-  btn.onclick = function() {
-    modal.style.display = 'block';
-  };
+
+  for (b of btn) {
+    b.onclick = function() {
+      modal.style.display = 'block';
+    };
+  }
+
   span.onclick = function() {
     modal.style.display = 'none';
   };
