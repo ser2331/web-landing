@@ -67,6 +67,88 @@ main {
     justify-content: center;
     align-items: center;
     padding: 17px 34px;
+    margin-bottom: 24px;
+  }
+
+  .card-bank-transfer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .left-block {
+      width: 385px;
+      height: 252px;
+      filter: drop-shadow(0px 0px 17px rgba(0, 0, 0, 0.12));
+      border-radius: 9px;
+    }
+
+    .center-block {
+      width: 358px;
+      font-family: 'Faktum', sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 10.0407px;
+      line-height: 14px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #3B3B3B;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .blurry-text {
+        position: relative;
+        margin-bottom: 24px;
+
+        &:after {
+          height: 24px;
+          position: absolute;
+          content: "";
+          background: rgba(255, 255, 255, 0.7);
+          width: 300px;
+        }
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .no-blurry {
+        &:after, &:before {
+          height: 12px;
+          position: relative;
+          content: "";
+          background: rgba(255, 255, 255, 0.7);
+          width: 12px;
+          border-radius: 50%;
+          left: 24px;
+          background: #3C37FF;
+        }
+        &:before {
+          right: 24px;
+          left: auto;
+        }
+        color: #3C37FF;
+        background: rgba(60, 55, 255, 0.05);
+        border: 2.15157px solid #3C37FF;
+        border-radius: 5.73753px;
+        width: max-content;
+        padding: 9px 17px;
+      }
+
+      .blurry-image {
+        margin-right: 12px;
+
+      }
+    }
+
+    .right-block {
+      width: 385px;
+      height: 252px;
+      filter: drop-shadow(0px 0px 17px rgba(0, 0, 0, 0.12));
+      border-radius: 9px;
+    }
   }
 
   &__images {
@@ -299,7 +381,7 @@ main {
 
         ul li {
           border-radius: 4px;
-          padding: 16px 0 16px 50px;
+          padding: 8px 0 8px 50px;
           opacity: 0.5;
           cursor: pointer;
           position: relative;
@@ -309,7 +391,7 @@ main {
             content: url("images/ap-page/arrow.svg");
             position: absolute;
             left: 24px;
-            top: 14px;
+            top: 8px;
           }
 
           &:hover {
@@ -326,7 +408,7 @@ main {
             content: url("images/ap-page/circleArrow.svg");
             position: absolute;
             left: 18px;
-            top: 20px;
+            top: 16px;
             height: 100%;
           }
         }
@@ -345,6 +427,7 @@ main {
           opacity: 1;
           height: 50px;
           visibility: visible;
+          margin: 0;
         }
       }
     }
@@ -679,6 +762,36 @@ main {
       position: sticky;
       bottom: 0;
       transition: width 0.5s, box-shadow 0.1s;
+      background: #111111;
+      border-radius: 10px;
+      padding: 44px 44px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      overflow: hidden;
+
+      .card-title, .card-description {
+        text-align: center;
+        color: #FFFFFF;
+      }
+
+      .card-image-wrapper {
+        position: relative;
+        max-width: 345px;
+        min-width: 245px;
+
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: -100px;
+          left: 0;
+          width: 100%;
+          height: 273px;
+          background: linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, #111111 57.81%);
+          z-index: 3;
+        }
+      }
     }
 
     .mob-card:not(.mob-card:nth-last-child(1)) {
@@ -694,6 +807,14 @@ main {
       z-index: 4;
       margin-top: 84px;
       bottom: -224px;
+
+      .card-image-wrapper {
+        position: relative;
+
+        img {
+          width: auto
+        }
+      }
     }
 
     .compliance-included {
@@ -702,6 +823,7 @@ main {
       margin-top: 58px;
       left: calc(50vw - 221px);
       bottom: -300px;
+
     }
 
     .ux-consistence {
@@ -710,6 +832,54 @@ main {
       left: calc(50vw - 208px);
       margin-top: 34px;
       bottom: -286px;
+    }
+
+    .card-image-wrapper {
+      position: relative;
+
+      img {
+        position: relative;
+        width: 132px;
+      }
+
+      .europe {
+        top: 88px;
+        left: 26px;
+        z-index: 3;
+      }
+
+      .gb {
+        left: -36px;
+        bottom: 0;
+        z-index: 2;
+      }
+
+      .usa {
+        right: -186px;
+        top: -57px;
+        z-index: 1;
+      }
+
+      .Tt {
+        width: 136px;
+        top: 66px;
+        left: 0;
+        z-index: 1;
+      }
+
+      .circle {
+        width: 136px;
+        top: 130px;
+        left: -44px;
+        z-index: 1;
+      }
+
+      .squares {
+        width: 136px;
+        top: -30px;
+        left: 199px;
+        z-index: 1;
+      }
     }
   }
 }
@@ -789,6 +959,11 @@ main {
       .sand-box-btn,
       .api-docs-btn {
         padding: 18px 34px;
+      }
+
+      .mt-button.mt-hero_app-page-btn.sand-box-btn:hover {
+        background: #FFFFFF;
+        color: #0A0A0A;
       }
 
       .sand-box-btn {
@@ -1117,6 +1292,10 @@ main {
 
   .mt-hero_ap-page {
     background: none;
+
+    .card-bank-transfer-wrapper {
+      display: none;
+    }
   }
   .mt-hero_ap-page:after {
     display: none;
@@ -1319,6 +1498,110 @@ main {
         margin-bottom: 32px;
         width: 280px;
         height: 358px;
+      }
+
+      .mob-card {
+        position: relative;
+        margin-bottom: 32px;
+        width: 280px;
+        height: 358px;
+        background: #111111;
+        border-radius: 10px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+
+        .card-title, .card-description {
+          text-align: center;
+          color: #FFFFFF;
+        }
+
+        .card-image-wrapper {
+          position: relative;
+          max-width: 345px;
+          min-width: 245px;
+
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: -100px;
+            left: 0;
+            width: 100%;
+            height: 204px;
+            background: linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, #111111 57.81%);
+            z-index: 3;
+          }
+        }
+      }
+
+      .fully-featured-platform {
+        .card-image-wrapper {
+          position: relative;
+
+          img {
+            width: auto
+          }
+        }
+      }
+
+      .compliance-included {
+
+
+      }
+
+      .ux-consistence {
+
+      }
+
+      .card-image-wrapper {
+        position: relative;
+
+        img {
+          position: relative;
+          width: 84px;
+        }
+
+        .europe {
+          top: 58px;
+          left: 26px;
+          z-index: 3;
+        }
+
+        .gb {
+          left: -20px;
+          bottom: 0;
+          z-index: 2;
+        }
+
+        .usa {
+          right: -130px;
+          top: -44px;
+          z-index: 1;
+        }
+
+        .Tt {
+          width: 96px;
+          top: 34px;
+          left: 0;
+          z-index: 1;
+        }
+
+        .circle {
+          width: 96px;
+          top: 70px;
+          left: -22px;
+          z-index: 1;
+        }
+
+        .squares {
+          width: 96px;
+          top: -50px;
+          left: 150px;
+          z-index: 1;
+        }
       }
     }
   }
