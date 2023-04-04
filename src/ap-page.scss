@@ -17,8 +17,8 @@ main {
   background-size: cover;
   display: flex;
   margin: 0;
-  height: 1100px;
-  padding-top: 180px;
+  //height: 1100px;
+  padding-top: 160px;
   padding-bottom: 44px;
 
   &__background-image-mobile {
@@ -26,8 +26,8 @@ main {
   }
 
   .call-wrapper {
-    position: absolute;
-    bottom: 24px;
+    //position: absolute;
+    //bottom: 24px;
 
     .backed-founders {
       margin-bottom: 24px;
@@ -125,10 +125,12 @@ main {
           left: 24px;
           background: #3C37FF;
         }
+
         &:before {
           right: 24px;
           left: auto;
         }
+
         color: #3C37FF;
         background: rgba(60, 55, 255, 0.05);
         border: 2.15157px solid #3C37FF;
@@ -648,6 +650,7 @@ main {
         text-align: center;
         max-width: 586px;
         margin-bottom: 24px;
+        margin-top: 0;
         background-color: transparent;
         z-index: 2;
       }
@@ -714,7 +717,7 @@ main {
 }
 
 .integrations {
-  padding-top: 120px;
+  padding: 120px 160px 90px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -726,9 +729,9 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: sticky;
-    top: calc(50vh - 162px);
-    margin-bottom: 194px;
+    //position: sticky;
+    //top: calc(50vh - 162px);
+    margin-bottom: 122px;
 
     .integrations-title {
       text-align: center;
@@ -742,37 +745,27 @@ main {
   }
 
   &__mobil-wrapper {
-    display: none;
-  }
-
-  &__mob-card-wrapper {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    .element-animation.element-show {
-      opacity: 1;
-      width: 470px;
-    }
-
     .mob-card {
-      box-shadow: 0 0 200px 100px rgba(255, 255, 255, 0.9);
-      width: 470px;
-      height: 475px;
-      position: sticky;
-      bottom: 0;
-      transition: width 0.5s, box-shadow 0.1s;
+      position: relative;
+      margin-bottom: 32px;
+      width: 366px;
+      height: 554px;
       background: #111111;
       border-radius: 10px;
-      padding: 44px 44px 0;
+      padding: 44px 32px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
       overflow: hidden;
 
+      &:nth-child(1), &:nth-child(2) {
+        margin-right: 10px;
+      }
+
       .card-title, .card-description {
-        text-align: center;
+        text-align: left;
         color: #FFFFFF;
       }
 
@@ -786,28 +779,15 @@ main {
           position: absolute;
           bottom: -100px;
           left: 0;
-          width: 100%;
-          height: 273px;
+          width: 130%;
+          height: 260px;
           background: linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, #111111 57.81%);
           z-index: 3;
         }
       }
     }
 
-    .mob-card:not(.mob-card:nth-last-child(1)) {
-      margin-bottom: 300px;
-    }
-
-    .mob-card:nth-last-child(1) {
-      margin-bottom: 254px;
-    }
-
     .fully-featured-platform {
-      width: 470px;
-      z-index: 4;
-      margin-top: 84px;
-      bottom: -224px;
-
       .card-image-wrapper {
         position: relative;
 
@@ -818,24 +798,20 @@ main {
     }
 
     .compliance-included {
-      width: 442px;
-      z-index: 3;
-      margin-top: 58px;
-      left: calc(50vw - 221px);
-      bottom: -300px;
+
 
     }
 
     .ux-consistence {
-      width: 416px;
-      z-index: 2;
-      left: calc(50vw - 208px);
-      margin-top: 34px;
-      bottom: -286px;
+
     }
+
 
     .card-image-wrapper {
       position: relative;
+      top: auto;
+      left: -12px;
+
 
       img {
         position: relative;
@@ -849,8 +825,8 @@ main {
       }
 
       .gb {
-        left: -36px;
-        bottom: 0;
+        left: -42px;
+        bottom: -12px;
         z-index: 2;
       }
 
@@ -879,6 +855,19 @@ main {
         top: -30px;
         left: 199px;
         z-index: 1;
+      }
+    }
+
+    &:nth-child(1) {
+      .card-image-wrapper {
+        top: 46px;
+        left: 0;
+      }
+    }
+
+    &:nth-child(2) {
+      .card-image-wrapper {
+        top: 52px
       }
     }
   }
@@ -931,7 +920,7 @@ main {
 .robust-account {
   background: #111111;
   display: flex;
-  padding: 160px 110px 0;
+  padding: 120px 160px 0;
 
   &__content {
     flex: 1 1;
@@ -1090,8 +1079,19 @@ main {
     }
   }
 }
-
+.desktop {
+  display: initial !important;
+}
+.mobile {
+  display: none !important;
+}
 @media screen and (max-width: 1144px) {
+  .desktop {
+    display: initial !important;
+  }
+  .mobile {
+    display: none !important;
+  }
   .function-demonstration {
 
     &__content {
@@ -1109,6 +1109,12 @@ main {
           }
         }
       }
+    }
+  }
+
+  .integrations {
+    &__mobil-wrapper {
+      flex-direction: column;
     }
   }
 
@@ -1131,6 +1137,12 @@ main {
 }
 
 @media screen and (max-width: 991px) {
+  .desktop {
+    display: initial !important;
+  }
+  .mobile {
+    display: none !important;
+  }
   .function-demonstration {
     &__content {
       .fd-content {
@@ -1202,6 +1214,11 @@ main {
     }
   }
 
+  .integrations {
+    &__mobil-wrapper {
+      flex-direction: column;
+    }
+  }
   .billpay {
     &__content {
       .back-images {
@@ -1218,6 +1235,18 @@ main {
 }
 
 @media screen and (max-width: 768px) {
+  ul {
+    padding-left: 0!important;
+  }
+  h3, p {
+    margin-top: 0!important;
+  }
+  .desktop {
+    display: none !important;
+  }
+  .mobile {
+    display: initial !important;
+  }
   br {
     display: none;
   }
@@ -1293,6 +1322,19 @@ main {
   .mt-hero_ap-page {
     background: none;
 
+    .mt-hero__inner {
+      .mt-hero__content {
+        .mt-title.mt-hero__title-wrapper {
+          .mt-hero__title {
+            margin: 0;
+          }
+          .mt-hero_ap-page__subtitle {
+            margin: 0;
+          }
+        }
+      }
+    }
+
     .card-bank-transfer-wrapper {
       display: none;
     }
@@ -1320,6 +1362,10 @@ main {
         .call-wrapper {
           position: relative;
           margin-bottom: 48px;
+
+          .mt-hero__partners {
+            padding: 0;
+          }
         }
       }
     }
@@ -1364,6 +1410,7 @@ main {
     &__content {
       .ai-content {
         .ai-fees-cards {
+          margin-bottom: 80px;
           flex-direction: column;
 
           .fees-card {
@@ -1489,118 +1536,71 @@ main {
       display: none;
     }
 
+  }
+  .integrations {
+    padding: 20px;
     &__mobil-wrapper {
-      display: flex;
       flex-direction: column;
 
-      .mobil-card {
-        position: relative;
-        margin-bottom: 32px;
-        width: 280px;
-        height: 358px;
-      }
-
       .mob-card {
-        position: relative;
-        margin-bottom: 32px;
-        width: 280px;
+        width: 100%;
         height: 358px;
-        background: #111111;
-        border-radius: 10px;
-        padding: 24px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        overflow: hidden;
-
-        .card-title, .card-description {
-          text-align: center;
-          color: #FFFFFF;
+        padding: 24px 28px;
+        &:nth-child(1), &:nth-child(2) {
+          margin-right: 0;
         }
 
+
         .card-image-wrapper {
-          position: relative;
-          max-width: 345px;
-          min-width: 245px;
+          width: 206px;
+          height: 108px;
+          top: -36px;
+          min-width: auto;
 
           &:after {
-            content: "";
-            position: absolute;
-            bottom: -100px;
-            left: 0;
-            width: 100%;
-            height: 204px;
-            background: linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, #111111 57.81%);
-            z-index: 3;
+            height: 108px;
           }
-        }
-      }
 
-      .fully-featured-platform {
-        .card-image-wrapper {
-          position: relative;
-
-          img {
-            width: auto
+          .europe {
+            width: 84px;
+            top: 52px;
+            left: 22px;
           }
-        }
-      }
 
-      .compliance-included {
+          .gb {
+            width: 84px;
+            left: -16px;
+            top: 12px;
+            bottom: auto;
+          }
 
+          .usa {
+            width: 84px;
+            right: -134px;
+            top: -40px;
+          }
+          .Tt {
+            width: 88px;
+            top: 46px;
+            left: 10px;
+            z-index: 1;
+          }
 
-      }
+          .circle {
+            width: 88px;
+            bottom: -90px;
+            left: -18px;
+            z-index: 1;
+            top: auto;
+          }
 
-      .ux-consistence {
-
-      }
-
-      .card-image-wrapper {
-        position: relative;
-
-        img {
-          position: relative;
-          width: 84px;
-        }
-
-        .europe {
-          top: 58px;
-          left: 26px;
-          z-index: 3;
-        }
-
-        .gb {
-          left: -20px;
-          bottom: 0;
-          z-index: 2;
-        }
-
-        .usa {
-          right: -130px;
-          top: -44px;
-          z-index: 1;
-        }
-
-        .Tt {
-          width: 96px;
-          top: 34px;
-          left: 0;
-          z-index: 1;
-        }
-
-        .circle {
-          width: 96px;
-          top: 70px;
-          left: -22px;
-          z-index: 1;
-        }
-
-        .squares {
-          width: 96px;
-          top: -50px;
-          left: 150px;
-          z-index: 1;
+          .squares {
+            width: 88px;
+            bottom: 0;
+            left: 146px;
+            z-index: 1;
+            top: auto;
+          }
         }
       }
     }
