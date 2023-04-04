@@ -1289,9 +1289,13 @@ main {
       margin-bottom: 12px;
     }
 
+
     .image-description {
       opacity: 0.8;
       margin-bottom: 82px;
+    }
+    .image-description:nth-last-child(1) {
+      margin-bottom: 0
     }
 
     .block {
