@@ -3,7 +3,9 @@ h1, h2, p {
 }
 .mt-hero.mt-hero_ap-page.ar-page {
   background: url("https://monite.com/wp-content/uploads/2023/03/Hero-Block.png") no-repeat;
-
+  background-size: cover;
+  padding-top: 212px;
+  padding-bottom: 69px;
   .mt-hero__inner {
     .mt-hero__content {
       .mt-title.mt-hero__title-wrapper {
@@ -18,7 +20,19 @@ h1, h2, p {
       .mt-subtitle {
         background-color: transparent;
       }
+      .mt-button.mt-hero_app-page-btn.BTN_1 {
+        margin-bottom: 24px;
+      }
+
+      .hero-image-wrapper {
+        //margin-bottom: 46px;
+        margin: -68px 0 -24px;
+      }
     }
+  }
+
+  &:after {
+    height: 400px;
   }
 }
 
@@ -36,10 +50,11 @@ h1, h2, p {
   }
 }
 
-.function-demonstration.ar-page {
+.function-demonstration.ar-page.payment-links-page.ar-details {
   .function-demonstration__content {
     .fd-content {
       .demonstration {
+        height: 812px;
         .demonstration-images-wrapper {
           .after.small {
             height: 12em;
@@ -51,7 +66,7 @@ h1, h2, p {
                 display: block;
                 background-color: #3C37FF;
                 border-radius: 16px;
-                bottom: 14px;
+                bottom: 0;
                 content: "";
                 height: 14px;
                 position: absolute;
@@ -64,6 +79,17 @@ h1, h2, p {
           }
         }
       }
+
+      .function-selector {
+        .checkedItem {
+          &::before {
+            background: linear-gradient(to bottom, #3C37FF 0%, #62008E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+      }
+
     }
   }
 }
@@ -72,29 +98,34 @@ h1, h2, p {
   .adding-invoicing__content {
     .ai-words-gratitude {
       .ai-words-gratitude-countries-icons {
+        margin-bottom: 36px;
         .ai-words-gratitude-finsWiss-icon {
-          background: url("./images/ar-page/entry.png") no-repeat;
+          width: 34px;
+          background: url("https://monite.com/wp-content/uploads/2023/04/enty-1.png") no-repeat;
           background-size: contain;
         }
 
         .ai-words-gratitude-europe-icon {
-          background: url("./images/ar-page/holland.png") no-repeat;
+          max-width: 30px;
+          margin-right: 8px;
+          background: url("https://monite.com/wp-content/uploads/2023/04/Frame-1948756850.png") no-repeat;
           background-size: contain;
         }
 
         .ai-words-gratitude-switzerland-icon {
-          background: url("./images/ar-page/estonia.png") no-repeat;
+          max-width: 30px;
+          background: url("https://monite.com/wp-content/uploads/2023/04/Frame-1948756851.png") no-repeat;
           background-size: contain;
         }
       }
 
       .back-images {
         .left-img {
-          background: url("images/ar-page/left-block.png") no-repeat;
+          background: url("https://monite.com/wp-content/uploads/2023/04/left-block-2.png") no-repeat;
         }
 
         .right-img {
-          background: url("images/ar-page/rhite-block.png") no-repeat right;
+          background: url("https://monite.com/wp-content/uploads/2023/04/rhite-block-1.png") no-repeat right;
         }
       }
     }
@@ -148,6 +179,8 @@ h1, h2, p {
 @media screen and (max-width: 768px) {
   .mt-hero.mt-hero_ap-page.ar-page {
     background: none;
+    padding-top: 152px;
+    padding-bottom: 32px;
 
     .mt-hero__inner {
       .mt-hero__content {
@@ -157,12 +190,24 @@ h1, h2, p {
       }
     }
   }
+  .mt-hero_ap-page__background-image-mobile.ar-page {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("https://monite.com/wp-content/uploads/2023/04/Group-1948756907-3.png") repeat;
+    background-size: contain;
+  }
 
   .billpay.ar-page {
     .billpay__content {
+      height: 474px;
       background: url("https://monite.com/wp-content/uploads/2023/03/back-mob-invoice.png") no-repeat;
       background-size: cover;
 
+      .bp-description {
+        margin-bottom: 24px;
+      }
       .back-images {
        display: none;
       }

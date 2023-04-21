@@ -1,5 +1,6 @@
-.mt-earn__content_alt {
-  background-color: #111;
+:root {
+  --translateSlide: 0px;
+  --translateContent: 0px
 }
 
 .mt-hero_about {
@@ -20,14 +21,15 @@
 
   .mt-hero__content {
     align-items: center;
-    width: 722px;
     max-width: 100%;
     margin: 0 auto;
     text-align: center;
   }
 
   .mt-subtitle {
-    max-width: 569px;
+    max-width: 905px;
+    font-size: 22px;
+    font-weight: 400;
   }
 
   &__images {
@@ -35,10 +37,153 @@
   }
 }
 
+.mt-history {
+  &__years {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  &__year {
+    margin-right: auto;
+    padding-bottom: 12px;
+    width: 253px;
+    position: relative;
+    cursor: pointer;
+
+    &:before {
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 100%;
+      background: #DDDDDD;
+    }
+
+    &_active {
+      &:before {
+        background: linear-gradient(180deg, #3D38FF 0%, #FE66BA 100%);
+      }
+    }
+  }
+
+  &__leftText {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: #0A0A0A;
+    opacity: 0.8;
+    max-width: 446px;
+  }
+
+  &__rightText {
+    font-family: 'Satoshi', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    color: #0A0A0A;
+    opacity: 0.8;
+    margin-bottom: 24px;
+    max-width: 542px;
+  }
+}
+
+.mt-history-primary {
+  padding: 120px 0 74px;
+  background: #F1F2F5;
+
+  .wrapper {
+    max-width: 1120px;
+    margin: 0 auto;
+
+    .links-wrapper {
+      .mob-pagination-wrapper {
+        display: none;
+      }
+    }
+  }
+
+  .mt-title {
+    margin-bottom: 96px;
+  }
+
+  .viewport-images {
+    overflow: hidden;
+    border-radius: 10px;
+
+    .images-wrapper {
+      transform: translate(var(--translateSlide), 0);
+      height: 325px;
+      width: 9999px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+      font-size: 0;
+      display: flex;
+
+      .mt-history__image {
+        display: inline-block;
+        width: 1125px;
+        height: 325px;
+
+        .desktop-image {
+          display: initial;
+        }
+
+        .mobile-image {
+          display: none;
+        }
+
+        img {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .mt-history__viewport-contents {
+    padding-top: 70px;
+    overflow: hidden;
+
+    .contents_container {
+      transform: translate(var(--translateContent), 0);
+      width: 400%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+      font-size: 0;
+      display: flex;
+
+      .content-wrapper {
+        display: flex;
+        width: 1125px;
+
+        .mt-history__left {
+          flex: 1;
+
+          .mobile-link {
+            display: none;
+          }
+        }
+
+        .mt-history__right {
+          flex: 1;
+        }
+      }
+    }
+  }
+}
+
 .mt-backed {
   padding: 120px 0 62px;
   text-align: center;
-  background-image: url('./images/mt-backed_bg.png');
+  background-image: url('https://monite.com/wp-content/uploads/2023/04/mt-backed_bg.png');
   background-repeat: no-repeat;
   background-position: center 268px;
   background-size: contain;
@@ -76,11 +221,14 @@
 
   .mt-people__name {
     text-align: center;
+    margin-top: 16px;
   }
 
   .mt-people__position {
+    font-family: 'Satoshi', serif;
+    font-style: normal;
     margin-top: 8px;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 12px;
     letter-spacing: 0.01em;
     text-align: center;
@@ -107,7 +255,6 @@
     background-color: #FE66BA;
     border: 1px solid #E3E3E3;
     border-radius: 100%;
-
   }
 
   &__partners {
@@ -140,7 +287,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
     }
   }
 
@@ -155,91 +302,23 @@
   &__logo {
     width: 85px;
     height: 85px;
+    align-items: center;
+    justify-content: center;
   }
 }
 
 .mt-about_alt {
-  padding: 0;
   background: #F1F2F5;
+  padding-right: 20px;
+  padding-left: 20px;
 
-  &__container {
-    max-width: 1120px;
-    margin: 0 auto;
-  }
-
-  .mt-title_about {
+  .mt-title {
     width: 522px;
     max-width: 100%;
   }
 
-  &__buttons {
-    display: flex;
-
-  }
-
-  &__button_left {
-    margin-right: 20px;
-    font-size: 28px;
-  }
-
-  &__button_right {
-    font-size: 28px;
-  }
-
-  &__button {
-    gap: 10px;
-    margin-left: auto;
-    padding: 7px 10px;
-    color: #0A0A0A;
-    font-weight: 500;
-    font-size: 14px;
-    font-style: normal;
-    line-height: 140%;
-    border: 1px solid #DDD;
-    border-radius: 10px;
-  }
-
-  .mt-container_scroll {
-    display: flex;
-    flex-wrap: nowrap;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 160px 120px;
-    overflow: auto;
-  }
-
-  .mt-title_about {
-    margin: 120px 0 0;
-  }
-
-  &__cards {
-    gap: 36px;
-    justify-content: unset;
-  }
-
-  &__card {
-    gap: unset;
-    padding: 44px;
+  .mt-about__card {
     background: #fff;
-
-    img, svg {
-      margin-bottom: 44px;
-    }
-  }
-
-  .mt-about_alt__date {
-    margin-bottom: 44px;
-  }
-
-  &__date {
-    color: #707070;
-    font-size: 12px;
-    opacity: 0.6;
-  }
-
-  .mt-about__card-text {
-    width: 261px;
-    margin-bottom: 8px;
   }
 }
 
@@ -262,9 +341,17 @@
 
   &__card {
     display: flex;
+    position: relative;
     flex-direction: column;
     padding: 0;
-    cursor: pointer;
+  }
+
+  &__logo {
+    position: absolute;
+    border: 1px solid #F4F4F4;
+    border-radius: 50%;
+    right: -24px;
+    top: -24px;
   }
 
   &__name {
@@ -285,11 +372,70 @@
   }
 }
 
-.mt_earn_alt {
-  margin: 0;
+.mt-culture {
+  padding: 120px 78px;
+
+  .mt-title {
+    max-width: 506px;
+    margin: 0 auto;
+    text-align: center;
+  }
 
   .mt-container {
+    background: #111111;
     max-width: 1284px;
+    width: 100%;
+    height: 700px;
+    border-radius: 10px;
+    margin-top: 106px;
+    overflow: hidden;
+  }
+  .slides {
+    display: flex;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    height: 700px;
+    max-width: 100%;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+
+    &_badge {
+      color: #FFFFFF;
+      margin-bottom: 40px;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 110%;
+      letter-spacing: -0.01em;
+    }
+
+    &_title {
+      color: #FFFFFF;
+      margin-bottom: 32px;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 110%;
+      letter-spacing: -0.01em;
+    }
+
+    &_subtitle {
+      color: #FFFFFF;
+      font-family: 'Satoshi', serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
+      letter-spacing: 0.01em;
+      opacity: 0.8;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+  }
+  .glide__bullets {
+    display: none;
   }
 }
 
@@ -370,19 +516,27 @@
 }
 
 @media screen and (max-width: 1144px) {
-  .mt-backed {
-    &__people {
-      gap: 10px;
-    }
-  }
+  .mt-history-primary {
+    padding: 100px 0 74px;
 
-  .mt-about_alt {
-    &__container {
+    .mt-title {
+      margin-bottom: 80px;
+      margin-left: 20px;
+    }
+
+    .links-wrapper {
       margin: 0 20px;
     }
 
-    .mt-container_scroll {
-      padding: 0 50px 50px;
+    .mt-history__viewport-contents {
+      padding-top: 50px;
+      margin: 0 20px;
+    }
+  }
+
+  .mt-backed {
+    &__people {
+      gap: 10px;
     }
   }
 
@@ -418,26 +572,42 @@
     }
   }
 
+  .mt-history {
+    &__leftText {
+      font-size: 18px;
+    }
+
+    &__rightText {
+      font-size: 14px;
+    }
+  }
+
+  .mt-history-primary {
+    padding: 80px 0 62px;
+
+    .mt-title {
+      margin-bottom: 32px;
+    }
+
+    .links-wrapper {
+      margin: 0 20px;
+    }
+
+    .mt-history__viewport-contents {
+      padding-top: 50px;
+      margin: 0 20px;
+
+      .content-wrapper {
+        gap: 24px;
+      }
+    }
+  }
+
   .mt-about_alt {
-    .mt-title_about {
+    .mt-title {
       width: 320px;
       margin: 42px 0 24px;
       text-align: left;
-    }
-
-    .mt-container_scroll {
-      max-width: 100%;
-      margin: 0 20px;
-    }
-
-    &__container {
-      margin: 0 20px;
-    }
-
-    &__cards {
-      display: flex;
-      flex-wrap: nowrap;
-      gap: 26px;
     }
   }
 
@@ -453,12 +623,24 @@
       margin: 0;
     }
   }
+
+  .mt-culture {
+    padding: 90px 0;
+
+    .mt-title {
+      margin: 0 20px;
+    }
+
+    .mt-container {
+      margin: 80px 0 0;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
   .mt-hero_about {
     width: 100%;
-    padding-top: 68px;
+    padding-top: 148px;
 
     .mt-title {
       margin: 0 36px;
@@ -470,6 +652,7 @@
 
     .mt-subtitle {
       margin: 0 20px;
+      font-size: 14px;
     }
 
     &__content {
@@ -485,10 +668,125 @@
     }
   }
 
+  .mt-history {
+
+    &__years {
+      margin-top: 20px;
+    }
+
+    .mt-title {
+      margin-bottom: 32px;
+      text-align: center;
+
+      br {
+        display: flex;
+      }
+    }
+
+    &__leftText {
+      font-size: 14px;
+    }
+
+    &__rightText {
+      font-size: 14px;
+      margin-bottom: 32px;
+    }
+  }
+
+  .mt-history-primary {
+    padding: 52px 0 62px;
+
+    .viewport-images {
+      width: 320px;
+      height: 197px;
+      border-radius: 0;
+
+      .images-wrapper {
+        height: 197px;
+
+        .mt-history__image {
+          justify-content: center;
+          width: 320px;
+          height: 197px;
+
+          .desktop-image {
+            display: none;
+          }
+
+          .mobile-image {
+            display: initial;
+          }
+
+          img {
+            object-fit: cover;
+            height: 197px;
+          }
+        }
+      }
+    }
+
+    .mt-history__years.desktop-links {
+      display: none;
+    }
+
+    .wrapper {
+      max-width: 344px;
+
+      .links-wrapper {
+        display: block;
+        position: relative;
+        top: 15px;
+        z-index: 1;
+
+        .mob-pagination-wrapper {
+          float: right;
+          display: flex;
+          gap: 7px;
+
+          .mob-page {
+            width: 9px;
+            height: 9px;
+            background: #DDDDDD;
+            border-radius: 50%;
+          }
+
+          .active-page {
+            background: #707070;
+          }
+        }
+      }
+    }
+
+    .mt-history__viewport-contents {
+      width: 100%;
+      padding: 0 20px;
+      margin: 0;
+
+      .contents_container {
+        .content-wrapper {
+          padding-right: 100px;
+          flex-direction: column;
+
+          .mt-history__left {
+            .mobile-link {
+              display: block;
+              margin-bottom: 32px;
+
+              &_active {
+                display: flex;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   .mt-backed {
     .mt-title {
-      max-width: 538px;
       text-align: center;
+      margin: 0 40px;
     }
 
     .mt-container {
@@ -511,7 +809,7 @@
     &__card {
       position: relative;
       flex-direction: column;
-      width: 157px;
+      max-width: 137px;
       height: auto;
       margin: 0;
     }
@@ -550,73 +848,15 @@
   }
 
   .mt-about_alt {
-    max-width: 100%;
-
-    .mt-title_about {
-    }
-
-    .mt-container_scroll {
-      max-width: 100%;
-      margin: 0;
-      padding: 0 20px;
-      overflow: auto;
-    }
-
-    &__cards {
-      display: flex;
-      gap: 10px;
-      margin-top: 34px;
-      margin-bottom: 72px;
-    }
-
-    &__card {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 100%;
-      max-width: 280px;
-      padding: 32px 0 44px 22px;
-      border-radius: 10px;
-    }
-  }
-
-  .mt-earn_about{
-    margin: 0 auto;
-
     .mt-title {
-      width: 226px;
-      margin: 0 20px 24px;
-    }
-
-    .mt-subtitle {
-      width: 254px;
-      margin: 0 20px;
-    }
-
-    .mt-container {
-      margin: 0 auto;
-    }
-
-    &__inner {
-      margin: 32px 0;
-    }
-
-    &__cards-inner {
-      margin: 0 20px;
-    }
-
-    &__head-item {
-      font-size: 14px;
-    }
-
-    &__head-title_alt {
-      font-weight: 600;
-      font-size: 18px;
+      text-align: center;
+      margin: 44px auto 0;
     }
   }
 
   .mt-people {
     display: flex;
+    padding: 0;
 
     .mt-container {
       margin: 0 0 44px;
@@ -634,11 +874,6 @@
       gap: 32px 10px;
       justify-content: center;
       margin: 0 20px;
-
-      img {
-        width: 135px;
-        height: 135px;
-      }
     }
 
     &__card {
@@ -647,12 +882,120 @@
       padding: 0;
     }
 
+    &__photo {
+      width: 135px;
+      height: 135px;
+    }
+
+    &__logo {
+      width: 30px;
+      height: 30px;
+      right: -5px;
+      top: -20px;
+    }
+
     &__name {
       font-size: 12px;
     }
 
     &__position {
       font-size: 12px;
+    }
+  }
+
+  .mt-culture {
+    padding: 52px 0;
+
+    .mt-container {
+      margin: 44px 0 0;
+      height: 448px;
+      position: relative;
+      border-radius: unset;
+    }
+
+    &__content {
+      position: relative;
+      padding: 40px 15px;
+      height: 448px;
+      max-width: 100%;
+      margin: 0;
+
+
+      &_badge {
+        position: absolute;
+        top: 32px;
+      }
+
+      &_title {
+        margin-bottom: 24px;
+        font-size: 18px;
+      }
+
+      &_subtitle {
+        font-size: 14px;
+      }
+    }
+
+    .glide__bullets {
+      position: absolute;
+      top: 38px;
+      right: 20px;
+      display: flex;
+      list-style: none;
+      align-items: center;
+    }
+
+    .glide__bullet {
+      background: #707070;
+      width: 9px;
+      height: 9px;
+      padding: 0;
+      border-radius: 50%;
+      transition: all .3s ease-in-out;
+      cursor: pointer;
+      line-height: 0;
+      margin: 0 0.25em;
+
+      &--active {
+        background: #DDDDDD;
+      }
+    }
+  }
+
+  .mt-modal {
+
+    &__inner {
+      right: 0;
+      gap: 32px;
+      margin-top: 20px;
+      padding: 44px 20px;
+
+    }
+
+    &__name {
+      font-size: 14px;
+    }
+
+    &__position {
+      font-size: 14px;
+    }
+
+    &__text {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 14px;
+    }
+
+    &__bottom-title {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 110%;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    &__close {
+      right: 20px;
+      padding: 7px;
     }
   }
 }

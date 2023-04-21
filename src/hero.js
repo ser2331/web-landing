@@ -1,62 +1,21 @@
-const mtHeroTitle = document.getElementById('mtHeroTitle')
-const mtHeroArrayTitles = [
-  'bill pay', 'B2B payments', 'invoicing'
-]
 
-function loopHeader() {
-  let loopHeader = setInterval(changeText, 2000);
-}
-let loopItem = 0;
 
-function changeText() {
-  loopItem++;
-  if (loopItem == mtHeroArrayTitles.length) {
-    loopItem = 0;
-  }
-  if(mtHeroTitle) {
-    mtHeroTitle.innerHTML = mtHeroArrayTitles[loopItem];
-  }
-}
+// for refactor up block
 
-const switchCurrentItem = (item, step) => {
-  if (window.innerWidth > 991) {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY
-    const mtEarnStickyFirst = document.getElementById('mtEarnStickyFirst')
-    const mtEarnStickySecond = document.getElementById('mtEarnStickySecond')
-    const mtEarnStickyThird = document.getElementById('mtEarnStickyThird')
-
-    if (scrollTop < 1465) {
-      mtEarnStickyFirst?.classList.add('mt-earn__head-inner_active')
-      mtEarnStickySecond?.classList.remove('mt-earn__head-inner_active')
-      mtEarnStickyThird?.classList.remove('mt-earn__head-inner_active')
-
-    } else if (scrollTop > 1665 && scrollTop < 1964) {
-      mtEarnStickySecond?.classList.add('mt-earn__head-inner_active')
-      mtEarnStickyFirst?.classList.remove('mt-earn__head-inner_active')
-      mtEarnStickyThird?.classList.remove('mt-earn__head-inner_active')
-    } else if (scrollTop > 1965 && scrollTop < 2264) {
-      mtEarnStickyThird?.classList.add('mt-earn__head-inner_active')
-      mtEarnStickyFirst?.classList.remove('mt-earn__head-inner_active')
-      mtEarnStickySecond?.classList.remove('mt-earn__head-inner_active')
-    }
-  }
-}
-window.addEventListener('scroll', switchCurrentItem)
-
-//
-setTimeout(()=>{
-  loopHeader()
-}, 1000)
-//
-// setInterval(()=> {
-//   for (let i = 0; i <= 3 ; i++) {
-//     let interval = setInterval( () => {
-//       span.innerText = `${this.state.text[i]}`
-//     }, 2000);
+// let observer = new IntersectionObserver(function(entries) {
+//   if(entries[0].isIntersecting === true) {
+//     const scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY
+//     window.addEventListener('scroll', switchCurrentItem(scrollTop, 300))
+//   } else {
+//     window.removeEventListener('scroll', switchCurrentItem)
 //   }
-//   mtHeroTitle.innerHTML = mtHeroArrayTitles[2]
-// }, 1500)
+// });
+//
+// if(document.querySelector(".mt-earn__content")) {
+//   observer.observe(document.querySelector(".mt-earn__content"));
+// }
 
+// menu header
 const headerMenu = document.getElementById("headerMenu")
 const buttonMenu = document.getElementById("buttonMenu")
 function switchBurgerMenu() {
@@ -64,8 +23,4 @@ function switchBurgerMenu() {
   buttonMenu?.classList.toggle('mt-button_menu_active');
   document.body.classList.toggle('body_lock');
 }
-buttonMenu.addEventListener("click", switchBurgerMenu);
-
-
-
-
+buttonMenu?.addEventListener("click", switchBurgerMenu);

@@ -21,6 +21,8 @@ input[type=range].styled-slider:focus {
 
 /*webkit*/
 input[type=range].styled-slider::-webkit-slider-thumb {
+  position: relative;
+  top: -10px;
   -webkit-appearance: none;
   width: 2em;
   height: 2em;
@@ -28,13 +30,13 @@ input[type=range].styled-slider::-webkit-slider-thumb {
   border-radius: 1em;
   background: #246FFF;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
-  margin-top: calc(max((1em - 1px - 1px) * 0.5,0px) - 40px * 0.5);
+  margin-top: calc(max((1em - 1px - 1px) * 0.5,0px) - 60px * 0.5);
   cursor: pointer;
 }
 
 input[type=range].styled-slider::-webkit-slider-runnable-track {
-  height: 8px;
-  border: 1px solid #b2b2b2;
+  height: 4px;
+  /*border: 1px solid #b2b2b2;*/
   border-radius: 0.5em;
   background: #E3E3E8;
   box-shadow: none;
@@ -51,6 +53,22 @@ input[type=range].styled-slider:active::-webkit-slider-runnable-track {
 input[type=range].styled-slider.slider-progress::-webkit-slider-runnable-track {
   background: linear-gradient(to right, #3C37FF, #FF4A4B) 0/var(--sx) 100% no-repeat, #E3E3E8;
 }
+.how-mach-revenue.bill-pay input[type=range].styled-slider.slider-progress::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, #3C37FF, #FEB9CB) 0/var(--sx) 100% no-repeat, rgba(70, 70, 70, 0.5);
+}
+.how-mach-revenue.bill-pay.main input[type=range].styled-slider.slider-progress::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, #3C37FF, #FE66BA) 0/var(--sx) 100% no-repeat, rgba(70, 70, 70, 0.5);
+}
+
+/*input[type=range].styled-slider.slider-progress::-webkit-slider-runnable-track {*/
+/*  background: linear-gradient(to right, #3C37FF, #FF4A4B) 0/var(--sx) 100% no-repeat, #E3E3E8;*/
+/*}*/
+/*.how-mach-revenue.bill-pay input[type=range].styled-slider.slider-progress::-webkit-slider-runnable-track {*/
+/*  background: linear-gradient(to right, #3C37FF, #FEB9CB) 0/var(--sx) 100% no-repeat, #E3E3E8;*/
+/*}*/
+/*.how-mach-revenue.bill-pay.main input[type=range].styled-slider.slider-progress::-webkit-slider-runnable-track {*/
+/*  background: linear-gradient(to right, #3C37FF, #FE66BA) 0/var(--sx) 100% no-repeat, #E3E3E8;*/
+/*}*/
 
 /*mozilla*/
 input[type=range].styled-slider::-moz-range-thumb {
@@ -129,3 +147,4 @@ input[type=range].styled-slider.slider-progress::-ms-fill-lower {
   border: 1px solid #b2b2b2;
   border-right-width: 0;
 }
+

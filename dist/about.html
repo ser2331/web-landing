@@ -4,183 +4,244 @@
   <title>monite</title>
   <link rel='stylesheet' href='https://monite.com/wp-content/themes/monite/css/main.min.css?ver=6.1.1' />
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css'
+        integrity='sha512-tYKqO78H3mRRCHa75fms1gBvGlANz0JxjN6fVrMBvWL+vOOy200npwJ69OBl9XEsTu3yVUvZNrdWFIIrIf8FLg=='
+        crossorigin='anonymous' referrerpolicy='no-referrer' />
 </head>
 <body>
 
-
-<section class='mt-header'>
-  <div class='mt-header__container'>
-    <div class='mt-footer-logo mt-header__logo'>
-      <a href='https://monite.com/'>
-        <svg width='104' height='19' viewBox='0 0 104 19' fill='none' xmlns='http://www.w3.org/2000/svg'>
-          <path fill-rule='evenodd' clip-rule='evenodd' d='M30.009 1.98042C29.4629 0.368097 28.459 0 27.9814 0H24.4921V18.56H27.2847V2.81397L28.0742 5.03624L33.1317 18.56H36.5571L41.5888 5.03624L42.4056 2.94173V18.56H45.1983V0H41.6983C41.2268 0 40.3218 0.330071 39.7605 1.73857L36.4005 11.1889L34.8459 16.1202L33.2914 11.1889L30.0166 1.97434L30.009 1.98194V1.98042Z' fill='#111111' />
-          <path fill-rule='evenodd' clip-rule='evenodd' d='M53.9289 5.5498C50.2464 5.5498 47.2499 8.15538 47.2499 12.1953C47.2499 16.2353 50.2449 18.8408 53.9289 18.8408C57.6129 18.8408 60.6337 16.2353 60.6337 12.1953C60.6337 8.15538 57.6387 5.5498 53.9289 5.5498ZM53.9289 16.3691C51.2518 16.3691 49.9802 15.0397 49.9802 12.1953C49.9802 9.35094 51.2518 8.02153 53.9289 8.02153C56.6059 8.02153 57.9034 9.35094 57.9034 12.1953C57.9034 15.0397 56.6318 16.3691 53.9289 16.3691Z' fill='#111111' />
-          <path fill-rule='evenodd' clip-rule='evenodd' d='M69.8832 5.5498C67.3948 5.5498 66.0426 6.85183 65.4357 8.89462V5.81447H62.7343V18.5579H65.4357V12.5589C65.4357 9.61104 66.8122 8.02001 68.9569 8.02001C70.6772 8.02001 71.7374 9.00262 71.7374 10.9131V18.561H74.4388V10.7275C74.4388 7.35378 72.8767 5.5498 69.8832 5.5498Z' fill='#111111' />
-          <path fill-rule='evenodd' clip-rule='evenodd' d='M80.1206 1.87312C80.1464 3.02913 79.4893 3.6847 78.2801 3.6847C77.0708 3.6847 76.4655 3.0276 76.4381 1.87312C76.4122 0.74449 77.0967 0.140628 78.2801 0.140628C79.4391 0.139107 80.0947 0.742969 80.1206 1.87312Z' fill='#111111' />
-          <path d='M79.6106 5.78369H76.9061V18.5606H79.6106V5.78369Z' fill='#111111' />
-          <path fill-rule='evenodd' clip-rule='evenodd' d='M90.7562 8.26172V5.85236H86.8942V1.95996H84.1958V5.85236H81.5233V8.26172H84.1958V15.0396C84.1958 17.1584 85.5982 18.5608 87.714 18.5608H90.3607V16.1515H86.8942V8.26172H90.7562Z' fill='#111111' />
-          <path fill-rule='evenodd' clip-rule='evenodd' d='M97.9858 5.5498C94.3307 5.5498 91.7343 8.23448 91.7343 12.2212C91.7343 16.2079 94.2501 18.8393 98.1181 18.8393C100.715 18.8393 103.261 16.9441 103.656 14.6397H101.27C100.687 16.182 99.9191 16.6323 98.144 16.6323C95.7605 16.6323 94.6729 15.6223 94.4889 13.0441H103.971C103.997 12.5391 103.997 12.3261 103.997 11.9276C103.999 8.02153 101.534 5.5498 97.9843 5.5498H97.9858ZM94.5178 11.0515C94.7566 8.73795 95.8944 7.67625 98.0147 7.67625C100.135 7.67625 101.194 8.60714 101.299 11.0515H94.5178Z' fill='#111111' />
-          <path fill-rule='evenodd' clip-rule='evenodd' d='M19.8922 14.2006C20.3835 13.828 20.782 13.0994 20.782 12.5716V5.98842C20.782 5.46061 20.382 4.73202 19.8922 4.35936L14.2491 0H8.59375L18.7073 7.65246C19.1986 8.02512 19.5971 8.75371 19.5971 9.28152C19.5971 9.80933 19.1971 10.5379 18.7073 10.9106L8.59375 18.56H14.2491L19.8922 14.1991V14.2006Z' fill='#3C37FF' />
-          <path fill-rule='evenodd' clip-rule='evenodd' d='M11.1448 14.3527C11.6361 13.9801 12.0346 13.2515 12.0346 12.7237V5.83632C12.0346 5.30851 11.6346 4.57992 11.1448 4.20726L5.65531 0H0L10.112 7.65246C10.6033 8.02512 11.0018 8.75371 11.0018 9.28152C11.0018 9.80933 10.6018 10.5379 10.112 10.9106L0 18.56H5.65531L11.1463 14.3512L11.1448 14.3527Z' fill='#3C37FF' />
-        </svg>
-      </a>
-    </div>
-    <nav class='mt-header__navbar' id='headerMenu'>
-      <ul class='mt-header__list'>
-        <li class='mt-header__item'>Products
-          <ul class='mt-header__sublist'>
-            <li class='mt-header__subitem'><a href='https://monite.com/ap-automation/'>AP Automation</a></li>
-            <li class='mt-header__subitem'><a href='https://monite.com/invoicing-api/'>AR Automation</a></li>
-            <li class='mt-header__subitem'><a href='https://monite.com/payments/'>Payments</a></li>
-            <li class='mt-header__subitem'><a href='https://monite.com/invoice-payment-link/'>Payment links</a></li>
-          </ul>
-        </li>
-        <li class='mt-header__item'>Solutions
-          <ul class='mt-header__sublist'>
-            <li class='mt-header__subitem'><a href='#'>7777777?????????</a></li>
-            <li class='mt-header__subitem'><a href='#'>?????????</a></li>
-            <li class='mt-header__subitem'><a href='#'>?????????</a></li>
-          </ul>
-        </li>
-        <li class='mt-header__item'>Docs + Resources
-          <ul class='mt-header__sublist'>
-            <li class='mt-header__subitem'><a href='https://docs.monite.com/'>API docs</a></li>
-            <li class='mt-header__subitem'><a href='https://portal.sandbox.monite.com/signin'>Sandbox</a></li>
-            <li class='mt-header__subitem'><a href='https://github.com/team-monite'>Github</a></li>
-            <li class='mt-header__subitem'><a href='https://www.postman.com/monite/workspace/monite-public-workspace/overview'>Postman</a></li>
-            <li class='mt-header__subitem'><a
-              href='https://www.postman.com/monite/workspace/monite-public-workspace/overview'>Postman</a></li>
-          </ul>
-        </li>
-      </ul>
-      <div class='mt-header__footer'>
-        <div class='mt-footer__copy-mail mt-header__mail'>
-          <a href='mailto:hello@monite.com'>hello@monite.com</a>
-        </div>
-        <div class='mt-footer__social mt-header__social'>
-          <ul class='mt-footer__socials mt-header__socials'>
-            <li>
-              <a href='https://www.facebook.com/monitehq/'>
-                <img src='https://monite.com/wp-content/uploads/2023/03/facebook_icon.svg' />
-              </a>
-            </li>
-            <li>
-              <a href='https://www.linkedin.com/company/monitehq'>
-                <img src='https://monite.com/wp-content/uploads/2023/03/li_icon.svg' />
-              </a>
-            </li>
-            <li>
-              <a href='https://twitter.com/Monite_'>
-                <img src='https://monite.com/wp-content/uploads/2023/03/twitter_icon.svg' />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <button class='mt-button mt-header__btn'>Get demo</button>
-    <button class='mt-button_menu' id='buttonMenu'></button>
-  </div>
-</section>
 <section class='mt-hero mt-hero_about'>
   <div class='mt-hero__inner'>
     <div class='mt-hero__content mt-hero_about__content'>
-      <h1 class='mt-title' style='z-index: 2;'>Building the next wave <br/>of financial infrastructure</h1>
-      <p class='mt-subtitle'>In 2023, SMBs still manage their finance on paper, Excel and 5+ external tools, resulting in 5% revenue loss. We want to turn B2B platforms, neobanks, fintechs, SaaS, to a super app for their industries</p>
-      <a class='mt-button' href="#modal_call" data-fancybox="">Find a role</a>
+      <h1 class='mt-title' style='z-index: 2;'>Building the next wave <br />of financial infrastructure</h1>
+      <p class='mt-subtitle'>SMBs still manage their finance on paper, Excel and 5+ external tools, resulting in 5%
+        revenue loss. We want to turn B2B platforms, neobanks, and fintechs into super-apps that solve this problem with
+        automated invoicing, payables, and B2B payments.
+      </p>
     </div>
     <div class='mt-hero_about__images'>
-      <img src='https://monite.com/wp-content/uploads/2023/03/mt-about_hero_mob.png' width='100%' height='146' alt='Building the next wave of financial infrastructure'>
+      <img src='https://monite.com/wp-content/uploads/2023/03/mt-about_hero_mob.png' width='100%' height='146'
+           alt='Building the next wave of financial infrastructure'>
+    </div>
+  </div>
+</section>
+<section class='mt-history-primary'>
+  <div class='wrapper' id='slider-history'>
+    <h2 class='mt-title'>Freeing SMBs from<br> Excel and paper</h2>
+    <div class='viewport-images' id='viewport-images'>
+      <ul class='images-wrapper'>
+        <li class='mt-history__image image_1'>
+          <img src='https://monite.com/wp-content/uploads/2023/04/Frame-1924187516902.jpg' alt='2021'>
+        </li>
+        <li class='mt-history__image image_2'>
+          <img src='https://monite.com/wp-content/uploads/2023/04/Frame-19487569202-scaled.jpg' alt='2022'>
+        </li>
+        <li class='mt-history__image image_3'>
+          <img class='desktop-image' src='https://monite.com/wp-content/uploads/2023/04/Frame-19487156902.jpg'
+               alt='2022'>
+          <img width='320' height='197' class='mobile-image'
+               src='https://monite.com/wp-content/uploads/2023/04/slide3.png' alt='2022'>
+        </li>
+        <li class='mt-history__image image_4'>
+          <img src='https://monite.com/wp-content/uploads/2023/04/Frame-192427516902.jpg' alt='2023'>
+        </li>
+      </ul>
+    </div>
+    <div class='links-wrapper'>
+      <div class='mob-pagination-wrapper'>
+        <div class='mob-page page_1 active-page' onclick='slideHistoryBlock(1)'></div>
+        <div class='mob-page page_2' onclick='slideHistoryBlock(2)'></div>
+        <div class='mob-page page_3' onclick='slideHistoryBlock(3)'></div>
+        <div class='mob-page page_4' onclick='slideHistoryBlock(4)'></div>
+      </div>
+      <div class='mt-history__years desktop-links'>
+        <div class='mt-history__year link_1 mt-history__year_active' onclick='slideHistoryBlock(1)'>
+          <p class='mt-subtitle'>2021</p>
+        </div>
+        <div class='mt-history__year link_2' onclick='slideHistoryBlock(2)'>
+          <p class='mt-subtitle'>2022 Jan-Jun</p>
+        </div>
+        <div class='mt-history__year link_3' onclick='slideHistoryBlock(3)'>
+          <p class='mt-subtitle'>2022 Jun - Dec</p>
+        </div>
+        <div class='mt-history__year link_4' onclick='slideHistoryBlock(4)'>
+          <p class='mt-subtitle'>2023</p>
+        </div>
+      </div>
+    </div>
+    <div class='mt-history__viewport-contents' id='mt-history__viewport-contents'>
+      <ul class='contents_container'>
+        <li class='content-wrapper content_1'>
+          <div class='mt-history__left'>
+            <div class='mt-history__year link_1 mobile-link mt-history__year_active'>
+              <p class='mt-subtitle'>2021</p>
+            </div>
+            <h4 class='mt-history__leftText'>
+              The beginning
+            </h4>
+          </div>
+          <div class='mt-history__right'>
+            <p class='mt-history__rightText'>
+              Monite was born in Berlin in 2020, with a founding mission to automate finance for SMEs. Soon after,
+              Monite raised a € 1.1 million pre-seed round with Tomahawk VC, Signals VC, Possible Ventures, and Runa
+              Capital
+            </p>
+          </div>
+        </li>
+        <li class='content-wrapper content_2'>
+          <div class='mt-history__left'>
+            <div class='mt-history__year link_2 mobile-link mt-history__year_active'>
+              <p class='mt-subtitle'>2022 Jan-Jun</p>
+            </div>
+            <h4 class='mt-history__leftText'>
+              Pivoted to embeddable finance and raised additional funding
+            </h4>
+          </div>
+          <div class='mt-history__right'>
+            <p class='mt-history__rightText'>
+              Seeing greater demand for embedded solutions in the market, Monite transitioned into a B2B2B model,
+              enabling other platforms to provide finance automation to SMBs
+            </p>
+          </div>
+        </li>
+        <li class='content-wrapper content_3'>
+          <div class='mt-history__left'>
+            <div class='mt-history__year link_3 mobile-link mt-history__year_active'>
+              <p class='mt-subtitle'>2022 Jun - Dec</p>
+            </div>
+            <h4 class='mt-history__leftText'>
+              Launched API-first products
+            </h4>
+          </div>
+          <div class='mt-history__right'>
+            <p class='mt-history__rightText'>
+              In late 2021, Monite launched its first API-first products—Accounts Receivable and Accounts Payable—with
+              the first clients taking them for a spin
+            </p>
+          </div>
+        </li>
+        <li class='content-wrapper content_4'>
+          <div class='mt-history__left'>
+            <div class='mt-history__year link_4 mobile-link mt-history__year_active'>
+              <p class='mt-subtitle'>2023</p>
+            </div>
+            <h4 class='mt-history__leftText'>
+              $10 million seed round raised, revenue-generating products are live
+            </h4>
+          </div>
+          <div class='mt-history__right'>
+            <p class='mt-history__rightText'>
+              Monite kicks off 2023 with the launch of two new products for digital B2B payments: Invoice Payment Links
+              and Bill Pay. The company raises another a total of $10 million in Seed funding
+            </p>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
 <section class='mt-backed'>
   <div class='mt-container'>
-    <h2 class='mt-title'>Backed by leading <br/>experts in fintech</h2>
+    <h2 class='mt-title'>Backed by leading <br />experts in fintech</h2>
     <ul class='mt-backed__people'>
       <li class='mt-backed__card'>
-       <div class='mt-backed__partner_logo mt-backed__logo mt-backed__photo'>
-          <img src='https://monite.com/wp-content/uploads/2023/03/expert_1.png' width='85' height='85' alt='Victor Jacobsson' />
-         <div class='mt-backed__logo_alt'>
-           <img src='https://monite.com/wp-content/uploads/2023/03/expert-logo_1.png' width='48' height='48' alt='Victor Jacobsson' />
-         </div>
-      </div>
+        <div class='mt-backed__partner_logo mt-backed__logo mt-backed__photo'>
+          <img src='https://monite.com/wp-content/uploads/2023/03/expert_1.png' width='85' height='85'
+               alt='Victor Jacobsson' />
+          <div class='mt-backed__logo_alt'>
+            <img src='https://monite.com/wp-content/uploads/2023/03/expert-logo_1.png' width='48' height='48'
+                 alt='Victor Jacobsson' />
+          </div>
+        </div>
         <p class='mt-people__name'>Victor Jacobsson</p>
-        <p class='mt-people__position'>co-founder of Klarna</p>
+        <p class='mt-people__position'>Co-founder of Klarna</p>
       </li>
       <li class='mt-backed__card'>
         <div class='mt-backed__partner_logo mt-backed__logo mt-backed__photo'>
-          <img src='https://monite.com/wp-content/uploads/2023/03/expert_2.png' width='85' height='85' alt='Adriaan Mol' />
+          <img src='https://monite.com/wp-content/uploads/2023/03/expert_2.png' width='85' height='85'
+               alt='Adriaan Mol' />
           <div class='mt-backed__logo_alt'>
-            <img src='https://monite.com/wp-content/uploads/2023/03/expert-logo_2.png' width='48' height='48' alt='Victor Jacobsson' />
+            <img src='https://monite.com/wp-content/uploads/2023/03/expert-logo_2.png' width='48' height='48'
+                 alt='Victor Jacobsson' />
           </div>
-      </div>
+        </div>
         <p class='mt-people__name'>Adriaan Mol</p>
-        <p class='mt-people__position'>founder of Mollie</p>
+        <p class='mt-people__position'>Founder of Mollie</p>
       </li>
       <li class='mt-backed__card'>
         <div class='mt-backed__partner_logo mt-backed__logo mt-backed__photo'>
-          <img src='https://monite.com/wp-content/uploads/2023/03/expert_3.png' width='85' height='85' alt='Prajit Nanu' />
+          <img src='https://monite.com/wp-content/uploads/2023/03/expert_3.png' width='85' height='85'
+               alt='Prajit Nanu' />
           <div class='mt-backed__logo_alt'>
-            <img src='https://monite.com/wp-content/uploads/2023/03/expert-logo_3.png' width='48' height='48' alt='Victor Jacobsson' />
+            <img src='https://monite.com/wp-content/uploads/2023/03/expert-logo_3.png' width='48' height='48'
+                 alt='Victor Jacobsson' />
           </div>
-      </div>
+        </div>
         <p class='mt-people__name'>Prajit Nanu</p>
-        <p class='mt-people__position'>founder of Nium</p>
+        <p class='mt-people__position'>Founder of Nium</p>
       </li>
       <li class='mt-backed__card'>
         <div class='mt-backed__partner_logo mt-backed__logo mt-backed__photo'>
-          <img src='https://monite.com/wp-content/uploads/2023/03/expert_4.png' width='85' height='85' alt='Phillip Valka' />
+          <img src='https://monite.com/wp-content/uploads/2023/03/expert_4.png' width='85' height='85'
+               alt='Phillip Valka' />
           <div class='mt-backed__logo_alt'>
-            <img src='https://monite.com/wp-content/uploads/2023/03/expert-logo_4.png' width='48' height='48' alt='Victor Jacobsson' />
+            <img src='https://monite.com/wp-content/uploads/2023/04/paypal_logo.png' width='48' height='48'
+                 alt='Victor Jacobsson' />
           </div>
-      </div>
+        </div>
         <p class='mt-people__name'>Phillip Valka</p>
-        <p class='mt-people__position'>investor at Apis Partners</p>
+        <p class='mt-people__position'>Investor at Apis Partners, ex-PayPal</p>
       </li>
       <li class='mt-backed__card'>
         <div class='mt-backed__partner_logo mt-backed__logo mt-backed__photo'>
-          <img src='https://monite.com/wp-content/uploads/2023/03/expert_5.png' width='85' height='85' alt='Jason Pate' />
+          <img src='https://monite.com/wp-content/uploads/2023/03/expert_5.png' width='85' height='85'
+               alt='Jason Pate' />
           <div class='mt-backed__logo_alt'>
-            <img src='https://monite.com/wp-content/uploads/2023/03/expert-logo_5.png' width='48' height='48' alt='Victor Jacobsson' />
+            <img src='https://monite.com/wp-content/uploads/2023/03/expert-logo_5.png' width='48' height='48'
+                 alt='Victor Jacobsson' />
           </div>
-      </div>
+        </div>
         <p class='mt-people__name'>Jason Pate</p>
         <p class='mt-people__position'>Head of Finance, Business and Corporate Development at Plaid</p>
       </li>
       <li class='mt-backed__card'>
         <div class='mt-backed__partner_logo mt-backed__logo mt-backed__photo'>
-          <img src='https://monite.com/wp-content/uploads/2023/03/expert_6.png' width='85' height='85' alt='Jonathan Weiner' />
+          <img src='https://monite.com/wp-content/uploads/2023/03/expert_6.png' width='85' height='85'
+               alt='Jonathan Weiner' />
           <div class='mt-backed__logo_alt'>
-            <img src='https://monite.com/wp-content/uploads/2023/03/expert-logo_6.png' width='48' height='48' alt='Victor Jacobsson' />
+            <img src='https://monite.com/wp-content/uploads/2023/03/expert-logo_6.png' width='48' height='48'
+                 alt='Victor Jacobsson' />
           </div>
-      </div>
+        </div>
         <p class='mt-people__name'>Jonathan Weiner</p>
-        <p class='mt-people__position'>fintech investor and founder of Money2020</p>
+        <p class='mt-people__position'>Fintech investor and Founder of Money2020</p>
       </li>
       <li class='mt-backed__card'>
         <div class='mt-backed__partner_logo mt-backed__logo mt-backed__photo'>
-          <img src='https://monite.com/wp-content/uploads/2023/03/expert_7.png' width='85' height='85' alt='Ralph Müller' />
+          <img src='https://monite.com/wp-content/uploads/2023/03/expert_7.png' width='85' height='85'
+               alt='Ralph Müller' />
           <div class='mt-backed__logo_alt'>
-            <img src='https://monite.com/wp-content/uploads/2023/03/expert-logo_7.png' width='48' height='48' alt='Victor Jacobsson' />
+            <img src='https://monite.com/wp-content/uploads/2023/03/expert-logo_7.png' width='48' height='48'
+                 alt='Victor Jacobsson' />
           </div>
-      </div>
+        </div>
         <p class='mt-people__name'>Ralph Müller</p>
         <p class='mt-people__position'>Ex-Deutsche Bank Board Member, Fintech investor, ex-McKinsey</p>
       </li>
     </ul>
-
     <div class='mt-backed__partners'>
       <ul class='mt-backed__partners_list'>
         <li class='mt-backed__partner'>
           <div class='mt-backed__partner_logo'>
-            <img src='https://monite.com/wp-content/uploads/2023/03/expert-logo_8.png' width='157' height='157' alt='logo' />
+            <img src='https://monite.com/wp-content/uploads/2023/03/expert-logo_8.png' width='157' height='157'
+                 alt='logo' />
           </div>
           <p class='mt-people__name'>Point 72 Ventures</p>
         </li>
         <li class='mt-backed__partner'>
           <div class='mt-backed__partner_logo'>
-            <img src='https://monite.com/wp-content/uploads/2023/03/expert-logo_9.png' width='157' height='157' alt='logo' />
+            <img src='https://monite.com/wp-content/uploads/2023/03/expert-logo_9.png' width='157' height='157'
+                 alt='logo' />
           </div>
           <p class='mt-people__name'>Third Prime</p>
         </li>
@@ -188,464 +249,470 @@
       <ul class='mt-backed__partners_list mt-backed__list'>
         <li class='mt-backed__partner mt-backed__item'>
           <div class='mt-backed__partner_logo mt-backed__logo'>
-            <img src='https://monite.com/wp-content/uploads/2023/03/expert-logo_10.png' width='85' height='85' alt='logo' />
-          </div>
-          <p class='mt-people__name'>Longrun Capital</p>
-        </li>
-        <li class='mt-backed__partner mt-backed__item'>
-          <div class='mt-backed__partner_logo mt-backed__logo'>
-            <img src='https://monite.com/wp-content/uploads/2023/03/expert-logo_11.png' width='85' height='85' alt='logo' />
+            <img src='https://monite.com/wp-content/uploads/2023/04/s16vc.png' width='64' height='29'
+                 alt='s16vc logo' />
           </div>
           <p class='mt-people__name'>s16vc</p>
         </li>
         <li class='mt-backed__partner mt-backed__item'>
           <div class='mt-backed__partner_logo mt-backed__logo'>
-            <img src='https://monite.com/wp-content/uploads/2023/03/expert-logo_12.png' width='85' height='85' alt='logo' />
+            <img src='https://monite.com/wp-content/uploads/2023/04/Longrun_Capital.png' width='24' height='38'
+                 alt='logo' />
+          </div>
+          <p class='mt-people__name'>Longrun Capital</p>
+        </li>
+        <li class='mt-backed__partner mt-backed__item'>
+          <div class='mt-backed__partner_logo mt-backed__logo'>
+            <img src='https://monite.com/wp-content/uploads/2023/04/Runa_Capital.png' width='42' height='27'
+                 alt='logo' />
           </div>
           <p class='mt-people__name'>Runa Capital</p>
         </li>
         <li class='mt-backed__partner mt-backed__item'>
           <div class='mt-backed__partner_logo mt-backed__logo'>
-            <img src='https://monite.com/wp-content/uploads/2023/03/expert-logo_13.png' width='85' height='85' alt='logo' />
-          </div>
-          <p class='mt-people__name'>Tomahawk.VC</p>
-        </li>
-        <li class='mt-backed__partner mt-backed__item'>
-          <div class='mt-backed__partner_logo mt-backed__logo'>
-            <img src='https://monite.com/wp-content/uploads/2023/03/expert-logo_14.png' width='85' height='85' alt='logo' />
+            <img src='https://monite.com/wp-content/uploads/2023/04/Possible_ventures.png' width='59' height='35'
+                 alt='logo' />
           </div>
           <p class='mt-people__name'>Possible ventures</p>
         </li>
         <li class='mt-backed__partner mt-backed__item'>
           <div class='mt-backed__partner_logo mt-backed__logo'>
-            <img src='https://monite.com/wp-content/uploads/2023/03/expert-logo_15.png' width='85' height='85' alt='logo' />
+            <img src='https://monite.com/wp-content/uploads/2023/04/Tomahawk_VC.png' width='34' height='29'
+                 alt='logo' />
+          </div>
+          <p class='mt-people__name'>Tomahawk.VC</p>
+        </li>
+        <li class='mt-backed__partner mt-backed__item'>
+          <div class='mt-backed__partner_logo mt-backed__logo'>
+            <img src='https://monite.com/wp-content/uploads/2023/04/Audeo_Ventures.png' width='38' height='26'
+                 alt='logo' />
           </div>
           <p class='mt-people__name'>Audeo Ventures</p>
         </li>
         <li class='mt-backed__partner mt-backed__item'>
           <div class='mt-backed__partner_logo mt-backed__logo'>
-            <img src='https://monite.com/wp-content/uploads/2023/03/expert-logo_16.png' width='85' height='85' alt='logo' />
-          </div>
-          <p class='mt-people__name'>365 Fintech</p>
-        </li>
-        <li class='mt-backed__partner mt-backed__item'>
-          <div class='mt-backed__partner_logo mt-backed__logo'>
-            <img src='https://monite.com/wp-content/uploads/2023/03/expert-logo_17.png' width='85' height='85' alt='logo' />
+            <img src='https://monite.com/wp-content/uploads/2023/04/Signals_Venture_Capital.png' width='35' height='35'
+                 alt='logo' />
           </div>
           <p class='mt-people__name'>Signals Venture Capital</p>
         </li>
+        <li class='mt-backed__partner mt-backed__item'>
+          <div class='mt-backed__partner_logo mt-backed__logo'>
+            <img src='https://monite.com/wp-content/uploads/2023/04/365_Fintech.png' width='41' height='41'
+                 alt='logo' />
+          </div>
+          <p class='mt-people__name'>365 Fintech</p>
+        </li>
       </ul>
     </div>
-   <div class='mt-backed__image_mob'>
-     <img src='https://monite.com/wp-content/uploads/2023/03/mt-backed-bg_mob.png' width='100%' height='182' alt='bg'/>
-   </div>
+    <div class='mt-backed__image_mob'>
+      <img src='https://monite.com/wp-content/uploads/2023/03/mt-backed-bg_mob.png' width='100%' height='182'
+           alt='bg' />
+    </div>
   </div>
 </section>
 <section class='mt-about mt-about_alt'>
-  <div class='mt-about_alt__container'>
-    <h2 class='mt-title mt-title_about'>Industry-recognized innovation</h2>
-    <div class='mt-about_alt__buttons'>
-      <button class='mt-about_alt__button_left'> < </button>
-      <button class='mt-about_alt__button_right'> > </button>
-      <button class='mt-about_alt__button'>See all</button>
+  <div class='mt-about__container'>
+    <h2 class='mt-title'>Industry-recognized innovation</h2>
+    <div class='mt-container_scroll' id='scrollBox'>
+      <div class='mt-scroll-buttons' data-glide-el='controls'>
+        <button class='mt-scroll-buttons__button_left' data-glide-dir='&lt;'>
+          <svg width='14' height='24' viewBox='0 0 14 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+            <path
+              d='M1.09816 10.8166L10.5315 1.39998C10.6864 1.24377 10.8708 1.11978 11.0739 1.03516C11.277 0.950547 11.4948 0.906982 11.7148 0.906982C11.9348 0.906982 12.1527 0.950547 12.3558 1.03516C12.5589 1.11978 12.7432 1.24377 12.8982 1.39998C13.2086 1.71225 13.3828 2.13467 13.3828 2.57498C13.3828 3.01529 13.2086 3.43771 12.8982 3.74998L4.64816 12.0833L12.8982 20.3333C13.2086 20.6456 13.3828 21.068 13.3828 21.5083C13.3828 21.9486 13.2086 22.371 12.8982 22.6833C12.7438 22.8408 12.5597 22.9661 12.3566 23.0519C12.1535 23.1377 11.9353 23.1824 11.7148 23.1833C11.4943 23.1824 11.2762 23.1377 11.073 23.0519C10.8699 22.9661 10.6858 22.8408 10.5315 22.6833L1.09816 13.2666C0.928983 13.1106 0.793969 12.9212 0.701623 12.7103C0.609278 12.4995 0.561603 12.2718 0.561603 12.0416C0.561603 11.8115 0.609278 11.5838 0.701623 11.373C0.793969 11.1621 0.928983 10.9727 1.09816 10.8166V10.8166Z'
+              fill='black' />
+          </svg>
+        </button>
+        <button class='mt-scroll-buttons__button_right' data-glide-dir='&gt;'>
+          <svg width='14' height='24' viewBox='0 0 14 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+            <path
+              d='M12.9018 10.8166L3.46851 1.39998C3.31357 1.24377 3.12924 1.11978 2.92614 1.03516C2.72304 0.950547 2.50519 0.906982 2.28517 0.906982C2.06516 0.906982 1.84731 0.950547 1.64421 1.03516C1.44111 1.11978 1.25678 1.24377 1.10184 1.39998C0.791423 1.71225 0.617188 2.13467 0.617188 2.57498C0.617188 3.01529 0.791423 3.43771 1.10184 3.74998L9.35184 12.0833L1.10184 20.3333C0.791423 20.6456 0.617188 21.068 0.617188 21.5083C0.617188 21.9486 0.791423 22.371 1.10184 22.6833C1.2562 22.8408 1.44027 22.9661 1.6434 23.0519C1.84653 23.1377 2.06466 23.1824 2.28517 23.1833C2.50569 23.1824 2.72382 23.1377 2.92695 23.0519C3.13008 22.9661 3.31415 22.8408 3.46851 22.6833L12.9018 13.2666C13.071 13.1106 13.206 12.9212 13.2984 12.7103C13.3907 12.4995 13.4384 12.2718 13.4384 12.0416C13.4384 11.8115 13.3907 11.5838 13.2984 11.373C13.206 11.1621 13.071 10.9727 12.9018 10.8166Z'
+              fill='black' />
+          </svg>
+        </button>
+      </div>
+      <div class='glide' data-glide-el='track'>
+        <ul class='mt-about__cards'>
+          <li class='mt-about__card'>
+            <img src='https://monite.com/wp-content/uploads/2023/04/TC_logo.png' alt='techcrunche' width='142'
+                 height='21'>
+            <h4 class='mt-about__card-text'>Monite doubles seed round to €10 million</h4>
+            <p class='mt-main-cases__card-text mt-about__date'>20.03.2022</p>
+            <a class='mt-about__link'
+               href='https://techcrunch.com/2023/03/20/berlins-monite-raises-5m-seed-for-its-embedded-b2b-payments-platform/'
+               target='_blank'>
+              <span class='mt-about__btn'>Learn more
+                <svg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'>
+            <path
+              d='M5.25 5.99986H10.9425L4.7175 12.2174C4.57627 12.3586 4.49693 12.5501 4.49693 12.7499C4.49693 12.9496 4.57627 13.1411 4.7175 13.2824C4.85873 13.4236 5.05027 13.5029 5.25 13.5029C5.44973 13.5029 5.64127 13.4236 5.7825 13.2824L12 7.05736V12.7499C12 12.9488 12.079 13.1395 12.2197 13.2802C12.3603 13.4208 12.5511 13.4999 12.75 13.4999C12.9489 13.4999 13.1397 13.4208 13.2803 13.2802C13.421 13.1395 13.5 12.9488 13.5 12.7499V5.24986C13.4988 5.15185 13.4784 5.05503 13.44 4.96486C13.3639 4.7816 13.2183 4.63597 13.035 4.55986C12.9448 4.52143 12.848 4.50105 12.75 4.49986H5.25C5.05109 4.49986 4.86032 4.57888 4.71967 4.71953C4.57902 4.86018 4.5 5.05095 4.5 5.24986C4.5 5.44877 4.57902 5.63954 4.71967 5.78019C4.86032 5.92084 5.05109 5.99986 5.25 5.99986Z'
+              fill='black' />
+          </svg>
+              </span>
+            </a>
+          </li>
+          <li class='mt-about__card'>
+            <img src='https://monite.com/wp-content/uploads/2023/03/baincapital_logo.png' alt='BainCapital' width='139'
+                 height='23'>
+            <h4 class='mt-about__card-text'>Next-Gen CFOs Need Next-Gen Tools to Power Their Organizations</h4>
+            <p class='mt-main-cases__card-text mt-about__date'>01.03.2022</p>
+            <a class='mt-about__link'
+               href='https://baincapitalventures.com/insight/next-gen-cfos-need-next-gen-tools-to-power-their-organizations/'
+               target='_blank'>
+          <span class='mt-about__btn'>Learn more
+          <svg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'>
+            <path
+              d='M5.25 5.99986H10.9425L4.7175 12.2174C4.57627 12.3586 4.49693 12.5501 4.49693 12.7499C4.49693 12.9496 4.57627 13.1411 4.7175 13.2824C4.85873 13.4236 5.05027 13.5029 5.25 13.5029C5.44973 13.5029 5.64127 13.4236 5.7825 13.2824L12 7.05736V12.7499C12 12.9488 12.079 13.1395 12.2197 13.2802C12.3603 13.4208 12.5511 13.4999 12.75 13.4999C12.9489 13.4999 13.1397 13.4208 13.2803 13.2802C13.421 13.1395 13.5 12.9488 13.5 12.7499V5.24986C13.4988 5.15185 13.4784 5.05503 13.44 4.96486C13.3639 4.7816 13.2183 4.63597 13.035 4.55986C12.9448 4.52143 12.848 4.50105 12.75 4.49986H5.25C5.05109 4.49986 4.86032 4.57888 4.71967 4.71953C4.57902 4.86018 4.5 5.05095 4.5 5.24986C4.5 5.44877 4.57902 5.63954 4.71967 5.78019C4.86032 5.92084 5.05109 5.99986 5.25 5.99986Z'
+              fill='black' />
+          </svg>
+          </span>
+            </a>
+          </li>
+          <li class='mt-about__card'>
+            <img src='https://monite.com/wp-content/uploads/2023/04/fortune_logo.png' alt='fortune logo' width='90'
+                 height='17' />
+            <h4 class='mt-about__card-text'>Monite Raises $10M in Seed Funding</h4>
+            <p class='mt-main-cases__card-text mt-about__date'>20.03.2022</p>
+            <a class='mt-about__link' href='https://fortune.com/2023/04/04/silicon-valley-saudi-arabia-controversy/'
+               target='_blank'>
+          <span class='mt-about__btn'>Learn more
+            <svg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'>
+            <path
+              d='M5.25 5.99986H10.9425L4.7175 12.2174C4.57627 12.3586 4.49693 12.5501 4.49693 12.7499C4.49693 12.9496 4.57627 13.1411 4.7175 13.2824C4.85873 13.4236 5.05027 13.5029 5.25 13.5029C5.44973 13.5029 5.64127 13.4236 5.7825 13.2824L12 7.05736V12.7499C12 12.9488 12.079 13.1395 12.2197 13.2802C12.3603 13.4208 12.5511 13.4999 12.75 13.4999C12.9489 13.4999 13.1397 13.4208 13.2803 13.2802C13.421 13.1395 13.5 12.9488 13.5 12.7499V5.24986C13.4988 5.15185 13.4784 5.05503 13.44 4.96486C13.3639 4.7816 13.2183 4.63597 13.035 4.55986C12.9448 4.52143 12.848 4.50105 12.75 4.49986H5.25C5.05109 4.49986 4.86032 4.57888 4.71967 4.71953C4.57902 4.86018 4.5 5.05095 4.5 5.24986C4.5 5.44877 4.57902 5.63954 4.71967 5.78019C4.86032 5.92084 5.05109 5.99986 5.25 5.99986Z'
+              fill='black' />
+          </svg>
+          </span>
+            </a>
+          </li>
+          <li class='mt-about__card'>
+            <img src='https://monite.com/wp-content/uploads/2023/04/axios_logo.png' alt='ProcureTech' width='74'
+                 height='21' />
+            <h4 class='mt-about__card-text'>Monite raises another $5 million bringing in a total of $10 million in seed
+              funding</h4>
+            <p class='mt-main-cases__card-text mt-about__date'>20.03.2022</p>
+            <a class='mt-about__link'
+               href='https://www.axios.com/pro/fintech-deals/newsletters/2023/03/20/fintech-signature-minus-crypto'
+               target='_blank'>
+          <span class='mt-about__btn'>Learn more
+            <svg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'>
+            <path
+              d='M5.25 5.99986H10.9425L4.7175 12.2174C4.57627 12.3586 4.49693 12.5501 4.49693 12.7499C4.49693 12.9496 4.57627 13.1411 4.7175 13.2824C4.85873 13.4236 5.05027 13.5029 5.25 13.5029C5.44973 13.5029 5.64127 13.4236 5.7825 13.2824L12 7.05736V12.7499C12 12.9488 12.079 13.1395 12.2197 13.2802C12.3603 13.4208 12.5511 13.4999 12.75 13.4999C12.9489 13.4999 13.1397 13.4208 13.2803 13.2802C13.421 13.1395 13.5 12.9488 13.5 12.7499V5.24986C13.4988 5.15185 13.4784 5.05503 13.44 4.96486C13.3639 4.7816 13.2183 4.63597 13.035 4.55986C12.9448 4.52143 12.848 4.50105 12.75 4.49986H5.25C5.05109 4.49986 4.86032 4.57888 4.71967 4.71953C4.57902 4.86018 4.5 5.05095 4.5 5.24986C4.5 5.44877 4.57902 5.63954 4.71967 5.78019C4.86032 5.92084 5.05109 5.99986 5.25 5.99986Z'
+              fill='black' />
+          </svg>
+          </span>
+            </a>
+          </li>
+          <li class='mt-about__card'>
+            <img src='https://monite.com/wp-content/uploads/2023/03/sifted_logo.png' alt='Sifted' width='96'
+                 height='25' />
+            <h4 class='mt-about__card-text'>50 highly relevant companies in B2B Payments</h4>
+            <p class='mt-main-cases__card-text mt-about__date'>01.03.2022</p>
+            <a class='mt-about__link' href='https://sifted.eu/articles/pay-for-employee-mentors/' target='_blank'>
+          <span class='mt-about__btn'>Learn more
+            <svg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'>
+            <path
+              d='M5.25 5.99986H10.9425L4.7175 12.2174C4.57627 12.3586 4.49693 12.5501 4.49693 12.7499C4.49693 12.9496 4.57627 13.1411 4.7175 13.2824C4.85873 13.4236 5.05027 13.5029 5.25 13.5029C5.44973 13.5029 5.64127 13.4236 5.7825 13.2824L12 7.05736V12.7499C12 12.9488 12.079 13.1395 12.2197 13.2802C12.3603 13.4208 12.5511 13.4999 12.75 13.4999C12.9489 13.4999 13.1397 13.4208 13.2803 13.2802C13.421 13.1395 13.5 12.9488 13.5 12.7499V5.24986C13.4988 5.15185 13.4784 5.05503 13.44 4.96486C13.3639 4.7816 13.2183 4.63597 13.035 4.55986C12.9448 4.52143 12.848 4.50105 12.75 4.49986H5.25C5.05109 4.49986 4.86032 4.57888 4.71967 4.71953C4.57902 4.86018 4.5 5.05095 4.5 5.24986C4.5 5.44877 4.57902 5.63954 4.71967 5.78019C4.86032 5.92084 5.05109 5.99986 5.25 5.99986Z'
+              fill='black' />
+          </svg>
+          </span>
+            </a>
+          </li>
+          <li class='mt-about__card'>
+            <img src='https://monite.com/wp-content/uploads/2023/04/image-81230.png' alt='ProcureTech' width='143'
+                 height='30' />
+            <h4 class='mt-about__card-text'>The definitive 100 pioneering digital procurement solutions</h4>
+            <p class='mt-main-cases__card-text mt-about__date'>01.03.2022</p>
+            <a class='mt-about__link' href='https://www.procuretech.co/procuretech100/' target='_blank'>
+          <span class='mt-about__btn'>Learn more
+            <svg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'>
+            <path
+              d='M5.25 5.99986H10.9425L4.7175 12.2174C4.57627 12.3586 4.49693 12.5501 4.49693 12.7499C4.49693 12.9496 4.57627 13.1411 4.7175 13.2824C4.85873 13.4236 5.05027 13.5029 5.25 13.5029C5.44973 13.5029 5.64127 13.4236 5.7825 13.2824L12 7.05736V12.7499C12 12.9488 12.079 13.1395 12.2197 13.2802C12.3603 13.4208 12.5511 13.4999 12.75 13.4999C12.9489 13.4999 13.1397 13.4208 13.2803 13.2802C13.421 13.1395 13.5 12.9488 13.5 12.7499V5.24986C13.4988 5.15185 13.4784 5.05503 13.44 4.96486C13.3639 4.7816 13.2183 4.63597 13.035 4.55986C12.9448 4.52143 12.848 4.50105 12.75 4.49986H5.25C5.05109 4.49986 4.86032 4.57888 4.71967 4.71953C4.57902 4.86018 4.5 5.05095 4.5 5.24986C4.5 5.44877 4.57902 5.63954 4.71967 5.78019C4.86032 5.92084 5.05109 5.99986 5.25 5.99986Z'
+              fill='black' />
+          </svg>
+          </span>
+            </a>
+          </li>
+          <li class='mt-about__card'>
+            <img src='https://monite.com/wp-content/uploads/2023/04/forbes.png' alt='forbes logo' width='61'
+                 height='15' />
+            <h4 class='mt-about__card-text'>How To Prepare For The Era Of Hyper-Niche B2B Super Apps</h4>
+            <p class='mt-main-cases__card-text mt-about__date'>21.09.2022</p>
+            <a class='mt-about__link'
+               href='https://www.forbes.com/sites/forbesbusinesscouncil/2022/09/21/how-to-prepare-for-the-era-of-hyper-niche-b2b-super-apps/?sh=544a996e185c'
+               target='_blank'>
+          <span class='mt-about__btn'>Learn more
+            <svg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'>
+            <path
+              d='M5.25 5.99986H10.9425L4.7175 12.2174C4.57627 12.3586 4.49693 12.5501 4.49693 12.7499C4.49693 12.9496 4.57627 13.1411 4.7175 13.2824C4.85873 13.4236 5.05027 13.5029 5.25 13.5029C5.44973 13.5029 5.64127 13.4236 5.7825 13.2824L12 7.05736V12.7499C12 12.9488 12.079 13.1395 12.2197 13.2802C12.3603 13.4208 12.5511 13.4999 12.75 13.4999C12.9489 13.4999 13.1397 13.4208 13.2803 13.2802C13.421 13.1395 13.5 12.9488 13.5 12.7499V5.24986C13.4988 5.15185 13.4784 5.05503 13.44 4.96486C13.3639 4.7816 13.2183 4.63597 13.035 4.55986C12.9448 4.52143 12.848 4.50105 12.75 4.49986H5.25C5.05109 4.49986 4.86032 4.57888 4.71967 4.71953C4.57902 4.86018 4.5 5.05095 4.5 5.24986C4.5 5.44877 4.57902 5.63954 4.71967 5.78019C4.86032 5.92084 5.05109 5.99986 5.25 5.99986Z'
+              fill='black' />
+          </svg>
+          </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class='glide__bullets' data-glide-el='controls[nav]'>
+        <button class='glide__bullet glide__bullet--active' data-glide-dir='=0'></button>
+        <button class='glide__bullet' data-glide-dir='=1'></button>
+        <button class='glide__bullet' data-glide-dir='=2'></button>
+        <button class='glide__bullet' data-glide-dir='=3'></button>
+        <button class='glide__bullet' data-glide-dir='=4'></button>
+        <button class='glide__bullet' data-glide-dir='=5'></button>
+        <button class='glide__bullet' data-glide-dir='=6'></button>
+      </div>
     </div>
-  </div>
-  <div class='mt-container_scroll'>
-    <ul class='mt-about__cards mt-about_alt__cards'>
-      <li class='mt-about__card mt-about_alt__card'>
-        <svg width="142" height="21" viewBox="0 0 142 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M53.8122 9.27436V18.3745H50.586V9.27436H47.3335V6.3623H57.0648V9.27436H53.8122ZM64.5896 14.7709H59.447C59.4428 14.9691 59.4787 15.1661 59.5525 15.3492C59.6262 15.5322 59.7362 15.6972 59.8754 15.8335C60.0145 15.9698 60.1797 16.0744 60.3603 16.1406C60.5409 16.2068 60.7329 16.2331 60.9239 16.2178C61.7177 16.2134 62.4967 15.9938 63.183 15.5808L64.3522 17.5828C63.2946 18.2569 62.0779 18.6158 60.8359 18.6203C58.1987 18.6203 56.7659 16.691 56.7659 13.9246C56.7659 10.8123 58.4625 9.21066 60.748 9.21066C63.0336 9.21066 64.6335 10.8487 64.6335 14.1976C64.5983 14.416 64.5983 14.6071 64.5896 14.7618V14.7709ZM60.6338 11.4675C59.9481 11.4675 59.5789 11.9498 59.4734 12.8507H61.9611C61.8117 11.9407 61.5216 11.4675 60.6425 11.4675H60.6338ZM70.1452 18.593C67.596 18.593 66.0664 16.9094 66.0664 13.8609C66.0664 11.1308 67.4201 9.18336 70.2156 9.18336C70.903 9.1598 71.5828 9.33889 72.1758 9.69977C72.7687 10.0607 73.2504 10.5885 73.5648 11.2218L71.5078 12.8598C71.0946 12.0772 70.8045 11.695 70.1628 11.695C69.5211 11.695 69.02 12.4867 69.02 13.9155C69.02 15.3442 69.4332 16.0813 70.2507 16.0813C70.8133 16.0813 71.2177 15.7537 71.7627 14.8983L73.6527 16.4271C72.633 17.9741 71.6924 18.5839 70.1365 18.5839L70.1452 18.593ZM80.3424 18.4109V13.2875C80.3424 12.1045 79.9644 11.8042 79.3491 11.8042C78.7337 11.8042 78.3293 12.1136 78.3293 13.2602V18.42H75.3405V7.13582L78.3293 5.89819V9.99328C78.9481 9.46807 79.727 9.18749 80.527 9.20156C82.4346 9.20156 83.34 10.5302 83.34 12.8962V18.42L80.3424 18.4109Z" fill="#0A9600"/>
-          <path d="M90.5044 18.5928C87.0496 18.5928 85.23 15.9538 85.23 12.3865C85.23 8.51894 87.4276 6.18019 90.5044 6.18019C93.3613 6.18019 94.4865 7.45421 95.2865 9.72926L92.368 10.9123C91.946 9.79296 91.5505 9.09225 90.4868 9.09225C89.1418 9.09225 88.5528 10.4846 88.5528 12.3956C88.5528 14.3067 89.1154 15.6899 90.5132 15.6899C91.5241 15.6899 91.9548 15.1257 92.5878 13.9881L95.3129 15.4897C94.9093 16.4528 94.2325 17.2662 93.3722 17.8221C92.5119 18.3779 91.5087 18.6499 90.4956 18.6019L90.5044 18.5928ZM102.688 12.7687C102.523 12.5463 102.314 12.3636 102.074 12.2332C101.834 12.1028 101.57 12.0278 101.299 12.0134C100.57 12.0134 100.121 12.3774 100.121 13.4694V18.3835H97.1325V9.37435H100.121V10.0296C100.534 9.57858 101.083 9.28681 101.678 9.20242C102.272 9.11804 102.877 9.2461 103.391 9.56546L102.688 12.7687ZM109.809 18.3926V17.792C109.198 18.3188 108.424 18.5999 107.629 18.5837C105.721 18.5837 104.816 17.2551 104.816 14.88V9.39255H107.804V14.4887C107.804 15.6535 108.191 15.9629 108.807 15.9629C109.422 15.9629 109.8 15.6535 109.8 14.5251V9.39255H112.806V18.4199L109.809 18.3926ZM119.971 18.3926V13.2692C119.971 12.0862 119.584 11.7859 118.977 11.7859C118.371 11.7859 117.958 12.0953 117.958 13.2419V18.4017H114.969V9.39255H117.958V9.99317C118.576 9.46796 119.355 9.18738 120.155 9.20145C122.063 9.20145 122.968 10.5301 122.968 12.8961V18.4199L119.971 18.3926ZM128.805 18.5746C126.256 18.5746 124.718 16.8911 124.718 13.8425C124.718 11.1125 126.08 9.16505 128.867 9.16505C129.555 9.14302 130.236 9.32266 130.83 9.68328C131.424 10.0439 131.907 10.5709 132.225 11.2035L130.168 12.8142C129.746 12.0316 129.465 11.6494 128.823 11.6494C128.181 11.6494 127.68 12.4411 127.68 13.8698C127.68 15.2986 128.093 16.0357 128.911 16.0357C129.473 16.0357 129.878 15.7081 130.423 14.8527L132.313 16.3815C131.302 17.9649 130.352 18.5655 128.814 18.5655L128.805 18.5746ZM139.002 18.3926V13.2692C139.002 12.0862 138.624 11.7859 138.009 11.7859C137.394 11.7859 136.998 12.0953 136.998 13.2419V18.4017H134.009V7.11751L136.998 5.87988V9.97497C137.613 9.44827 138.389 9.16734 139.187 9.18325C141.103 9.18325 142 10.5119 142 12.8779V18.4017L139.002 18.3926Z" fill="#111111"/>
-          <path d="M0 0V7.00353H6.75736V21H13.5241V7.00353H20.2815V0H0ZM27.0482 13.9965V7.00265H20.2806V20.9991H40.5714V13.9956L27.0482 13.9965ZM27.0482 0H40.5714V7.00353H27.0482V0Z" fill="#0A9600"/>
-        </svg>
-        <h4 class='mt-about__card-text'>Berlin’s Monite raises $5M seed for its embedded B2B payments platform</h4>
-        <p class='mt-main-cases__card-text mt-about_alt__date'>20.03.2022</p>
-        <a class='mt-about__link' href='https://techcrunch.com/2023/03/20/berlins-monite-raises-5m-seed-for-its-embedded-b2b-payments-platform/' target='_blank'>
-          <span class='mt-about__btn'>Learn more
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5.25 5.99986H10.9425L4.7175 12.2174C4.57627 12.3586 4.49693 12.5501 4.49693 12.7499C4.49693 12.9496 4.57627 13.1411 4.7175 13.2824C4.85873 13.4236 5.05027 13.5029 5.25 13.5029C5.44973 13.5029 5.64127 13.4236 5.7825 13.2824L12 7.05736V12.7499C12 12.9488 12.079 13.1395 12.2197 13.2802C12.3603 13.4208 12.5511 13.4999 12.75 13.4999C12.9489 13.4999 13.1397 13.4208 13.2803 13.2802C13.421 13.1395 13.5 12.9488 13.5 12.7499V5.24986C13.4988 5.15185 13.4784 5.05503 13.44 4.96486C13.3639 4.7816 13.2183 4.63597 13.035 4.55986C12.9448 4.52143 12.848 4.50105 12.75 4.49986H5.25C5.05109 4.49986 4.86032 4.57888 4.71967 4.71953C4.57902 4.86018 4.5 5.05095 4.5 5.24986C4.5 5.44877 4.57902 5.63954 4.71967 5.78019C4.86032 5.92084 5.05109 5.99986 5.25 5.99986Z" fill="black"/>
-          </svg>
-          </span>
-        </a>
-      </li>
-      <li class='mt-about__card mt-about_alt__card'>
-        <img src='https://monite.com/wp-content/uploads/2023/03/baincapital_logo.png' alt='BainCapital' width='139' height='23'>
-        <h4 class='mt-about__card-text'>Next-Gen CFOs Need Next-Gen Tools to Power Their Organizations</h4>
-        <p class='mt-main-cases__card-text mt-about_alt__date'>01.03.2022</p>
-        <a class='mt-about__link' href='https://baincapitalventures.com/insight/next-gen-cfos-need-next-gen-tools-to-power-their-organizations/' target='_blank'>
-          <span class='mt-about__btn'>Learn more
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5.25 5.99986H10.9425L4.7175 12.2174C4.57627 12.3586 4.49693 12.5501 4.49693 12.7499C4.49693 12.9496 4.57627 13.1411 4.7175 13.2824C4.85873 13.4236 5.05027 13.5029 5.25 13.5029C5.44973 13.5029 5.64127 13.4236 5.7825 13.2824L12 7.05736V12.7499C12 12.9488 12.079 13.1395 12.2197 13.2802C12.3603 13.4208 12.5511 13.4999 12.75 13.4999C12.9489 13.4999 13.1397 13.4208 13.2803 13.2802C13.421 13.1395 13.5 12.9488 13.5 12.7499V5.24986C13.4988 5.15185 13.4784 5.05503 13.44 4.96486C13.3639 4.7816 13.2183 4.63597 13.035 4.55986C12.9448 4.52143 12.848 4.50105 12.75 4.49986H5.25C5.05109 4.49986 4.86032 4.57888 4.71967 4.71953C4.57902 4.86018 4.5 5.05095 4.5 5.24986C4.5 5.44877 4.57902 5.63954 4.71967 5.78019C4.86032 5.92084 5.05109 5.99986 5.25 5.99986Z" fill="black"/>
-          </svg>
-          </span>
-        </a>
-      </li>
-      <li class='mt-about__card mt-about_alt__card'>
-        <img src='https://monite.com/wp-content/uploads/2023/03/procuretech_logo.png' alt='ProcureTech' width='143' height='30' />
-        <h4 class='mt-about__card-text'>The definitive 100 pioneering digital procurement solutions</h4>
-        <p class='mt-main-cases__card-text mt-about_alt__date'>01.03.2022</p>
-        <a class='mt-about__link' href='https://www.procuretech.co/procuretech100/' target='_blank'>
-          <span class='mt-about__btn'>Learn more
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5.25 5.99986H10.9425L4.7175 12.2174C4.57627 12.3586 4.49693 12.5501 4.49693 12.7499C4.49693 12.9496 4.57627 13.1411 4.7175 13.2824C4.85873 13.4236 5.05027 13.5029 5.25 13.5029C5.44973 13.5029 5.64127 13.4236 5.7825 13.2824L12 7.05736V12.7499C12 12.9488 12.079 13.1395 12.2197 13.2802C12.3603 13.4208 12.5511 13.4999 12.75 13.4999C12.9489 13.4999 13.1397 13.4208 13.2803 13.2802C13.421 13.1395 13.5 12.9488 13.5 12.7499V5.24986C13.4988 5.15185 13.4784 5.05503 13.44 4.96486C13.3639 4.7816 13.2183 4.63597 13.035 4.55986C12.9448 4.52143 12.848 4.50105 12.75 4.49986H5.25C5.05109 4.49986 4.86032 4.57888 4.71967 4.71953C4.57902 4.86018 4.5 5.05095 4.5 5.24986C4.5 5.44877 4.57902 5.63954 4.71967 5.78019C4.86032 5.92084 5.05109 5.99986 5.25 5.99986Z" fill="black"/>
-          </svg>
-          </span>
-        </a>
-      </li>
-      <li class='mt-about__card mt-about_alt__card'>
-        <img src='https://monite.com/wp-content/uploads/2023/03/sifted_logo.png' alt='Sifted' width='96' height='25' />
-        <h4 class='mt-about__card-text'>50 highly relevant companies in B2B Payments</h4>
-        <p class='mt-main-cases__card-text mt-about_alt__date'>01.03.2022</p>
-        <a class='mt-about__link' href='https://sifted.eu/articles/pay-for-employee-mentors/' target='_blank'>
-          <span class='mt-about__btn'>Learn more
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5.25 5.99986H10.9425L4.7175 12.2174C4.57627 12.3586 4.49693 12.5501 4.49693 12.7499C4.49693 12.9496 4.57627 13.1411 4.7175 13.2824C4.85873 13.4236 5.05027 13.5029 5.25 13.5029C5.44973 13.5029 5.64127 13.4236 5.7825 13.2824L12 7.05736V12.7499C12 12.9488 12.079 13.1395 12.2197 13.2802C12.3603 13.4208 12.5511 13.4999 12.75 13.4999C12.9489 13.4999 13.1397 13.4208 13.2803 13.2802C13.421 13.1395 13.5 12.9488 13.5 12.7499V5.24986C13.4988 5.15185 13.4784 5.05503 13.44 4.96486C13.3639 4.7816 13.2183 4.63597 13.035 4.55986C12.9448 4.52143 12.848 4.50105 12.75 4.49986H5.25C5.05109 4.49986 4.86032 4.57888 4.71967 4.71953C4.57902 4.86018 4.5 5.05095 4.5 5.24986C4.5 5.44877 4.57902 5.63954 4.71967 5.78019C4.86032 5.92084 5.05109 5.99986 5.25 5.99986Z" fill="black"/>
-          </svg>
-          </span>
-        </a>
-      </li>
-
-    </ul>
   </div>
 </section>
 <section class='mt-people'>
   <div class='mt-container'>
     <h2 class='mt-title'>The people behind Monite</h2>
     <ul class='mt-people__cards'>
-      <li class='mt-people__card' onclick='openModal(0)'>
-        <img src='https://monite.com/wp-content/uploads/2023/03/monite-people_1.png' alt='Ivan Maryasin' width='193' height='193'>
+      <li class='mt-people__card'>
+        <img class='mt-people__logo' src='https://monite.com/wp-content/uploads/2023/04/Frame-1948757080.png'
+             alt='penta logo' width='48' height='48'>
+        <img class='mt-people__photo' src='https://monite.com/wp-content/uploads/2023/04/Ivan_Maryasin.png'
+             alt='Ivan Maryasin' width='193'
+             height='193'>
         <p class='mt-people__name'>Ivan Maryasin</p>
         <p class='mt-people__position'>Co-Founder & CEO</p>
       </li>
-      <li class='mt-people__card' onclick='openModal(1)'>
-        <img src='https://monite.com/wp-content/uploads/2023/03/monite-people_2.png' alt='Andrey Korchak' width='193' height='193'>
+      <li class='mt-people__card'>
+        <img class='mt-people__logo' src='https://monite.com/wp-content/uploads/2023/04/Frame-1948757081.png'
+             alt='tochka logo' width='48' height='48'>
+        <img class='mt-people__photo' src='https://monite.com/wp-content/uploads/2023/04/Andrey_Korchak.png'
+             alt='Andrey Korchak' width='193'
+             height='193'>
         <p class='mt-people__name'>Andrey Korchak</p>
         <p class='mt-people__position'>Co-Founder & CTO</p>
       </li>
-      <li class='mt-people__card' onclick='openModal(2)'>
-        <img src='https://monite.com/wp-content/uploads/2023/03/monite-people_3.png' alt='Aleksey Akimov' width='193' height='193'>
-        <p class='mt-people__name'>Aleksey Akimov</p>
-        <p class='mt-people__position'>Head of API </p>
+      <li class='mt-people__card'>
+        <img class='mt-people__logo' src='https://monite.com/wp-content/uploads/2023/04/Frame-19487557081.png'
+             alt='fidelApi logo' width='48' height='48'>
+        <img class='mt-people__photo' src='https://monite.com/wp-content/uploads/2023/04/James_Regan.png'
+             alt='James Regan' width='193'
+             height='193'>
+        <p class='mt-people__name'>James Regan</p>
+        <p class='mt-people__position'>Head of Commercials</p>
       </li>
-      <li class='mt-people__card' onclick='openModal(3)'>
-        <img src='https://monite.com/wp-content/uploads/2023/03/monite-people_4.png' alt='Tobias Müller' width='193' height='193'>
-        <p class='mt-people__name'>Tobias Müller</p>
-        <p class='mt-people__position'>AP/AR Product Lead</p>
-      </li>
-      <li class='mt-people__card' onclick='openModal(4)'>
-        <img src='https://monite.com/wp-content/uploads/2023/03/monite-people_5.png' alt='Olya Laktushina' width='193' height='193'>
+      <li class='mt-people__card'>
+        <img class='mt-people__logo' src='https://monite.com/wp-content/uploads/2023/04/Frame-1948757076.png'
+             alt='abbyy logo' width='48' height='48'>
+        <img class='mt-people__photo' src='https://monite.com/wp-content/uploads/2023/04/Olya_Laktushina.png'
+             alt='Olya Laktushina' width='193'
+             height='193'>
         <p class='mt-people__name'>Olya Laktushina</p>
         <p class='mt-people__position'>Head of Marketing</p>
       </li>
-      <li class='mt-people__card' onclick='openModal(5)'>
-        <img src='https://monite.com/wp-content/uploads/2023/03/monite-people_6.png' alt='João Moreira' width='193' height='193'>
-        <p class='mt-people__name'>João Moreira</p>
-        <p class='mt-people__position'>Payments Lead</p>
+      <li class='mt-people__card'>
+        <img class='mt-people__logo' src='https://monite.com/wp-content/uploads/2023/04/Frame-1948757072.png'
+             alt='adyen logo' width='48' height='48'>
+        <img class='mt-people__photo' src='https://monite.com/wp-content/uploads/2023/04/Aleksey_Akimov.png'
+             alt='Aleksey Akimov' width='193'
+             height='193'>
+        <p class='mt-people__name'>Aleksey Akimov</p>
+        <p class='mt-people__position'>Head of API </p>
       </li>
-      <li class='mt-people__card' onclick='openModal(6)'>
-        <img src='https://monite.com/wp-content/uploads/2023/03/monite-people_7.png' alt='James Regan' width='193' height='193'>
-        <p class='mt-people__name'>James Regan</p>
-        <p class='mt-people__position'>Head of Sales</p>
-      </li>
-      <li class='mt-people__card' onclick='openModal(7)'>
-        <img src='https://monite.com/wp-content/uploads/2023/03/monite-people_8.png' alt='Nikolay Zaytsev' width='193' height='193'>
+      <li class='mt-people__card'>
+        <img class='mt-people__logo' src='https://monite.com/wp-content/uploads/2023/04/Frame-194813757078.png'
+             alt='backbase logo' width='48' height='48'>
+        <img class='mt-people__photo' src='https://monite.com/wp-content/uploads/2023/03/monite-people_8.png'
+             alt='Nikolay Zaytsev' width='193'
+             height='193'>
         <p class='mt-people__name'>Nikolay Zaytsev</p>
         <p class='mt-people__position'>Head of Design</p>
       </li>
-      <li class='mt-people__card' onclick='openModal(8)'>
-        <img src='https://monite.com/wp-content/uploads/2023/03/monite-people_9.png' alt='Andrey Ifrim' width='193' height='193'>
+      <li class='mt-people__card'>
+        <img class='mt-people__logo' src='https://monite.com/wp-content/uploads/2023/04/Frame-1948757074.png'
+             alt='celonis logo' width='48' height='48'>
+        <img class='mt-people__photo' src='https://monite.com/wp-content/uploads/2023/04/Tobias_Muller.png'
+             alt='Tobias Müller' width='193'
+             height='193'>
+        <p class='mt-people__name'>Tobias Müller</p>
+        <p class='mt-people__position'>AP/AR Product Lead</p>
+      </li>
+      <li class='mt-people__card'>
+        <img class='mt-people__logo' src='https://monite.com/wp-content/uploads/2023/04/Frame-1948757075.png'
+             alt='pps logo' width='48' height='48'>
+        <img class='mt-people__photo' src='https://monite.com/wp-content/uploads/2023/03/monite-people_6.png'
+             alt='João Moreira' width='193'
+             height='193'>
+        <p class='mt-people__name'>João Moreira</p>
+        <p class='mt-people__position'>Payments Lead</p>
+      </li>
+      <li class='mt-people__card'>
+        <img class='mt-people__logo' src='https://monite.com/wp-content/uploads/2023/04/Frame-194875742079.png'
+             alt='mambu logo' width='48' height='48'>
+        <img class='mt-people__photo' src='https://monite.com/wp-content/uploads/2023/03/monite-people_9.png'
+             alt='Andrey Ifrim' width='193'
+             height='193'>
         <p class='mt-people__name'>Andrey Ifrim</p>
         <p class='mt-people__position'>Engineering Manager</p>
       </li>
     </ul>
   </div>
 </section>
-<section class='mt-earn mt_earn_about'>
-  <div class='mt-container'>
-    <h2 class='mt-title mt-title_about'>Our culture is to make <br/>big things happen</h2>
-    <div class=''>
-      <div class='mt-earn__content mt-earn__content_alt'>
-        <div class='mt-earn__images'>
-          <img src='https://monite.com/wp-content/uploads/2023/03/mt-earn_img1.png' alt='img' width='380' height='545'>
-          <img src='https://monite.com/wp-content/uploads/2023/03/mt-earn_img2.png' alt='img' width='380' height='545'>
-          <img src='https://monite.com/wp-content/uploads/2023/03/mt-earn_img3.png' alt='img' width='380' height='545'>
+<!--<section class='mt-modal' id='mtModal' onclick='closeModal()'>-->
+<!--  <div class='mt-modal__inner'>-->
+<!--    <div class='mt-modal__close' onclick='closeModal()'>-->
+<!--      <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>-->
+<!--        <path-->
+<!--          d='M13.4099 11.9999L17.7099 7.70994C17.8982 7.52164 18.004 7.26624 18.004 6.99994C18.004 6.73364 17.8982 6.47825 17.7099 6.28994C17.5216 6.10164 17.2662 5.99585 16.9999 5.99585C16.7336 5.99585 16.4782 6.10164 16.2899 6.28994L11.9999 10.5899L7.70994 6.28994C7.52164 6.10164 7.26624 5.99585 6.99994 5.99585C6.73364 5.99585 6.47824 6.10164 6.28994 6.28994C6.10164 6.47825 5.99585 6.73364 5.99585 6.99994C5.99585 7.26624 6.10164 7.52164 6.28994 7.70994L10.5899 11.9999L6.28994 16.2899C6.19621 16.3829 6.12182 16.4935 6.07105 16.6154C6.02028 16.7372 5.99414 16.8679 5.99414 16.9999C5.99414 17.132 6.02028 17.2627 6.07105 17.3845C6.12182 17.5064 6.19621 17.617 6.28994 17.7099C6.3829 17.8037 6.4935 17.8781 6.61536 17.9288C6.73722 17.9796 6.86793 18.0057 6.99994 18.0057C7.13195 18.0057 7.26266 17.9796 7.38452 17.9288C7.50638 17.8781 7.61698 17.8037 7.70994 17.7099L11.9999 13.4099L16.2899 17.7099C16.3829 17.8037 16.4935 17.8781 16.6154 17.9288C16.7372 17.9796 16.8679 18.0057 16.9999 18.0057C17.132 18.0057 17.2627 17.9796 17.3845 17.9288C17.5064 17.8781 17.617 17.8037 17.7099 17.7099C17.8037 17.617 17.8781 17.5064 17.9288 17.3845C17.9796 17.2627 18.0057 17.132 18.0057 16.9999C18.0057 16.8679 17.9796 16.7372 17.9288 16.6154C17.8781 16.4935 17.8037 16.3829 17.7099 16.2899L13.4099 11.9999Z'-->
+<!--          fill='#707070' />-->
+<!--      </svg>-->
+<!--    </div>-->
+<!--    <div class='mt-modal__head'>-->
+<!--      <p class='mt-modal__name'>Ivan Maryasin</p>-->
+<!--      <p class='mt-modal__position'>Co-Founder & CEO</p>-->
+<!--    </div>-->
+<!--    <img src='https://monite.com/wp-content/uploads/2023/03/modal-img_1.png' alt='Ivan Maryasin' width='100%'-->
+<!--         height='281' class='mt-modal__image' />-->
+<!--    <p class='mt-modal__text'>Ivan manages product strategy, business growth and investor relations. Prior to Monite,-->
+<!--      Ivan was a C-level executive at Penta, a leading German SMB neobank that was sold to Qonto in 2022. Before that,-->
+<!--      he led growth for startups in Silicon Valley and Europe, including Series D startup BrightEdge and People.ai, a-->
+<!--      Y-Combinator alumnus funded by a16z.</p>-->
+<!--    <div class='mt-modal__bottom'>-->
+<!--      <p class='mt-modal__bottom-title'>EX AT</p>-->
+<!--      <div class='mt-modal__images-set'>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<section class='mt-culture'>
+  <h2 class='mt-title'>Our culture is to make big things happen</h2>
+  <div class='mt-container' id='cultureBox'>
+    <div class='glide' data-glide-el='track'>
+      <div class='slides'>
+        <div class='mt-culture__content'>
+          <p class='mt-culture__content_badge'>01</p>
+          <h2 class='mt-culture__content_title'>Go big or go home</h2>
+          <p class='mt-culture__content_subtitle'>We dream big and strive to make a large-scale impact in the industry.
+            We never settle for average—in our product, our culture, or anything else.
+          </p>
         </div>
-        <div class='mt-earn__head-sticky'>
-          <div class='mt-earn__head-inner mt-earn__head-inner_active' id='mtEarnStickyFirst'>
-            <p class='mt-earn__head-title'>01</p>
-            <p class='mt-earn__head-title mt-earn__head-title_alt'>Go big or go home</p>
-            <ul class='mt-earn__head-list'>
-              <li class='mt-earn__head-item'>We dream big and strive to make a large-scale impact in the industry. We never settle for average - in our product, our culture, or anything else.</li>
-            </ul>
-          </div>
-          <div class='mt-earn__head-inner' id='mtEarnStickySecond'>
-            <p class='mt-earn__head-title'>02</p>
-            <p class='mt-earn__head-title mt-earn__head-title_alt'>Work with passion</p>
-            <ul class='mt-earn__head-list'>
-               <li class='mt-earn__head-item'>We love what we do, we infect people with passion, and we go the extra mile.</li>
-            </ul>
-          </div>
-          <div class='mt-earn__head-inner' id='mtEarnStickyThird'>
-            <p class='mt-earn__head-title'>03</p>
-            <p class='mt-earn__head-title mt-earn__head-title_alt'>Forget the ego</p>
-            <ul class='mt-earn__head-list'>
-              <li class='mt-earn__head-item'>We use feedback to grow, actively work with mentors and advisors, and see every challenge as an opportunity.</li>
-            </ul>
-          </div>
-          <div class='mt-earn__head-inner' id='mtEarnStickyFourth'>
-            <p class='mt-earn__head-title'>04</p>
-            <p class='mt-earn__head-title mt-earn__head-title_alt'>Be radically candid</p>
-            <ul class='mt-earn__head-list'>
-              <li class='mt-earn__head-item'>Care and be kind, but always speak up on red flags, challenge directly and give open feedback.</li>
-            </ul>
-          </div>
-          <div class='mt-earn__head-inner' id='mtEarnStickyFifth'>
-            <p class='mt-earn__head-title'>05</p>
-            <p class='mt-earn__head-title mt-earn__head-title_alt'>Do the impossible</p>
-            <ul class='mt-earn__head-list'>
-              <li class='mt-earn__head-item'>Care and be kind, but always speak up on red flags, challenge directly and give open feedback.</li>
-          </ul>
-          </div>
+        <div class='mt-culture__content'>
+          <p class='mt-culture__content_badge'>02</p>
+          <h2 class='mt-culture__content_title'>Work with passion</h2>
+          <p class='mt-culture__content_subtitle'>We love what we do, we infect people with passion, and we go the extra
+            mile.
+          </p>
         </div>
-        <!--        <div class='mt-earn__head mt-earn__head_second'>-->
-        <!--          -->
-        <!--        </div>-->
-        <!--        <div class='mt-earn__head mt-earn__head_third'>-->
-        <!--          <div class='mt-earn__head-inner'>-->
-        <!--            <p class='mt-earn__head-title'>03</p>-->
-        <!--            <p class='mt-earn__head-title mt-earn__head-title_alt'>Attract more users</p>-->
-        <!--            <ul class='mt-earn__head-list'>-->
-        <!--              <li class='mt-earn__head-item'>Win over customers from competitors without new marketing expenses. Create a network effect with an all-in-one offering</li>-->
-        <!--              <li class='mt-earn__head-item'>Set your brand apart. Expand your offering to become the go-to player for your industry</li>-->
-        <!--              <li class='mt-earn__head-item'>Upsell your current users, so you can invest more into growth</li>-->
-        <!--            </ul>-->
-        <!--          </div>-->
-        <!--        </div>-->
+        <div class='mt-culture__content'>
+          <p class='mt-culture__content_badge'>03</p>
+          <h2 class='mt-culture__content_title'>Forget the ego</h2>
+          <p class='mt-culture__content_subtitle'>We use feedback to grow, actively work with mentors and advisors, and
+            see every challenge as an opportunity.
+          </p>
+        </div>
+        <div class='mt-culture__content'>
+          <p class='mt-culture__content_badge'>04</p>
+          <h2 class='mt-culture__content_title'>Be radically candid</h2>
+          <p class='mt-culture__content_subtitle'>Care and be kind, but always speak up on red flags, challenge directly
+            and give open feedback.
+          </p>
+        </div>
+        <div class='mt-culture__content'>
+          <p class='mt-culture__content_badge'>05</p>
+          <h2 class='mt-culture__content_title'>Do the impossible</h2>
+          <p class='mt-culture__content_subtitle'>We bring everyone way past the 100% they thought they were capable of,
+            so what the market does in 6mo we can do in 6 weeks.
+          </p>
+        </div>
       </div>
+    </div>
+    <div class='glide__bullets' data-glide-el='controls[nav]'>
+      <button class='glide__bullet glide__bullet--active' data-glide-dir='=0'></button>
+      <button class='glide__bullet' data-glide-dir='=1'></button>
+      <button class='glide__bullet' data-glide-dir='=2'></button>
+      <button class='glide__bullet' data-glide-dir='=3'></button>
+      <button class='glide__bullet' data-glide-dir='=4'></button>
     </div>
   </div>
 </section>
 <section class='mt-cta-block'>
   <h2 class='mt-title'>High priority for <br />your roadmap</h2>
   <p class='mt-subtitle'>Become a one-stop-shop before<br /> your competitors do</p>
-  <a class='mt-button mt-cta-block__button' href="#modal_call" data-fancybox="">Get demo</a>
+  <a class='mt-button mt-cta-block__button' href='/free-demo/' data-fancybox=''>Get demo</a>
 </section>
-<section class='mt-modal' id='mtModal' onclick='closeModal()'>
-  <div class='mt-modal__inner'>
-    <div class='mt-modal__close' onclick='closeModal()'>
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M13.4099 11.9999L17.7099 7.70994C17.8982 7.52164 18.004 7.26624 18.004 6.99994C18.004 6.73364 17.8982 6.47825 17.7099 6.28994C17.5216 6.10164 17.2662 5.99585 16.9999 5.99585C16.7336 5.99585 16.4782 6.10164 16.2899 6.28994L11.9999 10.5899L7.70994 6.28994C7.52164 6.10164 7.26624 5.99585 6.99994 5.99585C6.73364 5.99585 6.47824 6.10164 6.28994 6.28994C6.10164 6.47825 5.99585 6.73364 5.99585 6.99994C5.99585 7.26624 6.10164 7.52164 6.28994 7.70994L10.5899 11.9999L6.28994 16.2899C6.19621 16.3829 6.12182 16.4935 6.07105 16.6154C6.02028 16.7372 5.99414 16.8679 5.99414 16.9999C5.99414 17.132 6.02028 17.2627 6.07105 17.3845C6.12182 17.5064 6.19621 17.617 6.28994 17.7099C6.3829 17.8037 6.4935 17.8781 6.61536 17.9288C6.73722 17.9796 6.86793 18.0057 6.99994 18.0057C7.13195 18.0057 7.26266 17.9796 7.38452 17.9288C7.50638 17.8781 7.61698 17.8037 7.70994 17.7099L11.9999 13.4099L16.2899 17.7099C16.3829 17.8037 16.4935 17.8781 16.6154 17.9288C16.7372 17.9796 16.8679 18.0057 16.9999 18.0057C17.132 18.0057 17.2627 17.9796 17.3845 17.9288C17.5064 17.8781 17.617 17.8037 17.7099 17.7099C17.8037 17.617 17.8781 17.5064 17.9288 17.3845C17.9796 17.2627 18.0057 17.132 18.0057 16.9999C18.0057 16.8679 17.9796 16.7372 17.9288 16.6154C17.8781 16.4935 17.8037 16.3829 17.7099 16.2899L13.4099 11.9999Z" fill="#707070"/>
-      </svg>
-    </div>
-    <div class='mt-modal__head'>
-      <p class='mt-modal__name'>Ivan Maryasin</p>
-      <p class='mt-modal__position'>Co-Founder & CEO</p>
-    </div>
-    <img src='https://monite.com/wp-content/uploads/2023/03/modal-img_1.png' alt='Ivan Maryasin' width='100%' height='281' class='mt-modal__image' />
-    <p class='mt-modal__text'>Ivan manages product strategy, business growth and investor relations. Prior to Monite, Ivan was a C-level executive at Penta, a leading German SMB neobank that was sold to Qonto in 2022. Before that, he led growth for startups in Silicon Valley and Europe, including  Series D startup BrightEdge and People.ai, a Y-Combinator alumnus funded by a16z.</p>
-    <div class='mt-modal__bottom'>
-      <p class='mt-modal__bottom-title'>EX AT</p>
-      <div class='mt-modal__images-set'>
-      </div>
-    </div>
-  </div>
-</section>
-<footer class='mt-footer'>
-  <div class='mt-footer__inner'>
-    <div class='mt-footer__nav'>
-      <ul class='mt-footer__nav-menu'>
-        <li class='mt-footer__nav-menu-head'>Company</li>
-        <li class='mt-footer__nav-menu-link'>
-          <a href='https://monite.com/about/'>
-            About
-          </a>
-        </li>
-        <li class='mt-footer__nav-menu-link'>
-          <a href='https://monite.com/press/'>
-            Press
-          </a>
-        </li>
-        <li class='mt-footer__nav-menu-link'>
-          <a href='https://monite.notion.site/Careers-Monite-9ad0d34fcd0e4ec5ba1017aab6df686f'>
-            Careers
-          </a>
-        </li>
-        <li class='mt-footer__nav-menu-link'>
-          <a href='https://docs.monite.com/'>
-            Docs
-          </a>
-        </li>
-        <li class='mt-footer__nav-menu-link'>
-          <a href='https://monite.com/blog/'>
-            Blog
-          </a>
-        </li>
-      </ul>
-      <ul class='mt-footer__nav-menu'>
-        <li class='mt-footer__nav-menu-head'>Products</li>
-        <li class='mt-footer__nav-menu-link'>
-          <a href='https://monite.com/ap-automation/'>
-            AP Automation
-          </a>
-        </li>
-        <li class='mt-footer__nav-menu-link'>
-          <a href='https://monite.com/invoicing-api/'>
-            AP Automation / Invoicing
-          </a>
-        </li>
-        <li class='mt-footer__nav-menu-link'>
-          <a href='https://monite.com/payments/'>
-            Payments
-          </a>
-        </li>
-        <li class='mt-footer__nav-menu-link'>
-          <a href='https://monite.com/invoice-payment-link/'>
-            Payment links
-          </a>
-        </li>
-      </ul>
-      <ul class='mt-footer__nav-menu'>
-        <li class='mt-footer__nav-menu-head'>Developers</li>
-        <li class='mt-footer__nav-menu-link'>
-          <a href='https://docs.monite.com/'>
-            API docs
-          </a>
-        </li>
-        <li class='mt-footer__nav-menu-link'>
-          <a href='https://portal.sandbox.monite.com/'>
-            Sandbox
-          </a>
-        </li>
-        <li class='mt-footer__nav-menu-link'>
-          <a href='https://github.com/team-monite'>
-            Github
-          </a>
-        </li>
-        <li class='mt-footer__nav-menu-link'>
-          <a href='https://www.postman.com/monite/workspace/monite-public-workspace'>
-            Postman
-          </a>
-        </li>
-      </ul>
-      <ul class='mt-footer__nav-menu'>
-        <li class='mt-footer__nav-menu-head'>Resourses</li>
-        <li class='mt-footer__nav-menu-link'>
-          <a href='https://monite.com/imprint/'>
-            Imprint
-          </a>
-        </li>
-        <li class='mt-footer__nav-menu-link'>
-          <a href='https://monite.com/terms/'>
-            Terms
-          </a>
-        </li>
-        <li class='mt-footer__nav-menu-link'>
-          <a href='https://monite.com/data-privacy/'>
-            Data privacy
-          </a>
-        </li>
-        <li class='mt-footer__nav-menu-link'>
-          <a href='https://www.iubenda.com/privacy-policy/91473590'>
-            Privacy
-          </a>
-        </li>
-        <li class='mt-footer__nav-menu-link'>
-          <a href='https://www.iubenda.com/privacy-policy/91473590'>
-            Cookie Policy
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class='mt-footer__social'>
-      <div class='mt-footer-logo'>
-        <a href='https://monite.com/'>
-          <svg width='104' height='19' viewBox='0 0 104 19' fill='none' xmlns='http://www.w3.org/2000/svg'>
-            <path fill-rule='evenodd' clip-rule='evenodd'
-                  d='M30.009 1.98042C29.4629 0.368097 28.459 0 27.9814 0H24.4921V18.56H27.2847V2.81397L28.0742 5.03624L33.1317 18.56H36.5571L41.5888 5.03624L42.4056 2.94173V18.56H45.1983V0H41.6983C41.2268 0 40.3218 0.330071 39.7605 1.73857L36.4005 11.1889L34.8459 16.1202L33.2914 11.1889L30.0166 1.97434L30.009 1.98194V1.98042Z'
-                  fill='#111111' />
-            <path fill-rule='evenodd' clip-rule='evenodd'
-                  d='M53.9289 5.5498C50.2464 5.5498 47.2499 8.15538 47.2499 12.1953C47.2499 16.2353 50.2449 18.8408 53.9289 18.8408C57.6129 18.8408 60.6337 16.2353 60.6337 12.1953C60.6337 8.15538 57.6387 5.5498 53.9289 5.5498ZM53.9289 16.3691C51.2518 16.3691 49.9802 15.0397 49.9802 12.1953C49.9802 9.35094 51.2518 8.02153 53.9289 8.02153C56.6059 8.02153 57.9034 9.35094 57.9034 12.1953C57.9034 15.0397 56.6318 16.3691 53.9289 16.3691Z'
-                  fill='#111111' />
-            <path fill-rule='evenodd' clip-rule='evenodd'
-                  d='M69.8832 5.5498C67.3948 5.5498 66.0426 6.85183 65.4357 8.89462V5.81447H62.7343V18.5579H65.4357V12.5589C65.4357 9.61104 66.8122 8.02001 68.9569 8.02001C70.6772 8.02001 71.7374 9.00262 71.7374 10.9131V18.561H74.4388V10.7275C74.4388 7.35378 72.8767 5.5498 69.8832 5.5498Z'
-                  fill='#111111' />
-            <path fill-rule='evenodd' clip-rule='evenodd'
-                  d='M80.1206 1.87312C80.1464 3.02913 79.4893 3.6847 78.2801 3.6847C77.0708 3.6847 76.4655 3.0276 76.4381 1.87312C76.4122 0.74449 77.0967 0.140628 78.2801 0.140628C79.4391 0.139107 80.0947 0.742969 80.1206 1.87312Z'
-                  fill='#111111' />
-            <path d='M79.6106 5.78369H76.9061V18.5606H79.6106V5.78369Z' fill='#111111' />
-            <path fill-rule='evenodd' clip-rule='evenodd'
-                  d='M90.7562 8.26172V5.85236H86.8942V1.95996H84.1958V5.85236H81.5233V8.26172H84.1958V15.0396C84.1958 17.1584 85.5982 18.5608 87.714 18.5608H90.3607V16.1515H86.8942V8.26172H90.7562Z'
-                  fill='#111111' />
-            <path fill-rule='evenodd' clip-rule='evenodd'
-                  d='M97.9858 5.5498C94.3307 5.5498 91.7343 8.23448 91.7343 12.2212C91.7343 16.2079 94.2501 18.8393 98.1181 18.8393C100.715 18.8393 103.261 16.9441 103.656 14.6397H101.27C100.687 16.182 99.9191 16.6323 98.144 16.6323C95.7605 16.6323 94.6729 15.6223 94.4889 13.0441H103.971C103.997 12.5391 103.997 12.3261 103.997 11.9276C103.999 8.02153 101.534 5.5498 97.9843 5.5498H97.9858ZM94.5178 11.0515C94.7566 8.73795 95.8944 7.67625 98.0147 7.67625C100.135 7.67625 101.194 8.60714 101.299 11.0515H94.5178Z'
-                  fill='#111111' />
-            <path fill-rule='evenodd' clip-rule='evenodd'
-                  d='M19.8922 14.2006C20.3835 13.828 20.782 13.0994 20.782 12.5716V5.98842C20.782 5.46061 20.382 4.73202 19.8922 4.35936L14.2491 0H8.59375L18.7073 7.65246C19.1986 8.02512 19.5971 8.75371 19.5971 9.28152C19.5971 9.80933 19.1971 10.5379 18.7073 10.9106L8.59375 18.56H14.2491L19.8922 14.1991V14.2006Z'
-                  fill='#3C37FF' />
-            <path fill-rule='evenodd' clip-rule='evenodd'
-                  d='M11.1448 14.3527C11.6361 13.9801 12.0346 13.2515 12.0346 12.7237V5.83632C12.0346 5.30851 11.6346 4.57992 11.1448 4.20726L5.65531 0H0L10.112 7.65246C10.6033 8.02512 11.0018 8.75371 11.0018 9.28152C11.0018 9.80933 10.6018 10.5379 10.112 10.9106L0 18.56H5.65531L11.1463 14.3512L11.1448 14.3527Z'
-                  fill='#3C37FF' />
-          </svg>
-        </a>
-      </div>
-      <ul class='mt-footer__socials'>
-        <li>
-          <a href='https://www.facebook.com/monitehq/'>
-            <img src='https://monite.com/wp-content/uploads/2023/03/facebook_icon.svg' />
-          </a>
-        </li>
-        <li>
-          <a href='https://www.linkedin.com/company/monitehq'>
-            <img src='https://monite.com/wp-content/uploads/2023/03/li_icon.svg' />
-          </a>
-        </li>
-        <li>
-          <a href='https://twitter.com/Monite_'>
-            <img src='https://monite.com/wp-content/uploads/2023/03/twitter_icon.svg' />
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class='mt-footer__copy'>
-      <div class='mt-footer__copy-inner'>
-        <p>2022 - 2023 Monite GmbH</p>
-        <p>Friedrichstrasse 6810117 Berlin</p>
-      </div>
-      <div class='mt-footer__copy-mail'>
-        <a href='mailto:hello@monite.com'>hello@monite.com</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
 <script src='./bundle.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.min.js'
+        integrity='sha512-2sI5N95oT62ughlApCe/8zL9bQAXKsPPtZZI2KE3dznuZ8HpE2gTMHYzyVN7OoSPJCM1k9ZkhcCo3FvOirIr2A=='
+        crossorigin='anonymous'
+        referrerpolicy='no-referrer'></script>
 <script>
-  // modal
 
-  function openModal (id) {
-    const modalBlock = document.getElementById('mtModal')
-    modalBlock.style.display = 'block'
-    modalBlock.querySelector('.mt-modal__name').innerHTML = aboutPeople[id].name
-    modalBlock.querySelector('.mt-modal__position').innerHTML = aboutPeople[id].position
-    modalBlock.querySelector('.mt-modal__image').src = aboutPeople[id].picture
-    modalBlock.querySelector('.mt-modal__text').innerHTML = aboutPeople[id].text
+  //slider mt-culture
+  new Glide('#cultureBox', {
+    startAt: 0,
+    perView: 1,
+    rewind: true,
+    autoplay: 3000,
+  }).mount();
+
+  //slider mt-about
+  new Glide('#scrollBox', {
+    startAt: 0,
+    perView: 3.2,
+    rewind: false,
+    bound: 3,
+    peek: {
+      before: 0,
+      after: 0,
+    },
+    breakpoints: {
+      1144: {
+        perView: 3,
+      },
+      991: {
+        perView: 2.7,
+      },
+      820: {
+        perView: 2.2,
+      },
+      768: {
+        perView: 2.6,
+      },
+      520: {
+        perView: 1.7,
+      },
+      480: {
+        perView: 1.6,
+      },
+      425: {
+        perView: 1.4,
+      },
+      375: {
+        perView: 1.2,
+      },
+      320: {
+        perView: 1,
+      },
+    },
+  }).mount();
+
+  // modal
+  function openModal(id) {
+    const modalBlock = document.getElementById('mtModal');
+    modalBlock.style.display = 'block';
+    modalBlock.querySelector('.mt-modal__name').innerHTML = aboutPeople[id].name;
+    modalBlock.querySelector('.mt-modal__position').innerHTML = aboutPeople[id].position;
+    modalBlock.querySelector('.mt-modal__image').src = aboutPeople[id].picture;
+    modalBlock.querySelector('.mt-modal__text').innerHTML = aboutPeople[id].text;
 
     if (aboutPeople[id].logos) {
       aboutPeople[id].logos.map((item) => {
-        const img = document.createElement("img")
-        img.src = item
-        img.width = 50
-        img.height = 50
-        img.alt = 'logo'
-        modalBlock.querySelector('.mt-modal__images-set').append(img)
-      })
+        const img = document.createElement('img');
+        img.src = item;
+        img.width = 50;
+        img.height = 50;
+        img.alt = 'logo';
+        modalBlock.querySelector('.mt-modal__images-set').append(img);
+      });
     }
   }
 
-  function closeModal () {
-    const modalBlock = document.getElementById('mtModal')
-    modalBlock.style.display = 'none'
-    modalBlock.querySelector('.mt-modal__images-set').innerHTML = ''
+  function closeModal() {
+    const modalBlock = document.getElementById('mtModal');
+    modalBlock.style.display = 'none';
+    modalBlock.querySelector('.mt-modal__images-set').innerHTML = '';
   }
 
   const aboutPeople = [
@@ -654,65 +721,113 @@
       position: 'Co-Founder & CEO',
       picture: 'https://monite.com/wp-content/uploads/2023/03/modal-img_1.png',
       text: 'Ivan manages product strategy, business growth and investor relations. Prior to Monite, Ivan was a C-level executive at Penta, a leading German SMB neobank that was sold to Qonto in 2022. Before that, he led growth for startups in Silicon Valley and Europe, including Series D startup BrightEdge and People.ai, a Y-Combinator alumnus funded by a16z.',
-      logos: ['https://monite.com/wp-content/uploads/2023/03/modal-logo_2.png','https://monite.com/wp-content/uploads/2023/03/modal-logo_1.png']
+      logos: ['https://monite.com/wp-content/uploads/2023/03/modal-logo_2.png', 'https://monite.com/wp-content/uploads/2023/03/modal-logo_1.png'],
     },
     {
       name: 'Andrey Korchak',
       position: 'Co-Founder & CTO',
       picture: 'https://monite.com/wp-content/uploads/2023/03/monite-people_2.png',
       text: 'We need text',
-      logos: ['https://monite.com/wp-content/uploads/2023/03/modal-logo_2.png','https://monite.com/wp-content/uploads/2023/03/modal-logo_1.png']
+      logos: ['https://monite.com/wp-content/uploads/2023/03/modal-logo_2.png', 'https://monite.com/wp-content/uploads/2023/03/modal-logo_1.png'],
     },
     {
       name: 'Aleksey Akimov',
       position: 'Head of API',
       picture: 'https://monite.com/wp-content/uploads/2023/03/monite-people_3.png',
       text: 'Alex is responsible for API-as-a-product, making sure it provides the best value and developer experience for our customers.During his time at Adyen, he gained massive experience in managing APIs at scale, and now applies his knowledge to create a world-class API Platform at Monite.',
-      logos: []
+      logos: [],
     },
     {
       name: 'Tobias Müller',
       position: 'AP/AR Product Lead',
       picture: 'https://monite.com/wp-content/uploads/2023/03/monite-people_4.png',
       text: 'Tobias is responsible for Monite’s accounts payable and accounts receivable value proposition. Tobias has significant experience with analytical and operational solutions targeting the cash-to-cash cycle. At Monite, he leverages this domain expertise and the terrific team he  works with to deliver outstanding value for our customers.',
-      logos: []
+      logos: [],
     },
     {
       name: 'Olya Laktushina',
       position: 'Head of Marketing',
       picture: 'https://monite.com/wp-content/uploads/2023/03/monite-people_5.png',
       text: 'We need text ',
-      logos: []
+      logos: [],
     },
     {
       name: 'João Moreira',
       position: 'Payments Lead',
       picture: 'https://monite.com/wp-content/uploads/2023/03/monite-people_6.png',
       text: 'Joao is responsible for all payment strategy and value proposition at Monite. Joao has considerable experience in payments, with involvement in international payments projects for both fintechs and traditional operators. His past experience at PPS exposed him to some of the top fintechs in Europe such as Revolut, Monese, Tide, CountingUp and more. He specializes in payments , with most of his experience in product delivery, management and leadership.',
-      logos: []
+      logos: [],
     },
     {
       name: 'James Regan',
       position: 'Head of Sales',
       picture: 'https://monite.com/wp-content/uploads/2023/03/monite-people_7.png',
       text: 'James is responsible for Monite’s GTM and Sales. Encompassing all things commercial and growth globally. James has broad experience in establishing successful and meaningful relationships with businesses ranging from early-stage startups all the way up to Fortune 100 companies. Prior to Monite, James scaled commercial functions at a number of fintech payment businesses such as Fidel API, Currencycloud and worked on the Ventures Team at Accenture.',
-      logos: []
+      logos: [],
     },
     {
       name: 'Nikolay Zaytsev',
       position: 'Head of Design',
       picture: 'https://monite.com/wp-content/uploads/2023/03/monite-people_8.png',
       text: 'We need text',
-      logos: []
+      logos: [],
     },
     {
       name: 'Andrey Ifrim',
       position: 'Engineering Star',
       picture: 'https://monite.com/wp-content/uploads/2023/03/monite-people_9.png',
       text: 'We need text',
-      logos: []
+      logos: [],
+    },
+  ];
+
+  //history slider
+  const imageSlider = document.querySelector('#slider-history #viewport-images.viewport-images .images-wrapper');
+  const contentsSlider = document.querySelector('#slider-history #mt-history__viewport-contents.mt-history__viewport-contents .contents_container');
+  const sliderLinks = document.querySelectorAll('#slider-history .mt-history__year');
+  const sliderPages = document.querySelectorAll('#slider-history .links-wrapper .mob-pagination-wrapper .mob-page');
+
+  const windowWidth = window.innerWidth;
+  const isMobile = windowWidth <= 991;
+  const slideHistoryBlock = (id) => {
+    if (isMobile) {
+      const currentPage = document?.querySelector('#slider-history .links-wrapper .mob-pagination-wrapper .mob-page.page_' + (id));
+      for (let page of sliderPages) {
+        page.classList.remove('active-page');
+      }
+      currentPage.classList.add('active-page');
+    } else {
+      const currentLink = document?.querySelector('#slider-history .links-wrapper .mt-history__years .mt-history__year.link_' + (id));
+      for (let link of sliderLinks) {
+        link.classList.remove('mt-history__year_active');
+      }
+      currentLink.classList.add('mt-history__year_active');
     }
-  ]
+
+    const imageSlideWidth = imageSlider?.querySelector('.mt-history__image.image_' + id)?.getBoundingClientRect().width;
+
+    const contentsSliderWidth = contentsSlider?.querySelector('.content-wrapper.content_' + id)?.getBoundingClientRect().width;
+    const translateImage = id === 1 ? 0 : (id - 1) * imageSlideWidth;
+    const translateContent = id === 1 ? 0 : (id - 1) * contentsSliderWidth;
+    imageSlider.style.setProperty('--translateSlide', -translateImage + 'px');
+    contentsSlider.style.setProperty('--translateContent', -translateContent + 'px');
+  };
+
+  let index = 1;
+  let timer = -1;
+  const autoChanger = () => {
+    timer = setInterval(() => {
+      if (index >= 4) {
+        index = 0;
+        return;
+      }
+      ++index;
+      slideHistoryBlock(index);
+    }, 3000);
+  };
+  clearInterval(timer);
+  autoChanger();
+  slideHistoryBlock(index);
 </script>
 </body>
 </html>

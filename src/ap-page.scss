@@ -18,8 +18,8 @@ main {
   display: flex;
   margin: 0;
   //height: 1100px;
-  padding-top: 160px;
-  padding-bottom: 44px;
+  padding-top: 165px;
+  padding-bottom: 70px;
 
   &__background-image-mobile {
     display: none;
@@ -47,10 +47,17 @@ main {
     max-width: 100%;
     margin: 0 auto;
     text-align: center;
+    gap: 0;
+  }
+
+  .mt-title.mt-hero__title-wrapper {
+    margin-bottom: 16px;
   }
 
   .mt-subtitle {
     max-width: 569px;
+    margin-bottom: 48px;
+
   }
 
   .mt-hero_ap-page__subtitle {
@@ -67,13 +74,14 @@ main {
     justify-content: center;
     align-items: center;
     padding: 17px 34px;
-    margin-bottom: 24px;
+    margin-bottom: 80px;
   }
 
   .card-bank-transfer-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 114px;
 
     .left-block {
       width: 385px;
@@ -96,53 +104,77 @@ main {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      position: relative;
+      top: -20px;
+      z-index: 1;
+
+      .connecting-lines {
+        left: -44px;
+        position: absolute;
+        top: 2px;
+        width: 404px;
+        max-width: initial;
+
+        path {
+          &:nth-child(3), &:nth-child(4) {
+            transform: translate(14px, 0);
+          }
+        }
+      }
 
       .blurry-text {
         position: relative;
-        margin-bottom: 24px;
-
-        &:after {
-          height: 24px;
-          position: absolute;
-          content: "";
-          background: rgba(255, 255, 255, 0.7);
-          width: 300px;
-        }
-
+        margin-bottom: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
       }
 
-      .no-blurry {
-        &:after, &:before {
-          height: 12px;
-          position: relative;
-          content: "";
-          background: rgba(255, 255, 255, 0.7);
-          width: 12px;
-          border-radius: 50%;
-          left: 24px;
-          background: #3C37FF;
-        }
+      .blurry-text.blurry {
+        filter: blur(1px);
+        opacity: 0.4;
+      }
 
-        &:before {
-          right: 24px;
-          left: auto;
-        }
+      .no-blurry-back {
+        background: #FFFFFF;
+        z-index: 2;
 
-        color: #3C37FF;
-        background: rgba(60, 55, 255, 0.05);
-        border: 2.15157px solid #3C37FF;
-        border-radius: 5.73753px;
-        width: max-content;
-        padding: 9px 17px;
+        .no-blurry {
+          background: rgba(60, 55, 255, 0.05);
+
+          &:after, &:before {
+            height: 12px;
+            position: relative;
+            content: "";
+            background: rgba(255, 255, 255, 0.7);
+            width: 12px;
+            border-radius: 50%;
+            left: 8px;
+            background: #3C37FF;
+          }
+
+          &:before {
+            right: 8px;
+            left: auto;
+          }
+
+          &:nth-child(1) {
+            color: #3C37FF;
+            //width: 79px;
+            //height: 32px;
+          }
+
+          border: 2.15157px solid #3C37FF;
+          border-radius: 5.73753px;
+          width: max-content;
+          padding: 9px 0;
+        }
       }
 
       .blurry-image {
-        margin-right: 12px;
-
+        margin-right: 8px;
       }
+
     }
 
     .right-block {
@@ -169,18 +201,18 @@ main {
 }
 
 .manual-bill-statistics {
-  padding: 120px;
+  padding: 120px 120px 138px;
 
   &__content {
     .mbs-title {
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     .mbs-subtitle {
       text-align: center;
-      opacity: 0.6;
-      margin-bottom: 90px;
+      //opacity: 0.6;
+      margin-bottom: 95px;
     }
 
     .mbs-statistics-content {
@@ -195,23 +227,24 @@ main {
         text-align: center;
 
         .mbs-statistics-label {
+          display: inline-block;
+          margin-bottom: 8px;
           background: linear-gradient(180deg, #3C37FF 0%, #33DAFF 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
 
         .mbs-statistics-description {
-          padding: 0 40px;
+          padding: 0 38px;
           display: inline-block;
         }
       }
     }
-
   }
 }
 
 .function-demonstration {
-  padding: 112px 78px;
+  padding: 120px 78px 130px;
   background: #F1F2F5;
 
   &__content {
@@ -219,7 +252,7 @@ main {
     text-align: center;
 
     .fd-title {
-      padding: 32px 0 142px;
+      padding: 32px 0 90px;
     }
 
     .fd-content {
@@ -274,6 +307,8 @@ main {
 
             .has-point {
               position: absolute;
+              display: flex;
+              justify-content: center;
               top: 50%;
               left: 0;
               right: 0;
@@ -301,18 +336,6 @@ main {
               }
             }
 
-            .small-image {
-              &:before {
-                bottom: 24px;
-              }
-            }
-
-            .smalled-image {
-              &:before {
-                bottom: 64px;
-              }
-            }
-
             .block-with-many-items.image {
               position: absolute;
               top: 50%;
@@ -336,27 +359,22 @@ main {
 
                 .E {
                   transform: translate(238px, 190px);
-
                 }
 
                 .qb {
                   transform: translate(145px, 364px);
-
                 }
 
                 .arrays {
                   transform: translate(-150px, 356px);
-
                 }
 
                 .F {
                   transform: translate(-216px, 280px);
-
                 }
 
                 .sage {
                   transform: translate(-252px, 100px);
-
                 }
               }
             }
@@ -365,40 +383,47 @@ main {
               display: inherit;
               margin: 12px auto 24px;
             }
-
-            .approval-dabble {
-              display: inherit;
-              margin: 24px;
-            }
           }
         }
+      }
+
+      .ap-page {
+        height: 812px !important;
       }
 
       .function-selector {
         flex: 1 1;
         text-align: start;
         display: flex;
-        padding: 22px 82px;
+        padding: 66px 82px;
         align-items: center;
 
-        ul li {
-          border-radius: 4px;
-          padding: 8px 0 8px 50px;
-          opacity: 0.5;
-          cursor: pointer;
-          position: relative;
-          margin-bottom: 4px;
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          padding: 0;
+          margin: 0;
 
-          &::before {
-            content: url("images/ap-page/arrow.svg");
-            position: absolute;
-            left: 24px;
-            top: 8px;
-          }
+          li {
+            border-radius: 4px;
+            padding: 12px 16px 12px 56px;
+            opacity: 0.5;
+            cursor: pointer;
+            position: relative;
+            margin-bottom: 4px;
 
-          &:hover {
-            opacity: 1;
-            background: #FAFAFA;
+            &::before {
+              content: url("images/ap-page/arrow.svg");
+              position: absolute;
+              left: 24px;
+              top: 8px;
+            }
+
+            &:hover {
+              opacity: 1;
+              background: #FAFAFA;
+            }
           }
         }
 
@@ -427,7 +452,7 @@ main {
 
         .listItem-description.description-visible {
           opacity: 1;
-          height: 50px;
+          height: max-content;
           visibility: visible;
           margin: 0;
         }
@@ -441,7 +466,7 @@ main {
 }
 
 .adding-invoicing {
-  padding: 120px;
+  padding: 120px 78px 90px;
 
   &__content {
     .ai-title {
@@ -455,6 +480,30 @@ main {
         align-items: center;
         justify-content: center;
         margin-bottom: 120px;
+
+        .with-slider {
+          position: relative;
+          overflow: hidden;
+
+          &:after, &:before {
+            content: "";
+            position: absolute;
+            left: -2px;
+            width: 25%;
+            height: 116px;
+            z-index: 3;
+            background: linear-gradient(270deg, #F1F2F5 15.62%, rgba(241, 242, 245, 0) 100%);
+          }
+
+          &:after {
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+          }
+
+          &:before {
+            right: -2px;
+            left: auto;
+          }
+        }
 
         .fees-card {
           position: relative;
@@ -470,6 +519,10 @@ main {
           max-width: 368px;
           min-width: 242px;
 
+          .slider-container {
+            overflow: hidden;
+          }
+
           &:nth-child(2) {
             margin: 0 8px;
           }
@@ -478,23 +531,30 @@ main {
             width: 100%;
             height: 125px;
             margin-bottom: 56px;
+
+            li {
+
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              img {
+                width: 40px;
+                height: 40px;
+              }
+            }
           }
 
           .images-wrapper {
             display: inline-flex;
 
-            li {
+            li.slide {
               position: relative;
-              border: 2px solid #fff;
               border-radius: 50%;
               overflow: hidden;
               width: 66px;
               height: 66px;
               margin-left: -12px;
-
-              &:nth-child(1) {
-                z-index: 1;
-              }
 
               img {
                 width: 100%;
@@ -506,27 +566,13 @@ main {
           .payments {
             display: flex;
             padding-top: 42px;
-            overflow-x: scroll;
             position: relative;
-            overflow-y: hidden;
+            //overflow-y: hidden;
 
             img {
               width: 62px;
               height: 62px;
             }
-
-            //&:after {
-            //  content: "";
-            //  position: absolute;
-            //  left: 0;
-            //  top: 0;
-            //  width: 90px;
-            //  height: 187px;
-            //  background: linear-gradient(to left, rgba(217, 217, 217, 0) 0%, rgba(255,255,255, 0.5) 100%);
-            //}
-            //&:before {
-            //
-            //}
           }
 
           .saas {
@@ -536,11 +582,17 @@ main {
           .icon-wrapper {
             width: 70px;
             height: 70px;
-            background: #3B3B3B;
+            background: #FAFAFA;
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
+
+            svg {
+              path {
+                fill: #0A0A0A;
+              }
+            }
           }
 
           .saas:before, .saas:after {
@@ -605,13 +657,14 @@ main {
       .ai-words-gratitude-countries-icons {
         display: flex;
         align-items: center;
-        //margin-bottom: 36px;
+        margin-bottom: 24px;
 
         .ai-words-gratitude-finsWiss-icon {
           width: 64px;
           height: 16px;
           margin-right: 16px;
-          background: url("./images/ap-page/fins-wiss.svg") no-repeat;
+          background: url("https://monite.com/wp-content/uploads/2023/04/Mask-group-3.png") no-repeat;
+          background-size: contain;
         }
 
         .divider {
@@ -622,15 +675,20 @@ main {
         }
 
         .ai-words-gratitude-europe-icon {
-          width: 45px;
+          width: 30px;
           height: 30px;
-          background: url("./images/ap-page/europe-icon.png") no-repeat;
+          background: url("https://monite.com/wp-content/uploads/2023/04/Frame-1948756850-1.png") no-repeat;
+          background-size: contain;
+          border-radius: 7px;
+          margin-right: 6px;
         }
 
         .ai-words-gratitude-switzerland-icon {
-          width: 45px;
+          width: 30px;
           height: 30px;
-          background: url("./images/ap-page/switzerland-icon.png") no-repeat;
+          background: url("https://monite.com/wp-content/uploads/2023/04/image-8048.png") no-repeat;
+          background-size: contain;
+          border-radius: 7px;
         }
       }
 
@@ -642,7 +700,6 @@ main {
       .ai-quotes {
         width: 22px;
         height: 16px;
-        background: url("./images/ap-page/quots.svg") no-repeat;
         margin-bottom: 12px;
       }
 
@@ -675,16 +732,35 @@ main {
       .download_pdf-button {
         display: flex;
         align-items: center;
-        border: 1px solid #B8B8B8;
+        box-shadow: 0 0 0 1px #BBB;
         padding: 15px 30px;
         border-radius: 10px;
         cursor: pointer;
         z-index: 3;
+        background: #FFFFFF;
 
         .download_pdf-icon {
-          width: 24px;
-          height: 24px;
           margin-right: 12px;
+        }
+
+        &::before {
+          background: #3C37FF;
+        }
+      }
+
+      .download_pdf-button-hover {
+        &:hover {
+          box-shadow: 0 0 0 1px #3C37FF;
+
+          .download_pdf-title {
+            color: #FFFFFF !important;
+          }
+
+          .download_pdf-icon {
+            path {
+              fill: #FFFFFF !important;
+            }
+          }
         }
       }
 
@@ -695,12 +771,11 @@ main {
         display: flex;
         justify-content: space-between;
 
-
         .left-img {
           flex: 1 1;
           width: 100%;
           height: 390px;
-          background: url("images/ap-page/fin-swiss-leftback.png") no-repeat;
+          background: url("https://monite.com/wp-content/uploads/2023/04/fin-swiss-leftback.png") no-repeat;
           border-radius: 10px;
         }
 
@@ -708,7 +783,7 @@ main {
           flex: 1 1;
           width: 100%;
           height: 390px;
-          background: url("images/ap-page/fin-swiss-rightback.png") no-repeat right;
+          background: url("https://monite.com/wp-content/uploads/2023/04/fin-swiss-rightback.png") no-repeat right;
           border-radius: 10px;
         }
       }
@@ -717,7 +792,7 @@ main {
 }
 
 .integrations {
-  padding: 120px 160px 90px;
+  padding: 117px 160px 90px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -729,13 +804,11 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    //position: sticky;
-    //top: calc(50vh - 162px);
-    margin-bottom: 122px;
+    margin-bottom: 60px;
 
     .integrations-title {
       text-align: center;
-      margin-bottom: 28px;
+      margin-bottom: 16px;
     }
 
     .content-description {
@@ -746,9 +819,45 @@ main {
 
   &__mobil-wrapper {
     display: flex;
+    gap: 10px;
+
+    .fully-featured-platform {
+      position: relative;
+
+      .card-image-wrapper {
+        top: 40px;
+        left: 0;
+
+        img {
+          width: 307px;
+        }
+      }
+    }
+
+    .compliance-included {
+      .card-image-wrapper {
+        top: 60px;
+        left: 0;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .ux-consistence {
+      .card-image-wrapper {
+        top: 20px;
+        left: 0;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
     .mob-card {
       position: relative;
-      margin-bottom: 32px;
       width: 366px;
       height: 554px;
       background: #111111;
@@ -756,118 +865,33 @@ main {
       padding: 44px 32px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       align-items: center;
       overflow: hidden;
 
-      &:nth-child(1), &:nth-child(2) {
-        margin-right: 10px;
+      &:after {
+        content: "";
+        height: 510px;
+        width: 100%;
+        position: absolute;
+        background: linear-gradient(to top, #000 0, transparent 30%);
       }
 
+      //&:nth-child(1), &:nth-child(2) {
+      //  margin-right: 10px;
+      //}
+
       .card-title, .card-description {
+        width: 100%;
+        padding-right: 28px;
+        margin-bottom: 24px;
         text-align: left;
         color: #FFFFFF;
       }
 
       .card-image-wrapper {
         position: relative;
-        max-width: 345px;
-        min-width: 245px;
-
-        &:after {
-          content: "";
-          position: absolute;
-          bottom: -100px;
-          left: 0;
-          width: 130%;
-          height: 260px;
-          background: linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, #111111 57.81%);
-          z-index: 3;
-        }
-      }
-    }
-
-    .fully-featured-platform {
-      .card-image-wrapper {
-        position: relative;
-
-        img {
-          width: auto
-        }
-      }
-    }
-
-    .compliance-included {
-
-
-    }
-
-    .ux-consistence {
-
-    }
-
-
-    .card-image-wrapper {
-      position: relative;
-      top: auto;
-      left: -12px;
-
-
-      img {
-        position: relative;
-        width: 132px;
-      }
-
-      .europe {
-        top: 88px;
-        left: 26px;
-        z-index: 3;
-      }
-
-      .gb {
-        left: -42px;
-        bottom: -12px;
-        z-index: 2;
-      }
-
-      .usa {
-        right: -186px;
-        top: -57px;
-        z-index: 1;
-      }
-
-      .Tt {
-        width: 136px;
-        top: 66px;
-        left: 0;
-        z-index: 1;
-      }
-
-      .circle {
-        width: 136px;
-        top: 130px;
-        left: -44px;
-        z-index: 1;
-      }
-
-      .squares {
-        width: 136px;
-        top: -30px;
-        left: 199px;
-        z-index: 1;
-      }
-    }
-
-    &:nth-child(1) {
-      .card-image-wrapper {
-        top: 46px;
-        left: 0;
-      }
-    }
-
-    &:nth-child(2) {
-      .card-image-wrapper {
-        top: 52px
+        //max-width: 345px;
+        //min-width: 245px;
       }
     }
   }
@@ -877,7 +901,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 52px 0 72px;
+  padding: 120px 20px 0px;
   background: #F1F2F5;
 
   &__content {
@@ -887,11 +911,8 @@ main {
 
     .pi-transaction-image {
       position: relative;
-      width: 684px;
-      height: 410px;
-      background: url("https://monite.com/wp-content/uploads/2023/03/payments-integrated.png") no-repeat;
-      background-size: cover;
-      margin-bottom: 20px;
+      max-width: 684px;
+      height: auto;
     }
 
     .pi-transaction-image:before {
@@ -899,32 +920,39 @@ main {
       position: absolute;
       bottom: 0;
       width: 100%;
-      height: 114px;
+      height: 200px;
       background: linear-gradient(to top, #f1f2f5, transparent);
     }
 
     .pi-title {
       text-align: center;
-      margin-bottom: 24px;
+      margin: 0 auto 16px;
     }
 
     .pi-description {
       text-align: center;
       max-width: 558px;
-      margin-bottom: 32px;
+      margin: 0 auto 32px;
     }
 
+    .mt-button {
+      margin: 0 auto 28px;
+    }
   }
 }
 
 .robust-account {
   background: #111111;
   display: flex;
-  padding: 120px 160px 0;
+  padding: 90px 160px 0;
 
   &__content {
     flex: 1 1;
-    padding: 0 150px 140px 0;
+    padding-right: 60px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     .ra-title, .ra-description {
       color: #FFFFFF;
@@ -951,8 +979,12 @@ main {
       }
 
       .mt-button.mt-hero_app-page-btn.sand-box-btn:hover {
-        background: #FFFFFF;
-        color: #0A0A0A;
+        background: #FFFFFF !important;
+        color: #0A0A0A !important;
+
+        &:before {
+          content: unset;
+        }
       }
 
       .sand-box-btn {
@@ -970,11 +1002,46 @@ main {
     flex: 1 1;
     display: flex;
     align-items: end;
+    min-width: 390px;
+    overflow: hidden;
+    position: relative;
+
+    pre {
+      //font-family: 'Roboto Mono';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16.03px;
+      line-height: 21px;
+      border-radius: 15px;
+      position: relative;
+      width: 465px;
+      height: 600px;
+      background: #302F4D;
+      white-space: pre-wrap;
+      //font-style: normal;
+      //font-weight: 500;
+      //font-size: 16.0259px;
+      //line-height: 17px;
+      color: #FFFFFF;
+      bottom: -36px;
+      border: none;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 114px;
+      background: linear-gradient(to top, #0a0a0a, transparent);
+    }
   }
 }
 
 .billpay {
-  padding: 120px 78px;
+  padding: 120px 120px;
 
   &__content {
     width: 100%;
@@ -994,8 +1061,8 @@ main {
 
     .bp-description {
       text-align: center;
-      opacity: 0.7;
-      margin-bottom: 58px;
+      //opacity: 0.7;
+      margin-bottom: 60px;
       background-color: transparent;
       z-index: 2;
     }
@@ -1035,13 +1102,17 @@ main {
 
 .mt-footer.ap-page {
   .mt-footer__inner {
+    .social-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
     .mt-footer-logo-nav-wrapper {
       display: flex;
       justify-content: space-around;
 
       .mt-footer__nav {
-        flex: 1 1;
-
         .mt-footer__nav-menu.mobile {
           display: none;
         }
@@ -1079,12 +1150,93 @@ main {
     }
   }
 }
+
 .desktop {
   display: initial !important;
 }
+
 .mobile {
   display: none !important;
 }
+
+
+.features-clients {
+  padding: 145px 78px 90px;
+  background: #F1F2F5;
+
+  .fc-title {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 90px;
+    text-align: center;
+  }
+
+  .fc-content {
+    width: 100%;
+    height: 620px;
+    overflow: hidden;
+    overflow-y: scroll;
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 190px 0;
+    display: flex;
+    justify-content: space-between;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+
+    .fc-images-viewport {
+      flex: 1 1;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .image-wrapper {
+        .image {
+
+        }
+      }
+
+      .divider {
+        min-height: 300px;
+        border-right: 2px solid #33DAFF;
+        border-image: linear-gradient(to bottom, #33DAFF, rgba(0, 0, 0, 0)) 1 100%;
+      }
+    }
+
+    .fc-description {
+      flex: 1 1;
+      position: sticky;
+      top: 0;
+
+      .text-wrapper {
+        max-width: 482px;
+        margin: 0 auto;
+      }
+
+      .fc-description-number {
+        background: linear-gradient(180deg, #3C37FF 0%, #33DAFF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 30px;
+      }
+
+      .fc-description-title {
+        margin-bottom: 32px;
+      }
+
+      .fc-description-description {
+        display: inline-block;
+        max-width: 442px;
+      }
+    }
+  }
+}
+
+
 @media screen and (max-width: 1144px) {
   .desktop {
     display: initial !important;
@@ -1093,35 +1245,122 @@ main {
     display: none !important;
   }
   .function-demonstration {
+    padding: 100px 20px 110px;
 
     &__content {
 
       .fd-content {
         .demonstration {
           flex: 1 1;
+          padding: 0 10px;
         }
 
         .function-selector {
-          padding: 22px 0;
+          padding: 22px 10px;
 
           ul li {
-            padding: 12px 0 12px 42px;
+            padding: 12px 12px 12px 56px;
           }
         }
       }
     }
   }
-
   .integrations {
     &__mobil-wrapper {
       flex-direction: column;
+
+      .fully-featured-platform {
+        .card-image-wrapper {
+          top: 74px;
+          left: 0;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      .compliance-included {
+        .card-image-wrapper {
+          top: 84px;
+          left: 0;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      .ux-consistence {
+        .card-image-wrapper {
+          top: 114px;
+          left: 0;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      .mob-card {
+        width: 490px;
+
+        &:after {
+          content: "";
+          height: 510px;
+          width: 100%;
+          position: absolute;
+          background: linear-gradient(to top, #000 0, transparent 50%);
+        }
+
+        .card-title {
+          width: 100%;
+        }
+
+        .card-image-wrapper {
+          height: 108px;
+          min-width: auto;
+
+          &:after {
+            display: none;
+          }
+
+          img {
+            width: 100%;
+          }
+        }
+      }
     }
   }
+  .mt-hero_ap-page {
+    background: none;
 
+    .card-bank-transfer-wrapper {
+      .left-block {
+        width: 282px;
+      }
+
+      .center-block {
+        top: -36px;
+      }
+
+      .right-block {
+        width: 282px;
+      }
+    }
+  }
   .adding-invoicing {
-    padding: 32px;
-
     &__content {
+      .ai-content {
+        .ai-fees-cards {
+          .fees-card {
+            .fees-image-wrapper {
+              margin-bottom: 24px;
+            }
+          }
+        }
+      }
+
       .ai-words-gratitude {
         .back-images {
           top: 304px;
@@ -1159,7 +1398,6 @@ main {
       }
     }
   }
-
   .robust-account {
     padding: 32px 32px 0 32px;
 
@@ -1167,11 +1405,39 @@ main {
       padding: 0 32px 100px 0;
     }
   }
+  .mt-hero_ap-page {
+    background: none;
 
+    .card-bank-transfer-wrapper {
+      .center-block {
+        width: 222px;
+        top: -56px;
+
+        .blurry-text {
+          margin-bottom: 8px;
+        }
+
+        .no-blurry-back .no-blurry {
+          padding: 6px 0;
+        }
+
+        .connecting-lines {
+          width: 270px;
+          top: 6px;
+        }
+      }
+    }
+  }
 
   .function-demonstration {
+    padding: 90px 20px;
 
     &__content {
+
+      .fd-title {
+        max-width: 600px;
+        margin: 0 auto;
+      }
 
       .fd-content {
         .demonstration {
@@ -1180,7 +1446,7 @@ main {
 
         .function-selector {
           ul li {
-            padding: 8px 0 8px 42px;
+            padding: 8px 8px 8px 56px;
           }
         }
       }
@@ -1196,6 +1462,10 @@ main {
           .fees-card {
             .label-wrapper {
               padding: 0 20px 40px;
+            }
+
+            .fees-image-wrapper {
+              margin-bottom: 24px;
             }
           }
         }
@@ -1214,16 +1484,10 @@ main {
     }
   }
 
-  .integrations {
-    &__mobil-wrapper {
-      flex-direction: column;
-    }
-  }
   .billpay {
     &__content {
       .back-images {
         top: 120px;
-
 
         .left-img, .right-img {
           height: 300px;
@@ -1236,10 +1500,10 @@ main {
 
 @media screen and (max-width: 768px) {
   ul {
-    padding-left: 0!important;
+    padding-left: 0 !important;
   }
   h3, p {
-    margin-top: 0!important;
+    margin-top: 0 !important;
   }
   .desktop {
     display: none !important;
@@ -1262,6 +1526,10 @@ main {
     padding: 52px 20px;
     background: #F1F2F5;
 
+    p, h3 {
+      max-width: 400px;
+    }
+
     .fd-title {
       margin-bottom: 44px;
     }
@@ -1276,24 +1544,26 @@ main {
         left: 0;
         width: 100%;
         height: 100px;
-        background: linear-gradient(to top, #F1F2F5, #F1F2F5, transparent);
+        background: linear-gradient(to top, #F1F2F5 28%, transparent);
       }
     }
 
     .image {
-      padding: 20px;
+      //padding: 20px;
       //margin-bottom: 12px;
     }
 
     .image-label {
+      width: 100%;
+      text-align: left;
       margin-bottom: 12px;
     }
-
 
     .image-description {
       opacity: 0.8;
       margin-bottom: 82px;
     }
+
     .image-description:nth-last-child(1) {
       margin-bottom: 0
     }
@@ -1332,6 +1602,7 @@ main {
           .mt-hero__title {
             margin: 0;
           }
+
           .mt-hero_ap-page__subtitle {
             margin: 0;
           }
@@ -1349,7 +1620,7 @@ main {
   .mt-hero.mt-hero_ap-page {
     flex-direction: column;
     height: max-content;
-    padding: 68px 20px 0;
+    padding: 152px 20px 0;
 
     .mt-hero_ap-page__background-image {
       display: none;
@@ -1379,7 +1650,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url("https://monite.com/wp-content/uploads/2023/03/mobile-hiro.png") repeat;
+    background: url("https://monite.com/wp-content/uploads/2023/04/Group-1948756907-2.png") repeat;
+    background-size: cover;
 
     img {
       //height: 300px;
@@ -1392,14 +1664,22 @@ main {
 
     .mbs-subtitle {
       margin-bottom: 34px;
+      opacity: 1;
     }
 
     .mbs-statistics-content {
+      gap: 18px 10px;
+
       .mbs-statistics-item-wrapper {
         width: 135px;
-        height: 56px;
-        margin: 0 0 35px 0;
-        padding: 8px;
+        height: 70px;
+        margin: 0;
+        padding: 0 12px;
+
+        .mbs-statistics-label {
+          display: inline-block;
+          margin-bottom: 8px;
+        }
 
         .mbs-statistics-description {
           padding: 0;
@@ -1409,7 +1689,7 @@ main {
   }
 
   .adding-invoicing {
-    padding: 52px 20px;
+    padding: 52px 20px 44px;
 
     &__content {
       .ai-content {
@@ -1507,7 +1787,6 @@ main {
             height: 17px;
             margin-right: 10px;
           }
-
         }
 
         .back-images {
@@ -1524,103 +1803,86 @@ main {
   }
 
   .integrations {
-    padding: 0 20px;
+    padding: 40px 20px;
 
-    &__content {
-      position: relative;
-      top: 52px;
-      margin-bottom: 50px;
-
-      .content-description {
-        display: none;
-      }
-    }
-
-    &__mob-card-wrapper {
-      display: none;
-    }
-
-  }
-  .integrations {
-    padding: 20px;
     &__mobil-wrapper {
       flex-direction: column;
+      gap: 32px;
+
+      .fully-featured-platform {
+        .card-image-wrapper {
+          top: 5px;
+          left: 0;
+        }
+      }
+
+      .compliance-included {
+        .card-image-wrapper {
+          top: 20px;
+          left: 0;
+        }
+      }
+
+      .ux-consistence {
+        .card-image-wrapper {
+          top: 0;
+          left: 0;
+        }
+      }
 
       .mob-card {
         width: 100%;
         height: 358px;
-        padding: 24px 28px;
-        &:nth-child(1), &:nth-child(2) {
-          margin-right: 0;
+        padding: 24px;
+
+        &:after {
+          content: "";
+          height: 358px;
+          width: 100%;
+          position: absolute;
+          background: linear-gradient(to top, #000 0, transparent 50%);
         }
 
+        .card-title {
+          width: 100%;
+        }
 
         .card-image-wrapper {
-          width: 206px;
           height: 108px;
-          top: -36px;
           min-width: auto;
+
+          &:after {
+            display: none;
+          }
 
           &:after {
             height: 108px;
           }
 
-          .europe {
-            width: 84px;
-            top: 52px;
-            left: 22px;
-          }
-
-          .gb {
-            width: 84px;
-            left: -16px;
-            top: 12px;
-            bottom: auto;
-          }
-
-          .usa {
-            width: 84px;
-            right: -134px;
-            top: -40px;
-          }
-          .Tt {
-            width: 88px;
-            top: 46px;
-            left: 10px;
-            z-index: 1;
-          }
-
-          .circle {
-            width: 88px;
-            bottom: -90px;
-            left: -18px;
-            z-index: 1;
-            top: auto;
-          }
-
-          .squares {
-            width: 88px;
-            bottom: 0;
-            left: 146px;
-            z-index: 1;
-            top: auto;
+          img {
+            width: 100%;
           }
         }
       }
     }
   }
-
   .payments-integrated {
-    padding: 30px 28px 44px;
+    padding: 30px 20px 44px;
 
-    .payments-integrated__content {
-      .pi-transaction-image {
-        width: 100%;
-        height: 162px;
+    &__content {
+      flex-direction: column-reverse;
+      gap: 30px;
+
+      .pi-transaction-image:before {
+        height: 120px;
       }
 
       .pi-description {
-        padding: 0 16px;
+        margin: 0 auto 44px;
+      }
+
+      .mt-button {
+        margin: 0 auto;
       }
     }
   }
@@ -1633,6 +1895,16 @@ main {
 
     &__invoice-code-image-wrapper {
       position: relative;
+      min-width: 100%;
+
+      pre {
+        width: 100%;
+        height: 272px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 6.07759px;
+        line-height: 8px;
+      }
     }
 
     &__invoice-code-image-wrapper:after {
@@ -1641,7 +1913,7 @@ main {
       bottom: 0;
       width: 100%;
       height: 114px;
-      background: linear-gradient(to top, #0a0a0a, transparent);
+      background: linear-gradient(to top, #111111, transparent);
     }
 
     &__content {
@@ -1663,12 +1935,17 @@ main {
     padding: 52px 20px 80px;
 
     &__content {
+      height: 474px;
       padding: 24px 15px;
       background: url("https://monite.com/wp-content/uploads/2023/03/billPay-back-mobile.png") no-repeat;
       background-size: cover;
 
       .bp-title {
         z-index: 2;
+      }
+
+      .bp-description {
+        margin-bottom: 24px;
       }
 
       .back-images {
@@ -1685,6 +1962,13 @@ main {
     padding: 44px 20px 32px;
 
     .mt-footer__inner {
+      .social-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+
       .mt-footer-logo-nav-wrapper {
         flex-direction: column;
 

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/html'>
+<head>
+  <title>monite</title>
+  <link rel='stylesheet' href='https://monite.com/wp-content/themes/monite/css/main.min.css?ver=6.1.1' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+</head>
+<body>
+<style>
+    .payment-link-calc {
+        padding: 128px 0 28px;
+        background-color: #F1F2F5;
+        display: block;
+    }
+
+    .payment-link-calc__section {
+        display: flex;
+        gap: 8px;
+        max-width: 1096px;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .payment-link-calc__container {
+        background-color: #fff;
+        padding: 24px 0;
+        max-width: 628px;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        scroll-margin-top: 120px;
+    }
+
+    .payment-link-calc__right {
+        max-width: 468px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .payment-link-calc__inner {
+        width: 100%;
+        max-width: 640px;
+        background-color: #fff;
+        padding: 12px 16px 0px;
+    }
+
+    .payment-link-calc__top {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 110%;
+        color: #000;
+        text-align: center;
+        margin-bottom: 28px;
+    }
+
+    .payment-link-calc__group {
+        padding: 18px 12px 18px 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #DAE3E8;
+    }
+
+    .payment-link-calc__title {
+        font-family: 'Satoshi';
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 140%;
+        letter-spacing: 0.01em;
+        color: #282A2F;
+        width: 100%;
+    }
+
+    .payment-link-calc__title_alt {
+        color: #000;
+    }
+
+    .payment-link-calc__title_total {
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 140%;
+        letter-spacing: 0.01em;
+        color: #B8B8B8;
+    }
+
+    .payment-link-calc__title_total_sum {
+        font-family: 'Faktum';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 140%;
+        color: #FFF;
+        letter-spacing: -0.01em;
+    }
+
+    .payment-link-calc__input {
+        background: #fff;
+        border: 1px solid #DDDDDD;
+        border-radius: 10px;
+        max-width: 172px;
+        text-align: right;
+        min-height: 40px;
+        padding-right: 25px;
+        width: 100%;
+    }
+
+    .payment-link-calc__input:focus {
+        background: #FFFFFF;
+        border: 1px solid #246FFF;
+    }
+
+    .payment-link-calc__input[disabled] {
+        background: #F1F2F5;
+        border: unset;
+    }
+
+    .payment-link-calc__input_alt[disabled] {
+        background: none;
+        border: none;
+        max-width: unset;
+        padding-right: 10px;
+    }
+
+    .payment-link-calc__button {
+        margin: 20px auto 0 auto;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: fit-content;
+        padding: 17px 70px;
+        background: #3C37FF;
+        color: #fff;
+        border-radius: 10px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: -0.01em;
+        transition: all .4s;
+    }
+
+    .payment-link-calc__button_alt {
+        background: #CAFCC4;
+        color: #000;
+    }
+
+    .payment-link-calc__button:after {
+        right: 240px;
+    }
+
+    .payment-link-calc__button_alt:after {
+        right: 230px;
+        background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.92852 6.84173L6.92852 1.28488C6.92852 1.22965 6.88375 1.18488 6.82852 1.18488L1.27166 1.18488' stroke='black' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+
+    .payment-link-calc__total {
+        display: none;
+        background-color: #0A0A0A;
+        border-radius: 16px;
+        padding: 40px 24px;
+    }
+
+    .payment-link-calc__total .payment-link-calc__action-title {
+        margin-bottom: 64px;
+    }
+
+    .payment-link-calc__total .payment-link-calc__group {
+        padding: 9px 16px;
+        border-bottom: unset;
+        border-bottom: 1px solid #282828;
+    }
+
+    .payment-link-calc__action {
+        padding: 44px 20px;
+        margin-top: 4px;
+        border-radius: 16px;
+        background-color: #0A0A0A;
+        display: none;
+        flex-direction: column;
+        gap: 12px;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .payment-link-calc__action-title {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 110%;
+        color: #FFFFFF;
+        text-align: center;
+    }
+
+    .payment-link-calc__action-subtitle {
+        font-family: 'Satoshi';
+        margin-bottom: 21px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 150%;
+        color: #B8B8B8;
+        text-align: center;
+    }
+
+    /*.payment-link-calc__currency {*/
+    /*    padding-left: 20px;*/
+    /*    padding-right: 20px;*/
+    /*    display: flex;*/
+    /*    gap: 32px;*/
+    /*    font-weight: 400;*/
+    /*    font-size: 14px;*/
+    /*    line-height: 16px;*/
+    /*    color: #111111;*/
+    /*    margin-bottom: 24px;*/
+    /*    padding-bottom: 12px;*/
+    /*    background: linear-gradient(to right, #246FFF 50%, #DAE3E8 50%) bottom;*/
+    /*    background-size: 100% 2px;*/
+    /*    background-repeat: no-repeat;*/
+    /*}*/
+
+    /*.payment-link-calc__currency_alt {*/
+    /*    background: linear-gradient(to right, #DAE3E8 50%, #246FFF 50%) bottom;*/
+    /*    background-size: 100% 2px;*/
+    /*    background-repeat: no-repeat;*/
+    /*}*/
+
+    /*.payment-link-calc__currency-item {*/
+    /*    display: flex;*/
+    /*    justify-content: center;*/
+    /*    align-items: center;*/
+    /*    gap: 8px;*/
+    /*    cursor: pointer;*/
+    /*}*/
+
+    .payment-link-calc__currency {
+        position: relative;
+        display: flex;
+        align-items: center;
+        max-width: 182px;
+        width: 100%;
+        height: 50px;
+        padding: 6px;
+        list-style-type: none;
+        background: #F3F3F3;
+        border-radius: 310px;
+    }
+
+    .payment-link-calc__currency-toggle {
+        position: absolute;
+        display: block;
+        width: 85px;
+        height: 40px;
+        color: #fff;
+        font-weight: 600;
+        font-size: 16px;
+        font-family: Inter, sans-serif;
+        font-style: normal;
+        line-height: 20px;
+        letter-spacing: 0;
+        text-align: center;
+        background-color: #0A0A0A;
+        border-radius: 40px;
+        transition: all .4s;
+        will-change: transform;
+    }
+
+    .payment-link-calc__currency-item {
+        z-index: 2;
+        display: flex;
+        gap: 11px;
+        padding: 10px 0 10px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: -0.01em;
+        cursor: pointer;
+    }
+
+    .payment-link-calc__currency-item_first {
+        padding-left: 10px;
+        padding-right: 30px;
+    }
+
+    .payment-link-calc__currency-item:hover {
+        color: #3C37FF;
+    }
+
+    .payment-link-calc__currency-item_active {
+        color: #fff;
+    }
+
+    .payment-link-calc__currency-item_active:hover {
+        color: #fff;
+    }
+
+    .payment-link-calc__input-group {
+        width: 100%;
+        text-align: right;
+        position: relative;
+    }
+
+    .payment-link-calc__input-group-head {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        color: #707070;
+    }
+
+    .subscribe-form form .wpforms-submit-container .btn {
+        background-color: black;
+    }
+
+    @media screen and (max-width: 991px) {
+        .payment-link-calc {
+            padding: 128px 0 0;
+            background-color: #fff;
+        }
+
+        .payment-link-calc__container {
+            padding: 36px 0;
+            border-radius: unset;
+        }
+
+        .payment-link-calc__section {
+            flex-wrap: wrap;
+            padding-bottom: 20px;
+        }
+
+        .payment-link-calc__group {
+            align-items: flex-start;
+            flex-direction: column;
+            border-bottom: unset;
+            padding: 0 0 16px;
+        }
+
+        .payment-link-calc__total .payment-link-calc__action-title {
+            display: none;
+        }
+
+        .payment-link-calc__input {
+            max-width: unset;
+        }
+
+        .payment-link-calc__title {
+            margin-bottom: 8px;
+        }
+
+        .payment-link-calc__top {
+            font-size: 26px;
+            padding: 0 20px;
+        }
+
+        .payment-link-calc__right {
+            padding: 0 20px;
+        }
+
+        .payment-link-calc__button {
+            width: 100%;
+        }
+    }
+</style>
+
+<section class='payment-link-calc'>
+  <div class='payment-link-calc__section'>
+    <div class='payment-link-calc__container'>
+      <h2 class='payment-link-calc__top'>How much can you earn <br>with invoice payment links?</h2>
+      <ul class='payment-link-calc__currency'>
+        <li class='payment-link-calc__currency-toggle' id='paymentCalcCurrency'></li>
+        <li class='payment-link-calc__currency-item payment-link-calc__currency-item_first payment-link-calc__currency-item_active'
+          onclick="changeCurrency()" id='paymentCalcCurrencyFirstToggle'>
+          <img src='https://monite.com/wp-content/uploads/2023/02/payment-link-calc-flag-eu.png' width='16' height='16'
+               alt='EUR'> EUR
+        </li>
+        <li class='payment-link-calc__currency-item' onclick="changeCurrency()"
+            id='paymentCalcCurrencySecondToggle'>
+          <img src='https://monite.com/wp-content/uploads/2023/02/payment-link-calc-flag-us.png' width='16' height='16'
+               alt='USD'>USD
+        </li>
+      </ul>
+
+<!--      <ul class="payment-link-calc__currency" id="paymentCalcCurrency">-->
+<!--        <li class="payment-link-calc__currency-item" onclick="changeCurrency()">-->
+<!--          <img src="https://monite.com/wp-content/uploads/2023/02/payment-link-calc-flag-eu.png" width="16" height="16" alt="EUR"> EUR-->
+<!--        </li>-->
+<!--        <li class="payment-link-calc__currency-item" onclick="changeCurrency()">-->
+<!--          <img src="https://monite.com/wp-content/uploads/2023/02/payment-link-calc-flag-us.png" width="16" height="16" alt="USD"> USD-->
+<!--        </li>-->
+<!--      </ul>-->
+
+
+      <div class='payment-link-calc__inner'>
+        <div class='payment-link-calc__group'>
+          <p class='payment-link-calc__title'>Clients</p>
+          <input type='number' name='' class='payment-link-calc__input' value='5000' min='0' id='calcInputVal'
+                 onchange='calcInputsValue()'>
+        </div>
+        <div class='payment-link-calc__group'>
+          <p class='payment-link-calc__title'>% of users using payment links</p>
+          <span class='payment-link-calc__input-group'>
+	  			<span class='payment-link-calc__input-group-head'>%</span>
+	  			<input type='number' name='' class='payment-link-calc__input' value='40' min='1' max='100' id='calcInputVal2'
+                 onchange='calcInputsValue()'>
+	  		</span>
+        </div>
+        <div class='payment-link-calc__group'>
+          <p class='payment-link-calc__title'>Average invoices per month</p>
+          <input type='number' name='' class='payment-link-calc__input' value='15' id='calcInputVal3'
+                 onchange='calcInputsValue()'>
+        </div>
+        <div class='payment-link-calc__group'>
+          <p class='payment-link-calc__title'>Average invoice amount</p>
+          <span class='payment-link-calc__input-group'>
+	  			<span class='payment-link-calc__input-group-head' id='calclIputHeadCurrency'>€</span>
+	  			<input type='number' name='' class='payment-link-calc__input' value='1377' id='calcInputVal4'
+                 onchange='calcInputsValue()'>
+	  			</span>
+        </div>
+        <div class='payment-link-calc__group'>
+          <p class='payment-link-calc__title payment-link-calc__title_alt'>Payment volume/mo</p>
+          <input type='text' name='' class='payment-link-calc__input payment-link-calc__input_alt' disabled=''
+                 value='$41,310,000.00' id='paymentVolMo'>
+        </div>
+        <div class='payment-link-calc__group'>
+          <p class='payment-link-calc__title'>% invoices paid with the card</p>
+          <span class='payment-link-calc__input-group'>
+	  			<span class='payment-link-calc__input-group-head'>%</span>
+	  			<input type='number' name='' class='payment-link-calc__input' value='41' min='0' max='100' id='calcInputVal5'
+                 onchange='calcInputsValue()'>
+	  		</span>
+        </div>
+        <div class='payment-link-calc__group'>
+          <p class='payment-link-calc__title'>% invoices paid with the bank transfer</p>
+          <span class='payment-link-calc__input-group'>
+	  			<span class='payment-link-calc__input-group-head'>%</span>
+		  		<input type='number' name='' class='payment-link-calc__input' value='59' min='0' max='100' id='calcInputVal6'
+                 onchange='calcInputsValue()'>
+		  	</span>
+        </div>
+        <div class='payment-link-calc__group'>
+          <p class='payment-link-calc__title'>Average commission on card payments</p>
+          <span class='payment-link-calc__input-group'>
+	  			<span class='payment-link-calc__input-group-head'>%</span>
+	  			<input type='number' name='' class='payment-link-calc__input' value='0.25' min='0' max='5' step='0.05'
+                 id='calcInputVal7' onchange='calcInputsValue()'>
+	  		</span>
+        </div>
+        <div class='payment-link-calc__group' id='hiddingInput'>
+          <p class='payment-link-calc__title'>Average commission per bank transfer</p>
+          <span class='payment-link-calc__input-group'>
+	  			<span class='payment-link-calc__input-group-head'>€</span>
+	  			<input type='number' name='' class='payment-link-calc__input' value='0.1' max='1' id='calcInputVal8'
+                 onchange='calcInputsValue()'>
+	  		</span>
+        </div>
+        <button class='payment-link-calc__button' onclick='paymentCalcBtn()' id='paymentCalcBtn'>Calculate
+        </button>
+
+      </div>
+    </div>
+    <div class='payment-link-calc__right'>
+      <div class='payment-link-calc__total' id='calcTotal'>
+        <p class='payment-link-calc__action-title'>Projected earnings</p>
+        <div class='payment-link-calc__group'>
+          <p class='payment-link-calc__title_total'>Total earnings - per year</p>
+          <p class='payment-link-calc__title_total payment-link-calc__title_total_sum'><span id='calcTotalYear'>10,000.00</span>
+          </p>
+        </div>
+        <div class='payment-link-calc__group'>
+          <p class='payment-link-calc__title_total'>Total earnings - per month</p>
+          <p class='payment-link-calc__title_total payment-link-calc__title_total_sum'><span id='calcTotalMonth'>10,000.00</span>
+          </p>
+        </div>
+        <div class='payment-link-calc__group'>
+          <p class='payment-link-calc__title_total'>Revenue per user per month</p>
+          <p class='payment-link-calc__title_total payment-link-calc__title_total_sum'><span id='calcTotalUser'>10,000.00</span>
+          </p>
+        </div>
+      </div>
+
+      <div class='payment-link-calc__action' id='calcAction'>
+        <p class='payment-link-calc__action-title'>Let's discuss your possible <br>revenue growth</p>
+        <p class='payment-link-calc__action-subtitle'>Enter your email, and we'll get in touch shortly!</p>
+        [wpforms id="3001"]
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+
+
+  //bad
+  let currencyNow = 'EU';
+  let calcInputVal = document.getElementById('calcInputVal').value;
+  let calcInputVal2 = document.getElementById('calcInputVal2').value;
+  let calcInputVal3 = document.getElementById('calcInputVal3').value;
+  let calcInputVal4 = document.getElementById('calcInputVal4').value;
+  let calcInputVal5 = document.getElementById('calcInputVal5').value;
+  let calcInputVal6 = document.getElementById('calcInputVal6').value;
+  let calcInputVal7 = document.getElementById('calcInputVal7').value;
+  let calcInputVal8 = document.getElementById('calcInputVal8').value;
+
+  function valueInputs() {
+    calcInputVal = document.getElementById('calcInputVal').value;
+    calcInputVal2 = document.getElementById('calcInputVal2').value;
+    calcInputVal3 = document.getElementById('calcInputVal3').value;
+    calcInputVal4 = document.getElementById('calcInputVal4').value;
+    calcInputVal5 = document.getElementById('calcInputVal5').value;
+    calcInputVal6 = document.getElementById('calcInputVal6').value;
+    calcInputVal7 = document.getElementById('calcInputVal7').value;
+    calcInputVal8 = document.getElementById('calcInputVal8').value;
+  }
+
+  const formatter = new Intl.NumberFormat('de-DE', {
+    style: 'currency',
+    currency: 'USD',
+  });
+
+  const formatterEUR = new Intl.NumberFormat('de-DE', {
+    style: 'currency',
+    currency: 'EUR',
+  });
+
+  function calcInputsValue() {
+    valueInputs();
+    if (currencyNow === 'EU') {
+      document.getElementById('paymentVolMo').value = formatterEUR.format(calcInputVal * (calcInputVal2 / 100) * calcInputVal3 * calcInputVal4);
+    } else {
+      document.getElementById('paymentVolMo').value = formatter.format(calcInputVal * (calcInputVal2 / 100) * calcInputVal3 * calcInputVal4);
+    }
+    calcTotal();
+  }
+
+
+  function changeCurrency() {
+    valueInputs();
+    let btn = document.getElementById('paymentCalcBtn');
+    let paymentCalcCurrency = document.getElementById('paymentCalcCurrency');
+    let paymentCalcCurrencyFirstToggle = document.getElementById('paymentCalcCurrencyFirstToggle');
+    let paymentCalcCurrencySecondToggle = document.getElementById('paymentCalcCurrencySecondToggle');
+
+    if (paymentCalcCurrency.classList.contains('payment-link-calc__currency-item_active')) {
+      document.getElementById('paymentCalcCurrency').style.transform = 'translateX(0px) translateZ(0px)';
+      paymentCalcCurrency.classList.remove('payment-link-calc__currency-item_active');
+      paymentCalcCurrencyFirstToggle.classList.add('payment-link-calc__currency-item_active');
+      paymentCalcCurrencySecondToggle.classList.remove('payment-link-calc__currency-item_active');
+      document.getElementById('hiddingInput').style.display = 'flex';
+      currencyNow = 'EU';
+      document.getElementById('calclIputHeadCurrency').innerHTML = '€';
+    } else {
+      paymentCalcCurrency.classList.add('payment-link-calc__currency-item_active');
+      paymentCalcCurrencyFirstToggle.classList.remove('payment-link-calc__currency-item_active');
+      paymentCalcCurrencySecondToggle.classList.add('payment-link-calc__currency-item_active');
+      document.getElementById('paymentCalcCurrency').style.transform = 'translateX(100%) translateZ(0px)';
+      document.getElementById('hiddingInput').style.display = 'none';
+      currencyNow = 'US';
+      document.getElementById('calclIputHeadCurrency').innerHTML = '$';
+    }
+    calcInputsValue();
+    if (btn.classList.contains('payment-link-calc__button_alt')) {
+      calcTotal();
+    }
+  }
+  function calcTotal() {
+    valueInputs();
+    let calcTotalMonth = document.getElementById('calcTotalMonth');
+    let calcTotalYear = document.getElementById('calcTotalYear');
+    let calcTotalUser = document.getElementById('calcTotalUser');
+
+    if (currencyNow === 'EU') {
+      calcTotalMonth.innerHTML = formatterEUR.format((calcInputVal * (calcInputVal2 / 100) * calcInputVal3 * calcInputVal4) * (calcInputVal5 / 100) * (calcInputVal7 / 100) + calcInputVal * (calcInputVal2 / 100) * calcInputVal3 * (calcInputVal6 / 100) * calcInputVal8);
+      calcTotalYear.innerHTML = formatterEUR.format(((calcInputVal * (calcInputVal2 / 100) * calcInputVal3 * calcInputVal4) * (calcInputVal5 / 100) * (calcInputVal7 / 100) + calcInputVal * (calcInputVal2 / 100) * calcInputVal3 * (calcInputVal6 / 100) * calcInputVal8) * 12);
+      calcTotalUser.innerHTML = formatterEUR.format(((calcInputVal * (calcInputVal2 / 100) * calcInputVal3 * calcInputVal4) * (calcInputVal5 / 100) * (calcInputVal7 / 100) + calcInputVal * (calcInputVal2 / 100) * calcInputVal3 * (calcInputVal6 / 100) * calcInputVal8) / (calcInputVal * (calcInputVal2 / 100)));
+    } else {
+      calcTotalMonth.innerHTML = formatter.format(
+        (calcInputVal * (calcInputVal2 / 100) * calcInputVal3 * calcInputVal4) *
+        (calcInputVal5 / 100) * (calcInputVal7 / 100) +
+        (calcInputVal * (calcInputVal2 / 100) * calcInputVal3 * calcInputVal4) *
+        (calcInputVal6 / 100) * 0);
+
+      calcTotalYear.innerHTML = formatter.format(((calcInputVal * (calcInputVal2 / 100) * calcInputVal3 * calcInputVal4) *
+        (calcInputVal5 / 100) * (calcInputVal7 / 100) +
+        (calcInputVal * (calcInputVal2 / 100) * calcInputVal3 * calcInputVal4) *
+        (calcInputVal6 / 100) * 0) * 12);
+      calcTotalUser.innerHTML = formatter.format(((calcInputVal * (calcInputVal2 / 100) * calcInputVal3 * calcInputVal4) * (calcInputVal5 / 100) * (calcInputVal7 / 100) + calcInputVal * (calcInputVal2 / 100) * calcInputVal3 * (calcInputVal6 / 100) * 0) / (calcInputVal * (calcInputVal2 / 100)));
+    }
+  }
+
+  function paymentCalcBtn() {
+    valueInputs();
+    let btn = document.getElementById('paymentCalcBtn');
+    document.querySelector('.payment-link-calc__container').scrollIntoView()
+    if (btn.classList.contains('payment-link-calc__button_alt')) {
+      document.getElementById('calcAction').scrollIntoView();
+    } else {
+      btn.innerHTML = 'Get projections';
+      document.getElementById('calcTotal').style.display = 'block';
+      document.querySelector('.payment-link-calc__right').style.width = '100%';
+      document.getElementById('calcAction').style.display = 'flex';
+      calcTotal();
+    }
+
+  }
+
+
+  window.addEventListener('DOMContentLoaded', (event) => {
+
+    calcInputsValue();
+
+  });
+
+
+</script>
+</body>
+</html>

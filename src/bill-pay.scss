@@ -1,0 +1,1369 @@
+:root {
+  --transformRange: 68px;
+}
+
+.mt-hero.mt-hero_ap-page.payment-links.bill-pay {
+  background: url("https://monite.com/wp-content/uploads/2023/04/Hero-Block-2.png") no-repeat center;
+  background-size: cover;
+
+  .mt-hero__inner {
+    z-index: 2;
+
+    .mt-subtitle {
+      max-width: 100%;
+      margin-bottom: 32px;
+    }
+
+    .mt-title.mt-hero__title-wrapper {
+      .mt-hero_ap-page__subtitle {
+        background: linear-gradient(to right, #3C37FF 0%, #FEB9CB 100%);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .sub-description {
+      color: #3C37FF;
+      font-size: 16px;
+      display: block;
+    }
+
+    .mt-button.mt-hero_app-page-btn.BTN_1 {
+      margin-bottom: 20px;
+    }
+
+    .bp-center-image-wrapper {
+      position: relative;
+      margin-bottom: 45px;
+
+      .invoices-pay {
+        position: relative;
+        left: -112px;
+        top: 42px;
+        z-index: 1;
+        padding: 18px 26px;
+        background: #FFFFFF;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+
+        &__header {
+          text-align: left;
+          margin-bottom: 12px;
+          font-size: 13.3895px;
+          line-height: 18px;
+        }
+
+        &__search {
+          .search-input {
+            width: 133px;
+            padding: 4px 8px;
+            background: #F3F3F3;
+            border-radius: 40px;
+            text-align: left;
+
+            font-family: 'Faktum', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 7.81053px;
+            line-height: 11px;
+            color: #707070;
+          }
+        }
+
+        &__table {
+          border-collapse: separate;
+          border-spacing: 8px 16px;
+          font-family: 'Faktum', serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 7.81053px;
+          line-height: 10px;
+
+          .item-logo-wrapper {
+            width: 24px;
+          }
+
+          .empty-image {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #F3F3F3;
+          }
+
+          .empty-data {
+            //display: inline-block;
+            background: #F3F3F3;
+            height: 4px;
+            border-radius: 4px;
+          }
+
+          h4.item-name {
+            text-align: left;
+            font-family: 'Faktum', serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 7.81053px;
+            line-height: 10px;
+            color: #111111;
+          }
+
+          p.item-description {
+            text-align: left;
+            font-family: 'Faktum', serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 6.69474px;
+            line-height: 8px;
+            color: #707070;
+          }
+
+          h1.item-status {
+            border-radius: 4px;
+            font-family: 'Faktum', sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 7.81053px;
+            line-height: 9px;
+            padding: 4px 8px;
+
+            &.pending {
+              color: #E27E46;
+              background: #FFF5EB;
+            }
+
+            &.approved {
+              color: #A06DC8;
+              background: #FBF1FC
+            }
+
+            &.paid {
+              background: #EEFBF9;
+              color: #1FBCA0;
+            }
+          }
+
+          .item-sum {
+            text-align: right;
+          }
+
+          .actions {
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .scheduled {
+              width: 8px;
+              margin-right: 4px;
+            }
+
+            .item-btn {
+              padding: 4px 8px;
+              font-size: 6.69474px;
+              line-height: 9px;
+              border-radius: 4.46316px;
+              display: flex;
+              justify-content: space-between;
+              margin: 0;
+              width: 38px;
+
+              img {
+                width: 8px;
+              }
+            }
+          }
+
+        }
+      }
+
+      .invoice-image-wrapper {
+        position: absolute;
+        top: 0;
+        right: -116px;
+        width: 267px;
+        height: 360px;
+
+        img {
+          max-width: 267px;
+          max-height: 360px;
+        }
+      }
+    }
+  }
+}
+
+.payments-mt-win-win.solution.bill-pay {
+  padding: 90px 68px 0;
+
+  .mt-ww-title {
+   margin-bottom: 78px;
+  }
+
+  .payments-mt-win-win__content {
+    .descriptions-cols {
+      display: flex;
+      margin-bottom: 90px;
+      gap: 40px;
+
+      .ww-description-col {
+        flex: 1 1;
+        background: #F1F2F5;
+        border-radius: 10px;
+        max-width: 470px;
+        height: 475px;
+
+        .top-section {
+
+          .ww-col-list {
+            padding: 0;
+          }
+        }
+
+        .image-wrapper {
+          display: flex;
+          margin: 0 auto;
+          padding: 0;
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 140px;
+          background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.5) 100%);
+        }
+      }
+    }
+  }
+}
+
+.payment-method-one-api {
+  padding: 96px 72px;
+
+  .pm-title {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .pm-description {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  &__content {
+    padding: 104px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F1F2F5;
+    border-radius: 10px;
+
+    .methods {
+      position: relative;
+
+      &__list-items {
+        .item {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          background: #FFFFFF;
+          opacity: 0.95;
+          border-radius: 7.84053px;
+          margin-bottom: 12px;
+          padding: 12px 18px;
+          min-width: 412px;
+
+          &:nth-child(1) {
+            margin-bottom: 26px;
+          }
+
+          .left-block-item {
+            .item-title {
+              margin-bottom: 6px;
+              font-family: 'Faktum', serif;
+              font-style: normal;
+              font-weight: 600;
+              font-size: 15.6811px;
+              line-height: 140%;
+              letter-spacing: -0.01em;
+              color: #3B3B3B;
+            }
+
+            .item-logos {
+
+            }
+          }
+
+          .right-block-item {
+            .status {
+              display: flex;
+              align-items: center;
+              font-family: 'Satoshi', serif;
+              font-style: normal;
+              font-weight: 700;
+              font-size: 10.9767px;
+              line-height: 15px;
+              text-align: center;
+              padding: 6px 8px;
+              border-radius: 7.57574px;
+
+              svg {
+                margin-right: 4px;
+              }
+
+              &.live {
+                background: #D8F2D5;
+
+                .value {
+                  color: #1C960C;
+                }
+              }
+
+              &.beta {
+                background: rgba(171, 83, 216, 0.1);
+
+                .value {
+                  background: linear-gradient(180deg, #3C37FF 0%, #FE66BA 100%);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  background-clip: text;
+                }
+              }
+
+              &.soon {
+                background: rgba(60, 55, 255, 0.1);
+
+                .value {
+                  color: #3C37FF;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &:before {
+        position: absolute;
+        content: "Monite API";
+        left: -62px;
+        top: 50%;
+        transform: rotate(270deg);
+        font-family: 'Faktum', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17.2492px;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+        color: #111111;
+      }
+    }
+
+    .bundle {
+      position: relative;
+      width: 220px;
+
+      &__content {
+        position: relative;
+        top: -24px;
+
+        .bundle-title {
+          text-align: center;
+        }
+      }
+
+      .vectors {
+        position: absolute;
+        z-index: 1;
+      }
+
+      .desktop-vectors {
+        left: -14px;
+        top: -154px;
+      }
+
+    }
+
+    .mobile-vectors {
+      display: none;
+    }
+
+    .your-platform {
+      background: #FFFFFF;
+      min-width: 266px;
+      height: 188px;
+      //display: flex;
+      //align-items: center;
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+
+      &__header {
+        background: #FAFAFA;
+        border-radius: 8px 8px 0 0;
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: 18px;
+        display: flex;
+        align-items: center;
+        padding: 0 8px;
+        gap: 2px;
+
+        .btns {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+
+          &.red {
+            background: #ED6A5E;
+            border: 0.784053px solid rgba(0, 0, 0, 0.08);
+          }
+
+          &.orange {
+            background: #F4BF4F;
+            border: 0.784053px solid rgba(0, 0, 0, 0.08);
+          }
+
+          &.green {
+            background: #61C554;
+            border: 0.784053px solid rgba(0, 0, 0, 0.08);
+          }
+        }
+      }
+
+      &__content {
+        position: relative;
+        text-align: center;
+        top: calc(50% - 28px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .image-wrapper {
+          background: linear-gradient(180deg, #3C37FF 0%, #FEB9CB 100%);
+          border-radius: 6.27243px;
+          width: 32px;
+          height: 32px;
+          margin-right: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+.integrate-of-building.bill-pay {
+  padding: 120px 0 96px;
+  margin: 0 auto;
+  max-width: 1120px;
+
+  .mt-iob-title {
+    text-align: left;
+    margin-bottom: 24px;
+  }
+
+  .mt-iob-subtitle {
+    text-align: left;
+    margin-bottom: 48px;
+  }
+
+  .integrate-of-building__content {
+    .descriptions-cols {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      .iob-description-col {
+        width: 368px;
+        height: 251px;
+        padding: 44px;
+        background: #F1F2F5;
+        border-radius: 10px;
+
+        .image-wrapper {
+          margin-bottom: 24px;
+        }
+
+        .col-title {
+          margin-bottom: 24px;
+        }
+
+        .col-description {
+
+        }
+      }
+    }
+  }
+}
+
+.function-demonstration.ar-page.payment-links-page.bill-pay {
+  padding-top: 1px;
+
+  .function-demonstration__content {
+    .demonstration-title {
+      margin: 120px 0 90px;
+
+    }
+
+    .fd-content {
+      .demonstration {
+        .demonstration-images-wrapper {
+          .after {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            height: 50%;
+            border-image: linear-gradient(to bottom, #3C37FF, #33DAFF) 1 100%;
+          }
+
+          .before {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 50%;
+            border-image: linear-gradient(to bottom, #33DAFF, rgba(0, 0, 0, 0)) 1 100%;
+          }
+
+          .before-bill-pay {
+            border-image: linear-gradient(to bottom, #33DAFF, #FEB9CB) 1 100%;
+          }
+
+          .after-bill-pay {
+            border-image: linear-gradient(to bottom, #3C37FF, #FEB9CB) 1 100%;
+          }
+        }
+      }
+
+      .function-selector {
+        ul li.checkedItem {
+          opacity: 1;
+
+          &::before {
+            background: linear-gradient(180deg, #3C37FF 0%, #FEB9CB 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
+.adding-invoicing.payment-links.bill-pay {
+  padding-top: 120px;
+  padding-bottom: 0;
+
+  .adding-invoicing__content {
+    max-width: 100%;
+  }
+  .ai-content {
+    .ai-fees-cards {
+      .fees-card {
+        max-width: 512px;
+
+        .fees-image-wrapper {
+          li {
+            background: #FAFAFA;
+            box-shadow: 8.63363px 0px 16px rgba(0, 0, 0, 0.04);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+
+        .fees-image-wrapper.revenue {
+          .icon-wrapper {
+            background: #FFFFFF;
+
+            svg {
+              path {
+                fill: #000000;
+              }
+            }
+          }
+        }
+
+        .label-wrapper {
+          box-sizing: border-box;
+          width: 100%;
+          padding: 0 38px 40px;
+        }
+      }
+
+      .fees-card.with-plus:after {
+        position: absolute;
+        content: "+";
+        top: 143px;
+        font-size: 26px;
+        background: white;
+        padding: 12px;
+        width: 20px;
+        border-radius: 25px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        left: -25px;
+      }
+    }
+  }
+}
+
+.monites-features {
+  padding: 120px 160px 90px;
+  background: #FFFFFF;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 90px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 60px 36px;
+    margin: 0 auto;
+
+    .mf-card {
+      width: 349px;
+      //height: 196px;
+      padding: 0;
+
+      //background: #F1F2F5;
+      border-radius: 10px;
+
+      .image-back {
+        margin-bottom: 24px;
+        width: 38px;
+        height: 38px;
+        padding: 1px;
+        background: linear-gradient(to bottom, #3C37FF 0%, #FEB9CB 100%);
+        border-radius: 8px;
+
+        .image-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 7px;
+          background: #ffffff;
+          height: 100%;
+
+          .mf-card-icon {
+          }
+        }
+      }
+
+      .mf-card-title {
+        margin-bottom: 24px;
+      }
+
+      .mf-card-description {
+
+      }
+    }
+  }
+}
+
+.how-mach-revenue.bill-pay {
+  padding: 78px;
+
+  .how-mach-revenue__revenue {
+    padding: 36px 0 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #0A0A0A;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+
+    .payments-mt-one-api__revenue-mob {
+      display: none;
+    }
+
+    .revenue-title {
+      color: #FFFFFF;
+      margin-bottom: 24px;
+      z-index: 2;
+    }
+
+    .revenue-subtitle {
+      color: #FFFFFF;
+      margin-bottom: 16px;
+      z-index: 2;
+    }
+
+    .range-label {
+      font-family: 'Faktum', serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 110%;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #707070;
+    }
+
+    .range-wrapper {
+      position: relative;
+      margin-bottom: 24px;
+      z-index: 2;
+
+      .revenue-range {
+        min-width: 420px;
+        border-radius: 10px;
+        background: none !important;
+      }
+
+      .revenue-range-value {
+        position: relative;
+        width: 50px;
+        height: 34px;
+        background: #fff;
+        border-radius: 6px;
+        transform: translate(var(--transformRange), 8px);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .arrow {
+          background: #fff;
+          position: absolute;
+          top: -4px;
+          width: 12px;
+          height: 12px;
+          z-index: -1;
+          transform: rotate(45deg);
+        }
+      }
+    }
+
+    .revenue-btn {
+      z-index: 2;
+    }
+
+    .back-images {
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      background: url("https://monite.com/wp-content/uploads/2023/04/Mask-group.png") no-repeat left top,
+      url("https://monite.com/wp-content/uploads/2023/04/left.png") no-repeat right bottom;
+      height: 470px;
+    }
+  }
+}
+
+.robust-account {
+  pre {
+    box-sizing: border-box;
+  }
+}
+
+.billpay.ar-page.payment-link-invoice.bill-pay {
+  .billpay__content {
+    box-sizing: border-box;
+    .mobile-text {
+      display: none;
+    }
+
+    .left-img {
+      background: url("https://monite.com/wp-content/uploads/2023/04/Mask-group-1.png") no-repeat;
+    }
+
+    .right-img {
+      background: url("https://monite.com/wp-content/uploads/2023/04/2222.png") no-repeat right;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1144px) {
+  .payment-method-one-api {
+    padding: 44px 20px;
+
+    &__content {
+      padding: 50px 40px;
+    }
+  }
+
+  .integrate-of-building.bill-pay {
+    padding: 120px 40px 90px;
+
+    .integrate-of-building__content {
+      .descriptions-cols {
+        .iob-description-col {
+          padding: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .payment-method-one-api {
+    padding: 44px 0;
+
+    .pm-title {
+      margin-bottom: 24px;
+      padding: 0 20px;
+    }
+
+    .pm-description {
+      margin-bottom: 30px;
+      padding: 0 20px;
+    }
+
+    &__content {
+      padding: 50px 0;
+      flex-direction: column;
+      width: 100%;
+      position: relative;
+
+      .methods {
+        position: relative;
+
+        &__list-items {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          padding: 0;
+
+          .item {
+            margin: 0;
+            padding: 12px 16px;
+            min-width: 241px;
+
+            &:nth-child(1) {
+              margin: 0;
+            }
+
+            .left-block-item {
+              .item-title {
+                font-size: 9.51316px;
+                line-height: 140%;
+                margin-bottom: 2px;
+              }
+
+              .item-logos {
+                max-width: 155px;
+
+                img {
+                  width: 100%;
+                  height: auto;
+                }
+              }
+            }
+
+            .right-block-item {
+              .status {
+                font-size: 6.57519px;
+                line-height: 9px;
+                padding: 4px 6px;
+                border-radius: 4px;
+
+                svg {
+                  width: 8px;
+                  height: 8px;
+                  margin-right: 2px;
+                }
+              }
+            }
+          }
+        }
+
+        &:before {
+          left: calc(50% - 48px);
+          top: -21px;
+          transform: rotate(0deg);
+        }
+      }
+
+      .bundle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 110px;
+
+        .desktop-vectors {
+          display: none;
+        }
+      }
+
+      .mobile-vectors {
+        display: initial;
+        height: 542px;
+        width: 294px;
+        position: absolute;
+        top: 76px;
+
+        .line {
+          position: absolute;
+          border: 2.13583px solid #3C37FF;
+          border-radius: 7px;
+          width: 100%;
+          bottom: 0;
+
+          &.small-bundle {
+            height: 318px;
+            border-top: none;
+            border-right: none;
+            border-radius: 12px 0 7px 7px;
+
+            &:before {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 11px;
+              height: 120px;
+              border-radius: 12px 0 0 0;
+              border-top: 2.13583px solid #3C37FF;
+              content: "";
+            }
+          }
+
+          &.middle-bundle {
+            height: 458px;
+            border-left: none;
+            border-top: none;
+            border-radius: 0 12px 7px 7px;
+
+            &:before {
+              position: absolute;
+              top: 0;
+              right: 0;
+              width: 11px;
+              height: 120px;
+              border-radius: 0 12px 0 0;
+              border-top: 2.13583px solid #3C37FF;
+              content: "";
+            }
+          }
+
+          &.large-bundle {
+            border-left: none;
+            border-top: none;
+            border-radius: 0 12px 7px 7px;
+            height: 523px;
+
+            &:before {
+              position: absolute;
+              top: 0;
+              right: 0;
+              width: 11px;
+              height: 120px;
+              border-radius: 0 12px 0 0;
+              border-top: 2.13583px solid #3C37FF;
+              content: "";
+            }
+          }
+        }
+
+        .dot {
+          position: absolute;
+          content: "";
+          background: #3C37FF;
+          width: 12px;
+          height: 12px;
+          right: 0;
+          border-radius: 50%;
+        }
+
+        .dot-left {
+          left: 18px;
+        }
+
+        .dot-right {
+          right: 18px;
+        }
+
+        .dot-bottom.dot-right {
+          right: 8px;
+        }
+
+        .dot-bottom.dot-left {
+          left: 8px;
+        }
+
+        .dot-bottom {
+          bottom: -4px;
+          z-index: 2;
+        }
+
+        .dot-middle1 {
+          bottom: 312px;
+          left: 5px;
+        }
+
+        .dot-middle2 {
+          top: 78px;
+          right: 5px;
+        }
+
+        .dot-top {
+          top: 13px;
+          right: 5px;
+        }
+      }
+
+      .your-platform {
+        z-index: 1;
+      }
+    }
+  }
+
+  .integrate-of-building.bill-pay {
+    padding: 60px 20px 40px;
+
+    .integrate-of-building__content {
+      .descriptions-cols {
+        .iob-description-col {
+          padding: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .mt-hero.mt-hero_ap-page.payment-links.bill-pay {
+    background: none;
+    margin: 0;
+
+    .mt-hero__inner {
+      .mt-hero__content {
+        .hero-image-wrapper {
+          display: none;
+        }
+
+        .hero-image-wrapper.play-btn {
+          display: none;
+        }
+
+        .call-wrapper {
+          margin-bottom: 0;
+        }
+
+        .bp-center-image-wrapper {
+          display: none;
+        }
+      }
+    }
+  }
+  .mt-hero_ap-page__background-image-mobile.payment-links.bill-pay {
+    position: relative;
+    background: url("https://monite.com/wp-content/uploads/2023/04/bill-back.png") no-repeat bottom;
+    background-size: contain;
+    padding: 30px 40px 0;
+
+    .hero-image-wrapper {
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .payments-mt-win-win.solution.bill-pay {
+    padding: 52px 20px 0;
+
+    .mt-ww-title {
+      margin-bottom: 42px;
+    }
+
+    .payments-mt-win-win__content {
+
+      .descriptions-cols {
+
+
+        .ww-description-col {
+
+
+          .top-section {
+
+
+            .ww-col-list {
+              .ww-list-item {
+                .icon {
+                  width: 20px;
+                  height: 20px;
+
+                  svg {
+                    width: 16px;
+                    height: 16px;
+                  }
+                }
+              }
+            }
+          }
+
+          .image-wrapper {
+
+
+            img {
+
+            }
+          }
+        }
+      }
+
+      .beneficial-content {
+        flex-wrap: wrap;
+
+        .beneficial {
+          flex: 1 1;
+          min-width: 135px;
+          margin: 6px 2px;
+          padding: 12px;
+          flex-direction: column;
+          justify-content: left;
+          align-items: start;
+
+          .icon {
+            margin-bottom: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .function-demonstration-mobile.payment-links-page.bill-pay {
+    .image-wrapper {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .image-label {
+      text-align: center;
+      background: linear-gradient(180deg, #3C37FF 0%, #FEB9CB 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .image-description {
+      text-align: center;
+    }
+  }
+
+  .adding-invoicing.payment-links.bill-pay {
+    padding: 44px 20px;
+
+    .adding-invoicing__content {
+      .ai-title {
+        margin-bottom: 40px;
+      }
+
+      .ai-fees-cards {
+        margin: 0;
+        gap: 12px;
+
+        .fees-card {
+          margin: 0;
+          overflow: hidden;
+
+          .label-wrapper {
+            padding: 0;
+
+            .fees-label {
+              padding: 0 20px;
+            }
+
+            .fees-description {
+              max-width: 230px;
+              margin-bottom: 32px;
+              padding: 0 20px;
+            }
+          }
+        }
+
+        .fees-card.with-plus {
+          margin: 0;
+
+          .fees-image-wrapper.payments {
+            margin-bottom: 72px;
+            padding: 20px 0 0;
+          }
+
+          &::after {
+            right: auto;
+            left: calc(50% - 24px);
+            top: -24px;
+          }
+        }
+      }
+    }
+  }
+
+  .monites-features {
+    padding: 44px 20px;
+
+    &__content {
+      gap: 12px 0;
+
+      .mf-card {
+        width: 280px;
+        height: auto;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        .image-back {
+          margin-bottom: 22px;
+          width: 52px;
+          height: 52px;
+        }
+      }
+
+      .mf-card-title {
+        margin-bottom: 22px;
+      }
+
+    }
+  }
+
+  .integrate-of-building.bill-pay {
+    padding: 44px 20px;
+
+    .mt-iob-title {
+      margin-bottom: 24px;
+    }
+
+    .mt-iob-subtitle {
+      margin-bottom: 24px;
+    }
+
+    .integrate-of-building__content {
+      .descriptions-cols {
+        flex-direction: column;
+        gap: 12px;
+
+        .iob-description-col {
+          max-width: 368px;
+          width: 100%;
+          height: auto;
+
+          .col-title {
+            max-width: 260px;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .how-mach-revenue.bill-pay {
+    padding: 80px 20px;
+
+    .how-mach-revenue__revenue {
+      padding: 0px 20px 20px;
+      height: 487px;
+      justify-content: space-between;
+      position: relative;
+
+      .payments-mt-one-api__revenue-mob {
+        display: block;
+        width: 120%;
+
+        img {
+          width: 300px;
+          float: left;
+        }
+
+        margin-bottom: 26px;
+      }
+
+      .range-wrapper {
+        .revenue-range {
+          min-width: 232px;
+        }
+      }
+
+      .back-images {
+        display: none;
+      }
+    }
+  }
+
+  .robust-account {
+    padding-top: 0;
+
+    .robust-account__content {
+      padding: 0;
+
+      .ra-title {
+        margin-bottom: 24px;
+      }
+
+      .ra-description {
+        padding-right: 40px;
+        margin-bottom: 24px;
+      }
+
+      .ra-btn-wrapper {
+        .mt-button.mt-hero_app-page-btn.sand-box-btn.BTN_2 {
+          padding: 12px 22px;
+          border-radius: 8px;
+        }
+      }
+    }
+
+    .robust-account__invoice-code-image-wrapper {
+      padding: 0 20px;
+      max-width: 272px;
+      min-width: 120px;
+      width: 100%;
+
+      pre {
+        border-radius: 7px;
+      }
+    }
+  }
+
+  .billpay.ar-page.payment-link-invoice.bill-pay {
+    display: flex;
+    .billpay__content {
+      padding: 50px 20px 0;
+      background: url("https://monite.com/wp-content/uploads/2023/04/Frame-1948756842.png") no-repeat bottom;
+      background-size: cover;
+
+      .desktop-text {
+        display: none;
+      }
+
+      .mobile-text {
+        display: inherit;
+      }
+
+      .bp-description {
+        padding: 0 18px;
+      }
+    }
+  }
+}
